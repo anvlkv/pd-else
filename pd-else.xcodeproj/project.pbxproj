@@ -1,0 +1,168 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		FA66FD2C2BCEAB4600706B95 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
+		FA66FD2D2BCEAB4600706B95 /* Code_source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code_source; sourceTree = "<group>"; };
+		FA66FD2F2BCEAB4600706B95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LICENSE; sourceTree = "<group>"; };
+		FA66FD302BCEAB4600706B95 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		FA66FD312BCEAB4600706B95 /* .gitmodules */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		FA66FD322BCEAB4600706B95 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA66FD332BCEAB4600706B95 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA66FD342BCEAB4600706B95 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		FA66FD352BCEAB4600706B95 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		FA66FD362BCEAB4600706B95 /* .git */ = {isa = PBXFileReference; lastKnownFileType = text; path = .git; sourceTree = "<group>"; };
+		FA66FD372BCEAB4600706B95 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		FA66FD382BCEAB4600706B95 /* pd-lib-builder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "pd-lib-builder"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		FA66FD262BCEAB4600706B95 = {
+			isa = PBXGroup;
+			children = (
+				FA66FD2C2BCEAB4600706B95 /* Documentation */,
+				FA66FD2D2BCEAB4600706B95 /* Code_source */,
+				FA66FD2F2BCEAB4600706B95 /* LICENSE */,
+				FA66FD302BCEAB4600706B95 /* Makefile */,
+				FA66FD312BCEAB4600706B95 /* .gitmodules */,
+				FA66FD322BCEAB4600706B95 /* README.md */,
+				FA66FD332BCEAB4600706B95 /* .gitignore */,
+				FA66FD342BCEAB4600706B95 /* .github */,
+				FA66FD352BCEAB4600706B95 /* .gitattributes */,
+				FA66FD362BCEAB4600706B95 /* .git */,
+				FA66FD372BCEAB4600706B95 /* License.txt */,
+				FA66FD382BCEAB4600706B95 /* pd-lib-builder */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		FA66FD2B2BCEAB4600706B95 /* pd-else */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "install objectsdir=$(PROJECT_DIR)/../iOS/generated/pd-else ";
+			buildConfigurationList = FA66FD392BCEAB4600706B95 /* Build configuration list for PBXLegacyTarget "pd-else" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "$(PROJECT_DIR)";
+			dependencies = (
+			);
+			name = "pd-else";
+			passBuildSettingsInEnvironment = 1;
+			productName = "pd-else";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		FA66FD272BCEAB4600706B95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+			};
+			buildConfigurationList = FA66FD2A2BCEAB4600706B95 /* Build configuration list for PBXProject "pd-else" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA66FD262BCEAB4600706B95;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA66FD2B2BCEAB4600706B95 /* pd-else */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		FA66FD282BCEAB4600706B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA66FD292BCEAB4600706B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA66FD3A2BCEAB4600706B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "pd-else";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA66FD3B2BCEAB4600706B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "pd-else";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA66FD2A2BCEAB4600706B95 /* Build configuration list for PBXProject "pd-else" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA66FD282BCEAB4600706B95 /* Debug */,
+				FA66FD292BCEAB4600706B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA66FD392BCEAB4600706B95 /* Build configuration list for PBXLegacyTarget "pd-else" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA66FD3A2BCEAB4600706B95 /* Debug */,
+				FA66FD3B2BCEAB4600706B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA66FD272BCEAB4600706B95 /* Project object */;
+}
