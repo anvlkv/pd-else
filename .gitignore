@@ -1,2 +1,4 @@
 .DS_Store
 classes/dir.c
+*.pd_darwin
+*.o
