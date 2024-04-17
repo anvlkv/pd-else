@@ -2,3 +2,5 @@
 classes/dir.c
 *.pd_darwin
 *.o
+*.d_amd64
+*.d_arm64

@@ -101,7 +101,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf $PROJECT_DIR/../iOS/generated/else\n\nmake CC=\"$(xcrun --sdk iphoneos --find clang) -isysroot $(xcrun --sdk iphoneos --show-sdk-path) -arch armv7 -arch armv7s -arch arm64\" PLATFORM=\"x86_64-apple-iossimulator\" install objectsdir=\"$PROJECT_DIR/../iOS/generated/\"\n";
+			shellScript = "\nrm -rf $PROJECT_DIR/../iOS/generated/else\n\nmake install CC=\"$(xcrun --sdk iphoneos --find clang) -isysroot $(xcrun --sdk iphoneos --show-sdk-path) -arch armv7 -arch armv7s -arch arm64\" PLATFORM=\"arm64-apple-ios\"  objectsdir=\"$PROJECT_DIR/../iOS/generated/\" extension=d_arm64\n\n\n\n\n\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
