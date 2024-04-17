@@ -6,6 +6,20 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FADE78482BD01D2500BA5D5F /* else */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FADE78492BD01D2500BA5D5F /* Build configuration list for PBXAggregateTarget "else" */;
+			buildPhases = (
+				FADE784C2BD01D2A00BA5D5F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = else;
+			productName = else;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXFileReference section */
 		FA66FD2C2BCEAB4600706B95 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		FA66FD2D2BCEAB4600706B95 /* Code_source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code_source; sourceTree = "<group>"; };
@@ -42,28 +56,16 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		FA66FD2B2BCEAB4600706B95 /* pd-else */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "install objectsdir=$(PROJECT_DIR)/../iOS/generated/pd-else ";
-			buildConfigurationList = FA66FD392BCEAB4600706B95 /* Build configuration list for PBXLegacyTarget "pd-else" */;
-			buildPhases = (
-			);
-			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "$(PROJECT_DIR)";
-			dependencies = (
-			);
-			name = "pd-else";
-			passBuildSettingsInEnvironment = 1;
-			productName = "pd-else";
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXProject section */
 		FA66FD272BCEAB4600706B95 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				TargetAttributes = {
+					FADE78482BD01D2500BA5D5F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
 			};
 			buildConfigurationList = FA66FD2A2BCEAB4600706B95 /* Build configuration list for PBXProject "pd-else" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -77,67 +79,73 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA66FD2B2BCEAB4600706B95 /* pd-else */,
+				FADE78482BD01D2500BA5D5F /* else */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FADE784C2BD01D2A00BA5D5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf $PROJECT_DIR/../iOS/generated/else\n\nmake CC=\"$(xcrun --sdk iphoneos --find clang) -isysroot $(xcrun --sdk iphoneos --show-sdk-path) -arch armv7 -arch armv7s -arch arm64\" PLATFORM=\"x86_64-apple-iossimulator\" install objectsdir=\"$PROJECT_DIR/../iOS/generated/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		FA66FD282BCEAB4600706B95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		FA66FD292BCEAB4600706B95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
-				SDKROOT = macosx;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
-		FA66FD3A2BCEAB4600706B95 /* Debug */ = {
+		FADE784A2BD01D2500BA5D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_ABOUT_RETURN_TYPE = NO;
-				GCC_WARN_UNUSED_VARIABLE = NO;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "pd-else";
-				SDKROOT = macosx;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M59X77GZ2V;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		FA66FD3B2BCEAB4600706B95 /* Release */ = {
+		FADE784B2BD01D2500BA5D5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = NO;
-				GCC_WARN_UNUSED_VARIABLE = NO;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "pd-else";
-				SDKROOT = macosx;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M59X77GZ2V;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -153,11 +161,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA66FD392BCEAB4600706B95 /* Build configuration list for PBXLegacyTarget "pd-else" */ = {
+		FADE78492BD01D2500BA5D5F /* Build configuration list for PBXAggregateTarget "else" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA66FD3A2BCEAB4600706B95 /* Debug */,
-				FA66FD3B2BCEAB4600706B95 /* Release */,
+				FADE784A2BD01D2500BA5D5F /* Debug */,
+				FADE784B2BD01D2500BA5D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
