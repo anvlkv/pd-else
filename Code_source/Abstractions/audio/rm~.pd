@@ -10,10 +10,10 @@
 #X obj 119 113 osc~;
 #X obj 301 69 declare -path else;
 #X obj 163 42 inlet~;
-#X obj 163 16 else/initmess \$1;
-#X obj 45 167 else/xselect2~, f 30;
-#X obj 163 126 else/glide~ 10;
-#X obj 163 87 else/op~ != 0;
+#X obj 163 16 initmess \$1;
+#X obj 45 167 xselect2~, f 30;
+#X obj 163 126 glide~ 10;
+#X obj 163 87 op~ != 0;
 #X connect 0 0 11 1;
 #X connect 1 0 0 0;
 #X connect 1 0 11 0;

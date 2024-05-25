@@ -9,7 +9,7 @@
 #X text 254 192 This is just a wrapper around [rm~] from ELSE \, check it out., f 22;
 #X obj 333 385 about.MERDA;
 #X text 251 303 this is still a simple module \, with no CV input yet \, so kinda like a pedal still., f 22;
-#X obj 33 98 else/knob 40 20 2000 1 20 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 20;
+#X obj 33 98 knob 40 20 2000 1 20 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 20;
 #X floatatom 33 147 5 0 0 0 - - - 0;
 #X msg 33 170 hz \$1;
 #X floatatom 113 147 5 0 0 0 - - - 0;

@@ -5,10 +5,10 @@
 #X obj 33 19 inlet;
 #X obj 721 82 declare -lib else;
 #X obj 268 257 route size;
-#X obj 388 234 else/args;
-#X obj 388 267 else/routetype list;
-#X obj 307 129 else/lb -init;
-#X obj 349 390 else/routetype float;
+#X obj 388 234 args;
+#X obj 388 267 routetype list;
+#X obj 307 129 lb -init;
+#X obj 349 390 routetype float;
 #X obj 188 68 r \$0-flags;
 #X msg 349 356 \$1;
 #X obj 307 198 t b b, f 12;
@@ -78,8 +78,8 @@
 #X obj 552 311 t a a;
 #X obj 307 514 pack f \$0;
 #X obj 307 162 delay 40;
-#X obj 55 134 else/receiver;
-#X obj 510 428 else/router;
+#X obj 55 134 receiver;
+#X obj 510 428 router;
 #X obj 33 175 t a a a, f 9;
 #X text 752 367 extract send and receive symbols, f 17;
 #X obj 416 190 r \$0-args;
@@ -99,9 +99,9 @@
 #X msg 307 559 \; \$2-cnv donecanvasdialog 1 -1 3 0 \$1 \$1 0 \$1 \$1 175 100, f 51;
 #X obj 85 560 r \$0-to-circle-gui;
 #X obj 85 614 outlet;
-#X obj 452 87 else/canvas.setname \$0-cnv 1;
+#X obj 452 87 canvas.setname \$0-cnv 1;
 #X msg 699 460 symbol;
-#X obj 55 107 else/dollsym 1;
+#X obj 55 107 dollsym 1;
 #X msg 632 513 clear;
 #X obj 154 391 s \$0-set-r-sym;
 #X obj 94 364 sel empty;
@@ -180,7 +180,7 @@
 #X obj 305 400 outlet;
 #X obj 411 294 r \$0-set-s-sym;
 #X obj 117 316 s \$0-args;
-#X obj 175 102 else/routetype list;
+#X obj 175 102 routetype list;
 #X obj 102 182 list split 1;
 #X obj 58 212 sel state;
 #X obj 117 284 list;
@@ -189,8 +189,8 @@
 #X obj 175 53 inlet;
 #X obj 182 209 b, f 2;
 #X obj 305 304 t l l;
-#X obj 337 352 else/sender;
-#X obj 411 321 else/dollsym 1;
+#X obj 337 352 sender;
+#X obj 411 321 dollsym 1;
 #X connect 1 0 13 0;
 #X connect 3 0 8 0;
 #X connect 3 1 11 0;

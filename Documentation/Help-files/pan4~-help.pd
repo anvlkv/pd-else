@@ -207,7 +207,7 @@
 #X connect 13 0 5 2;
 #X connect 18 0 12 0;
 #X restore 467 269 pd example;
-#X obj 250 115 else/slider2d 64 64 -1 1 -1 1 1 210 210 210 0 0 0 1 0 0 1 -1 empty empty;
+#X obj 250 115 slider2d 64 64 -1 1 -1 1 1 210 210 210 0 0 0 1 0 0 1 -1 empty empty;
 #N canvas 539 94 519 557 multichannel 0;
 #X obj 211 198 noise~;
 #X obj 211 381 out.mc~;

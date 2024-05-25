@@ -109,7 +109,7 @@
 #X obj 235 197 s \$0-x;
 #X obj 105 190 loadbang;
 #X text 39 17 The object below has a receive symbol \, so you can send messages to it via a [send] object (but not audio). The receive symbol can be set with the receive message or the -receive flag. Dollar signs must be escaped. If you set a receive name as "empty" then it can't receive messages anymore., f 69;
-#X obj 107 101 else/setdsp~;
+#X obj 107 101 setdsp~;
 #X obj 105 286 scope3d~ 0 0 250 250 1 0 1 1 0.502574 1 50 8 256 30 30 30 190 190 190 160 160 160;
 #X msg 308 182 clip 0;
 #X connect 0 0 1 0;
@@ -170,8 +170,8 @@
 #X text 329 18 To the left we have basic appaerance messages to set dimension sizes \, line width \, zoom and grid., f 57;
 #X text 329 101 To perspective setting enhances the 3D effect and changes the 'depth feel'. Increasing it appear more dramatically different in size based on their distance.;
 #X obj 52 116 pack2 250 250, f 14;
-#X obj 52 29 else/knob 50 0 250 0 250 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 133 29 else/knob 50 0 250 0 250 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 52 29 knob 50 0 250 0 250 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 133 29 knob 50 0 250 0 250 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X obj 342 224 scope3d~ 0 0 250 250 1 0 1 1 0.75 1 50 8 256 30 30 30 190 190 190 160 160 160;
 #X obj 463 187 osc~ 40;
 #X obj 585 187 osc~ 120;
@@ -237,7 +237,7 @@
 #X obj 283 49 vsl 15 128 0 255 0 0 qdaskjlf \$0-Bb empty 0 -9 0 10 #0000fc #fcfcfc #000000 0 1;
 #X floatatom 283 191 5 0 0 0 - - - 0;
 #X obj 422 272 osc~ 49;
-#X obj 131 375 else/setdsp~;
+#X obj 131 375 setdsp~;
 #X obj 326 311 scope3d~ 20 20 200 200 1 0 1 1 0.9 1 50 8 512 30 30 30 190 190 190 160 160 160;
 #X connect 0 0 25 0;
 #X connect 2 0 25 0;

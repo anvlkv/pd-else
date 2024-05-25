@@ -56,7 +56,7 @@
 #X coords 0 1 100 -1 147 253 1 50 50;
 #X restore 59 72 graph;
 #N canvas 241 41 587 463 preset 0;
-#X obj 121 133 else/sender 1 \\\$0-presets;
+#X obj 121 133 sender 1 \\\$0-presets;
 #X msg 121 98 name \$1;
 #X obj 98 182 receiver;
 #X obj 123 222 route list;
@@ -79,8 +79,8 @@
 #X connect 6 0 1 0;
 #X connect 7 0 5 0;
 #X restore 97 46 pd id-name-init;
-#X obj 123 258 else/dispatch \$0-set-decay \$0-set-cutoff \$0-att-decay-set \$0-att-cut-set \$0-set-midi-mode \$0-set-n-voices;
-#X obj 98 331 else/var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode \$0-n-voices, f 41;
+#X obj 123 258 dispatch \$0-set-decay \$0-set-cutoff \$0-att-decay-set \$0-att-cut-set \$0-set-midi-mode \$0-set-n-voices;
+#X obj 98 331 var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode \$0-n-voices, f 41;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 2 0 6 0;
@@ -93,9 +93,9 @@
 #X obj 287 206 declare -path else;
 #X obj 85 67 loadbang;
 #X obj 85 165 list;
-#X obj 85 205 else/default 0 1;
-#X obj 85 250 else/dispatch \$0-set-decay \$0-set-cutoff \$0-att-decay-set \$0-att-cut-set \$0-set-midi-mode \$0-set-n-voices;
-#X obj 170 142 else/var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode \$0-n-voices, f 40;
+#X obj 85 205 default 0 1;
+#X obj 85 250 dispatch \$0-set-decay \$0-set-cutoff \$0-att-decay-set \$0-att-cut-set \$0-set-midi-mode \$0-set-n-voices;
+#X obj 170 142 var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode \$0-n-voices, f 40;
 #X connect 0 0 3 1;
 #X connect 0 1 6 0;
 #X connect 2 0 3 0;
@@ -109,8 +109,8 @@
 #X obj 376 500 outlet;
 #X obj 376 36 inlet;
 #N canvas 416 72 454 608 list 0;
-#X obj 86 245 else/router;
-#X obj 197 299 else/mono;
+#X obj 86 245 router;
+#X obj 197 299 mono;
 #X obj 197 333 pack;
 #X obj 197 367 list prepend 0;
 #X obj 185 71 r \$0-n-voices;
@@ -122,7 +122,7 @@
 #X obj 207 198 s \$0-n;
 #X obj 132 182 == 1;
 #X msg 185 250 voices \$1;
-#X obj 66 309 else/voices 1 1;
+#X obj 66 309 voices 1 1;
 #X obj 197 514 outlet;
 #X obj 232 421 r \$0-midi-mode;
 #X msg 232 455 all midi_active \$1;
@@ -153,7 +153,7 @@
 #X obj 502 129 s \$0-att-decay-set;
 #X obj 104 282 t b f, f 33;
 #X obj 104 241 change 0;
-#X obj 104 131 else/nchs~;
+#X obj 104 131 nchs~;
 #X msg 332 321 resize \$1;
 #X obj 104 159 spigot;
 #X obj 196 159 == 0;
@@ -164,8 +164,8 @@
 #X floatatom 427 279 5 0 0 0 - - - 0;
 #X obj 238 89 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X floatatom 56 183 5 0 0 0 - - - 0;
-#X obj 104 323 else/var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode, f 27;
-#X obj 104 387 else/dispatch \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode, f 32;
+#X obj 104 323 var \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode, f 27;
+#X obj 104 387 dispatch \$0-decay \$0-cutoff \$0-att-decay \$0-att-cut \$0-midi-mode, f 32;
 #X connect 0 0 11 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;

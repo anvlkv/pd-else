@@ -10,9 +10,9 @@
 #A saved 0 0 0 0 1 0 0 0;
 #X obj 246 314 vcf.m~;
 #A saved 500 10 0 0;
-#X obj 31 290 else/lfo.m~;
+#X obj 31 290 lfo.m~;
 #A saved 0.1 0 0 0 0 0;
-#X obj 429 409 else/seq8.m~;
+#X obj 429 409 seq8.m~;
 #A saved 60 4 0 0 0 0 0 0 0 0 0;
 #X obj 603 44 vca.m~;
 #A saved 1;
@@ -22,9 +22,9 @@
 #A saved 0.1 0 0;
 #X obj 263 44 delay.m~;
 #A saved 100 0 100 0 0.5;
-#X obj 264 329 else/drive.m~;
+#X obj 264 329 drive.m~;
 #A saved 1 0;
-#X obj 507 314 else/flanger.m~;
+#X obj 507 314 flanger.m~;
 #A saved 0.1 0 0 0;
 #X obj 48 237 phaser.m~;
 #A saved 0.1 3 0.5;
@@ -38,9 +38,9 @@
 #A saved 50 8 1 10 10;
 #X obj 43 40 plaits.m~;
 #A saved 0 0.5 0.5 0.5 0 0.5 0.5 0 0 0 0 0 0 0 0;
-#X obj 334 358 else/pluck.m~;
+#X obj 334 358 pluck.m~;
 #A saved 1 1 0 0;
-#X obj 537 106 else/pm6.m~;
+#X obj 537 106 pm6.m~;
 #A saved idx 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \; vol 100 0 0 0 0 0 \; ratio 1 1 1 1 1 1 \; detune 0 0 0 0 0 0 \; pan 0 0 0 0 0 0 \; transp 0 \;;
 #X restore 84 75 pd oscillators;
 #N canvas 621 255 450 300 tools 0;
