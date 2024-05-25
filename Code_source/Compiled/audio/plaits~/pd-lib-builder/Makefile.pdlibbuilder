@@ -781,7 +781,7 @@ endif
 
 # store path to Pd API m_pd.h if it is found
 ifdef PDINCLUDEDIR
-  mpdh := $(shell ls "$(PDINCLUDEDIR)/m_pd.h")
+  mpdh := $(shell ls "$(PDINCLUDEDIR)/m_pd.hpp")
 endif
 
 # store path to pd.dll; if not found, ls will give a useful error
