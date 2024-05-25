@@ -8,7 +8,7 @@
 #X obj 95 454 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 164 454 signal -;
-#X obj 209 185 else/out~;
+#X obj 209 185 out~;
 #X obj 307 6 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
 0;
 #N canvas 382 141 749 319 (subpatch) 0;
@@ -67,27 +67,27 @@ a gate input., f 65;
 #X text 226 423 an impulse syncs the metronome;
 #X text 220 598 - swing deviation in % (default 0);
 #N canvas 384 123 873 298 sync 0;
-#X obj 226 218 else/out~;
+#X obj 226 218 out~;
 #X obj 184 176 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 42 24 You can sync a [tempo~] object to an external sync source
 with an incoming bang.;
-#X obj 251 149 else/trig2bang~;
+#X obj 251 149 trig2bang~;
 #X obj 251 176 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 542 210 else/out~;
-#X obj 567 145 else/trig2bang~;
+#X obj 542 210 out~;
+#X obj 567 145 trig2bang~;
 #X obj 567 174 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 670 64 else/imp~ 0.5;
-#X obj 670 145 else/trig2bang~;
+#X obj 670 64 imp~ 0.5;
+#X obj 670 145 trig2bang~;
 #X obj 670 174 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 452 25 You can also sync with an impulse into the rightmost
 inlet \, for a sample accurate sync.;
-#X obj 226 115 else/tempo~ -on 70;
-#X obj 184 75 else/tempo -on 30;
-#X obj 542 112 else/tempo~ -on 70;
+#X obj 226 115 tempo~ -on 70;
+#X obj 184 75 tempo -on 30;
+#X obj 542 112 tempo~ -on 70;
 #X connect 3 0 4 0;
 #X connect 6 0 7 0;
 #X connect 8 0 9 0;
@@ -113,17 +113,17 @@ inlet \, for a sample accurate sync.;
 #X msg 183 89 ms;
 #X msg 192 110 bpm;
 #X text 60 34 You can set the tempo either as bpm or ms.;
-#X obj 146 187 else/out~;
+#X obj 146 187 out~;
 #X obj 399 102 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
 #X text 388 81 on/off;
-#X obj 399 192 else/out~;
+#X obj 399 192 out~;
 #X msg 441 103 hz 2 \, bang;
 #X msg 445 126 bpm 60 \, bang;
 #X text 358 32 These messages takes optional float arguments to set
 tempo and swing, f 35;
-#X obj 146 136 else/tempo~ -ms 150;
-#X obj 399 151 else/tempo~ -hz 2;
+#X obj 146 136 tempo~ -ms 150;
+#X obj 399 151 tempo~ -hz 2;
 #X connect 0 0 12 0;
 #X connect 2 0 12 0;
 #X connect 3 0 12 0;
@@ -151,24 +151,24 @@ tempo and swing, f 35;
 #X obj 180 113 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
 #X text 169 92 on/off;
-#X obj 176 359 else/out~;
-#X obj 180 319 else/match~ 1;
-#X obj 318 222 else/pulsediv~ 4;
+#X obj 176 359 out~;
+#X obj 180 319 match~ 1;
+#X obj 318 222 pulsediv~ 4;
 #X obj 318 279 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 318 249 else/trig2bang~;
+#X obj 318 249 trig2bang~;
 #X obj 78 255 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 78 227 else/trig2bang~;
-#X obj 180 262 else/pulsecount~ 4;
+#X obj 78 227 trig2bang~;
+#X obj 180 262 pulsecount~ 4;
 #X text 64 16 You can set a tempo (or 'frequency') multiplier with
 the -mul flag or the "mul" message". In practice \, this subdivides
 the tempo into fractions. So if you multiply by four your tempo is
 actually 1/4 of the original. You can also use object like [count]
 and [bangdiv] to manage tempo subdivisions.;
 #X text 317 308 back to the original;
-#X obj 180 159 else/tempo~ -on -mul 4 30;
-#X obj 180 289 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 180 159 tempo~ -on -mul 4 30;
+#X obj 180 289 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 0 0 12 0;
 #X connect 3 0 2 0;
 #X connect 3 1 2 1;
@@ -183,7 +183,7 @@ and [bangdiv] to manage tempo subdivisions.;
 #X restore 450 176 pd multiplier;
 #X text 139 533 -mul <float>;
 #X text 221 533 - sets multiplier (default 1);
-#X obj 209 159 else/tempo~ -on 60;
+#X obj 209 159 tempo~ -on 60;
 #X text 133 550 -seed <float>;
 #N canvas 316 118 832 342 swing/seed 0;
 #X text 32 118 The minimum swing value is 0 (no deviation) and there
@@ -193,15 +193,15 @@ is no maximum value., f 44;
 #X obj 160 195 nbx 4 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 83 169 on/off;
-#X obj 94 260 else/out~;
+#X obj 94 260 out~;
 #X text 156 176 swing (%);
-#X obj 94 219 else/tempo~ 60 10;
-#X obj 360 257 else/trig2bang~;
+#X obj 94 219 tempo~ 60 10;
+#X obj 360 257 trig2bang~;
 #X obj 360 286 bng 30 400 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 360 226 else/tempo~ -on -seed 1234 60 100;
-#X obj 584 257 else/trig2bang~;
-#X obj 584 226 else/tempo~ -on -seed 1234 60 100;
+#X obj 360 226 tempo~ -on -seed 1234 60 100;
+#X obj 584 257 trig2bang~;
+#X obj 584 226 tempo~ -on -seed 1234 60 100;
 #X msg 360 182 seed;
 #X msg 584 182 seed 1234;
 #X obj 584 286 bng 30 400 50 0 empty empty empty 17 7 0 10 #dfdfdf
@@ -241,7 +241,7 @@ repeat the output., f 79;
 ;
 #X text 221 550 - sets seed (default: unique internal);
 #X text 22 190 see also:;
-#X obj 23 212 else/tempo;
+#X obj 23 212 tempo;
 #X connect 22 0 61 0;
 #X connect 28 0 61 0;
 #X connect 29 0 61 1;

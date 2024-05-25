@@ -48,7 +48,7 @@
 #X text 271 159 convert/output;
 #X text 95 193 open color picker;
 #N canvas 994 43 707 769 convert 0;
-#X obj 380 191 else/pack2 rgb 0 0 0;
+#X obj 380 191 pack2 rgb 0 0 0;
 #X obj 419 26 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #fc0000
 #fcfcfc #000000 0 0;
 #X obj 458 26 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #00fc00
@@ -59,7 +59,7 @@
 #X obj 458 168 int;
 #X obj 497 168 int;
 #X symbolatom 380 287 8 0 0 0 - - - 0;
-#X obj 116 258 else/colors;
+#X obj 116 258 colors;
 #X msg 136 167 to rgb \, hex #ab1f4c;
 #X msg 116 141 to hex \, rgb 127 127 127;
 #X msg 380 311 hex \$1;
@@ -68,10 +68,10 @@
 with the "to" message., f 40;
 #X text 68 336 Be aware that when you lose resolution when you convert
 to "ds" (Pd's Data Structures format)., f 38;
-#X obj 116 287 else/display;
-#X obj 380 219 else/display;
-#X obj 380 365 else/display;
-#X obj 57 608 else/pack2 cmyk 0 0 0 0;
+#X obj 116 287 display;
+#X obj 380 219 display;
+#X obj 380 365 display;
+#X obj 57 608 pack2 cmyk 0 0 0 0;
 #X obj 104 458 vsl 15 128 0 100 0 0 empty \$0-cyan empty 0 -9 0 10
 #00fcfc #000000 #000000 0 1;
 #X obj 128 458 vsl 15 128 0 100 0 0 empty \$0-yellow empty 0 -9 0 10
@@ -80,11 +80,11 @@ to "ds" (Pd's Data Structures format)., f 38;
 #000000 #000000 0 1;
 #X obj 183 458 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 #000000
 #fcfcfc #000000 0 1;
-#X obj 57 670 else/display;
+#X obj 57 670 display;
 #X obj 451 455 vsl 15 128 0 360 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 390 642 else/pack2 hsl 0 0 0;
-#X obj 544 642 else/pack2 hsv 0 0 0;
+#X obj 390 642 pack2 hsl 0 0 0;
+#X obj 544 642 pack2 hsv 0 0 0;
 #X floatatom 451 594 8 0 0 0 - - - 0;
 #X obj 511 455 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
@@ -92,26 +92,26 @@ to "ds" (Pd's Data Structures format)., f 38;
 #X obj 581 455 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X floatatom 581 594 8 0 0 0 - - - 0;
-#X obj 390 673 else/colors;
-#X obj 390 702 else/display;
-#X obj 544 673 else/colors;
-#X obj 544 702 else/display;
+#X obj 390 673 colors;
+#X obj 390 702 display;
+#X obj 544 673 colors;
+#X obj 544 702 display;
 #X text 483 420 HSL & HSV;
 #X obj 245 462 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 245 669 else/display;
+#X obj 245 669 display;
 #X msg 245 608 gray \$1;
 #X text 283 516 <= gray scale;
 #X text 37 429 CMYK values (from \, 0 to 100);
 #X msg 164 225 to iemgui \, bang;
 #X obj 116 115 loadbang;
-#X obj 380 260 else/colors;
+#X obj 380 260 colors;
 #X text 469 249 converts to hexadecimal (default), f 11;
 #X text 489 329 converts to RGB, f 8;
 #X text 452 260 <=;
-#X obj 380 335 else/colors -rgb;
-#X obj 245 640 else/colors;
-#X obj 57 641 else/colors -rgb;
+#X obj 380 335 colors -rgb;
+#X obj 245 640 colors;
+#X obj 57 641 colors -rgb;
 #X connect 0 0 16 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -166,7 +166,7 @@ to "ds" (Pd's Data Structures format)., f 38;
 #X obj 4 606 cnv 3 550 3 empty empty click 8 12 0 13 #dcdcdc #000000
 0;
 #X text 151 614 clicking on the object opens color picker;
-#X obj 248 244 else/colors;
+#X obj 248 244 colors;
 #X text 228 464 -;
 #X text 162 390 ds <float>;
 #X text 228 344 - RGB (Red \, Green and Blue) color values;
@@ -174,7 +174,7 @@ to "ds" (Pd's Data Structures format)., f 38;
 #X text 340 188 color in hexadecimal;
 #X text 369 210 color in RGB;
 #X text 241 463 set conversion to "rgb" \, "hex" \, "gui" or "ds";
-#X obj 248 272 else/display;
+#X obj 248 272 display;
 #X text 120 405 cmyk <f \, f \, f \, f>;
 #X text 228 405 - CMYK (Cyan \, Magente Yellow and Key) color values
 ;
@@ -192,7 +192,7 @@ that you pick and colors you send to the object are stored and recalled
 next time you open the color picker. This object is useful for setting
 color properties inside abstractions., f 66;
 #N canvas 810 160 720 512 iemgui/DS 0;
-#X obj 64 286 else/pack2 rgb 0 0 0;
+#X obj 64 286 pack2 rgb 0 0 0;
 #X obj 103 148 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #fc0000
 #fcfcfc #000000 0 0;
 #X obj 142 148 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #00fc00
@@ -226,7 +226,7 @@ color properties inside abstractions., f 66;
 #X obj 74 184 filledpolygon color 0 2 0 0 0 1 1 1 1 0;
 #X restore 79 188 pd \$0-pixel;
 #X obj 191 39 inlet;
-#X obj 68 65 else/lb;
+#X obj 68 65 lb;
 #X msg 68 122 clear \, scalar \$1 \$2;
 #X obj 68 146 send pd-\$0-DS;
 #X obj 68 96 pack2 list \$0-pixel 0;
@@ -235,16 +235,16 @@ color properties inside abstractions., f 66;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
 #X restore 391 375 pd set-ds;
-#X obj 391 286 else/pack2 rgb 0 0 0;
+#X obj 391 286 pack2 rgb 0 0 0;
 #X obj 430 148 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #fc0000
 #fcfcfc #000000 0 0;
 #X obj 469 148 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #00fc00
 #fcfcfc #000000 0 0;
 #X obj 508 148 vsl 15 128 0 255 0 0 nope nada empty 0 -9 0 10 #0400fc
 #fcfcfc #000000 0 0;
-#X obj 391 313 else/colors -ds;
-#X obj 391 342 else/display;
-#X obj 44 345 else/display;
+#X obj 391 313 colors -ds;
+#X obj 391 342 display;
+#X obj 44 345 display;
 #X msg 44 249 to hex;
 #X text 132 27 [colors] can output color values specially for Pd Vanilla's
 GUI objects (aka iemgus) and Data Structures. In recent versions of
@@ -255,7 +255,7 @@ float format., f 72;
 #X text 152 430 Data Structures also have a particular format to set
 colors \, provided by colors with the '-ds' flag or "to ds" message.
 Note that these have less color resolution.;
-#X obj 44 313 else/colors -iemgui;
+#X obj 44 313 colors -iemgui;
 #X msg 22 221 to iemgui;
 #X connect 0 0 21 0;
 #X connect 1 0 0 1;

@@ -49,15 +49,15 @@
 #X text 122 430 open <symbol> -;
 #X text 128 474 loop <float> -;
 #X text 222 474 loop on <1> or off <0>, f 50;
-#X obj 221 291 else/out~;
+#X obj 221 291 out~;
 #X obj 221 200 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
 #X text 175 362 bang - (re)start playing the sample;
 #X text 170 412 float - non-0 (re)starts playing \, zero stops, f
 59;
 #N canvas 760 138 588 508 multi-channel 0;
-#X obj 175 332 else/meter2~;
-#X obj 340 364 else/out~;
+#X obj 175 332 meter2~;
+#X obj 340 364 out~;
 #X msg 106 215 open violin.wav;
 #X text 123 115 If you have a file with less channels than specified
 (like a mono file in a stereo sampler) \, the extra channels are silent.
@@ -80,9 +80,9 @@ file name is given \, then the number of channels is the same as the
 sound file's. The maximum number is 64 channels.;
 #X text 208 213 <= mono file;
 #X text 221 239 <= stereo file;
-#X obj 62 332 else/out~;
-#X obj 62 268 else/play.file~ -loop stereo.wav;
-#X obj 340 319 else/play.file~ -loop 1 stereo.wav;
+#X obj 62 332 out~;
+#X obj 62 268 play.file~ -loop stereo.wav;
+#X obj 340 319 play.file~ -loop 1 stereo.wav;
 #X connect 2 0 13 0;
 #X connect 4 0 13 0;
 #X connect 5 0 14 0;
@@ -119,7 +119,7 @@ sound file's. The maximum number is 64 channels.;
 #X text 222 429 opens a file with the symbol name (no symbol opens
 dialog box) and starts playing, f 50;
 #X text 35 299 see also:;
-#X obj 39 317 else/player~;
+#X obj 39 317 player~;
 #X text 55 259 click: opens a new file =>;
 #X obj 64 41 cnv 4 4 4 empty empty sound 0 28 2 18 #e0e0e0 #000000
 0;
@@ -133,7 +133,7 @@ be at the same sample rate as Pd's. The object can open files with
 absolute paths and is also able to search for files relative to the
 parent patch., f 69;
 #X msg 270 201 open MouthBow.wav;
-#X obj 221 258 else/play.file~ violin.wav 1 1;
+#X obj 221 258 play.file~ violin.wav 1 1;
 #X text 314 230 <= opens dialog;
 #X connect 0 0 59 0;
 #X connect 1 0 59 0;

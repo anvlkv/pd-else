@@ -168,7 +168,7 @@ for visualizing audio signals.;
 #X text 201 616 - set lower and upper graph range (default -1 1),
 f 51;
 #X obj 359 346 s \$0-set;
-#X obj 115 316 else/out~;
+#X obj 115 316 out~;
 #X obj 85 519 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 #dcdcdc
 #9c9c9c 0;
 #X text 202 519 signal;
@@ -192,7 +192,7 @@ f 51;
 #X msg 413 306 range -2 2;
 #X obj 51 132 r \$0-set;
 #X obj 115 131 cusp~ 400;
-#X obj 115 161 else/graph~ 471 17 -1 1 200 140 #dfdfdf 0 1;
+#X obj 115 161 graph~ 471 17 -1 1 200 140 #dfdfdf 0 1;
 #X text 201 559 - buffer skip (default 10), f 51;
 #X connect 26 0 27 0;
 #X connect 27 0 40 0;

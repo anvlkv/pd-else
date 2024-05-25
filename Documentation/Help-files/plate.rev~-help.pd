@@ -46,16 +46,16 @@
 #X obj 114 227 throw~ \$0-input;
 #X obj 323 204 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 323 232 else/impseq~;
+#X obj 323 232 impseq~;
 #X obj 323 267 throw~ \$0-input;
 #X obj 129 127 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 129 169 else/decay2~ 50 1000;
+#X obj 129 169 decay2~ 50 1000;
 #N canvas 780 129 376 168 tone 0;
 #X obj 52 23 inlet;
 #X obj 52 134 outlet~;
-#X obj 52 51 else/rand.i 36 84;
-#X obj 52 97 else/oscbank~ 6 -ratio 1 3 5.01 7.02 9.03 11.04 -amp 1
+#X obj 52 51 rand.i 36 84;
+#X obj 52 97 oscbank~ 6 -ratio 1 3 5.01 7.02 9.03 11.04 -amp 1
 0.3 0.2 0.15 0.1 0.1, f 47;
 #X obj 52 73 mtof;
 #X connect 0 0 2 0;
@@ -63,16 +63,16 @@
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
 #X restore 67 168 pd tone;
-#X obj 698 70 else/gain~;
+#X obj 698 70 gain~;
 #X obj 403 141 throw~ \$0-input;
 #X msg 359 80 open;
 #X obj 62 367 noise~;
 #X obj 191 438 *~;
 #X obj 191 467 throw~ \$0-input;
-#X obj 206 389 else/decay~ 200;
+#X obj 206 389 decay~ 200;
 #X obj 206 299 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 62 398 else/lowpass~ 0 5;
+#X obj 62 398 lowpass~ 0 5;
 #X text 344 205 impulse;
 #X text 379 53 sample;
 #X text 738 109 audio input;
@@ -80,7 +80,7 @@
 #X text 125 299 noise burst;
 #N canvas 1068 445 205 165 init 0;
 #X obj 53 28 inlet;
-#X obj 53 56 else/initmess \; \$0-predelayms 100 \; \$0-cutoff 0.5
+#X obj 53 56 initmess \; \$0-predelayms 100 \; \$0-cutoff 0.5
 \; \$0-damping 0.25 \; \$0-fbgain 0.75 \; \$0-drywet 0.5;
 #X connect 0 0 1 0;
 #X restore 771 480 pd init;
@@ -90,8 +90,8 @@
 #X obj 403 78 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
 #X text 428 80 play/stop;
-#X obj 364 413 else/plate.rev~;
-#X obj 364 413 else/plate.rev~;
+#X obj 364 413 plate.rev~;
+#X obj 364 413 plate.rev~;
 #X obj 453 207 hsl 128 15 0 1000 0 0 empty \$0-predelayms empty -2
 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X floatatom 450 231 5 0 0 0 - - - 0;
@@ -122,11 +122,11 @@
 #X msg 649 341 size \$1;
 #X msg 727 371 wet \$1;
 #X msg 726 404 clear;
-#X obj 111 361 else/rand.f 500 3000, f 12;
+#X obj 111 361 rand.f 500 3000, f 12;
 #X obj 526 429 s \$0-set;
 #X obj 386 385 r \$0-set;
-#X obj 364 457 else/out~;
-#X obj 403 114 else/play.file~ -loop violin.wav;
+#X obj 364 457 out~;
+#X obj 403 114 play.file~ -loop violin.wav;
 #X connect 0 0 31 0;
 #X connect 2 0 11 0;
 #X connect 3 0 4 0;
@@ -190,7 +190,7 @@
 #X text 69 88 [plate.rev~] is a reverb abstraction based on a patch
 by Tom Erbe implementing the plate reverb model by Dattorro. It has
 a mono input and stereo output.;
-#X obj 190 210 else/out~;
+#X obj 190 210 out~;
 #X text 129 482 1) float - pre delay in ms (0-1000) - default 50,
 f 54;
 #X text 129 498 2) float - filter cutoff (0-1) - default 0.5, f 54
@@ -199,8 +199,8 @@ f 54;
 ;
 #X text 129 528 4) float - room size (0-1) - default 0.75, f 54;
 #X text 129 543 5) float - wet ratio (0-1) - default 0.75, f 54;
-#X obj 189 179 else/plate.rev~;
-#X obj 189 145 else/play.file~ vacuous.wav 1 1;
+#X obj 189 179 plate.rev~;
+#X obj 189 145 play.file~ vacuous.wav 1 1;
 #X connect 45 0 39 0;
 #X connect 45 1 39 1;
 #X connect 46 0 45 0;

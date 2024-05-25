@@ -12,11 +12,11 @@
 #X text 262 258 this is still a simple module \, with no CV input yet \, so kinda like a pedal still., f 22;
 #N canvas 139 120 477 341 messages 0;
 #X obj 183 243 outlet;
-#X obj 306 49 else/knob 41 0 1 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
-#X obj 237 49 else/knob 41 0 1 0 0 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0;
-#X obj 33 49 else/knob 41 10 200 4 10 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 10;
-#X obj 106 49 else/knob 41 0 1 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
-#X obj 388 49 else/knob 41 0 1 0 0.5 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0.5;
+#X obj 306 49 knob 41 0 1 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 237 49 knob 41 0 1 0 0 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0;
+#X obj 33 49 knob 41 10 200 4 10 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 10;
+#X obj 106 49 knob 41 0 1 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 388 49 knob 41 0 1 0 0.5 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0.5;
 #X floatatom 33 103 7 0 0 0 - - - 0;
 #X floatatom 106 103 7 0 0 0 - - - 0;
 #X msg 106 132 size \$1;

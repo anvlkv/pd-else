@@ -146,7 +146,7 @@
 #X obj 83 209 trigger anything bang;
 #X msg 83 181 dump;
 #X msg 153 264 create;
-#X obj 147 432 else/keyboard 17 80 2 4 0 0 empty empty;
+#X obj 147 432 keyboard 17 80 2 4 0 0 empty empty;
 #X obj 227 403 makenote 127 300, f 22;
 #X floatatom 295 361 3 1 5 0 - - - 0;
 #X text 320 361 order;

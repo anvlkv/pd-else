@@ -129,9 +129,9 @@
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 74 pd;
-#X obj 79 307 else/out~;
+#X obj 79 307 out~;
 #X text 234 157 bit crushing (0-1);
-#X obj 187 264 else/graph~ 143 50;
+#X obj 187 264 graph~ 143 50;
 #X obj 143 149 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 214 505 - resampled and quantized signal;
 #X text 213 452 - bit reduction from 0-1;
@@ -141,12 +141,12 @@
 #X text 311 189 decimation (0-1);
 #X text 180 539 1) float - bit reduction (default 0);
 #X text 180 555 2) float - decimation (default 0);
-#X obj 187 232 else/crusher~;
+#X obj 187 232 crusher~;
 #X obj 143 171 osc~ 440;
 #X text 158 451 signal;
 #X text 158 473 signal;
-#X obj 224 198 else/f2s~;
-#X obj 293 231 else/f2s~;
+#X obj 224 198 f2s~;
+#X obj 293 231 f2s~;
 #X connect 8 0 42 0;
 #X connect 9 0 8 0;
 #X connect 10 0 43 0;

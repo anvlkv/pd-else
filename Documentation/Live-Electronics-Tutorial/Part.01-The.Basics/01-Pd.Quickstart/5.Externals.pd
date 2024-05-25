@@ -4,7 +4,7 @@
 #X obj 288 161 rev2~, f 8;
 #X obj 362 161 rev3~, f 8;
 #X obj 835 272 pluck~;
-#X obj 706 371 else/fbdelay~;
+#X obj 706 371 fbdelay~;
 #X obj 155 161 sigmund~;
 #N canvas 602 31 447 276 open-readme 0;
 #X obj 107 167 pdcontrol;
@@ -25,7 +25,7 @@
 #X text 808 102 <= ELSE's repository;
 #X text 26 269 Compiled external libraries come either as a single binary pack (the "classic" library format) or as a set of separate binaries. Single binary packs need to be loaded via the startup tab (Preferences => Startup) and the second type only needs you to add the library's folder to the search paths (in Preferences => Path). 'Deken' has a preference tabs where you can opt to be prompted if you want to add a library to the paths after it's downloaded (sometimes you don't want it \, like when it's a single binary pack)., f 65;
 #X text 26 612 If you haven't already \, please download the "ELSE" library that is needed for this tutorial and widely used from this point onward. You can use 'deken' for it., f 65;
-#X text 549 645 else/openfile =>;
+#X text 549 645 openfile =>;
 #X text 520 575 For more information on how Pd handles externals \, check section 4 of Pd's manual in the browser. In Window => Help Browser go to (Pure Data/1.manual/x4.htm). Or click here on this link below:, f 58;
 #X obj 598 272 declare -path else;
 #X text 519 305 ELSE comes with separate binaries \, so you could add else's folder to the user added search paths. Alternatively \, you can use [declare -path else] \, which is what we do here in the examples of this tutorial. Another alternative is to use relative paths \, such as:, f 62;
@@ -44,7 +44,7 @@
 #X restore 783 132 pd open-ELSE;
 #X obj 785 533 else;
 #X text 621 534 Check its help file =>;
-#X obj 673 645 else/openfile -h http://msp.ucsd.edu/Pd_documentation/x4.htm Pd Documentation chapter 4: externals;
+#X obj 673 645 openfile -h http://msp.ucsd.edu/Pd_documentation/x4.htm Pd Documentation chapter 4: externals;
 #X text 518 406 This will only work if the folder containing the external library is included in a folder that Pd automatically searches for files \, as is the case with Pd's externals folder \, the usual folder for externals in Pd. When ELSE is installed you can also right click on an empty spot in the canvas and access an object browser \, which includes objects with the 'else' prefix. ELSE also has a [else] external that can be loaded via Startup \, but it doesn't do much besides outputting its version., f 62;
 #X connect 7 0 6 0;
 #X connect 8 0 25 0;

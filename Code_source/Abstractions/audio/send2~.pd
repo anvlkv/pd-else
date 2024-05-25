@@ -1,7 +1,7 @@
 #N canvas 477 25 334 260 10;
 #X obj 105 62 inlet~;
 #X obj 105 183 send~ \$1;
-#X obj 120 94 else/nchs~;
+#X obj 120 94 nchs~;
 #X msg 120 155 channels \$1;
 #X obj 120 125 change;
 #X connect 0 0 2 0;

@@ -43,7 +43,7 @@ in float gridx float gridy;
 #X obj 104 152 bng 17 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X floatatom 271 188 5 0 0 0 - - -;
-#X obj 104 207 else/display;
+#X obj 104 207 display;
 #X text 174 261 set <symbol> - sets a receive name, f 46;
 #X text 232 323 - receive name (default none), f 36;
 #X text 200 292 anything;
@@ -51,18 +51,18 @@ in float gridx float gridy;
 #N canvas 1041 110 409 386 more 0;
 #X obj 66 105 bng 17 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
-#X obj 66 200 else/display;
+#X obj 66 200 display;
 #X msg 78 132 set a;
 #X obj 227 276 symbol hi;
 #X text 89 105 <= retrieve data;
-#X obj 62 251 else/receiver a b;
+#X obj 62 251 receiver a b;
 #X obj 227 251 r c;
 #X msg 124 139 set c;
 #X obj 65 277 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 4000 1;
 #X obj 209 106 bng 17 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
-#X obj 209 201 else/display;
+#X obj 209 201 display;
 #X msg 228 137 set b;
 #X text 232 106 <= retrieve data;
 #X msg 271 142 set c;
@@ -71,8 +71,8 @@ name. You can connect the corresponding [receive] object to GUIs or
 any object that receives a bang and outputs data. Note that it also
 works with [receiver] \, which can have up to two receive names.,
 f 56;
-#X obj 66 172 else/retrieve a;
-#X obj 209 173 else/retrieve b;
+#X obj 66 172 retrieve a;
+#X obj 209 173 retrieve b;
 #X text 51 324 But also note that it can only retrieve from compiled
 objects \, it doesn't work with abstractions or subpatches., f 43
 ;
@@ -89,7 +89,7 @@ objects \, it doesn't work with abstractions or subpatches., f 43
 #X restore 493 154 pd more;
 #X obj 271 164 r \$0-x;
 #X text 254 292 - the retrieved data;
-#X obj 104 179 else/retrieve \$0-x;
+#X obj 104 179 retrieve \$0-x;
 #X text 127 152 <= retrieve data;
 #X text 310 189 <= change and then hit bang to retrieve., f 14;
 #N canvas 481 180 885 319 built-in 0;
@@ -98,15 +98,15 @@ objects \, it doesn't work with abstractions or subpatches., f 43
 #X obj 56 101 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
 #X text 301 262 "number-2";
-#X obj 56 247 else/display;
+#X obj 56 247 display;
 #X floatatom 252 240 5 0 0 0 - number-1 -;
 #X text 289 239 "number-1";
 #X msg 67 132 set number-1;
 #X msg 78 156 set number-2;
-#X obj 214 120 else/function 200 100 empty function 0 1 220 220 220
+#X obj 214 120 function 200 100 empty function 0 1 220 220 220
 50 50 50 1 0 0 0 0 500 0.97 500 0;
 #X msg 85 184 set function;
-#X obj 56 220 else/retrieve function;
+#X obj 56 220 retrieve function;
 #X text 23 17 [retrieve] can also retrieve from any GUI object that
 has a built-in receive name \, such as atom boxes \, iemguis (bang
 \, toggle \, etc) and even externals that have a built in receive name).
@@ -118,12 +118,12 @@ is a compiled object that can have a built-in receive name as an example.
 a work around in the ELSE library. Inside the [slider2d] abstraction
 below \, we have a [receiver] and a [default] object that can do the
 trick for us., f 62;
-#X obj 506 193 else/display;
-#X obj 506 162 else/retrieve slider2d;
+#X obj 506 193 display;
+#X obj 506 162 retrieve slider2d;
 #X obj 506 132 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X text 667 92 receive name "slider2d";
-#X obj 676 116 else/slider2d 127 127 0 127 0 127 1 255 255 255 0 0
+#X obj 676 116 slider2d 127 127 0 127 0 127 1 255 255 255 0 0
 0 0 0 1 76 75 empty slider2d;
 #X connect 1 0 10 0;
 #X connect 6 0 10 0;
@@ -137,7 +137,7 @@ trick for us., f 62;
 0;
 #X text 57 87 [retrieve] retrieves values from things that are connected
 to a "receive" symbol that matches the argument. It works with [rceive]
-\, [else/receiver] and built-in receives in GUIs. In a sense \, it
+\, [receiver] and built-in receives in GUIs. In a sense \, it
 uses "receive" names as a "send" as well., f 73;
 #N canvas 836 168 376 380 presets 0;
 #X obj 202 339 hsl 128 15 0 127 0 0 empty slider-2 empty -2 -8 0 10
@@ -154,7 +154,7 @@ uses "receive" names as a "send" as well., f 73;
 #X text 24 16 [retrieve] can be useful to retrieve and store data that
 can then be recalled as a preset. It is actually the heart of the [presets]
 object in the ELSE library., f 53;
-#X obj 83 269 else/retrieve slider-2;
+#X obj 83 269 retrieve slider-2;
 #X obj 74 143 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -228856 -1 -1 48 256;
 #X obj 197 155 r slider-1;
@@ -166,7 +166,7 @@ object in the ELSE library., f 53;
 #X obj 47 138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 59 193 s slider-1;
-#X obj 74 114 else/retrieve slider-1;
+#X obj 74 114 retrieve slider-1;
 #X connect 1 0 3 1;
 #X connect 2 0 8 0;
 #X connect 3 0 5 0;

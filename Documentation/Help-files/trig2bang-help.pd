@@ -47,7 +47,7 @@
 #X restore 2 3 graph;
 #X text 212 251 - signal to detect triggers;
 #X text 171 251 float;
-#X obj 211 174 else/trig2bang;
+#X obj 211 174 trig2bang;
 #X msg 211 146 0;
 #X msg 280 146 1;
 #X msg 247 146 -1;

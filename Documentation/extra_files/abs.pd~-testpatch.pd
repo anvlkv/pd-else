@@ -1,11 +1,11 @@
 #N canvas 489 341 516 312 12;
 #X obj 178 106 adc~;
 #X obj 178 175 dac~;
-#X obj 89 111 else/setdsp~ 1;
+#X obj 89 111 setdsp~ 1;
 #X obj 403 116 r test;
-#X obj 403 153 else/display;
-#X obj 259 125 else/display;
-#X obj 259 93 else/midi.in;
+#X obj 403 153 display;
+#X obj 259 125 display;
+#X obj 259 93 midi.in;
 #X obj 258 164 midiin;
 #X floatatom 258 192 5 0 0 0 - - - 0;
 #X text 56 231 MIDI data from devices connected to the super-process are accessible in MIDI objects such as [midiin] \, etc.;

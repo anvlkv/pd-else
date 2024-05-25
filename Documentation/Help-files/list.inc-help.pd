@@ -35,7 +35,7 @@
 #X text 150 514 1) float;
 #X text 150 549 3) float;
 #X obj 199 178 bng 19 250 50 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000;
-#X obj 231 261 else/display;
+#X obj 231 261 display;
 #X text 216 514 - start value (default 0);
 #X text 216 532 - increment step value (default 0);
 #X text 216 549 - number of elements in the list (default 1);
@@ -45,13 +45,13 @@
 #X text 132 350 ratio <float>;
 #X text 226 350 - non zero sets to 'ratio' mode for given step;
 #X text 39 181 see also:;
-#X obj 38 208 else/amean;
-#X obj 38 232 else/gmean;
-#X obj 38 255 else/loop;
+#X obj 38 208 amean;
+#X obj 38 232 gmean;
+#X obj 38 255 loop;
 #X text 62 91 Use [list.inc] to generate a list by giving it a start value \, a step value and number of elements. In 'ratio' mode the step is considered a ratio step that it multiplies to \, otherwise it's just a regular linear addition., f 68;
 #X obj 4 465 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000 0;
 #X text 148 476 -r: sets to ratio mode (default linear);
-#X obj 231 225 else/list.inc -r 100 1.06 6;
+#X obj 231 225 list.inc -r 100 1.06 6;
 #X connect 0 0 48 0;
 #X connect 1 0 48 0;
 #X connect 31 0 48 0;

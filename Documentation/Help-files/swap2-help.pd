@@ -38,11 +38,11 @@
 #X text 172 387 (none);
 #X obj 2 409 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 196 165 else/swap2, f 14;
+#X obj 196 165 swap2, f 14;
 #X msg 277 137 any message;
 #X msg 196 134 swap;
-#X obj 277 190 else/display;
-#X obj 196 221 else/display;
+#X obj 277 190 display;
+#X obj 196 221 display;
 #X text 31 189 see also:;
 #X obj 39 210 swap;
 #X text 71 93 [swap2] is like [swap] but swaps any messages \, not

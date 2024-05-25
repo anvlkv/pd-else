@@ -39,7 +39,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
-#X obj 196 225 else/display;
+#X obj 196 225 display;
 #X obj 282 40 cnv 4 4 4 empty empty conversion 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 171 318 list;
@@ -52,10 +52,10 @@
 #X text 165 362 float;
 #X text 218 396 (none);
 #X text 28 195 see also:;
-#X obj 196 159 else/coeff2pz;
+#X obj 196 159 coeff2pz;
 #X msg 196 129 1 -0.5 0.2 0.2 1;
-#X obj 311 159 else/display;
-#X obj 233 195 else/display;
+#X obj 311 159 display;
+#X obj 233 195 display;
 #X text 343 162 Overall gain;
 #X text 164 197 Zeros ===>;
 #X text 142 229 Poles =>;
@@ -63,7 +63,7 @@
 #X text 201 362 - overall gain of the filter response;
 #X text 201 340 - Coordinates of 2 Zeros;
 #X text 201 318 - Coordinates of 2 Poles;
-#X obj 28 219 else/pz2coeff;
+#X obj 28 219 pz2coeff;
 #X obj 192 40 cnv 4 4 4 empty empty Poles/Zeros 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 62 89 [coeff2pz] converts an input of biquad coefficients to

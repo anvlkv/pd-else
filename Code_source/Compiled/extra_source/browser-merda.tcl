@@ -7,7 +7,7 @@ namespace eval category_merda_menu {
 }
 
 proc menu_send_merda_obj {w x y item} {
-    pdsend "$w obj $x $y else/$item"
+    pdsend "$w obj $x $y $item"
     pdsend "pd-$item.pd loadbang"
 }
 

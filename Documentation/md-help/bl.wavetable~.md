@@ -73,4 +73,4 @@ methods:
 draft: false
 ---
 
-[bl.wavetable~] is a wavetable oscillator like [else/wavetable~], but it is bandlimited with the upsampling/filtering technique. This makes the object quite inefficient CPU wise, but is an easy way to implement a bandlimited oscillator. This object also minimizes aliasing caused by hard sync and phase modulation.
+[bl.wavetable~] is a wavetable oscillator like [wavetable~], but it is bandlimited with the upsampling/filtering technique. This makes the object quite inefficient CPU wise, but is an easy way to implement a bandlimited oscillator. This object also minimizes aliasing caused by hard sync and phase modulation.

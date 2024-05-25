@@ -21,7 +21,7 @@
 #X obj 58 131 moses;
 #X obj 110 139 moses;
 #X obj 58 28 inlet;
-#X obj 157 176 else/wrap2;
+#X obj 157 176 wrap2;
 #X obj 142 28 inlet;
 #X obj 142 58 list length;
 #X connect 1 0 2 1;
@@ -43,8 +43,8 @@
 #X obj 150 469 list;
 #X obj 143 165 && 1;
 #N canvas 597 153 252 229 init 0;
-#X obj 69 58 else/args;
-#X obj 69 29 else/loadbanger 2;
+#X obj 69 58 args;
+#X obj 69 29 loadbanger 2;
 #X obj 69 87 unpack;
 #X obj 108 115 s \$0-n;
 #X obj 69 147 s \$0-i;
@@ -58,7 +58,7 @@
 #X obj 167 62 r \$0-i;
 #X obj 143 89 trigger float float;
 #X obj 179 116 != 0;
-#X obj 69 192 else/router;
+#X obj 69 192 router;
 #X obj 179 140 t b f;
 #X obj 422 131 declare -path else;
 #X connect 0 0 28 0;

@@ -7,10 +7,10 @@ width float bordercolor;
 #000000 #000000;
 #X text 167 287 hit;
 #X text 223 287 rest;
-#X obj 316 286 else/display;
+#X obj 316 286 display;
 #X obj 193 150 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 193 177 else/count 15;
+#X obj 193 177 count 15;
 #X floatatom 193 226 3 0 0 0 - - - 0;
 #X obj 22 40 cnv 4 4 4 empty empty Euclidean 0 28 2 18 #e0e0e0 #000000
 0;
@@ -47,7 +47,7 @@ width float bordercolor;
 #X text 100 227 step number:;
 #X text 224 206 steps;
 #X text 270 206 hits;
-#X obj 193 254 else/euclid 16 7 0;
+#X obj 193 254 euclid 16 7 0;
 #X text 311 206 rotation;
 #X obj 4 322 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000
 0;
@@ -95,17 +95,17 @@ on parameters of: number of steps \, number of hits and rotation value.
 #N canvas 780 114 563 524 example 0;
 #X obj 192 296 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 192 177 else/count 15;
+#X obj 192 177 count 15;
 #X floatatom 264 235 3 0 0 0 - - - 0;
-#X obj 192 142 else/tempo 60 -div 4;
+#X obj 192 142 tempo 60 -div 4;
 #X obj 192 116 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 174 412 else/out~;
+#X obj 174 412 out~;
 #X obj 174 370 *~;
-#X obj 192 331 else/decay~ 250;
+#X obj 192 331 decay~ 250;
 #X obj 192 209 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0;
-#X obj 192 262 else/euclid 16 7;
+#X obj 192 262 euclid 16 7;
 #X text 291 235 <= try different divisions;
 #X text 88 43 The algorithm tries to divide a given number of steps
 as equally spaced as possible. In the example below we have 16 steps
@@ -133,13 +133,13 @@ and \, by default \, 7 hits (change it to check it out), f 56;
 #X floatatom 228 222 3 0 0 0 - - - 0;
 #X floatatom 269 253 3 0 0 0 - - - 0;
 #X floatatom 310 282 3 0 0 0 - - - 0;
-#X obj 157 353 else/group;
-#X obj 179 453 else/tempo 60 -div 4;
-#X obj 157 492 else/drum.seq 2 16 20 0 0 0 0 0 0 0 0 0 0 0 0;
-#X obj 187 313 else/euclid 16 5 0;
-#X obj 153 283 else/loop;
+#X obj 157 353 group;
+#X obj 179 453 tempo 60 -div 4;
+#X obj 157 492 drum.seq 2 16 20 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 187 313 euclid 16 5 0;
+#X obj 153 283 loop;
 #X obj 153 251 f 16;
-#X obj 157 389 else/insert track 1;
+#X obj 157 389 insert track 1;
 #X obj 451 300 + 1;
 #X obj 451 254 vradio 18 1 0 2 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0;
@@ -152,12 +152,12 @@ and \, by default \, 7 hits (change it to check it out), f 56;
 #X obj 157 556 route 1 2, f 15;
 #X obj 352 591 sel 1;
 #X text 203 427 <= play;
-#X obj 204 724 else/out~;
+#X obj 204 724 out~;
 #X obj 139 673 *~;
-#X obj 157 634 else/decay~ 250;
-#X obj 67 633 else/brown~;
+#X obj 157 634 decay~ 250;
+#X obj 67 633 brown~;
 #X obj 335 670 *~;
-#X obj 353 631 else/decay~ 250;
+#X obj 353 631 decay~ 250;
 #X obj 291 631 noise~;
 #X msg 451 328 track \$1;
 #X text 92 22 In this example we use [euclid] to genetrate values for

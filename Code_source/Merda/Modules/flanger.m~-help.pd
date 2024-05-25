@@ -12,10 +12,10 @@
 #X text 270 265 this is still a simple module \, with no CV input yet \, so kinda like a pedal still., f 22;
 #N canvas 120 97 527 359 messages 0;
 #X obj 258 245 outlet;
-#X obj 258 67 else/knob 41 -1 1 0 0 empty empty #dfdfdf #bbbbbb #000000 0 0 0 0 1 320 0 0 0;
-#X obj 121 67 else/knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 0 0 0 0 1 320 0 0 0.1;
-#X obj 188 67 else/knob 41 0 25 2 0 empty empty #dfdfdf #afafaf black 0 0 0 0 1 320 0 0 0;
-#X obj 338 67 else/knob 41 -1 1 0 0 \$0-wet \$0-set-wet #9f9f9f #afafaf black 0 0 0 0 1 320 0 0 0;
+#X obj 258 67 knob 41 -1 1 0 0 empty empty #dfdfdf #bbbbbb #000000 0 0 0 0 1 320 0 0 0;
+#X obj 121 67 knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 0 0 0 0 1 320 0 0 0.1;
+#X obj 188 67 knob 41 0 25 2 0 empty empty #dfdfdf #afafaf black 0 0 0 0 1 320 0 0 0;
+#X obj 338 67 knob 41 -1 1 0 0 \$0-wet \$0-set-wet #9f9f9f #afafaf black 0 0 0 0 1 320 0 0 0;
 #X msg 121 151 rate \$1;
 #X msg 188 151 depth \$1;
 #X msg 258 151 coeff \$1;

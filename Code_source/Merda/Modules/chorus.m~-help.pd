@@ -13,10 +13,10 @@
 #N canvas 174 142 422 333 messages 0;
 #X obj 174 229 outlet;
 #X msg 100 172 rate \$1;
-#X obj 100 63 else/knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0.1;
+#X obj 100 63 knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0.1;
 #X floatatom 100 135 7 0 0 0 - - - 0;
-#X obj 254 63 else/knob 41 0 1 0 0 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0;
-#X obj 174 63 else/knob 41 0 25 2 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 254 63 knob 41 0 1 0 0 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 174 63 knob 41 0 25 2 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
 #X floatatom 174 135 8 0 0 0 - - - 0;
 #X msg 174 172 depth \$1;
 #X floatatom 254 135 8 0 0 0 - - - 0;

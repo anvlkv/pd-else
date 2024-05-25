@@ -37,9 +37,9 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
-#X obj 206 187 else/scramble;
-#X obj 281 217 else/display;
-#X obj 206 217 else/display;
+#X obj 206 187 scramble;
+#X obj 281 217 display;
+#X obj 206 217 display;
 #X msg 206 130 10 20 30;
 #X msg 222 159 a b c d e;
 #X text 79 89 [scramble] scrambles an input message. The right outlet

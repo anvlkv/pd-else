@@ -44,7 +44,7 @@
 #X text 225 298 sets step range, f 50;
 #X obj 206 226 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 479 77 else/setdsp~;
+#X obj 479 77 setdsp~;
 #X text 67 93 [drunkard~] generates random nvalues within a given step
 range from the last output. When reaching the bounds \, the values
 get wrapped., f 63;
@@ -54,8 +54,8 @@ get wrapped., f 63;
 #X text 210 410 - random value as result of the random walk;
 #X text 178 282 list;
 #X text 225 282 two floats set lower and upper bound, f 50;
-#X obj 203 201 else/s2f~;
-#X obj 203 142 else/impulse~ 50;
+#X obj 203 201 s2f~;
+#X obj 203 142 impulse~ 50;
 #X obj 109 350 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X obj 109 374 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0
@@ -84,12 +84,12 @@ value., f 52;
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [drunkard~] object twice with the same seed
 to repeat the output., f 52;
-#X obj 39 230 else/drunkard~ -seed 1039;
-#X obj 39 256 else/s2f~;
-#X obj 203 256 else/s2f~;
-#X obj 203 230 else/drunkard~ -seed 1039;
-#X obj 203 201 else/impseq~;
-#X obj 39 207 else/impseq~;
+#X obj 39 230 drunkard~ -seed 1039;
+#X obj 39 256 s2f~;
+#X obj 203 256 s2f~;
+#X obj 203 230 drunkard~ -seed 1039;
+#X obj 203 201 impseq~;
+#X obj 39 207 impseq~;
 #X floatatom 203 283 11 0 0 0 - - - 16;
 #X text 379 74 Sync [drunkard~] objects with a seed value;
 #X msg 536 149 seed 507;
@@ -100,13 +100,13 @@ to repeat the output., f 52;
 #000000 #000000 0 1;
 #X obj 539 298 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dfdfdf
 #000000 #000000 0 1;
-#X obj 386 236 else/s2f~;
-#X obj 536 236 else/s2f~;
-#X obj 386 149 else/impseq~;
+#X obj 386 236 s2f~;
+#X obj 536 236 s2f~;
+#X obj 386 149 impseq~;
 #X obj 386 120 bng 19 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 386 205 else/drunkard~;
-#X obj 536 205 else/drunkard~;
+#X obj 386 205 drunkard~;
+#X obj 536 205 drunkard~;
 #X floatatom 536 263 10 0 0 0 - - - 16;
 #X connect 1 0 4 0;
 #X connect 2 0 11 0;
@@ -133,8 +133,8 @@ to repeat the output., f 52;
 #X connect 27 0 20 0;
 #X restore 482 220 pd seed;
 #X text 31 157 see also;
-#X obj 32 211 else/brown~;
-#X obj 32 184 else/drunkard;
+#X obj 32 211 brown~;
+#X obj 32 184 drunkard;
 #X text 149 494 1) float;
 #X text 149 510 2) float;
 #X obj 4 546 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
@@ -152,7 +152,7 @@ to repeat the output., f 52;
 #X text 205 526 - sets maximum value (default 1);
 #X text 225 314 a float sets seed \, no float sets a unique internal
 ;
-#X obj 203 174 else/drunkard~;
+#X obj 203 174 drunkard~;
 #X connect 33 0 24 0;
 #X connect 34 0 57 0;
 #X connect 57 0 33 0;

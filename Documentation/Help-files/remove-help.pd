@@ -23,9 +23,9 @@
 #X obj 139 318 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X listbox 298 196 8 0 0 0 - - - 0;
 #X text 351 197 <--- set new element value, f 13;
-#X obj 175 251 else/display;
+#X obj 175 251 display;
 #X text 170 356 list;
-#X obj 175 222 else/remove 4 5, f 21;
+#X obj 175 222 remove 4 5, f 21;
 #X msg 175 192 1 2 3 4 5 6;
 #X msg 298 148 3 4 5;
 #X msg 149 168 1 4 5 4 3 4 5 6;
@@ -40,7 +40,7 @@
 #X text 203 297 - input list;
 #X text 204 356 - list with removed elements;
 #X text 28 216 see also;
-#X obj 26 245 else/replace;
+#X obj 26 245 replace;
 #X text 78 91 [remove] removes one or more number elements from a list. The right inlet or arguments set the elements to remove., f 58;
 #X msg 345 171 symbol x;
 #X msg 73 166 list x y z;

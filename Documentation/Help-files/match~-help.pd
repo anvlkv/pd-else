@@ -150,8 +150,8 @@
 #X restore 506 74 pd;
 #X obj 182 281 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 182 255 else/trig2bang~;
-#X obj 287 256 else/trig2bang~;
+#X obj 182 255 trig2bang~;
+#X obj 287 256 trig2bang~;
 #X text 210 324 the signal to be matched;
 #X text 147 429 1) list;
 #X text 206 428 - values to match to (default 0);
@@ -165,26 +165,26 @@
 #N canvas 697 133 526 370 example 0;
 #X obj 81 183 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 81 159 else/trig2bang~;
-#X obj 193 159 else/trig2bang~;
+#X obj 81 159 trig2bang~;
+#X obj 193 159 trig2bang~;
 #X obj 193 182 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 69 130 else/match~ 1 2 3, f 57;
+#X obj 69 130 match~ 1 2 3, f 57;
 #X obj 69 56 *~ 4;
-#X obj 69 78 else/ceil~;
-#X obj 310 161 else/trig2bang~;
+#X obj 69 78 ceil~;
+#X obj 310 161 trig2bang~;
 #X obj 310 184 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 408 160 else/trig2bang~;
+#X obj 408 160 trig2bang~;
 #X obj 408 183 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 295 214 else/resonant~ 2500 1000, f 14;
-#X obj 70 212 else/resonant~ 1000 500, f 14;
-#X obj 182 213 else/resonant~ 1500 750, f 14;
+#X obj 295 214 resonant~ 2500 1000, f 14;
+#X obj 70 212 resonant~ 1000 500, f 14;
+#X obj 182 213 resonant~ 1500 750, f 14;
 #X text 214 70 A sequencer patch;
 #X obj 69 32 phasor~ 0.75;
-#X obj 182 281 else/out~;
-#X obj 69 103 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 182 281 out~;
+#X obj 69 103 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 4 0 1 0;
@@ -205,17 +205,17 @@
 #X connect 15 0 5 0;
 #X connect 17 0 4 0;
 #X restore 463 257 pd example;
-#X obj 182 227 else/match~ 1, f 18;
+#X obj 182 227 match~ 1, f 18;
 #X text 62 92 [match~] is quite similar to pd vanilla's [select] object
 \, but is signal based and sends impulses instead of bangs.;
 #X text 62 123 When a signal value corresponds to one of the arguments
 \, an impulse is sent to its corresponding outlet. Otherwise \, the
 rightmost outlet sends an impulse., f 58;
-#X obj 182 174 else/pulse~ 1;
+#X obj 182 174 pulse~ 1;
 #X text 157 324 signal -;
 #X text 169 343 list;
 #X text 199 342 - one or more floats reset argument values;
-#X obj 182 199 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 182 199 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 287 281 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X connect 24 0 23 0;

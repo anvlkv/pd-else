@@ -29,7 +29,7 @@
 #X obj 127 39 cnv 4 4 4 empty empty with 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 167 39 cnv 4 4 4 empty empty arithmetic 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 247 39 cnv 4 4 4 empty empty means 0 28 2 18 #e0e0e0 #000000 0;
-#X obj 190 265 else/display;
+#X obj 190 265 display;
 #X text 147 428 list - list with geometric means;
 #X text 212 181 start;
 #X text 260 181 end;
@@ -43,14 +43,14 @@
 #X text 150 457 1) float - sets start (default 1);
 #X obj 114 374 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X obj 114 395 cnv 17 3 17 empty empty 3 5 9 0 16 #dcdcdc #9c9c9c 0;
-#X obj 190 232 else/amean 1 2 5;
+#X obj 190 232 amean 1 2 5;
 #X text 52 84 [amean] creates a list of arithmetic means. It takes a start point \, an end point and the number of steps from start to end., f 64;
 #X msg 142 175 10 200 4;
 #X text 156 331 list - set start/end/steps and generate list;
 #X text 52 118 The number of steps is the output list length - 1 and represents the number of values until reaching the end. The minimum number of steps is "1"., f 64;
 #X text 35 217 see also:;
-#X obj 35 245 else/gmean;
-#X obj 35 275 else/list.inc;
+#X obj 35 245 gmean;
+#X obj 35 275 list.inc;
 #X connect 0 0 40 0;
 #X connect 1 0 40 1;
 #X connect 2 0 40 2;

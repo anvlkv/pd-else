@@ -11,7 +11,7 @@
 #X obj 248 92 declare -path else;
 #N canvas 284 70 295 308 init 0;
 #X obj 87 52 loadbang;
-#X obj 87 83 else/args;
+#X obj 87 83 args;
 #X obj 87 253 outlet;
 #X msg 87 219 args \$1;
 #X obj 139 145 sel -inf;
@@ -25,7 +25,7 @@
 #X connect 6 0 3 0;
 #X connect 6 1 4 0;
 #X restore 74 77 pd init;
-#X obj 54 101 else/spread -mode 1 -100, f 12;
+#X obj 54 101 spread -mode 1 -100, f 12;
 #X connect 0 0 10 0;
 #X connect 1 0 7 0;
 #X connect 2 0 3 0;

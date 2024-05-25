@@ -53,4 +53,4 @@ methods:
 draft: false
 ---
 
-[bl.square~] is a square oscillator like [else/square~], but it is bandlimited.
+[bl.square~] is a square oscillator like [square~], but it is bandlimited.

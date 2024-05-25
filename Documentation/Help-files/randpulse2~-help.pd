@@ -152,7 +152,7 @@
 #X text 131 233 float/signal - density;
 #X text 209 359 - density (default 0);
 #X text 150 376 2) float;
-#X obj 219 164 else/randpulse2~ 50;
+#X obj 219 164 randpulse2~ 50;
 #X text 209 292 - random pulse signal;
 #X text 164 293 signal;
 #X text 128 249 rand <float>;
@@ -160,14 +160,14 @@
 #X text 209 375 - non zero sets to random gate value mode (default
 0);
 #N canvas 622 221 467 476 rand 0;
-#X obj 130 268 else/graph~ 441 3;
+#X obj 130 268 graph~ 441 3;
 #X msg 69 132 rand \$1;
 #X obj 69 107 tgl 17 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
-#X obj 147 205 else/out~;
+#X obj 147 205 out~;
 #X obj 129 132 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 129 168 else/randpulse2~ 1500 1;
+#X obj 129 168 randpulse2~ 1500 1;
 #X obj 132 105 hsl 128 15 100 44100 1 0 empty empty empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
 #X text 47 23 By default \, gate values in [randopulse2~] are "1" \,
@@ -186,8 +186,8 @@ this.;
 alternates at random intervals according to a "density" parameter \,
 which controls the average frequency.;
 #X text 35 150 see also:;
-#X obj 31 174 else/randpulse~;
-#X obj 219 190 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 31 174 randpulse~;
+#X obj 219 190 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 6 319 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
 #X text 135 328 -seed <float>: seed value (default: unique internal)
@@ -205,8 +205,8 @@ a 'seed' message without float \, the object also gets a unique seed
 value., f 57;
 #X msg 339 264 seed;
 #X msg 329 235 seed 123;
-#X obj 60 311 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 190 311 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 60 311 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 190 311 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 329 297 s \$0-randpulse2~;
 #X obj 190 223 r \$0-randpulse2~;
 #X obj 60 223 r \$0-randpulse2~;
@@ -214,8 +214,8 @@ value., f 57;
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [randpulse2~] object twice with the same seed
 to repeat the output., f 57;
-#X obj 60 253 else/randpulse2~ -seed 123 2 1, f 16;
-#X obj 190 253 else/randpulse2~ -seed 123 2 1, f 16;
+#X obj 60 253 randpulse2~ -seed 123 2 1, f 16;
+#X obj 190 253 randpulse2~ -seed 123 2 1, f 16;
 #X connect 2 0 6 0;
 #X connect 3 0 6 0;
 #X connect 7 0 11 0;
@@ -223,7 +223,7 @@ to repeat the output., f 57;
 #X connect 10 0 4 0;
 #X connect 11 0 5 0;
 #X restore 487 195 pd seed;
-#X obj 32 197 else/randpulse2;
+#X obj 32 197 randpulse2;
 #X text 279 137 <-- density;
 #X connect 16 0 27 0;
 #X connect 27 0 37 0;

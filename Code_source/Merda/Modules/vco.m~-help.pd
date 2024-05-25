@@ -17,7 +17,7 @@
 #X obj 458 359 outlet;
 #X obj 389 160 tgl 19 0 empty empty empty 0 -10 0 12 #dfdfdf #000000 #000000 0 1;
 #X floatatom 458 160 6 0 100 0 - - - 0;
-#X obj 153 150 else/knob 35 -36 36 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 153 150 knob 35 -36 36 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X text 370 143 linear FM, f 6;
 #X obj 301 160 tgl 19 0 empty empty empty 0 -10 0 12 #dfdfdf #000000 #000000 0 1;
 #X text 324 154 Soft Sync, f 4;
@@ -27,7 +27,7 @@
 #X text 56 96 saw;
 #X text 49 117 vsaw;
 #X text 35 137 square;
-#X obj 240 150 else/knob 35 -1 1 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 240 150 knob 35 -1 1 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 153 196 transp \$1;
 #X msg 389 196 lin \$1;
 #X msg 301 196 soft \$1;
@@ -37,13 +37,13 @@
 #X msg 526 196 fm \$1;
 #X msg 81 196 wave \$1;
 #X floatatom 81 166 3 0 0 0 - - - 0;
-#X obj 593 121 else/knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 753 121 else/knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 593 121 knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 753 121 knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 593 197 att_fm \$1;
 #X floatatom 593 165 5 0 0 0 - - - 0;
 #X floatatom 753 165 5 0 0 0 - - - 0;
 #X msg 753 197 att_pwm \$1;
-#X obj 672 121 else/knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 672 121 knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X floatatom 672 165 5 0 0 0 - - - 0;
 #X msg 672 197 att_pm \$1;
 #X connect 1 0 15 0;

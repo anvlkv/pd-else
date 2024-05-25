@@ -38,10 +38,10 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
 #X text 195 275 float;
-#X obj 236 184 else/display;
+#X obj 236 184 display;
 #X text 62 89 [meter] is a CPU meter based on the "Load Meter" patch
 found in Pd's Media menu.;
-#X obj 236 156 else/meter;
+#X obj 236 156 meter;
 #X msg 236 129 0;
 #X msg 269 129 1;
 #X text 207 129 off;

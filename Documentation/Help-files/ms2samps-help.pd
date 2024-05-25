@@ -51,7 +51,7 @@ values from ms to number of samples., f 53;
 #X text 96 116 Conversion expression: samps = ms * samplerate/1000.
 ;
 #X text 176 168 ms;
-#X obj 198 197 else/ms2samps;
+#X obj 198 197 ms2samps;
 #X text 146 224 Samples;
 #X text 153 331 (none);
 #X text 202 298 - converted value in number of samples;

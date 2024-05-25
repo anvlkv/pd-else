@@ -43,7 +43,7 @@ can send it messages. It's the same as [namecanvas] but it also allows
 you to set the name of a parent patch with the second optional depth
 argument - (1) is parent patch (2) is parent's parent patch and so
 on..., f 64;
-#X obj 267 178 else/canvas.setname \$0-cnv;
+#X obj 267 178 canvas.setname \$0-cnv;
 #X text 37 192 click =>;
 #X msg 104 192 obj 275 225 f;
 #X text 236 330 - canvas name (default none);

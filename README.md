@@ -11,7 +11,7 @@
 Copyright © 2017-2024 Alexandre Torres Porres and others 
 
 
-This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See License.txt <https://github.com/porres/pd-else/blob/master/License.txt> and <http://www.wtfpl.net/> for more details
+This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See License.txt <https://github.com/porres/pd-blob/master/License.txt> and <http://www.wtfpl.net/> for more details
 
 For details on authorship check the source code. Other licenses also apply for specific objects and this is also informed in the source code. 
 For instance:
@@ -32,7 +32,7 @@ This version of ELSE needs **Pd 0.54-1** or above.
 
 ELSE is a big library of externals that extends the performance Pure Data (Pd) - Miller S. Puckette's realtime computer music environment (download Pd from: http://msp.ucsd.edu/software.html).
 
-ELSE provides a cohesive system for computer music, it also serves as a basis for an Live Electronics Tutorial by the same author, yours truly, Alexandre Torres Porres. This library's repository resides at <https://github.com/porres/pd-else/>. This tutorial is also found as part of the download of the ELSE library. Look for the 'Live-Electronics-Tutorial' folder inside it and also check its README on how to install it.
+ELSE provides a cohesive system for computer music, it also serves as a basis for an Live Electronics Tutorial by the same author, yours truly, Alexandre Torres Porres. This library's repository resides at <https://github.com/porres/pd->. This tutorial is also found as part of the download of the ELSE library. Look for the 'Live-Electronics-Tutorial' folder inside it and also check its README on how to install it.
 
 ELSE is also part of PlugData by Timothy Schoen, which is a fork of Pd that loads as a standalone or VST with a revamped GUI. ELSE has received collaboration from Tim and others involved with PlugData and many objects have been included in ELSE just so they are supported in PlugData. ​See: <https://github.com/timothyschoen/PlugData>
 
@@ -42,7 +42,7 @@ This project is still in an experimental phase (currently at a 'release candidat
 
 ### Downloading ELSE:
 
-You can get ELSE from https://github.com/porres/pd-else/releases - where all releases are available, but ELSE is also found via Pd's external manager (In Pd, just go for Help => Find Externals and search for 'else'). In any case, you should download the folder to a place Pd automatically searches for, and the common place is the **~/Documents/Pd/externals** folder. Instructions on how to install and build ELSE are provided below.
+You can get ELSE from https://github.com/porres/pd-releases - where all releases are available, but ELSE is also found via Pd's external manager (In Pd, just go for Help => Find Externals and search for 'else'). In any case, you should download the folder to a place Pd automatically searches for, and the common place is the **~/Documents/Pd/externals** folder. Instructions on how to install and build ELSE are provided below.
 
 --------------------------------------------------------------------------
 
@@ -269,123 +269,123 @@ But, here are some considerations:
 - maximum/minimum => [array max] [array min] (you need to set an array with the list)
 - for [capture~] you can use [print~] 
 - for [kink~] you can use [function~] (and [function])
-- [spike~] => [else/status~] + [else/detect~] => [threshold~] + [timer]
-- [anal] is usually used with [prob] for markov chains, but you can use [else/markov] instead
-- [teeth~] is just a comb reverberator which can be constructed with [else/ffdelay~] + [else/fbdelay~]
+- [spike~] => [status~] + [detect~] => [threshold~] + [timer]
+- [anal] is usually used with [prob] for markov chains, but you can use [markov] instead
+- [teeth~] is just a comb reverberator which can be constructed with [ffdelay~] + [fbdelay~]
 - [forward] => just message boxes with ";"
-- [flush] => [poly] has a flush option, so does [else/voices]
+- [flush] => [poly] has a flush option, so does [voices]
 - for [coll], you can use [text] which miller considers is a better design, but it's simpler. 
 
 Alternatives:
 
-- 2d.wave~ => else/wt2d~ (sort of)
-- +=~ / [plusequals~] => else/add~
-- operators >~ / <~ / %~ / etc => else/op~ => [expr~]
+- 2d.wave~ => wt2d~ (sort of)
+- +=~ / [plusequals~] => add~
+- operators >~ / <~ / %~ / etc => op~ => [expr~]
 - bitwise operators (bitand~ / bitor~, etc) => [expr~]
-- accum => else/add 
+- accum => add 
 -acos/acosh/acos~/acos~/asin/asin~/atan~/atan2~/asin/asinh~/cosh/cosh~/cosx~/sinh/sinh~/sinx~/tanh/tanh~/tanx~ => [expr]/[expr~]
-- active => else/canvas.active
+- active => canvas.active
 - append => [list append] 
 - atob/atodb~/dbtoa/dbtoa~ => db2lin/lin2db/db2lin~/lin2db/~
-- bangbang => else/loadbanger => trigger
-- borax / else/noteinfo
-- average~ / avg~ => else/mov.avg~
-- bondo => else/hot
-- buffer~ => else/sample~
-- buffir~ => else/conv~
-- counter => else/count
-- changed => else/changed~
-- click~ => else/impseq~
+- bangbang => loadbanger => trigger
+- borax / noteinfo
+- average~ / avg~ => mov.avg~
+- bondo => hot
+- buffer~ => sample~
+- buffir~ => conv~
+- counter => count
+- changed => changed~
+- click~ => impseq~
 - clip/clip~ => clip/clip~
-- comb~ => else/comb.rev~
-- count~ => else/ramp~
-- cross~ => else/crossover~
-- cycle~ => else/wavetable~ => tabosc4~
-- curve~ => else/envgen~
+- comb~ => comb.rev~
+- count~ => ramp~
+- cross~ => crossover~
+- cycle~ => wavetable~ => tabosc4~
+- curve~ => envgen~
 - cartopol/poltocar/cartopol~/poltocar~ => else car2pol/pol2car/car2pol~/pol2car~ 
-- degrade~ => else/crusher~
-- drunk => else/drunkard
-- delay~ => else/ffdelay~
+- degrade~ => crusher~
+- drunk => drunkard
+- delay~ => ffdelay~
 - delta~ => [rzero~ 1]
-- deltaclip~ => else/slew~ => slop~
-- downsamp~ => else/downsample~
-- edge~ => else/status~ => threshold~
-- fromsymbol => else/symbol2any / else/separate
-- grab => else/retrieve
-- gate => else/router
-- gate~ => else/xgate~
-- histo => else/histogram
-- index~ => else/ramp~
-- iter => else/iterate
-- join => else/merge
-- listfunnel => else/order
-- loadmess => else/initmess
-- line~ => else/envgen~ => vline~ 
-- lookup~ => else/shaper~
-- lores~ => else/lowpass~
-- mean => else/mov.avg
-- matrix~ => else/mtx~
+- deltaclip~ => slew~ => slop~
+- downsamp~ => downsample~
+- edge~ => status~ => threshold~
+- fromsymbol => symbol2any / separate
+- grab => retrieve
+- gate => router
+- gate~ => xgate~
+- histo => histogram
+- index~ => ramp~
+- iter => iterate
+- join => merge
+- listfunnel => order
+- loadmess => initmess
+- line~ => envgen~ => vline~ 
+- lookup~ => shaper~
+- lores~ => lowpass~
+- mean => mov.avg
+- matrix~ => mtx~
 - maximum~/minimum~ => max~/min~/expr~ (totally unnecessary external)
-- minmax~ => else/range~
-- mstosamps~/samps2ms~ => else/ms2samps ms2samps~ samps2ms samps2ms~
-- midiflush => else/panic
-- midiformat/midiparse => midi in/out objects (else/note.in/note.out, etc)
-- mtr => else/rec
-- mousestate => else/mouse
-- onebang => else/nmess
+- minmax~ => range~
+- mstosamps~/samps2ms~ => ms2samps ms2samps~ samps2ms samps2ms~
+- midiflush => panic
+- midiformat/midiparse => midi in/out objects (note.in/note.out, etc)
+- mtr => rec
+- mousestate => mouse
+- onebang => nmess
 - onepole~ => lop~
-- overdrive~ => else/drive~
-- peakamp~ => else/peak~
-- pak => else/pack2
-- past => else/above
+- overdrive~ => drive~
+- peakamp~ => peak~
+- pak => pack2
+- past => above
 - peek~ => tabwrite
-- phaseshift~ => else/allpass.2nd~
-- phasewrap~ => else/wrap2~ => wrap~
-- pink~ => else/pinknoise~
-- play~ => else/tabplayer~
-- poke~ => else/tabwriter~
-- pong/pong~ => else/fold / else/wrap2 / else/fold~ / else/wrap2~
+- phaseshift~ => allpass.2nd~
+- phasewrap~ => wrap2~ => wrap~
+- pink~ => pinknoise~
+- play~ => tabplayer~
+- poke~ => tabwriter~
+- pong/pong~ => fold / wrap2 / fold~ / wrap2~
 - pow~ => pow~ (totally unnecessary external)
-- prepend => else/insert => [list prepend]
-- round / round~ => else/quantizer / else/quantizer~
-- rand~ => else/rampnoise~
-- record~ => else/tabwriter~
-- reson~ => else/bandpass~ 
-- scale / scale~ => else/rescale / else/rescale~
-- seq => else/midi
-- speedlim => else/limit
+- prepend => insert => [list prepend]
+- round / round~ => quantizer / quantizer~
+- rand~ => rampnoise~
+- record~ => tabwriter~
+- reson~ => bandpass~ 
+- scale / scale~ => rescale / rescale~
+- seq => midi
+- speedlim => limit
 - spell => [list fromsymbol]
-- split => else/spread
-- sprintf => else/format => makefilename
-- sustain => else/suspedal
-- switch => else/selector
-- sah~ => else/sh~ => samphold~
-- selector~ => else/xselect~
-- slide~ => else/lag2~
-- snapshot~ => else/s2f~ => snapshot~
-- svf~ => else/svfilter~
+- split => spread
+- sprintf => format => makefilename
+- sustain => suspedal
+- switch => selector
+- sah~ => sh~ => samphold~
+- selector~ => xselect~
+- slide~ => lag2~
+- snapshot~ => s2f~ => snapshot~
+- svf~ => svfilter~
 - table => array
-- tanh~ (again) => else/drive~
-- thresh~ => else/schmitt~
-- train~ => else/pulse~
-- trapezoid~ => else/envelope~
-- triangle~ => else/vsaw~
-- trunc~ => else/trunc~
-- thresh => else/combine
-- togedge => else/status
-- tosymbol => else/any2symbol / else/unite
-- unjoin => else/unmerge
-- urn => else/rand.seq
-- uzi => else/loop
-- xbendin/sbendin2/xbendout/xbenout2 => else/bend.in / else/bend.out
-- xnotein/xnoteout => else/note.in / else/note.out
-- wave~ => else/wavetable~
-- zerox~ => else/zerocross~
-- zl => several dedicated objects include functionalities from it, such as: else/group, else/scramble, else/sort, else/reverse, else/rotate, else/sum, else/slice and else/stream
+- tanh~ (again) => drive~
+- thresh~ => schmitt~
+- train~ => pulse~
+- trapezoid~ => envelope~
+- triangle~ => vsaw~
+- trunc~ => trunc~
+- thresh => combine
+- togedge => status
+- tosymbol => any2symbol / unite
+- unjoin => unmerge
+- urn => rand.seq
+- uzi => loop
+- xbendin/sbendin2/xbendout/xbenout2 => bend.in / bend.out
+- xnotein/xnoteout => note.in / note.out
+- wave~ => wavetable~
+- zerox~ => zerocross~
+- zl => several dedicated objects include functionalities from it, such as: group, scramble, sort, reverse, rotate, sum, slice and stream
 
 
 GUI:
 
-- scope~ => else/scope~ (not the same but quite similar)
-- comment => else/note (actually, comment is deprecated and based on else’s [note] now.
+- scope~ => scope~ (not the same but quite similar)
+- comment => note (actually, comment is deprecated and based on else’s [note] now.
 

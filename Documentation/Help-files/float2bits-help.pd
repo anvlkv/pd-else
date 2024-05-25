@@ -42,7 +42,7 @@
 #X obj 159 41 cnv 4 4 4 empty empty bits 0 28 2 18 -233017 -1 0;
 #X obj 33 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
-#X obj 83 215 else/float2bits 1;
+#X obj 83 215 float2bits 1;
 #X obj 85 366 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
 ;
 #X text 134 366 float;
@@ -53,12 +53,12 @@
 #X text 120 89 [float2bits] converts decimal float (IEEE754 Single precision
 32-bit) values to binary form (a list of 32 bits). By the way \, this
 is the type of float used in Pure Data.;
-#X obj 83 243 else/display;
+#X obj 83 243 display;
 #X text 120 131 [float2bits] can also send separate sets of bits (signal
 \, exponent and mantissa) when receiving a split message.;
 #N canvas 489 174 551 368 split 0;
 #X obj 50 232 route sign exponent mantissa, f 33;
-#X obj 50 179 else/float2bits;
+#X obj 50 179 float2bits;
 #X msg 50 147 set \$1 \, split;
 #X obj 50 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
@@ -68,14 +68,14 @@ is the type of float used in Pure Data.;
 #X text 58 300 exponent;
 #X text 124 266 mantissa;
 #X obj 50 27 loadbang;
-#X obj 180 262 else/display;
-#X obj 115 295 else/display;
-#X obj 50 262 else/display;
+#X obj 180 262 display;
+#X obj 115 295 display;
+#X obj 50 262 display;
 #X text 189 128 When receiving a 'split' message \, [float2bits] sends
 the bits separately as "mantissa" \, "exponent" and "signal". You can
 use [route] to retrieve these independently., f 52;
 #X obj 71 207 print split;
-#X obj 50 86 else/rand.f -100 100;
+#X obj 50 86 rand.f -100 100;
 #X connect 0 0 11 0;
 #X connect 0 1 10 0;
 #X connect 0 2 9 0;

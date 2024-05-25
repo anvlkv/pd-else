@@ -32,12 +32,12 @@
 0;
 #X obj 116 40 cnv 4 4 4 empty empty flop 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 220 153 else/imp~ 1;
+#X obj 220 153 imp~ 1;
 #X text 75 92 [toggleff~] toggles between 0 and 1 upon receiving a
 trigger. A trigger happens when the signal changes from non-positive
 to positive.;
 #X text 159 268 signal;
-#X obj 220 188 else/toggleff~;
+#X obj 220 188 toggleff~;
 #X text 147 336 1) float - initial output <0 or 1> (default 0);
 #X text 201 268 - trigger signal;
 #X text 159 303 signal;
@@ -146,7 +146,7 @@ to positive.;
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 68 pd;
-#X obj 220 217 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 220 217 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 3 3 cnv 15 301 42 empty empty toggleff~ 20 20 2 37 #e0e0e0 #000000
 0;
 #N canvas 0 22 450 278 (subpatch) 0;

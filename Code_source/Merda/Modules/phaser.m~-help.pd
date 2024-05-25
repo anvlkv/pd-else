@@ -11,9 +11,9 @@
 #X obj 361 358 about.MERDA;
 #X text 321 235 this is still a simple module \, with no CV input yet \, so kinda like a pedal still., f 22;
 #N canvas 118 97 386 301 messages 0;
-#X obj 99 61 else/knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0.1;
-#X obj 170 61 else/knob 41 5 0.1 -2 5 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 5;
-#X obj 232 61 else/knob 41 0 1 0 0 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 99 61 knob 41 0.1 5 4 0.1 empty empty #dfdfdf #bbbbbb #000000 1 0 0 0 1 320 0 0 0.1;
+#X obj 170 61 knob 41 5 0.1 -2 5 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 5;
+#X obj 232 61 knob 41 0 1 0 0 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0;
 #X msg 99 137 rate \$1;
 #X msg 170 137 bw \$1;
 #X msg 232 137 wet \$1;

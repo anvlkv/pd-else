@@ -24,8 +24,8 @@
 #X text 145 474 2) float;
 #X text 145 492 3) float;
 #X msg 287 247 1.2 2.1;
-#X obj 210 273 else/gbman~;
-#X obj 210 298 else/out~;
+#X obj 210 273 gbman~;
+#X obj 210 298 out~;
 #X msg 280 226 0.3 -0.2;
 #X text 338 247 (default);
 #X text 170 392 list;

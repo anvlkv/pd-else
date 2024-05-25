@@ -39,9 +39,9 @@
 #X obj 203 40 cnv 4 4 4 empty empty crossings 0 28 2 18 -233017 -1
 0;
 #X obj 150 152 osc~ 1;
-#X obj 150 191 else/zerocross~;
+#X obj 150 191 zerocross~;
 #X obj 327 152 osc~ 1;
-#X obj 327 200 else/zerocross~;
+#X obj 327 200 zerocross~;
 #X text 426 227 both;
 #X text 189 445 (none);
 #X text 61 86 [zerocross~] sens impulses when crossing from non-positive
@@ -167,8 +167,8 @@ outlet) and both (right outlet).;
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 71 pd;
-#X obj 128 252 else/out~;
-#X obj 414 253 else/out~;
+#X obj 128 252 out~;
+#X obj 414 253 out~;
 #X text 53 213 non-positive;
 #X text 49 228 to positive;
 #X text 217 226 non-positive;

@@ -16,8 +16,8 @@
 #N canvas 123 97 490 346 messages 0;
 #X obj 171 57 knob 40 0.5 100 2 0.5 empty empty #e4e4e4 #a8a8a8 #4d4d4d 1 0 0 0 1 270 0 0 0.5;
 #X obj 81 57 knob 40 50 10000 4 50 empty empty #e4e4e4 #a8a8a8 #4d4d4d 1 0 0 0 1 270 0 0 50;
-#X obj 251 57 else/knob 40 -100 100 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 361 57 else/knob 40 -100 100 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 251 57 knob 40 -100 100 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 361 57 knob 40 -100 100 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 81 144 cutoff \$1;
 #X floatatom 81 110 7 0 0 0 - - - 0;
 #X floatatom 171 110 7 0 0 0 - - - 0;

@@ -294,7 +294,7 @@ empty 60 8 0 10 -262130 -1 -1 -0.23 256;
 #X text 784 618 Initial Phase, f 7;
 #X obj 785 132 cnv 5 5 5 empty empty 2 0 0 0 14 -233017 -66577 0;
 #X obj 750 24 declare -path else;
-#X text 48 152 Move the circular slider ([else/circle] object) to the
+#X text 48 152 Move the circular slider ([circle] object) to the
 right to set amplitudes for both cosine (horizontal axis) and sine
 (vertical axis). Note that negative values invert the polarity of the
 function., f 55;

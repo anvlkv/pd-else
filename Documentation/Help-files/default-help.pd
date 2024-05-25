@@ -36,7 +36,7 @@
 #X obj 4 378 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
 #X text 162 329 anything;
-#X obj 229 220 else/display;
+#X obj 229 220 display;
 #X obj 229 167 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 162 359 1) anything -;
@@ -61,7 +61,7 @@
 #X text 59 87 The [default] sets a default message as the argument
 or via the right inlet. A bang outputs the default message \, other
 messages are sent through without being stored., f 69;
-#X obj 229 192 else/default a b c;
+#X obj 229 192 default a b c;
 #X connect 19 0 38 0;
 #X connect 26 0 38 1;
 #X connect 27 0 38 1;

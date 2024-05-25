@@ -6,7 +6,7 @@
 #X obj 291 289 outlet~;
 #N canvas 276 70 618 338 route 0;
 #X msg 156 135 pd~ stop;
-#X obj 46 135 else/sendmidi;
+#X obj 46 135 sendmidi;
 #X obj 156 51 inlet;
 #X obj 340 273 outlet;
 #N canvas 482 145 378 484 start 0;
@@ -46,10 +46,10 @@
 #X msg 222 258 pd-\$1 vis 0 \, pd-\$1 vis 1;
 #X obj 111 82 r \$0-fname;
 #X obj 222 194 symbol;
-#X obj 246 112 else/click;
+#X obj 246 112 click;
 #X obj 222 302 outlet;
 #X obj 111 114 file split;
-#X obj 111 138 else/slice -1;
+#X obj 111 138 slice -1;
 #X obj 222 31 inlet;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
@@ -62,7 +62,7 @@
 #N canvas 411 145 289 303 init 0;
 #X obj 82 56 loadbang;
 #X obj 82 245 s \$0-fname;
-#X obj 82 87 else/args -;
+#X obj 82 87 args -;
 #X obj 82 127 route symbol;
 #X obj 82 186 file which;
 #X obj 82 156 list append 1;

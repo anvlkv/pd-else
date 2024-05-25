@@ -58,7 +58,7 @@
 #X obj 322 134 r \$0-2to2;
 #X msg 322 158 2to2 \$1;
 #X obj 134 302 r \$0-pan2;
-#X obj 289 231 else/initmess 1;
+#X obj 289 231 initmess 1;
 #X obj 289 309 s \$0-set-vol1;
 #X obj 311 268 s \$0-set-vol2;
 #X connect 0 0 7 0;

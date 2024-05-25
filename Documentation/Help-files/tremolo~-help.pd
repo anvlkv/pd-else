@@ -1,6 +1,6 @@
 #N canvas 547 33 562 458 10;
-#X obj 219 137 else/player~ violin.wav 1 1;
-#X obj 219 190 else/tremolo~ 5 0.75;
+#X obj 219 137 player~ violin.wav 1 1;
+#X obj 219 190 tremolo~ 5 0.75;
 #X obj 306 6 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc 0;
 #X obj 345 13 cnv 10 10 10 empty empty ELSE 0 15 2 30 #7c7c7c #e0e4dc 0;
 #X obj 458 13 cnv 10 10 10 empty empty EL 0 6 2 13 #7c7c7c #e0e4dc 0;
@@ -23,7 +23,7 @@
 #X obj 130 332 cnv 17 3 17 empty \$0-pddp.cnv.let.2 2 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 178 332 float;
 #X text 178 309 float;
-#X obj 219 216 else/out~;
+#X obj 219 216 out~;
 #X obj 1 357 cnv 3 550 3 empty \$0-pddp.cnv.outlets outlets 8 12 0 13 #dcdcdc #000000 0;
 #X obj 131 365 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 173 365 signal;

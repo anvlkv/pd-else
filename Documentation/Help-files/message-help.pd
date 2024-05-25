@@ -40,7 +40,7 @@
 0;
 #X text 256 329 - the message;
 #X text 176 388 clicking on the outputs the message;
-#X obj 235 217 else/display;
+#X obj 235 217 display;
 #X text 182 190 click =>;
 #X obj 235 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
@@ -52,13 +52,13 @@ message in different ones inside the same box.;
 #X obj 122 122 print Message;
 #X obj 110 208 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 122 92 else/message 1 \, 2 \, 3;
+#X obj 122 92 message 1 \, 2 \, 3;
 #X obj 239 214 receive \$0-a;
 #X obj 239 242 print Receive;
-#X obj 110 238 else/message \; \$0-a 1 \, 2 \, 3;
+#X obj 110 238 message \; \$0-a 1 \, 2 \, 3;
 #X obj 125 409 print Message;
-#X obj 125 379 else/message, f 13;
-#X obj 247 401 else/display;
+#X obj 125 379 message, f 13;
+#X obj 247 401 display;
 #X msg 200 346 1 \\\, 2 \\\, 3;
 #X obj 95 345 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
@@ -82,9 +82,9 @@ and dollar signs., f 37;
 #X text 226 258 bang;
 #X obj 35 41 cnv 4 4 4 empty empty Store 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 235 189 else/message a b c;
+#X obj 235 189 message a b c;
 #X text 31 190 see also:;
-#X obj 28 212 else/initmess;
+#X obj 28 212 initmess;
 #X text 256 258 - outputs the message;
 #X text 202 274 anything;
 #X text 256 274 - sets and outputs the message;

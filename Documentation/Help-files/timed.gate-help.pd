@@ -63,10 +63,10 @@
 default \, the initial gate value is "1" \, but you can change that
 with the second argument. A bang will also output the last received
 gate value from a signal or float input., f 53;
-#X obj 117 146 else/timed.gate 1000;
-#X obj 117 176 else/display;
-#X obj 111 294 else/display;
-#X obj 111 264 else/timed.gate 1000 0.5;
+#X obj 117 146 timed.gate 1000;
+#X obj 117 176 display;
+#X obj 111 294 display;
+#X obj 111 264 timed.gate 1000 0.5;
 #X connect 0 0 4 0;
 #X connect 1 0 7 0;
 #X connect 2 0 7 0;
@@ -88,10 +88,10 @@ is triggered \, but you can change to "retrigger" mode \, where a new
 timed gate starts before the last was finished., f 53;
 #X text 35 87 You can set to retrigger mode with the retrigger message
 or the third argument., f 53;
-#X obj 110 241 else/display;
+#X obj 110 241 display;
 #X obj 110 167 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 110 210 else/timed.gate 1000;
+#X obj 110 210 timed.gate 1000;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 5 0 6 0;
@@ -106,8 +106,8 @@ or the third argument., f 53;
 a timed gate (with the value of the float for the given duration \,
 0 otherwise).;
 #X text 187 373 float;
-#X obj 206 200 else/timed.gate 500;
-#X obj 206 230 else/display;
+#X obj 206 200 timed.gate 500;
+#X obj 206 230 display;
 #X obj 206 263 print;
 #X text 187 405 float;
 #X connect 25 0 44 0;

@@ -54,19 +54,19 @@
 #N canvas 516 137 836 468 more 0;
 #X obj 96 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
-#X obj 141 206 else/display;
-#X obj 555 186 else/display;
+#X obj 141 206 display;
+#X obj 555 186 display;
 #X msg 152 112 10 20 30 40 50;
 #X msg 123 79 list a b c d e;
-#X obj 141 173 else/pack2 1 2 3 4 5;
+#X obj 141 173 pack2 1 2 3 4 5;
 #X text 22 13 At any inlet \, you can specify more than one element
 \, and this will also set subsequential atoms. If more atoms are provided
 as an input than the existing elements \, they'll be ignored., f 61
 ;
 #X obj 112 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
-#X obj 168 428 else/display;
-#X obj 168 395 else/pack2 1 2 3 4 5;
+#X obj 168 428 display;
+#X obj 168 395 pack2 1 2 3 4 5;
 #X msg 170 143 list x y;
 #X msg 258 143 500 5000;
 #X text 28 259 A set message behaves the same way but doesn't force
@@ -78,18 +78,18 @@ an output., f 61;
 #X text 423 47 The [pack2] object also understand "anything" messages
 \, that is messages without the "list" or symbol selector.;
 #X msg 575 125 x;
-#X obj 555 392 else/display;
+#X obj 555 392 display;
 #X text 430 239 Note that it also doesn't generate a message selector
 ("list" or "symbol") for you. If you need a list selector \, for example
 \, you can just have "list" as the first element, f 65;
 #X msg 610 331 x;
 #X obj 555 332 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
-#X obj 555 358 else/pack2 list a b;
+#X obj 555 358 pack2 list a b;
 #X msg 666 332 y;
 #X msg 678 126 y;
 #X msg 577 308 alpha beta;
-#X obj 555 152 else/pack2 alpha beta;
+#X obj 555 152 pack2 alpha beta;
 #X obj 530 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X msg 555 100 alpha beta;
@@ -119,7 +119,7 @@ an output., f 61;
 #X text 200 289 the elements of a message update the inlet's value
 they are connected to and the subsequent inlets according to the remaining
 elements - it doesn't force an output, f 56;
-#X obj 218 202 else/pack2, f 13;
+#X obj 218 202 pack2, f 13;
 #X text 51 86 [pack2] is kinda similar to Pd Vanilla's [pack] \, but
 any inlet triggers the output (though a "set" message avoids the output).
 It can also initialize a symbol value and it doesn't create a list
@@ -132,7 +132,7 @@ symbol and vice versa., f 75;
 #X text 199 397 the number of elements defines the number of inlets.
 A float or a symbol will define an initial value (default: two floats
 set to '0'), f 51;
-#X obj 218 230 else/display;
+#X obj 218 230 display;
 #X connect 26 0 33 1;
 #X connect 27 0 33 0;
 #X connect 30 0 33 0;

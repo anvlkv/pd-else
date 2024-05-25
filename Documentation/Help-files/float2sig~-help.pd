@@ -136,12 +136,12 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 2 3 graph;
 #X obj 51 196 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
-#X obj 51 252 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 51 223 else/f2s~ 100 5;
+#X obj 51 252 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 51 223 f2s~ 100 5;
 #X text 221 346 - ramp time in ms;
 #X text 61 91 [float2sig~] (or [f2s~] for short) is an abstraction that converts floats to signals or lists to multichannel signals. The conversion is smoothened by a ramp time in ms., f 67;
-#X obj 191 220 else/float2sig~ 1000 1 2 3;
-#X obj 191 250 else/sig2float~;
+#X obj 191 220 float2sig~ 1000 1 2 3;
+#X obj 191 250 sig2float~;
 #X text 292 249 <-- see also;
 #X connect 7 0 37 1;
 #X connect 12 0 37 0;

@@ -62,8 +62,8 @@
 #dcdcdc #000000 #000000 0 256;
 #X obj 175 131 hsl 128 15 1 5 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 172 194 else/randpulse2 1 1;
-#X obj 172 228 else/display;
+#X obj 172 194 randpulse2 1 1;
+#X obj 172 228 display;
 #X text 46 22 By default \, gate values in [randopulse2] are "1" \,
 but you can set it to random mode with the second argument (non zero
 value) \, where it gives you random positive and negative values (in
@@ -78,8 +78,8 @@ this.;
 #X text 60 87 [randpulse2] is a random pulse train oscillator (which
 alternates between 0 and 1 at random intervals according to a "density"
 parameter \, which controls the average frequency.;
-#X obj 199 194 else/display;
-#X obj 199 165 else/randpulse2 1;
+#X obj 199 194 display;
+#X obj 199 165 randpulse2 1;
 #X obj 6 318 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
 #X text 125 328 -seed <float>: sets seed (default: unique internal)
@@ -105,8 +105,8 @@ to repeat the output., f 52;
 #X floatatom 372 178 10 0 0 0 - - - 16;
 #X msg 572 63 seed 123;
 #X floatatom 572 178 10 0 0 0 - - - 16;
-#X obj 372 135 else/randpulse2 -seed 123 0.5 1;
-#X obj 572 135 else/randpulse2 -seed 123 0.5 1;
+#X obj 372 135 randpulse2 -seed 123 0.5 1;
+#X obj 572 135 randpulse2 -seed 123 0.5 1;
 #X text 378 25 Sync [randpulse2] objects with a seed value;
 #X connect 3 0 8 0;
 #X connect 3 0 9 0;
@@ -116,7 +116,7 @@ to repeat the output., f 52;
 #X connect 9 0 7 0;
 #X restore 488 193 pd seed;
 #X text 29 149 see also:;
-#X obj 29 172 else/randpulse2~;
-#X obj 29 195 else/randpulse;
+#X obj 29 172 randpulse2~;
+#X obj 29 195 randpulse;
 #X connect 16 0 34 0;
 #X connect 34 0 33 0;

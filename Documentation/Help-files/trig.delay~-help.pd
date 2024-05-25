@@ -158,10 +158,10 @@
 #X text 205 377 - delayed trigger;
 #X text 121 413 1) float - delay time in ms (default 0);
 #X text 424 250 see also:;
-#X obj 176 184 else/impseq~;
-#X obj 219 215 else/trig.delay~ 500;
-#X obj 412 273 else/trig.delay2~;
-#X obj 176 246 else/out~;
+#X obj 176 184 impseq~;
+#X obj 219 215 trig.delay~ 500;
+#X obj 412 273 trig.delay2~;
+#X obj 176 246 out~;
 #X text 50 91 After receiving a trigger (non-positive to positive transition)
 \, [trig.delay~] sends an impulse delayed by a given time in ms. Any
 triggers which arrive before the delayed output resets and reschedules

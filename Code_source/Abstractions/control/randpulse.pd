@@ -33,12 +33,12 @@
 #X obj 122 262 == 1;
 #X obj 238 303 s \$0-freq;
 #X obj 582 134 s \$0-rate;
-#X obj 238 121 else/args -;
-#X obj 381 222 else/swap2;
+#X obj 238 121 args -;
+#X obj 381 222 swap2;
 #X obj 382 187 list split 1;
 #X obj 447 251 s \$0-seed;
 #X obj 238 160 route float list -rate -seed;
-#X obj 515 103 else/swap2;
+#X obj 515 103 swap2;
 #X obj 516 68 list split 1;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
@@ -68,7 +68,7 @@
 #X connect 21 0 20 0;
 #X connect 21 1 20 1;
 #X restore 94 118 pd args;
-#X obj 61 57 else/lb 3, f 10;
+#X obj 61 57 lb 3, f 10;
 #X connect 3 0 0 0;
 #X connect 3 1 2 0;
 #X connect 3 2 1 0;
@@ -185,7 +185,7 @@
 #X obj 64 151 v out_\$0;
 #X obj 147 76 expr dir_\$0 > 0;
 #X obj 64 219 sel 1;
-#X obj 114 286 else/rand.f -1 1;
+#X obj 114 286 rand.f -1 1;
 #N canvas 68 97 450 300 seed 0;
 #X obj 184 187 outlet;
 #X obj 136 37 r \$0-seed;

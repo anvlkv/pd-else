@@ -42,7 +42,7 @@
 0;
 #X text 256 299 - the message;
 #X text 161 378 clicking on the outputs the message;
-#X obj 238 217 else/display;
+#X obj 238 217 display;
 #X text 185 190 click =>;
 #X obj 238 162 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
@@ -58,8 +58,8 @@ message in different ones inside the same box.;
 box into a send object;
 #X obj 234 236 receive \$0-a;
 #X obj 234 264 print Receive;
-#X obj 117 104 else/initmess 1 \, 2 \, 3;
-#X obj 105 260 else/initmess \; \$0-a 1 \, 2 \, 3;
+#X obj 117 104 initmess 1 \, 2 \, 3;
+#X obj 105 260 initmess \; \$0-a 1 \, 2 \, 3;
 #X connect 1 0 7 0;
 #X connect 3 0 8 0;
 #X connect 5 0 6 0;
@@ -74,7 +74,7 @@ patch. As an object \, it can also deal with "\$0" and arguments and
 expand them., f 71;
 #X text 226 268 bang;
 #X text 256 268 - resends message;
-#X obj 238 189 else/initmess a b c;
+#X obj 238 189 initmess a b c;
 #X text 208 329 the message \, where commas and semicolons behave as
 usual in message boxes \, dollarsigns behave as usual inside objects
 too (default none), f 52;

@@ -39,7 +39,7 @@
 ;
 #X obj 4 476 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 234 271 else/display;
+#X obj 234 271 display;
 #X msg 264 152 9 0 3 1 10 20 33;
 #X msg 336 178 1;
 #X msg 303 178 -1;
@@ -49,13 +49,13 @@
 #X text 153 363 float -;
 #X text 207 363 order (negative is descending \, ascending otherwise)
 ;
-#X obj 303 235 else/display;
+#X obj 303 235 display;
 #X text 155 396 list -;
 #X obj 103 419 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 155 419 list -;
 #X text 209 420 the sorted list as indexes of the original input;
-#X obj 234 210 else/sort -1;
+#X obj 234 210 sort -1;
 #X obj 234 151 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 134 318 anything -;

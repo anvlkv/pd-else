@@ -21,14 +21,14 @@
 #X obj 122 345 cnv 17 3 17 empty empty 3 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #N canvas 512 142 467 416 pulse 0;
-#X obj 174 314 else/out~;
+#X obj 174 314 out~;
 #X obj 212 191 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 209 216 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 43 139 The pulse width is set via the first argument or the
 second inlet.;
-#X obj 174 269 else/square~ 100 0;
+#X obj 174 269 square~ 100 0;
 #X text 37 22 The pulse width parameter controls how much of the cycle
 is "1" or "-1". A pulse width of 0.5 means the first half is "1" and
 the last half is "-1".;
@@ -36,7 +36,7 @@ the last half is "-1".;
 rest is "-1". Conversely \, a pulse width of 1 has the opposite situation
 (the entire period is "1" except the last sample \, which is "-1").
 ;
-#X obj 209 241 else/float2sig~ 10;
+#X obj 209 241 float2sig~ 10;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 4 0 0 0;
@@ -46,7 +46,7 @@ rest is "-1". Conversely \, a pulse width of 1 has the opposite situation
 #X text 425 32 The phase values are wrapped into the 0-1 range \, since
 the phase cycle is from 0 to 1 - where 1 is also the start of another
 cycle., f 36;
-#X obj 463 184 else/out~;
+#X obj 463 184 out~;
 #X text 570 141 Phase Modulation:;
 #X obj 556 114 osc~ 50.05;
 #X text 355 120 1;
@@ -54,11 +54,11 @@ cycle., f 36;
 #000000 #000000 0 1;
 #X floatatom 214 145 4 0 0 0 - - - 0;
 #X text 195 120 0;
-#X obj 463 141 else/square~ 200;
+#X obj 463 141 square~ 200;
 #X obj 243 213 +~;
-#X obj 73 175 else/square~ 100 0.5 0.5;
-#X obj 259 176 else/square~ 100;
-#X obj 243 250 else/out~;
+#X obj 73 175 square~ 100 0.5 0.5;
+#X obj 259 176 square~ 100;
+#X obj 243 250 out~;
 #X text 50 25 The third argument sets an initial phase (or "phase offset").
 This is also settable with the fourth inlet. In such a way \, you have
 two objects with the same frequency falling out and back in sync. Another
@@ -77,12 +77,12 @@ feature is phase modulation., f 51;
 LFOs and control with MIDI. A sync with audio is useful for the "hard
 sync" technique \, where an oscillator is synced according to the frequency
 of a master frequency., f 44;
-#X obj 536 266 else/out~;
+#X obj 536 266 out~;
 #X obj 598 169 nbx 5 14 110 200 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 699 195 Master oscillator;
 #X text 658 230 Slave oscillator;
-#X obj 598 195 else/imp~ 110;
+#X obj 598 195 imp~ 110;
 #X text 508 373 NOTE:;
 #X text 524 406 The "phase sync" inlet is quite different from the
 "phase offset" inlet. This means that the are completely independent.
@@ -96,13 +96,13 @@ Send it impulses above and check the result. Use a multiplier to reset
 to another phase value.;
 #X text 33 15 The third inlet resets the phase and behaves in the same
 way for control data as the phase sync inlet of other objects like
-[else/sine~]. A number input resets the oscillator and restarts the
+[sine~]. A number input resets the oscillator and restarts the
 cycle with an initial phase that corresponds to the input number \,
 so the internal phase is synced to the given value. The phase values
 are from 0 to 1 and values beyond that are wrapped within this range.
 ;
-#X obj 83 221 else/sig2float~;
-#X obj 258 224 else/sig2float~;
+#X obj 83 221 sig2float~;
+#X obj 258 224 sig2float~;
 #X text 223 139 <= reset =>;
 #N canvas 207 34 366 264 (subpatch) 0;
 #X obj 51 101 tgl 42 0 \$0-tgl-s \$0-tgl-r empty 1 8 1 9 #dcdcdc #7c7c7c
@@ -213,18 +213,18 @@ are from 0 to 1 and values beyond that are wrapped within this range.
 #X msg 146 140 0.75;
 #X msg 189 140 1;
 #X msg 111 140 0.5;
-#X obj 83 194 else/square~ 1;
-#X obj 258 200 else/square~ 1;
+#X obj 83 194 square~ 1;
+#X obj 258 200 square~ 1;
 #X obj 83 252 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 258 250 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 536 229 else/square~ 200;
+#X obj 536 229 square~ 200;
 #X msg 418 141 0.25;
 #X msg 344 140 0.75;
 #X msg 312 140 1;
 #X msg 384 140 0.5;
-#X obj 312 172 else/impseq~;
+#X obj 312 172 impseq~;
 #X connect 2 0 5 0;
 #X connect 5 0 23 2;
 #X connect 10 0 21 0;
@@ -278,8 +278,8 @@ are from 0 to 1 and values beyond that are wrapped within this range.
 #X obj 227 139 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 287 138 <= hz;
-#X obj 227 166 else/square~ 220;
-#X obj 227 202 else/out~;
+#X obj 227 166 square~ 220;
+#X obj 227 202 out~;
 #X text 267 379 square wave signal;
 #X text 60 87 [square~] is a square oscillator that accepts negative
 frequencies \, has inlets for pulse width \, phase sync and phase modulation.
@@ -287,6 +287,6 @@ frequencies \, has inlets for pulse width \, phase sync and phase modulation.
 #X text 164 326 float/signal - phase sync (resets internal phase)
 ;
 #X text 379 160 see also:;
-#X obj 447 160 else/bl.square~;
+#X obj 447 160 bl.square~;
 #X connect 34 0 36 0;
 #X connect 36 0 37 0;

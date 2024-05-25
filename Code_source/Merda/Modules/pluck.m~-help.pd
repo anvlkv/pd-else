@@ -19,10 +19,10 @@
 #X msg 94 140 cutoff \$1;
 #X floatatom 184 111 7 100 10000 0 - - - 0;
 #X msg 184 140 decay \$1;
-#X obj 184 47 else/knob 50 100 10000 1 100 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 100;
-#X obj 94 47 else/knob 50 500 15000 1 500 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 500;
-#X obj 269 55 else/knob 40 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 379 55 else/knob 40 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 184 47 knob 50 100 10000 1 100 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 100;
+#X obj 94 47 knob 50 500 15000 1 500 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 500;
+#X obj 269 55 knob 40 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 379 55 knob 40 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X floatatom 269 111 7 0 0 0 - - - 0;
 #X floatatom 379 111 7 0 0 0 - - - 0;
 #X msg 269 140 cutoff_att \$1;

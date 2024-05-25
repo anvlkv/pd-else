@@ -30,7 +30,7 @@
 #X text 117 325 version;
 #X text 135 358 list;
 #X msg 227 126 version;
-#X obj 213 258 else/display;
+#X obj 213 258 display;
 #X text 170 308 - prints library information on the terminal;
 #X text 170 325 - outputs version information as a list;
 #X obj 95 398 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
@@ -40,7 +40,7 @@
 #X text 135 419 list;
 #X text 170 399 - Pd version (major \, minor \, bugfix);
 #X text 170 420 - Pd flavor information;
-#X obj 213 231 else/format ELSE %d.%d-%d_%s-%d;
+#X obj 213 231 format ELSE %d.%d-%d_%s-%d;
 #X text 123 374 symbol;
 #X text 170 375 - ELSE's directory when receiving 'dir' message;
 #X text 254 452 NONE, f 6;

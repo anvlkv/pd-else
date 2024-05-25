@@ -7,7 +7,7 @@
 #X obj 109 293 cnv 17 3 54 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 181 293 signal;
 #X text 181 434 signal;
-#X obj 230 222 else/out~;
+#X obj 230 222 out~;
 #X obj 2 3 cnv 15 301 42 empty empty highshelf~ 20 20 2 37 #e0e0e0 #000000 0;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
@@ -30,7 +30,7 @@
 #X obj 667 119 hsl 128 15 0.1 1 0 0 empty \$0-Q-set empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 614 70 hsl 128 15 20 20000 1 0 empty \$0-Hz-set empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 558 116 noise~;
-#X obj 558 208 else/out~;
+#X obj 558 208 out~;
 #X obj 664 143 nbx 5 14 1e-06 1 0 0 \$0-Q empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 611 94 nbx 4 14 20 20000 0 0 \$0-Hz empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 502 20 Change the parameters and check the filter response below. The graph considers a sample rate of 44.1Khz.;
@@ -47,15 +47,15 @@
 #X obj 87 54 loadbang;
 #X obj 87 156 outlet;
 #X obj 254 89 r \$0-G;
-#X obj 87 127 else/bicoeff2 highshelf 1000 0.1 12;
+#X obj 87 127 bicoeff2 highshelf 1000 0.1 12;
 #X connect 0 0 5 0;
 #X connect 1 0 5 1;
 #X connect 2 0 5 0;
 #X connect 4 0 5 2;
 #X connect 5 0 3 0;
 #X restore 19 272 pd coeff;
-#X obj 19 299 else/biplot;
-#X obj 558 175 else/highshelf~ 1000 0.1 12;
+#X obj 19 299 biplot;
+#X obj 558 175 highshelf~ 1000 0.1 12;
 #X text 26 230 [1] found in https://webaudio.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.html, f 80;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
@@ -78,7 +78,7 @@
 #X text 138 499 3) float - gain in dB (default 0), f 53;
 #X text 138 482 2) float - slope from 0 to 1 (default 0), f 53;
 #X text 138 464 1) float - shelving frequency in Hertz (default 0), f 53;
-#X obj 230 191 else/highshelf~ 1500 0.5 -8;
+#X obj 230 191 highshelf~ 1500 0.5 -8;
 #X obj 305 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc 0;
 #X obj 344 11 cnv 10 10 10 empty empty ELSE 0 15 2 30 #7c7c7c #e0e4dc 0;
 #X obj 457 11 cnv 10 10 10 empty empty EL 0 6 2 13 #7c7c7c #e0e4dc 0;

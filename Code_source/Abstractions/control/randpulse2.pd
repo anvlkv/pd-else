@@ -15,14 +15,14 @@
 #X msg 81 263 0;
 #X obj 81 295 change;
 #X msg 111 263 1;
-#X obj 81 476 else/rand.f -1 1;
-#X obj 81 324 else/tempo 0 100 -ms;
+#X obj 81 476 rand.f -1 1;
+#X obj 81 324 tempo 0 100 -ms;
 #X obj 272 97 declare -path else;
 #X obj 81 199 select 0;
 #X obj 81 442 select 1, f 13;
 #N canvas 290 158 428 412 init 0;
-#X obj 108 67 else/args -;
-#X obj 193 165 else/swap2;
+#X obj 108 67 args -;
+#X obj 193 165 swap2;
 #X obj 194 130 list split 1;
 #X obj 250 194 s \$0-seed;
 #X obj 108 35 loadbang;

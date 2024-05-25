@@ -60,14 +60,14 @@
 #X text 240 308 - refresh rate in ms;
 #X text 104 415 -rate <float>: sets refresh rate in ms (default 5 \,
 minimum 1), f 61;
-#X obj 45 170 else/glide2;
-#X obj 45 214 else/glide~;
-#X obj 45 192 else/slew;
+#X obj 45 170 glide2;
+#X obj 45 214 glide~;
+#X obj 45 192 slew;
 #X obj 227 223 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 224 136 else/pulse 0.25;
-#X obj 224 197 else/glide 2000, f 18;
-#X obj 224 158 else/display 2;
+#X obj 224 136 pulse 0.25;
+#X obj 224 197 glide 2000, f 18;
+#X obj 224 158 display 2;
 #X floatatom 329 176 5 0 0 0 - - - 0;
 #X text 363 171 glide time, f 5;
 #N canvas 868 80 383 211 exp 0;
@@ -77,14 +77,14 @@ minimum 1), f 61;
 #X msg 157 86 exp \$1;
 #X obj 57 163 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 54 76 else/pulse 0.25;
-#X obj 54 137 else/glide 2000, f 18;
-#X obj 54 98 else/display 2;
+#X obj 54 76 pulse 0.25;
+#X obj 54 137 glide 2000, f 18;
+#X obj 54 98 display 2;
 #X msg 188 34 0.5;
 #X msg 222 34 -0.5;
 #X text 265 68 You can set exponential factors like in [rescale]. Check
 it out as well., f 13;
-#X obj 264 146 else/rescale;
+#X obj 264 146 rescale;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -97,18 +97,18 @@ it out as well., f 13;
 #X restore 492 173 pd exp;
 #N canvas 806 193 494 369 example 0;
 #X obj 78 256 osc~;
-#X obj 78 293 else/out~;
+#X obj 78 293 out~;
 #X text 185 29 <= random numbers generated once a second;
 #X text 212 52 <= values rescaled to 200-800 range;
-#X obj 78 30 else/stepnoise 1;
-#X obj 78 53 else/rescale 200 800;
+#X obj 78 30 stepnoise 1;
+#X obj 78 53 rescale 200 800;
 #X floatatom 78 223 8 0 0 0 - - - 0;
 #X text 174 194 <= values are limited \, generating a portamento;
 #X msg 158 141 rate \$1;
 #X floatatom 158 106 5 0 0 0 - - - 0;
 #X text 195 104 <= increasing refresh rate generates steps, f 22;
-#X obj 78 194 else/glide 750;
-#X obj 78 100 else/display;
+#X obj 78 194 glide 750;
+#X obj 78 100 display;
 #X connect 0 0 1 0;
 #X connect 4 0 5 0;
 #X connect 5 0 12 0;
@@ -122,7 +122,7 @@ it out as well., f 13;
 #X obj 166 240 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 163 176 7 0 0 0 - - - 0;
-#X obj 163 147 else/rand.f 0 1;
+#X obj 163 147 rand.f 0 1;
 #X obj 163 123 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X msg 97 178 rate \$1;
@@ -133,7 +133,7 @@ it out as well., f 13;
 #X text 42 33 By default \, the refresh rate is 5 ms \, but you can
 change it with the -rate flag or the rate message. If you change the.
 , f 61;
-#X obj 163 212 else/glide -rate 250 1500;
+#X obj 163 212 glide -rate 250 1500;
 #X connect 1 0 10 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;

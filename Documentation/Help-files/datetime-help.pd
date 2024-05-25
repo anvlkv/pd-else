@@ -16,10 +16,10 @@
 #000000;
 #X listbox 156 179 22 0 0 0 - - - 16;
 #X text 56 29 Formatting the list values;
-#X obj 60 64 else/tempo -on -ms 1000;
-#X obj 60 133 else/datetime;
-#X obj 156 143 else/format list %d/%.2d/%.2d (%s);
-#X obj 60 230 else/format symbol %.2d:%.2d:%.2d;
+#X obj 60 64 tempo -on -ms 1000;
+#X obj 60 133 datetime;
+#X obj 156 143 format list %d/%.2d/%.2d (%s);
+#X obj 60 230 format symbol %.2d:%.2d:%.2d;
 #X connect 0 0 7 0;
 #X connect 2 0 6 0;
 #X connect 5 0 2 0;
@@ -58,11 +58,11 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 2 4 graph;
-#X obj 180 186 else/display;
+#X obj 180 186 display;
 #X text 70 88 [datetime] gives us current/local date (right outlet)
 and time (left outlet) as lists., f 53;
-#X obj 180 155 else/datetime;
-#X obj 255 186 else/display;
+#X obj 180 155 datetime;
+#X obj 255 186 display;
 #X text 254 216 date: year/month/day/weekday;
 #X text 118 216 time: hour \, min \, sec;
 #X text 163 251 - outputs date and time, f 53;

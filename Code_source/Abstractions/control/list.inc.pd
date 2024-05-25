@@ -6,10 +6,10 @@
 #N canvas 332 105 445 466 guts 0;
 #X obj 158 184 unpack f f f;
 #X obj 101 251 until;
-#X obj 78 367 else/group;
+#X obj 78 367 group;
 #X msg 287 223 *;
 #X msg 252 222 +;
-#X obj 178 325 else/op;
+#X obj 178 325 op;
 #X obj 78 409 outlet;
 #X obj 78 18 inlet;
 #X obj 264 163 != 0;
@@ -23,7 +23,7 @@
 #X obj 78 167 t b b b;
 #N canvas 529 141 420 330 init 0;
 #X obj 97 45 loadbang;
-#X obj 97 80 else/args -;
+#X obj 97 80 args -;
 #X obj 97 124 route -r, f 17;
 #X obj 97 161 t a b;
 #X obj 129 192 s \$0-ratio;

@@ -7,7 +7,7 @@
 #X obj 97 352 cnv 17 3 17 empty empty n 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 147 351 signal;
 #X text 147 384 signal;
-#X obj 270 231 else/out~;
+#X obj 270 231 out~;
 #X obj 2 3 cnv 15 301 42 empty empty xselect~ 20 20 2 37 #e0e0e0 #000000 0;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
@@ -47,10 +47,10 @@
 #X text 189 351 - inputs to select from;
 #X obj 97 406 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 160 406 list;
-#X obj 270 200 else/xselect~ 2 1000 1;
+#X obj 270 200 xselect~ 2 1000 1;
 #X text 136 434 1) float - number of inputs (default 1 \, max 512);
 #N canvas 603 150 633 378 status 0;
-#X obj 182 261 else/out~;
+#X obj 182 261 out~;
 #X obj 182 44 vradio 15 1 0 3 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0;
 #X floatatom 182 99 3 0 2 0 - - - 0;
 #X text 202 43 0: none;
@@ -60,7 +60,7 @@
 #X text 36 127 crossfade duration, f 9;
 #X text 202 59 1: input 1;
 #X text 202 74 2: input 2;
-#X obj 299 260 else/display;
+#X obj 299 260 display;
 #X text 379 216 you can use status to feed [switch~] objects, f 18;
 #X obj 299 315 s \$0-status;
 #X text 373 203 <= open and see how;
@@ -102,7 +102,7 @@
 #X connect 7 0 5 0;
 #X connect 8 0 0 0;
 #X restore 299 205 pd input-2;
-#X obj 182 230 else/xselect~ 2 20, f 20;
+#X obj 182 230 xselect~ 2 20, f 20;
 #X text 296 71 You can use the off status report from the right outlet to turn a subpatch off. But in order to turn it on you need to use the float input. Open the subpatches below to see how this works., f 43;
 #X obj 307 291 print off-status;
 #X connect 1 0 2 0;
@@ -121,10 +121,10 @@
 #X obj 312 173 osc~ 330;
 #X obj 399 174 osc~ 440;
 #X text 28 177 see also:;
-#X obj 29 200 else/select~;
-#X obj 29 221 else/xselect2~;
-#X obj 29 242 else/xselect.mc~;
-#X obj 29 264 else/xgate~;
+#X obj 29 200 select~;
+#X obj 29 221 xselect2~;
+#X obj 29 242 xselect.mc~;
+#X obj 29 264 xgate~;
 #X connect 15 0 18 0;
 #X connect 18 0 44 0;
 #X connect 20 0 44 0;

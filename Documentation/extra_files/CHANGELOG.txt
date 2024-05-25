@@ -613,7 +613,7 @@ Breaking changes:
 Enhancements/fixes:
 - [unmerge] fixed output for mixed (float/symbol) input.
 - [break] now can break with symbols more than character that matches the argument.
-- [presets] fixed a bug where it didn't handle messages with a single '|' (as needed for [else/sequencer]).
+- [presets] fixed a bug where it didn't handle messages with a single '|' (as needed for [sequencer]).
 - [sequencer]: fixed float input not take into account barlines as elements in the sequence. Fixed dealing with actual symbols that start with "-" (by not considering a symbol separator). Added 'clear' method - plus other fixes.
 - [sample~]: fixed 'load' message.
 - 1 new object for a total of 425: [pattern]. 

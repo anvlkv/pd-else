@@ -11,14 +11,14 @@
 #X text 272 230 soft clip;
 #X text 269 197 DC filter;
 #X floatatom 310 341 7 -200 200 0 - - - 0;
-#X obj 310 288 else/knob 41 -2 2 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
+#X obj 310 288 knob 41 -2 2 0 0 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
 #X text 302 265 feedback;
 #X floatatom 217 84 7 0 0 0 - - - 0;
-#X obj 217 31 else/knob 41 15 5000 4 15 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
+#X obj 217 31 knob 41 15 5000 4 15 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
 #X text 294 60 cutoff;
 #X text 363 60 resonance;
 #X floatatom 151 232 5 0 100 0 - - - 0;
-#X obj 151 180 else/knob 41 0 1 0 0.5 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
+#X obj 151 180 knob 41 0 1 0 0.5 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0;
 #X obj 217 162 lowpass~ 1000 1.5, f 23;
 #X obj 217 230 drive~;
 #X obj 42 352 out~;
@@ -29,8 +29,8 @@
 #X text 127 44 time in ms;
 #X text 55 184 Input;
 #X text 470 23 Here's a patch that is the basis of a high level delay object in the ELSE library \, called [filterdelay~]. As the name implies \, this is a delay unit with a built in filter., f 55;
-#X obj 296 83 else/knob 41 20 10000 4 20 empty empty #dfdfdf #afafaf black 2 0 0 0 1 320 0;
-#X obj 375 83 else/knob 41 0.7 10 4 0.7 empty empty #dfdfdf #afafaf black 2 0 0 0 1 320 0;
+#X obj 296 83 knob 41 20 10000 4 20 empty empty #dfdfdf #afafaf black 2 0 0 0 1 320 0;
+#X obj 375 83 knob 41 0.7 10 4 0.7 empty empty #dfdfdf #afafaf black 2 0 0 0 1 320 0;
 #X text 144 158 dry/wet;
 #X text 470 87 The [xfade~] object controls a dry and wet parameter by crossfading between the original input and the delayed and filtered signal. The filter is a resonant lowpass filter ([lowpass~]) but we also have a DC filter and a soft clip stage because the feedback parameter has no constrains \, which means you can have a big feedback coefficient value that would normally blow things up so they are contained by the DC filter and soft clipper. Note that negative feedback values are also allowed., f 55;
 #X text 470 223 Note that the filtered signal goes back into the delay line. This means that we have a recursive filtering at each feedback iteration. Hence \, a higher resonance value will increasily reinforce a given frequency. This is a bit like having a feedback parameter higher than 1 or lower than -1 \, so the DC filtering and soft clipping come in hand here as well. When things get too crazy you can clear the delay line., f 55;

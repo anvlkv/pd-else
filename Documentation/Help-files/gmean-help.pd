@@ -29,7 +29,7 @@
 #X obj 127 39 cnv 4 4 4 empty empty with 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 167 39 cnv 4 4 4 empty empty geometric 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 247 39 cnv 4 4 4 empty empty means 0 28 2 18 #e0e0e0 #000000 0;
-#X obj 189 277 else/display;
+#X obj 189 277 display;
 #X text 147 439 list - list with geometric means;
 #X text 211 193 start;
 #X text 259 193 end;
@@ -46,11 +46,11 @@
 #X text 52 84 [gmean] creates a list of geometric means. It takes a start point \, an end point and the number of steps from start to end., f 64;
 #X text 156 342 list - set start/end/steps and generate list;
 #X msg 142 187 10 200 4;
-#X obj 188 244 else/gmean 1 2 5;
+#X obj 188 244 gmean 1 2 5;
 #X text 52 119 The number of steps is the output list length - 1 and represents the number of values until reaching the end. The minimum number of steps is "1"., f 64;
 #X text 45 227 see also:;
-#X obj 45 285 else/list.inc;
-#X obj 45 255 else/amean;
+#X obj 45 285 list.inc;
+#X obj 45 255 amean;
 #X connect 0 0 43 0;
 #X connect 1 0 43 1;
 #X connect 2 0 43 2;

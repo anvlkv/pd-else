@@ -62,13 +62,13 @@ range for the output., f 53;
 #dcdcdc #000000 #000000 0 256;
 #X text 187 255 cutoff in hertz;
 #X obj 127 365 biquad~;
-#X obj 127 394 else/plate.rev~ 50 0.9 0.9 0.9 0.7, f 18;
-#X obj 160 335 else/bl.saw~;
+#X obj 127 394 plate.rev~ 50 0.9 0.9 0.9 0.7, f 18;
+#X obj 160 335 bl.saw~;
 #X obj 160 312 sig~ 35;
-#X obj 127 227 else/rescale 200 700;
-#X obj 127 282 else/bicoeff2 lowpass 500 20;
-#X obj 127 83 else/rampnoise 0.5;
-#X obj 137 437 else/out~;
+#X obj 127 227 rescale 200 700;
+#X obj 127 282 bicoeff2 lowpass 500 20;
+#X obj 127 83 rampnoise 0.5;
+#X obj 137 437 out~;
 #X connect 1 0 2 0;
 #X connect 2 0 9 0;
 #X connect 3 0 10 0;
@@ -82,15 +82,15 @@ range for the output., f 53;
 #X connect 11 0 1 0;
 #X restore 465 246 pd rescale;
 #X text 187 427 - frequency in hertz (default 0), f 55;
-#X obj 34 232 else/rampnoise~;
+#X obj 34 232 rampnoise~;
 #X text 104 332 seed <float>;
-#X obj 241 181 else/rampnoise 2;
+#X obj 241 181 rampnoise 2;
 #X text 37 207 see also:;
 #X text 187 363 - ramp noise's waveform in the range from 0 - 127;
 #X text 64 91 [rampnoise] is a control rate ramp noise. It doesn't
 need the DSP on to function. Give it a seed value if you want a reproducible
 output.;
-#X obj 34 254 else/stepnoise;
+#X obj 34 254 stepnoise;
 #N canvas 459 157 726 249 seed 0;
 #X text 30 19 Pseudo random number generators aren't true random number
 generators. Instead \, an algorithm is used to provide a sequence of
@@ -114,8 +114,8 @@ to repeat the output., f 52;
 #X obj 545 193 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dfdfdf
 #000000 #000000 0 1;
 #X text 387 25 Sync [rampnoise] objects with a seed value;
-#X obj 542 120 else/rampnoise -seed 507 1, f 14;
-#X obj 382 120 else/rampnoise -seed 507 1, f 14;
+#X obj 542 120 rampnoise -seed 507 1, f 14;
+#X obj 382 120 rampnoise -seed 507 1, f 14;
 #X connect 3 0 12 0;
 #X connect 3 0 11 0;
 #X connect 4 0 12 0;
@@ -131,7 +131,7 @@ to repeat the output., f 52;
 , f 54;
 #X text 199 332 a float sets seed \, no float sets a unique internal
 ;
-#X obj 34 277 else/lfnoise;
+#X obj 34 277 lfnoise;
 #X connect 17 0 18 0;
 #X connect 18 0 31 0;
 #X connect 31 0 23 0;

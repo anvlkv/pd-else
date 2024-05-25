@@ -164,7 +164,7 @@
 #X text 187 565 - sets Q/Slope (default 1), f 53;
 #X obj 188 223 biquad~;
 #X obj 125 178 noise~;
-#X obj 188 248 else/out~;
+#X obj 188 248 out~;
 #X obj 188 148 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 264 148 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -220,11 +220,11 @@ Change below from the two types and see the filter's response below.
 freq \, q/slope and gain. It also takes a message that starts with
 the filter type and takes 3 more optional arguments.;
 #X text 272 175 sets: freq \, slope \, gain, f 12;
-#X obj 169 210 else/bicoeff2;
-#X obj 449 208 else/bicoeff2 500 10;
+#X obj 169 210 bicoeff2;
+#X obj 449 208 bicoeff2 500 10;
 #X obj 677 219 s \$0-bicoeff2;
-#X obj 677 188 else/bicoeff2 eq 500 10 24;
-#X obj 6 273 else/biplot;
+#X obj 677 188 bicoeff2 eq 500 10 24;
+#X obj 6 273 biplot;
 #X obj 449 239 s \$0-bicoeff2;
 #X obj 169 235 s \$0-bicoeff2;
 #X obj 6 246 r \$0-bicoeff2;
@@ -256,24 +256,24 @@ the filter type and takes 3 more optional arguments.;
 ;
 #X text 70 86 [bicoeff2] generates coefficients for vanilla's [biquad~]
 according to different filter types. All inlets are hot!, f 61;
-#X obj 188 172 else/bicoeff2 eq 500 10 24;
+#X obj 188 172 bicoeff2 eq 500 10 24;
 #N canvas 399 107 925 491 related 0;
-#X obj 627 55 else/bandpass~;
-#X obj 629 81 else/bandstop~;
-#X obj 724 55 else/lowpass~;
-#X obj 724 81 else/highpass~;
-#X obj 724 105 else/lowshelf~;
-#X obj 724 130 else/highshelf~;
-#X obj 629 105 else/resonant~;
-#X obj 629 130 else/eq~;
+#X obj 627 55 bandpass~;
+#X obj 629 81 bandstop~;
+#X obj 724 55 lowpass~;
+#X obj 724 81 highpass~;
+#X obj 724 105 lowshelf~;
+#X obj 724 130 highshelf~;
+#X obj 629 105 resonant~;
+#X obj 629 130 eq~;
 #X text 387 49 The else library carries related objects with all the
 filter types \, and with the same name! These have signal inlets to
 control all the parameters. They are:, f 35;
-#X obj 17 173 else/biplot;
-#X text 40 89 The [else/biplot] object below is a great companion to
+#X obj 17 173 biplot;
+#X text 40 89 The [biplot] object below is a great companion to
 [bicoeff2] as it plots the filter response from a list of biquad coefficients
 , f 50;
-#X obj 657 25 else/allpass.2nd~;
+#X obj 657 25 allpass.2nd~;
 #X restore 471 265 pd related \; objects;
 #X text 199 401 sets filter type: <allpass \, lowpass \, highpass \,
 bandpass \, resonant \, bandstop \, eq \, lowshelf \, highshelf \,

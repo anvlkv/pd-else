@@ -53,4 +53,4 @@ methods:
 draft: false
 ---
 
-[bl.vsaw~] is a variable sawtooth waveform oscillator that also becomes a triangular osccilator just like [else/vsaw~], but it is bandlimited.
+[bl.vsaw~] is a variable sawtooth waveform oscillator that also becomes a triangular osccilator just like [vsaw~], but it is bandlimited.

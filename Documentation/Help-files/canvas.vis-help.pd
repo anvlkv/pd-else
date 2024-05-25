@@ -39,12 +39,12 @@
 0;
 #X text 152 326 1) float - depth \, default 0 (current window);
 #N canvas 761 302 389 296 subpatch 0;
-#X obj 132 108 else/display;
+#X obj 132 108 display;
 #X obj 151 241 print subptach;
 #X obj 132 151 sel 0 1;
 #X text 55 26 The [canvas.vis] reports this subpatch's window visibility.
 , f 43;
-#X obj 132 81 else/canvas.vis;
+#X obj 132 81 canvas.vis;
 #X text 157 111 visibility;
 #X msg 136 206 is invisible;
 #X msg 151 177 is visible;
@@ -60,13 +60,13 @@
 also abstractions!!, f 37;
 #X text 61 20 With the depth argument of 1 \, this [canvas.vis] reports
 the parent patch visibility., f 35;
-#X obj 107 102 else/display;
+#X obj 107 102 display;
 #X obj 126 235 print subptach;
 #X obj 107 145 sel 0 1;
 #X text 132 105 visibility;
 #X msg 111 200 is invisible;
 #X msg 126 171 is visible;
-#X obj 107 75 else/canvas.vis 1;
+#X obj 107 75 canvas.vis 1;
 #X connect 2 0 4 0;
 #X connect 4 0 6 0;
 #X connect 4 1 7 0;
@@ -75,8 +75,8 @@ the parent patch visibility., f 35;
 #X connect 8 0 2 0;
 #X restore 439 210 pd depth-1;
 #X text 376 185 examples:;
-#X obj 176 211 else/display;
-#X obj 176 184 else/canvas.vis;
+#X obj 176 211 display;
+#X obj 176 184 canvas.vis;
 #X text 224 290 window visibility (0 invisible / 1 visible);
 #X obj 137 257 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
 ;

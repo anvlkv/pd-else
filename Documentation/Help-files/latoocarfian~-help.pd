@@ -44,7 +44,7 @@
 #X obj 186 40 cnv 4 4 4 empty empty generator 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 279 201 rate in Hz;
-#X obj 223 250 else/out~;
+#X obj 223 250 out~;
 #X text 192 358 list;
 #N canvas 894 143 430 452 parameters 0;
 #X text 25 19 By default \, the initial k \, x and y values are 1 \,
@@ -55,7 +55,7 @@
 #X obj 61 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 91 69 rate in Hz;
-#X obj 106 310 else/out~;
+#X obj 106 310 out~;
 #X floatatom 106 141 5 0 0 0 - - - 0;
 #X floatatom 163 142 5 0 0 0 - - - 0;
 #X text 96 121 y[n-1];
@@ -64,7 +64,7 @@
 ;
 #X msg 116 250 coefs \$1 \$2 \$3 \$4;
 #X text 232 243 sets coefficients 'a' \, 'b' \, 'c' & 'd', f 21;
-#X obj 106 278 else/latoocarfian~;
+#X obj 106 278 latoocarfian~;
 #X text 44 391 The object can give chaotic output \, converge to a
 single value or oscillate in a cycle. According to the reference \,
 'a' and 'b' should be from -3 to +3 \, and 'c' and 'd' from 0.5 to
@@ -77,8 +77,8 @@ single value or oscillate in a cycle. According to the reference \,
 #X text 271 202 b;
 #X text 332 202 c;
 #X text 395 203 d;
-#X obj 116 222 else/pack2 coeffs float float float float;
-#X obj 106 162 else/pack2;
+#X obj 116 222 pack2 coeffs float float float float;
+#X obj 106 162 pack2;
 #X connect 1 0 2 0;
 #X connect 2 0 12 0;
 #X connect 5 0 23 0;
@@ -100,7 +100,7 @@ nyquist).;
 #X obj 7 532 cnv 3 550 3 empty empty more_info 8 12 0 13 #dcdcdc #000000
 0;
 #X text 227 417 - sets frequency in hertz (default: nyquist);
-#X obj 223 225 else/latoocarfian~;
+#X obj 223 225 latoocarfian~;
 #X text 227 433 - sets a (default: 1);
 #X text 84 91 [latoocarfian~] is a chaotic generator using the difference
 equations \; x[n] = sin(a * y[n-1]) + d * sin(a * x[n-1]) \; y[n] =

@@ -26,7 +26,7 @@
 #X obj 86 433 cnv 17 3 17 empty \$0-pddp.cnv.let.2 2 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 157 435 float;
 #X obj 1 577 cnv 15 552 21 empty \$0-pddp.cnv.footer empty 20 12 0 14 #dcdcdc #404040 0;
-#X obj 145 164 else/impseq~;
+#X obj 145 164 impseq~;
 #X obj 215 42 cnv 4 4 4 empty empty reverberator 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 86 463 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X obj 86 484 cnv 17 3 17 empty \$0-pddp.cnv.let.1 1 5 9 0 16 #dcdcdc #9c9c9c 0;
@@ -52,10 +52,10 @@
 #X text 337 70 [fdn.rev~] uses a householder reflection feedback matrix. The main parameters are the reverberation decay time (t60) \, which is the time it takes to decrease 60dB in seconds. The damping parameter controls the decay of higher frequencies \, the higher the damping \, the less higher frequencies reverberate., f 47;
 #X obj 205 210 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X msg 198 185 set 64 10 1000;
-#X obj 204 236 else/impseq~;
+#X obj 204 236 impseq~;
 #X msg 87 211 print;
 #X msg 140 75 29 31 37 67 82 110 172 221;
-#X obj 149 275 else/fdn.rev~ -time 6;
+#X obj 149 275 fdn.rev~ -time 6;
 #X msg 149 101 set 8 5 80;
 #X msg 118 45 7 11 13 17 19 23 29 31;
 #X msg 165 127 set 16 10 120;
@@ -66,7 +66,7 @@
 #X text 337 206 The set message sets the size of the matrix with the first element \, the two extra elements set the minimum and maximum delay times. By default they are spaced linearly \, but they can be exponentially spaced with the "exp" message., f 47;
 #X text 116 22 list sets delay lines;
 #X text 261 45 default;
-#X obj 162 309 else/out~;
+#X obj 162 309 out~;
 #X connect 1 0 3 0;
 #X connect 2 0 6 0;
 #X connect 3 0 6 0;
@@ -93,10 +93,10 @@
 #X text 151 514 (none);
 #X text 201 295 - input signal to reverberate, f 55;
 #X text 201 309 - sets reflection times in ms, f 55;
-#X obj 186 200 else/fdn.rev~, f 16;
+#X obj 186 200 fdn.rev~, f 16;
 #X obj 235 159 hsl 128 15 0.01 10 1 0 empty empty empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X text 264 159 decay (t60), f 12;
-#X obj 187 228 else/out~;
+#X obj 187 228 out~;
 #X connect 12 0 23 0;
 #X connect 23 0 58 0;
 #X connect 46 0 58 1;

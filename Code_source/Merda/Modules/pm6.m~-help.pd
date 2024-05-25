@@ -2,7 +2,7 @@
 #X declare -path else;
 #X obj 31 21 keyboard 17 80 4 2 0 0 empty empty;
 #X obj 181 551 out~;
-#X obj 281 121 else/adsr~ 250 50 0.85 1000;
+#X obj 281 121 adsr~ 250 50 0.85 1000;
 #X text 527 151 Set modulation index int the matrix. The gray diagonal row represents each oscillator and the index value in this row is for self feedback modulation. The bottom left number boxes are for feedforwad modulation and the top right half is for feedback., f 48;
 #X obj 31 136 voices~ 4;
 #X text 527 311 The left inlet is for pitch in MIDI \, the other inlets are for Level inputs of each oscillator and the rightmost if for the master level. If nothing is connected \, the level is set to 1 for all secondary inleys but you can connect signals from envelopes and what not., f 48;

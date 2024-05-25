@@ -47,4 +47,4 @@ methods:
 draft: false
 ---
 
-[bl.saw2~] is a sawtooth oscillator like [else/saw2~], but it is bandlimited.
+[bl.saw2~] is a sawtooth oscillator like [saw2~], but it is bandlimited.

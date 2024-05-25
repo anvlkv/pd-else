@@ -29,14 +29,14 @@
 #X msg 29 134 0;
 #X obj 37 249 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 37 211 else/sig2float~;
+#X obj 37 211 sig2float~;
 #X msg 63 134 0.25;
 #X msg 140 133 0.75;
 #X msg 183 133 1;
 #X msg 105 133 0.5;
 #X obj 248 249 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 248 217 else/sig2float~;
+#X obj 248 217 sig2float~;
 #X text 217 132 <= reset =>;
 #X text 34 15 The second inlet resets the phase ands behaves in the
 same way for control data as objects like [osc~] and [phasor~] in Pd.
@@ -48,12 +48,12 @@ phase is synced to the given value. The phase values are from 0 to
 LFOs and control with MIDI. A sync with audio is useful for the "hard
 sync" technique \, where an oscillator is synced according to the frequency
 of a master frequency., f 44;
-#X obj 528 255 else/out~;
+#X obj 528 255 out~;
 #X obj 583 149 nbx 5 14 110 200 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 684 175 Master oscillator;
 #X text 670 210 Slave oscillator;
-#X obj 583 175 else/imp~ 110;
+#X obj 583 175 imp~ 110;
 #X text 509 349 NOTE:;
 #X text 525 382 The "phase sync" inlet is quite different from the
 "phase offset" inlet. This means that the are completely independent.
@@ -169,14 +169,14 @@ to another phase value.;
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 132 267 pd;
-#X obj 37 181 else/parabolic~ 0.25;
-#X obj 248 193 else/parabolic~ 0.25;
-#X obj 528 209 else/parabolic~ 200;
+#X obj 37 181 parabolic~ 0.25;
+#X obj 248 193 parabolic~ 0.25;
+#X obj 528 209 parabolic~ 200;
 #X msg 412 134 0.25;
 #X msg 338 133 0.75;
 #X msg 306 133 1;
 #X msg 378 133 0.5;
-#X obj 306 165 else/impseq~;
+#X obj 306 165 impseq~;
 #X connect 0 0 21 1;
 #X connect 2 0 1 0;
 #X connect 3 0 21 1;
@@ -196,30 +196,30 @@ to another phase value.;
 #X connect 28 0 22 1;
 #X restore 494 222 pd sync;
 #N canvas 430 175 786 354 phase 0;
-#X obj 480 152 else/out~;
+#X obj 480 152 out~;
 #X text 602 111 Phase Modulation:;
 #X obj 591 83 osc~ 50.01;
 #X text 21 22 The second argument sets an initial phase (or "phase
 offset"). This is also settable with the third inlet. This allows you
 to control two oscillators with the same frequency falling in and out
 of phase. Another feature is phase modulation., f 53;
-#X obj 106 242 else/out~;
+#X obj 106 242 out~;
 #X obj 106 206 +~;
 #X text 367 105 1;
 #X obj 235 105 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 232 129 4 0 0 0 - - - 0;
 #X text 215 105 0;
-#X obj 232 153 else/float2sig~ 10;
+#X obj 232 153 float2sig~ 10;
 #X text 397 28 The phase values are wrapped into the 0-1 range \, since
 the phase cycle is from 0 to 1 (where 1 is also the start of another
 cycle).;
 #X text 433 241 Note: When used to modulate the phase \, a parabolic
 oscillator acts like a triangular wave modulating the frequency.,
 f 50;
-#X obj 62 140 else/parabolic~ 220 0.5;
-#X obj 121 179 else/parabolic~ 220;
-#X obj 480 110 else/parabolic~ 200;
+#X obj 62 140 parabolic~ 220 0.5;
+#X obj 121 179 parabolic~ 220;
+#X obj 480 110 parabolic~ 200;
 #X connect 2 0 15 2;
 #X connect 5 0 4 0;
 #X connect 7 0 8 0;
@@ -231,7 +231,7 @@ f 50;
 #X restore 445 246 pd phase offset;
 #X text 243 420 - initial phase offset (default 0);
 #X text 243 401 - frequency in hertz (default 0);
-#X obj 218 221 else/out~;
+#X obj 218 221 out~;
 #X text 184 420 2) float;
 #X text 165 313 float/signal -;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
@@ -260,7 +260,7 @@ f 50;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 2 3 graph;
-#X obj 218 186 else/parabolic~ 440;
+#X obj 218 186 parabolic~ 440;
 #X text 60 87 [parabolic~] is a parabolic oscillator that accepts negative
 frequencies \, has inlets for phase sync and and phase modulation.
 A parabolic waveform is similar to a sinusoid but it is not band limited

@@ -10,8 +10,8 @@
 #X obj 235 404 outlet;
 #X obj 600 377 outlet;
 #X obj 507 161 unpack s f f, f 16;
-#X obj 107 47 else/lb;
-#X obj 107 88 else/args -;
+#X obj 107 47 lb;
+#X obj 107 88 args -;
 #X obj 19 261 t a b;
 #X msg 502 194 set \$1;
 #X obj 502 236 s \$0-set;
@@ -25,11 +25,11 @@
 #X msg 233 297 lagrange;
 #X obj 234 338 s \$0-set;
 #X msg 307 297 size \$1;
-#X obj 247 238 else/slice 1;
-#X obj 252 261 else/swap2;
+#X obj 247 238 slice 1;
+#X obj 252 261 swap2;
 #X msg 399 297 size \$1;
-#X obj 339 237 else/slice 1;
-#X obj 344 260 else/swap2;
+#X obj 339 237 slice 1;
+#X obj 344 260 swap2;
 #X msg 339 185 midi 1;
 #X obj 367 209 s \$0-set;
 #X msg 389 185 soft 1;
@@ -84,9 +84,9 @@
 #X restore 62 51 pd init;
 #X f 22;
 #X obj 62 79 inlet~ fwd;
-#X obj 119 156 else/brickwall~;
+#X obj 119 156 brickwall~;
 #X obj 276 86 declare -path else;
-#X obj 119 126 else/wavetable~;
+#X obj 119 126 wavetable~;
 #X connect 0 0 10 1;
 #X connect 1 0 10 2;
 #X connect 6 0 7 0;

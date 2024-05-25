@@ -21,7 +21,7 @@
 #X obj 212 186 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 124 311 float/signal;
 #X obj 123 40 cnv 4 4 4 empty empty generator 0 28 2 18 #e0e0e0 #000000 0;
-#X obj 212 236 else/out~;
+#X obj 212 236 out~;
 #X text 207 434 - sets frequency in hertz (default: nyquist);
 #X obj 2 3 cnv 15 301 42 empty empty perlin~ 20 20 2 37 #e0e0e0 #000000 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -30,7 +30,7 @@
 #X text 271 186 frequency in Hz;
 #X text 207 363 - perlin noise signal;
 #X text 207 311 - frequency in hertz;
-#X obj 212 211 else/perlin~;
+#X obj 212 211 perlin~;
 #X text 129 327 seed <float> - a float sets seed \, no float sets a unique internal, f 65;
 #N canvas 301 91 871 308 seed 0;
 #X text 31 58 Pseudo random number generators like [white~] aren't true random number generators. Instead \, an algorithm is used to provide a sequence of numbers that seems random. The same sequence can be reproduced if you set a "seed" value \, which can be any integer number., f 52;
@@ -39,10 +39,10 @@
 #X text 400 36 Sync [perlin~] objects with a seed value;
 #X msg 608 73 seed;
 #X msg 384 73 seed 973;
-#X obj 384 127 else/perlin~ -seed 973 3;
-#X obj 608 130 else/perlin~ -seed 973 3;
-#X obj 384 173 else/scope~ 200 100 256 3 128 -1 1 0 0 0 0 30 30 30 190 190 190 160 160 160 0 empty;
-#X obj 608 172 else/scope~ 200 100 256 3 128 -1 1 0 0 0 0 30 30 30 190 190 190 160 160 160 0 empty;
+#X obj 384 127 perlin~ -seed 973 3;
+#X obj 608 130 perlin~ -seed 973 3;
+#X obj 384 173 scope~ 200 100 256 3 128 -1 1 0 0 0 0 30 30 30 190 190 190 160 160 160 0 empty;
+#X obj 608 172 scope~ 200 100 256 3 128 -1 1 0 0 0 0 30 30 30 190 190 190 160 160 160 0 empty;
 #X connect 4 0 6 0;
 #X connect 4 0 7 0;
 #X connect 5 0 6 0;

@@ -32,12 +32,12 @@
 #X text 329 134 ch;
 #X text 237 275 -;
 #X text 197 275 float;
-#X obj 217 182 else/ptouch.out 4;
+#X obj 217 182 ptouch.out 4;
 #X text 257 134 pressure;
 #X text 219 134 key;
 #X obj 266 154 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
-#X obj 35 161 else/ptouch.in;
-#X obj 35 186 else/touch.out;
+#X obj 35 161 ptouch.in;
+#X obj 35 186 touch.out;
 #X obj 153 272 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 237 299 -;
 #X text 197 299 float;
@@ -54,7 +54,7 @@
 #X obj 199 151 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 298 150 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 311 131 ch;
-#X obj 199 179 else/ptouch.out 4;
+#X obj 199 179 ptouch.out 4;
 #X text 239 131 pressure;
 #X text 201 131 key;
 #X obj 248 151 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;

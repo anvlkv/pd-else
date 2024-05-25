@@ -42,7 +42,7 @@
 #X obj 107 383 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 116 526 4) float;
-#X obj 161 182 else/duck~, f 12;
+#X obj 161 182 duck~, f 12;
 #X text 181 285 signal - input signal, f 48;
 #X text 181 383 signal - control signal, f 48;
 #X text 40 89 [duck~] is an abstraction that performs a duck volume
@@ -64,8 +64,8 @@ f 53;
 #X text 181 496 - attenuation ratio (default 1), f 46;
 #X text 181 526 - release time in ms (default 10), f 46;
 #X obj 161 148 osc~ 440;
-#X obj 161 215 else/out~;
-#X obj 230 148 else/randpulse2~ 10;
+#X obj 161 215 out~;
+#X obj 230 148 randpulse2~ 10;
 #N canvas 832 127 453 375 example 0;
 #X obj 213 185 *~;
 #X obj 287 154 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000
@@ -76,11 +76,11 @@ to how much the control signal has exceeded the threshold. For instance
 \, if the signal has increased 10 dB over the threshold and the ratio
 is 1 \, then th einoput signal gets attenuated by 10 dB. A ratio of
 0.5 decreases 5 dB \, 2 corresponds to 20 dB and so on., f 58;
-#X obj 287 185 else/glide~ 500;
-#X obj 120 272 else/out~;
+#X obj 287 185 glide~ 500;
+#X obj 120 272 out~;
 #X obj 120 176 noise~;
 #X obj 213 149 osc~ 220;
-#X obj 120 222 else/duck~ -mix -40 0.2 100 100, f 16;
+#X obj 120 222 duck~ -mix -40 0.2 100 100, f 16;
 #X connect 0 0 7 1;
 #X connect 1 0 3 0;
 #X connect 3 0 0 1;

@@ -61,8 +61,8 @@
 #X obj 150 226 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 11
 -228856 -1 -1 0.00163925 256;
 #X text 24 196 see also:;
-#X obj 24 218 else/deg2rad;
-#X obj 340 199 else/rad2deg -pos;
+#X obj 24 218 deg2rad;
+#X obj 340 199 rad2deg -pos;
 #X text 63 88 [rad2deg] converts radians (0 to 2*pi) to radians (0
 to 360). Besides 0 to 2*pi you can also convert negative values from
 0 to -2*pi (0 to -360) - and input values are wrapped if the exceed
@@ -72,7 +72,7 @@ positive values only., f 69;
 also);
 #X obj 153 151 hsl 128 15 -12.5664 12.5664 0 0 empty empty empty -2
 -8 0 10 -228856 -1 -1 12700 1;
-#X obj 150 199 else/rad2deg 3.14159;
+#X obj 150 199 rad2deg 3.14159;
 #X obj 343 151 hsl 128 15 -12.5664 12.5664 0 0 empty empty empty -2
 -8 0 10 -228856 -1 -1 6100 1;
 #X connect 6 0 40 0;

@@ -38,8 +38,8 @@
 0;
 #X obj 221 147 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 218 225 else/out~;
-#X obj 218 196 else/crackle~;
+#X obj 218 225 out~;
+#X obj 218 196 crackle~;
 #X msg 168 167 clear;
 #X text 237 345 - crackle noise;
 #X text 193 315 clear - clear filter's memory;

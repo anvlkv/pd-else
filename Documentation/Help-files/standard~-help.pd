@@ -46,9 +46,9 @@
 #X obj 196 40 cnv 4 4 4 empty empty generator 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 273 220 rate in Hz;
-#X obj 214 282 else/out~;
+#X obj 214 282 out~;
 #X text 162 390 list;
-#X obj 214 247 else/standard~;
+#X obj 214 247 standard~;
 #X text 84 91 [standard~] is a standard map chaotic generator \, the
 sound is generated with the difference equations \; y[n] = (y[n-1]
 + k * sin(x[n-1])) % 2pi \; x[n] = (x[n-1] + y[n]) % 2pi \; out = (x[n]
@@ -59,8 +59,8 @@ sound is generated with the difference equations \; y[n] = (y[n-1]
 #X obj 71 109 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 130 109 rate in Hz;
-#X obj 71 314 else/out~;
-#X obj 71 268 else/standard~;
+#X obj 71 314 out~;
+#X obj 71 268 standard~;
 #X text 152 236 sets k;
 #X obj 106 179 pack f f;
 #X floatatom 106 158 5 0 0 0 - - - 0;

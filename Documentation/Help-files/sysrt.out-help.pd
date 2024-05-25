@@ -41,9 +41,9 @@
 #X text 203 376 (none);
 #X obj 2 399 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 280 218 else/display;
+#X obj 280 218 display;
 #X obj 280 252 midiout;
-#X obj 280 188 else/sysrt.out, f 15;
+#X obj 280 188 sysrt.out, f 15;
 #X msg 94 145 clock;
 #X msg 174 145 start;
 #X msg 219 145 continue;

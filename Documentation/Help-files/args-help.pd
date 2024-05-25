@@ -31,21 +31,21 @@
 0;
 #X obj 6 383 cnv 15 552 21 empty empty empty 20 12 0 14 -233017 -33289
 0;
-#X obj 238 171 else/args;
+#X obj 238 171 args;
 #X text 178 244 bang - output arguments list;
 #X text 150 292 anything -;
 #N canvas 585 214 499 372 break 0;
 #X obj 105 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
 #X text 128 95 <= get arguments;
-#X obj 105 124 else/args-example -freq 100 200 -amp 1 0.5;
+#X obj 105 124 args-example -freq 100 200 -amp 1 0.5;
 #X obj 297 212 route -freq -amp;
-#X obj 343 244 else/display;
-#X obj 297 284 else/display;
-#X obj 105 165 else/break -;
+#X obj 343 244 display;
+#X obj 297 284 display;
+#X obj 105 165 break -;
 #X obj 105 203 route -freq -amp;
-#X obj 151 235 else/display;
-#X obj 105 275 else/display;
+#X obj 151 235 display;
+#X obj 105 275 display;
 #X obj 25 185 print Full;
 #X obj 354 180 print Broken;
 #X text 64 28 You can use a break character as an optiona first argument
@@ -67,7 +67,7 @@ as using the [break] object aftwerwards. Open the subpatch below.;
 #X text 220 293 symbol \, float or list \, depending on the given arguments
 - or bang if no arguments are given to the parent patch (as in this
 help patch), f 47;
-#X obj 238 201 else/display;
+#X obj 238 201 display;
 #X text 91 90 [args] loads arguments of an abstraction and can also
 change them. It is useful for the management of variable number of
 arguments in abstractions \, and also to change/set them up.;
@@ -75,7 +75,7 @@ arguments in abstractions \, and also to change/set them up.;
 #N canvas 460 162 848 520 example 0;
 #X obj 81 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
-#X obj 81 227 else/display;
+#X obj 81 227 display;
 #X text 27 71 Here you can test that the given arguments are loaded
 and passed throughout the left outlet. But if no arguments are given
 \, then the right outlet sends a bang.;
@@ -85,15 +85,15 @@ is a very simple example on how it works.;
 #X text 237 188 <= click and open the abstraction, f 18;
 #X obj 532 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
-#X obj 532 257 else/display;
+#X obj 532 257 display;
 #X msg 562 170 1 2 3;
-#X obj 532 223 else/args-example 1 2 3;
-#X obj 81 188 else/args-example 1 2 3;
+#X obj 532 223 args-example 1 2 3;
+#X obj 81 188 args-example 1 2 3;
 #X msg 573 195 list a b c;
 #X obj 457 447 pdcontrol;
 #X obj 457 373 print;
 #X text 495 318 <= get arguments;
-#X obj 457 342 else/args-example foo 100 \$0-x \\\$0 \$1 \$2-x;
+#X obj 457 342 args-example foo 100 \$0-x \\\$0 \$1 \$2-x;
 #X msg 457 318 bang;
 #X text 60 326 Note how dollar signs (such as "\$0" \, "\$1" or "\$2-x")
 get expanded unless you escape them with a backslash ("\$2-x" may appear

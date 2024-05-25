@@ -78,17 +78,17 @@
 #N canvas 431 23 775 540 clock 0;
 #X obj 81 48 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000
 0 1;
-#X obj 97 460 else/out~;
+#X obj 97 460 out~;
 #X msg 156 124 timesig 7/8;
 #X msg 141 97 timesig 6/8;
 #X msg 114 49 timesig 15/8 3;
 #X msg 171 150 timesig 4/4;
 #X msg 183 175 timesig 3/4;
 #X msg 125 71 timesig 15/8 5;
-#X obj 184 332 else/clock -s 2;
+#X obj 184 332 clock -s 2;
 #X obj 385 56 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
-#X obj 434 459 else/out~;
+#X obj 434 459 out~;
 #X msg 456 130 timesig 7/8;
 #X msg 445 105 timesig 6/8;
 #X msg 418 57 timesig 15/8 3;
@@ -99,7 +99,7 @@
 #000000 0 1;
 #X obj 521 358 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 521 331 else/clock \$0-clock -s 2;
+#X obj 521 331 clock \$0-clock -s 2;
 #X msg 271 301 1.5;
 #X msg 240 301 2;
 #X msg 303 301 0.5;
@@ -119,11 +119,11 @@ flag., f 22;
 #X obj 81 255 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 47 254 beat bang, f 4;
-#X obj 81 218 else/metronome, f 35;
-#X obj 81 356 else/impseq~;
-#X obj 418 355 else/impseq~;
-#X obj 184 388 else/impseq~;
-#X obj 521 387 else/impseq~;
+#X obj 81 218 metronome, f 35;
+#X obj 81 356 impseq~;
+#X obj 418 355 impseq~;
+#X obj 184 388 impseq~;
+#X obj 521 387 impseq~;
 #X floatatom 288 185 4 0 0 0 - - - 12;
 #X text 289 162 tempo;
 #X obj 418 244 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
@@ -131,15 +131,15 @@ flag., f 22;
 #X text 384 243 beat bang, f 4;
 #X floatatom 589 174 4 0 0 0 - - - 12;
 #X text 590 151 tempo;
-#X obj 418 207 else/metronome -name \$0-clock;
+#X obj 418 207 metronome -name \$0-clock;
 #X text 242 278 divider values;
 #X text 626 278 divider values;
 #X text 81 9 [metronome] syncs to [clock] objects and they can have
 divider values. Check its help file., f 93;
-#X obj 81 390 else/resonant~ 1100 1000, f 14;
-#X obj 184 415 else/resonant~ 1700 1000, f 14;
-#X obj 418 389 else/resonant~ 1100 1000, f 14;
-#X obj 521 414 else/resonant~ 1700 1000, f 14;
+#X obj 81 390 resonant~ 1100 1000, f 14;
+#X obj 184 415 resonant~ 1700 1000, f 14;
+#X obj 418 389 resonant~ 1100 1000, f 14;
+#X obj 521 414 resonant~ 1700 1000, f 14;
 #X connect 0 0 35 0;
 #X connect 2 0 35 0;
 #X connect 3 0 35 0;
@@ -184,7 +184,7 @@ divider values. Check its help file., f 93;
 #X text 147 597 1) float - (optional) tempo in BPM (default 120);
 #X text 191 305 - non-zero (re)starts \, zero stops, f 47;
 #X text 18 182 see also:;
-#X obj 18 201 else/clock;
+#X obj 18 201 clock;
 #X text 194 166 start/stop;
 #X text 107 361 beat <symbol>;
 #X text 191 361 - set beat length symbol, f 47;
@@ -195,7 +195,7 @@ divider values. Check its help file., f 93;
 #X msg 488 161 beat 3/8 \, timesig 6/8;
 #X obj 658 242 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 658 219 else/initmess 90;
+#X obj 658 219 initmess 90;
 #X msg 443 39 beat 1/2 \, timesig 4/4;
 #X msg 452 62 beat 1/8 \, timesig 4/4;
 #X msg 433 19 beat 1/4 \, timesig 4/4;
@@ -206,17 +206,17 @@ as slow., f 51;
 #X obj 415 377 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 443 375 beat bang, f 4;
-#X obj 496 434 else/out~;
+#X obj 496 434 out~;
 #X obj 580 350 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 577 377 9 0 0 0 - - - 12;
 #X text 649 378 phase (0-1);
 #X listbox 496 378 9 0 0 0 - - - 12;
 #X listbox 658 318 22 0 0 0 - - - 12;
-#X obj 496 408 else/metronome~;
+#X obj 496 408 metronome~;
 #X msg 479 130 beat 1/6 \, timesig 2/4;
 #X msg 494 179 beat 1/4 \, timesig 2/4;
-#X obj 415 263 else/metronome 90, f 41;
+#X obj 415 263 metronome 90, f 41;
 #X text 616 114 both have the same actual tempo and bar duration.,
 f 26;
 #X text 631 163 both have the same actual tempo and bar duration.,
@@ -330,7 +330,7 @@ crazy), f 30;
 #X obj 595 500 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 594 528 beat bang, f 4;
-#X obj 642 512 else/out~;
+#X obj 642 512 out~;
 #X obj 760 503 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 757 530 9 0 0 0 - - - 12;
@@ -338,7 +338,7 @@ crazy), f 30;
 #X listbox 642 456 9 0 0 0 - - - 12;
 #X listbox 838 471 25 0 0 0 - - - 12;
 #X text 848 438 actual beat length and tempo, f 18;
-#X obj 642 486 else/metronome~;
+#X obj 642 486 metronome~;
 #X text 19 32 You can have other values as the denominator other than
 the usual multiples of "2" (4/4 \, 6/6 \, 15/16 \, etc). These can
 be integers or floats (which can also be defined as fractions) and
@@ -390,7 +390,7 @@ you go. And what if you want a quarter note? Then you have 15:8 * 4
 the measure? Then you have a [7:5] ratio \, multiply it by 8 and you
 have '56/5'. For 5 in the space of 3 you have 5:3 \, times 8 it's '40/3'.
 , f 86;
-#X obj 595 416 else/metronome 60 2/(8/3), f 41;
+#X obj 595 416 metronome 60 2/(8/3), f 41;
 #X connect 0 0 47 0;
 #X connect 1 0 47 0;
 #X connect 2 0 47 0;
@@ -442,7 +442,7 @@ the number of sub-beats)., f 78;
 #X obj 85 383 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 51 382 beat bang, f 4;
-#X obj 166 438 else/out~;
+#X obj 166 438 out~;
 #X obj 250 356 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 247 383 9 0 0 0 - - - 12;
@@ -456,13 +456,13 @@ a beat is three eight notes. In relation to a 60 bpm for a quarter
 note as a base beat length we have a beat that is "1.5" and an actual
 bpm of "40"., f 77;
 #X text 172 326 bar \; sub-bar \; beat \; sub-beat;
-#X obj 166 414 else/metronome~;
+#X obj 166 414 metronome~;
 #X text 267 413 <= metronome clicks;
 #X msg 136 248 timesig 6/4;
 #X text 213 248 automatically grouped in 2;
 #X msg 146 272 timesig 6/4 6;
 #X text 235 272 grouped in 6 (so we have 6 tempos);
-#X obj 85 304 else/metronome 90 15/8 5, f 41;
+#X obj 85 304 metronome 90 15/8 5, f 41;
 #X text 347 296 actual beat length actual tempo and bar duration (ms)
 , f 27;
 #X text 29 565 Similarly \, 7/8 considers an eighth note as the tempo
@@ -491,14 +491,14 @@ bpm of "40"., f 77;
 #X obj 125 319 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 124 347 beat bang, f 4;
-#X obj 206 376 else/out~;
+#X obj 206 376 out~;
 #X obj 290 292 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 287 319 9 0 0 0 - - - 12;
 #X text 359 320 phase (0-1);
 #X listbox 206 320 9 0 0 0 - - - 12;
 #X listbox 368 260 25 0 0 0 - - - 12;
-#X obj 206 350 else/metronome~;
+#X obj 206 350 metronome~;
 #X msg 125 112 timesig 3/4 + 3/8;
 #X msg 142 140 timesig 5/8 + 6/8;
 #X msg 157 172 timesig 4/4 + 3/8 + 3/16 + 4/6;
@@ -514,7 +514,7 @@ to another time signature before the last sub-bar (so you still have
 one or more sub-bars to go) \, it won't wait until all sub-bars finish.
 This means the next sub-bar will already reflect the time signature
 change., f 81;
-#X obj 125 205 else/metronome 90 4/4 + 3/8 + 3/16 + 4/6, f 41;
+#X obj 125 205 metronome 90 4/4 + 3/8 + 3/16 + 4/6, f 41;
 #X text 378 227 actual beat \, actual tempo and duration, f 19;
 #X connect 0 0 16 0;
 #X connect 4 0 5 0;
@@ -536,7 +536,7 @@ change., f 81;
 #X text 191 319 - stops the metronome (same as '0'), f 47;
 #X text 137 347 continue;
 #X msg 119 139 start;
-#X obj 19 222 else/metronome~;
+#X obj 19 222 metronome~;
 #N canvas 858 177 417 216 events 0;
 #N canvas 397 97 460 454 example-1 0;
 #X obj 144 156 tgl 20 0 empty empty empty 17 7 0 10 #dcdcdc #000000
@@ -556,13 +556,13 @@ change., f 81;
 #X obj 193 357 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 110 326 sel 1:3 2:3 4:1 4:3;
-#X obj 110 273 else/format symbol %s:%s;
+#X obj 110 273 format symbol %s:%s;
 #X msg 193 381 0;
 #X obj 193 405 s \$0-metro;
 #X obj 144 127 r \$0-metro;
-#X obj 144 193 else/metronome, f 41;
-#X obj 286 225 else/metronome~;
-#X obj 286 260 else/out~;
+#X obj 144 193 metronome, f 41;
+#X obj 286 225 metronome~;
+#X obj 286 260 out~;
 #X text 53 32 The count list gives us 4 items that we can use to trigger
 an event. For most cases \, just the 1st and 3rd element (bar and tempo)
 are enough. Here we get them and format them into a symbol and use
@@ -602,12 +602,12 @@ output to sequence events., f 48;
 #X msg 186 331 4/4;
 #X msg 216 331 15/8 3;
 #X msg 277 350 6/8;
-#X obj 277 382 else/insert timesig;
+#X obj 277 382 insert timesig;
 #X msg 407 382 stop;
 #X obj 84 109 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000;
-#X obj 61 233 else/metronome~;
-#X obj 61 265 else/out~;
+#X obj 61 233 metronome~;
+#X obj 61 265 out~;
 #X obj 186 221 change;
 #X obj 407 417 s \$0-metronome;
 #X obj 123 76 r \$0-metronome;
@@ -620,9 +620,9 @@ to filter repeatitions., f 38;
 #X obj 186 255 sel 1 2 3 4 6 8, f 31;
 #X obj 123 168 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 123 107 else/display;
+#X obj 123 107 display;
 #X msg 321 350 7/8 + 4/6;
-#X obj 123 141 else/metronome 110, f 32;
+#X obj 123 141 metronome 110, f 32;
 #X obj 186 195 trigger float;
 #X connect 0 0 12 0;
 #X connect 0 0 25 0;
@@ -654,32 +654,32 @@ to filter repeatitions., f 38;
 #X restore 92 120 pd example-2;
 #N canvas 436 68 698 549 example-3 0;
 #X listbox 130 258 9 0 0 0 - - - 0;
-#X obj 32 351 else/metronome~;
-#X obj 32 386 else/out~;
+#X obj 32 351 metronome~;
+#X obj 32 386 out~;
 #X obj 226 324 == 3, f 5;
 #X obj 193 351 spigot;
-#X obj 193 416 else/impseq~;
+#X obj 193 416 impseq~;
 #X obj 130 286 unpack f f f;
-#X obj 193 446 else/resonant~ 2000 1000;
+#X obj 193 446 resonant~ 2000 1000;
 #X obj 67 173 tgl 20 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
 #X listbox 439 238 9 0 0 0 - - - 0;
-#X obj 383 365 else/metronome~;
-#X obj 383 400 else/out~;
-#X obj 350 212 else/metronome, f 45;
+#X obj 383 365 metronome~;
+#X obj 383 400 out~;
+#X obj 350 212 metronome, f 45;
 #X obj 512 371 spigot;
 #X obj 512 446 sel 1;
-#X obj 512 473 else/impseq~;
-#X obj 512 502 else/resonant~ 2000 1000;
+#X obj 512 473 impseq~;
+#X obj 512 502 resonant~ 2000 1000;
 #X obj 350 173 tgl 20 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
 #X msg 439 264 symbol \$1:\$3;
 #X msg 439 331 1;
 #X msg 478 331 0;
 #X obj 439 307 sel 1:4;
-#X obj 67 212 else/metronome, f 32;
+#X obj 67 212 metronome, f 32;
 #X obj 512 397 ==;
-#X obj 564 406 else/frac2dec;
+#X obj 564 406 frac2dec;
 #X text 30 10 In these examples we're using the phase output information
 to trigger something. To the left we open a spigot for every 3rd tempo
 and get a bang when the phase is equal or greater then 0.333333 (about
@@ -688,9 +688,9 @@ tempo of the 1st bar and trigger when the phase precisely reaches 1/3
 of the tempo. Note that the phase output has 960 frames \, so you can
 multiply the output by 960 and match to an exact integer frame or use
 the 0-1 range., f 101;
-#X obj 439 286 else/changed;
-#X obj 564 379 else/initmess 1/3;
-#X obj 193 385 else/above 0.333333;
+#X obj 439 286 changed;
+#X obj 564 379 initmess 1/3;
+#X obj 193 385 above 0.333333;
 #X text 30 71 Considering 960 is a quarter note \, this allows you
 to precisely match down to 256th notes (15 frames or 0.015625) \, triplets
 down to a 512th triplet (5 frames) and quintuplets down to 1024th (3
@@ -743,7 +743,7 @@ timeline data (bar \, sub-bar \, beat and sub-beat count) and phase
 output. It also syncs to [clock] objects., f 70;
 #X text 153 611 2) list - allowed time signature syntax (default 4/4)
 ;
-#X obj 163 218 else/metronome 60 3/4, f 36;
+#X obj 163 218 metronome 60 3/4, f 36;
 #X msg 227 193 continue;
 #X msg 181 190 pause;
 #X text 155 333 pause;
@@ -754,22 +754,22 @@ output. It also syncs to [clock] objects., f 70;
 0 1;
 #X obj 325 195 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 325 166 else/initmess 90;
+#X obj 325 166 initmess 90;
 #X obj 82 326 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 50 324 beat bang, f 4;
-#X obj 163 383 else/out~;
+#X obj 163 383 out~;
 #X obj 247 299 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 244 326 9 0 0 0 - - - 12;
 #X text 316 327 phase (0-1);
 #X listbox 163 327 9 0 0 0 - - - 12;
 #X text 169 279 bar \; beat \; sub-beat;
-#X obj 163 357 else/metronome~;
+#X obj 163 357 metronome~;
 #X msg 174 173 timesig 6/8;
 #X msg 155 144 timesig 15/8 3;
 #X msg 142 116 sub \$1;
-#X obj 82 232 else/metronome -sub 90 15/8 3, f 41;
+#X obj 82 232 metronome -sub 90 15/8 3, f 41;
 #X obj 142 88 tgl 20 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
 #X text 60 19 The -sub flag sets to subdivision (or subtempo) mode
@@ -794,7 +794,7 @@ sets to the default mode (only bang at tempo number changes)., f
 #X text 150 569 -sub - sets to subdivision (subtempo) mode, f 61;
 #X text 119 389 sub <float>;
 #X text 191 389 - non zero sets to subdivision (subtempo) mode;
-#X obj 19 243 else/score;
+#X obj 19 243 score;
 #X text 191 514 - actual beat length \, actual tempo and bar duration
 in ms.;
 #N canvas 424 123 842 460 tempo-&-tuplets 0;
@@ -805,21 +805,21 @@ ways to achieve the same results., f 48;
 #X obj 386 328 bng 22 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 414 326 beat bang, f 4;
-#X obj 467 385 else/out~;
+#X obj 467 385 out~;
 #X obj 551 301 hsl 150 19 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 548 328 9 0 0 0 - - - 12;
 #X text 620 329 phase (0-1);
 #X listbox 467 329 9 0 0 0 - - - 12;
 #X listbox 629 269 22 0 0 0 - - - 12;
-#X obj 467 359 else/metronome~;
+#X obj 467 359 metronome~;
 #X text 649 223 actual beat length \, actual tempo and duration.,
 f 20;
 #X text 473 271 bar \; sub-bar \; beat \; sub-beat;
 #X msg 386 24 tempo 90 \, beat 1/4 \, timesig 2/(8/3) \, bang;
 #X msg 401 46 tempo 90 \, beat 1/6 \, timesig 2/4 \, bang;
 #X msg 411 69 tempo 60 \, beat 1/4 \, timesig 2/4 \, bang;
-#X obj 386 214 else/metronome, f 41;
+#X obj 386 214 metronome, f 41;
 #X text 38 107 For a beat length of 1/4 \, a time signature that reflects
 two tempos of a dotted quarter note is 2/(8/3) as it was explained
 before. Another way is to have a plain 2/4 time signature and just

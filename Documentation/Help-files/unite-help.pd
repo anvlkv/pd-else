@@ -43,7 +43,7 @@
 #X obj 206 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X floatatom 257 170 5 0 0 0 - - - 0;
-#X obj 236 236 else/display;
+#X obj 236 236 display;
 #X msg 227 120 list a b c;
 #X symbolatom 236 270 10 0 0 0 - - - 0;
 #X msg 315 171 hi there;
@@ -53,7 +53,7 @@
 #X msg 102 229 list a b c;
 #X symbolatom 117 458 10 0 0 0 - - - 0;
 #X msg 136 279 hi there;
-#X obj 117 417 else/unite \\\\, f 25;
+#X obj 117 417 unite \\\\, f 25;
 #X symbolatom 264 389 10 0 0 0 - - - 0;
 #X text 330 209 <= a comma.;
 #X text 313 178 <= a backslash;
@@ -92,11 +92,11 @@ An empty symbol also sets no separator., f 66;
 #X obj 116 329 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 39 191 see also:;
-#X obj 42 212 else/separate;
-#X obj 236 209 else/unite;
+#X obj 42 212 separate;
+#X obj 236 209 unite;
 #X text 163 330 symbol;
 #X text 218 330 - set separator;
-#X obj 42 235 else/any2symbol;
+#X obj 42 235 any2symbol;
 #X obj 184 39 cnv 4 4 4 empty empty a 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 3 2 cnv 15 301 42 empty empty unite 20 20 2 37 #e0e0e0 #000000
 0;
@@ -106,7 +106,7 @@ An empty symbol also sets no separator., f 66;
 #X text 72 87 [unite] unites and converts messages into a symbol message.
 ;
 #X text 218 308 - any message to be unted/converted into a symbol;
-#X obj 42 258 else/format;
+#X obj 42 258 format;
 #X connect 21 0 33 0;
 #X connect 22 0 33 0;
 #X connect 23 0 33 0;

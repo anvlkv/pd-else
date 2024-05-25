@@ -48,8 +48,8 @@
 #X obj 215 595 - 1;
 #X obj 107 117 expr mode_\$0 \; order_\$0[voice_\$0] = (i_\$0 = i_\$0+1) * on_\$0 \; notes_\$0[voice_\$0] = ($f2 + 1) * on_\$0 \; velocities_\$0[voice_\$0] = $f3 \; voice_\$0 = $f1 \; on_\$0 = $f3 > 0;
 #X obj 71 526 - 1;
-#X obj 245 255 else/loop 10;
-#X obj 107 86 else/voices -retrig 1 10 1;
+#X obj 245 255 loop 10;
+#X obj 107 86 voices -retrig 1 10 1;
 #X obj 107 40 pack float float;
 #X obj 30 45 r \$0-clear;
 #X connect 2 0 43 0;
@@ -163,7 +163,7 @@
 #X obj 15 136 t f b;
 #X obj 56 136 t f b;
 #X obj 97 136 t f b;
-#X obj 15 83 else/args -;
+#X obj 15 83 args -;
 #X obj 15 56 loadbang;
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;

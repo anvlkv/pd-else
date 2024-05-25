@@ -63,20 +63,20 @@ when receiving a bang.;
 #dcdcdc #000000 #000000 0 256;
 #X obj 161 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 156 80 else/pi;
+#X obj 156 80 pi;
 #X obj 161 227 expr 2 * pi;
 #X obj 156 141 value pi;
 #X text 19 20 [pi] can be conveniently connected to a [value] object
 so it can be recalled in an [expr] object.;
-#X obj 161 256 else/display;
+#X obj 161 256 display;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
 #X connect 2 0 4 0;
 #X connect 3 0 6 0;
 #X restore 431 245 pd expr and value;
-#X obj 229 218 else/pi 2;
+#X obj 229 218 pi 2;
 #X text 201 291 - calculate or output the last calculated value;
-#X obj 229 246 else/display;
+#X obj 229 246 display;
 #X text 80 219 click (same as bang) =>;
 #X connect 6 0 32 0;
 #X connect 18 0 32 1;

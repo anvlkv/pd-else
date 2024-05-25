@@ -29,7 +29,7 @@
 #X obj 186 127 pack;
 #X obj 238 130 pack;
 #X text 516 158 Alexandre Torres Porres (2019);
-#X obj 512 309 else/merge 4;
+#X obj 512 309 merge 4;
 #X obj 490 69 declare -path else;
 #X obj 199 42 snake~ out 4;
 #N canvas 275 222 423 406 vu 0;
@@ -43,7 +43,7 @@
 #X obj 84 277 - 100;
 #X obj 176 294 - 100;
 #X obj 242 174 expr 1000 / $f1;
-#X obj 242 132 else/initmess 500;
+#X obj 242 132 initmess 500;
 #X obj 84 347 outlet;
 #X obj 176 347 outlet;
 #X connect 0 0 1 0;
@@ -71,7 +71,7 @@
 #X obj 84 277 - 100;
 #X obj 176 294 - 100;
 #X obj 242 174 expr 1000 / $f1;
-#X obj 242 132 else/initmess 500;
+#X obj 242 132 initmess 500;
 #X obj 84 347 outlet;
 #X obj 176 347 outlet;
 #X connect 0 0 1 0;
@@ -99,7 +99,7 @@
 #X obj 84 277 - 100;
 #X obj 176 294 - 100;
 #X obj 242 174 expr 1000 / $f1;
-#X obj 242 132 else/initmess 500;
+#X obj 242 132 initmess 500;
 #X obj 84 347 outlet;
 #X obj 176 347 outlet;
 #X connect 0 0 1 0;
@@ -127,7 +127,7 @@
 #X obj 84 277 - 100;
 #X obj 176 294 - 100;
 #X obj 242 174 expr 1000 / $f1;
-#X obj 242 132 else/initmess 500;
+#X obj 242 132 initmess 500;
 #X obj 84 347 outlet;
 #X obj 176 347 outlet;
 #X connect 0 0 1 0;

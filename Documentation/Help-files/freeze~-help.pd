@@ -34,7 +34,7 @@
 #X text 189 282 signal;
 #X obj 138 305 cnv 17 3 48 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 194 210 else/out~;
+#X obj 194 210 out~;
 #X msg 263 132 1;
 #X msg 275 156 0;
 #X text 291 132 freeze;
@@ -52,11 +52,11 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 2 3 graph;
 #X text 427 219 see also:;
-#X obj 429 241 else/pvoc.freeze~;
-#X obj 194 180 else/freeze~;
+#X obj 429 241 pvoc.freeze~;
+#X obj 194 180 freeze~;
 #X text 71 90 [freeze~] is an abstraction based on [sigmund~] (analysis
 & ressynthesis). It contains a bank with oscillators., f 58;
-#X obj 156 135 else/play.file~ violin.wav 1 1, f 15;
+#X obj 156 135 play.file~ violin.wav 1 1, f 15;
 #X text 241 304 - non-zero freezes (or refreezes) \, 0 unfreezes;
 #X text 241 322 - freezes/refreezes;
 #X connect 19 0 34 1;

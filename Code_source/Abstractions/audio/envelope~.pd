@@ -117,9 +117,9 @@
 #X obj 188 173 list trim;
 #X msg 374 239 0.25;
 #X obj 374 260 s \$0-s;
-#X obj 89 78 else/loadbanger 2, f 32;
-#X obj 66 195 else/swap2;
-#X obj 89 109 else/args -;
+#X obj 89 78 loadbanger 2, f 32;
+#X obj 66 195 swap2;
+#X obj 89 109 args -;
 #X connect 1 0 11 0;
 #X connect 3 0 8 0;
 #X connect 4 0 11 0;
@@ -168,7 +168,7 @@
 #X obj 224 134 switch~;
 #X obj 224 84 r \$0-type;
 #X obj 224 108 == 0;
-#X obj 74 113 else/tabreader~;
+#X obj 74 113 tabreader~;
 #X connect 0 0 6 0;
 #X connect 2 0 6 0;
 #X connect 4 0 5 0;
@@ -184,7 +184,7 @@
 #X obj 169 133 switch~;
 #X obj 169 83 r \$0-type;
 #X obj 169 107 == 1;
-#X obj 45 84 else/vsaw~ 0 0.5;
+#X obj 45 84 vsaw~ 0 0.5;
 #X obj 75 54 r \$0-v;
 #X connect 0 0 7 3;
 #X connect 2 0 3 0;
@@ -206,8 +206,8 @@
 #X obj 115 158 expr (1 - $f1) / 2;
 #X text 170 129 sigma;
 #X obj 115 70 r \$0-s;
-#X obj 71 188 else/tabreader~ \$0-gauss;
-#X obj 115 99 else/rescale -in 0 1 0.5 70 4;
+#X obj 71 188 tabreader~ \$0-gauss;
+#X obj 115 99 rescale -in 0 1 0.5 70 4;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X connect 4 0 5 0;

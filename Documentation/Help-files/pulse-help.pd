@@ -62,7 +62,7 @@
 #X text 230 495 - pulse width (default 0);
 #X text 313 154 <= resets phase.;
 #X msg 276 155 0;
-#X obj 195 249 else/display;
+#X obj 195 249 display;
 #X text 59 93 This is much like the [pulse~] oscillator but operates
 in a control rate (with a default resolution of 1 ms) and the output
 is like a toggle switch.;
@@ -72,10 +72,10 @@ is like a toggle switch.;
 0;
 #X text 104 440 -rate <float>;
 #X text 209 440 - rate period in ms (default 1 \, min 0.1);
-#X obj 195 196 else/pulse 1;
+#X obj 195 196 pulse 1;
 #N canvas 414 239 721 374 rate 0;
-#X obj 204 159 else/display;
-#X obj 204 127 else/sr~ -ms;
+#X obj 204 159 display;
+#X obj 204 127 sr~ -ms;
 #X text 36 36 [pulse] is an actual oscillator with a running phase
 \, which runs at a given rate. A signal oscillator runs at the sample
 rate which has a period in ms given by the [sr~] object., f 55;
@@ -83,9 +83,9 @@ rate which has a period in ms given by the [sr~] object., f 55;
 1 ms and the minimum rate is 0.1 ms. The maximum frequency that [pulse]
 can run is half the frequency of the given rate (500 hz default).,
 f 55;
-#X obj 498 214 else/status;
+#X obj 498 214 status;
 #X obj 513 250 timer;
-#X obj 498 139 else/pulse 3 -rate 20;
+#X obj 498 139 pulse 3 -rate 20;
 #X msg 498 112 rate \$1;
 #X obj 498 86 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
@@ -108,7 +108,7 @@ message. This affects the period resolution, f 55;
 #X connect 10 0 4 0;
 #X restore 442 244 pd rate;
 #X text 41 221 see also:;
-#X obj 43 246 else/pulse~;
+#X obj 43 246 pulse~;
 #X connect 26 0 46 0;
 #X connect 28 0 39 0;
 #X connect 38 0 46 2;

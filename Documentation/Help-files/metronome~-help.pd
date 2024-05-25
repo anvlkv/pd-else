@@ -42,13 +42,13 @@
 #X text 364 113 tempo;
 #X obj 151 181 bng 17 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 151 155 else/metronome 60, f 36;
+#X obj 151 155 metronome 60, f 36;
 #X text 24 288 see also:;
 #X text 171 131 start/stop;
 #X listbox 222 181 9 0 0 0 - - - 10;
 #X text 70 85 [metronome~] works in conjunction with [metronome] and
 outputs metronome clicks., f 66;
-#X obj 24 307 else/metronome;
+#X obj 24 307 metronome;
 #X obj 222 280 out~;
 #X text 166 354 list;
 #X text 196 354 - count output from [metronome], f 47;
@@ -60,7 +60,7 @@ outputs metronome clicks., f 66;
 #X text 109 477 1) list - low \, mid and high frequencies (default:
 600 \, 1000 \, 1700), f 66;
 #X msg 249 206 set 300 800 1200;
-#X obj 222 253 else/metronome~;
+#X obj 222 253 metronome~;
 #X msg 258 229 set 600 1000 1700;
 #N canvas 571 113 736 360 modes 0;
 #X obj 267 126 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -73,7 +73,7 @@ outputs metronome clicks., f 66;
 #X text 74 127 start/stop;
 #X listbox 125 174 9 0 0 0 - - - 0;
 #X obj 125 266 out~;
-#X obj 54 151 else/metronome 90 6/8, f 36;
+#X obj 54 151 metronome 90 6/8, f 36;
 #X obj 616 124 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 403 123 tgl 17 0 empty empty empty 17 7 0 10 #dfdfdf #000000
@@ -84,8 +84,8 @@ outputs metronome clicks., f 66;
 #X text 423 124 start/stop;
 #X listbox 474 202 11 0 0 0 - - - 0;
 #X obj 474 284 out~;
-#X obj 474 256 else/metronome~ -mode 2;
-#X obj 125 237 else/metronome~ -mode 1;
+#X obj 474 256 metronome~ -mode 2;
+#X obj 125 237 metronome~ -mode 1;
 #X msg 139 202 mode 0;
 #X msg 189 209 mode 1;
 #X obj 555 177 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc
@@ -102,7 +102,7 @@ this via a '-mode' flag or mode message. The default mode (0) has 3
 types of clicks (low \, mid and high). The mid pitch is for tempo subdivisions
 as in a 6/8 time signature. Mode 1 doesn't play these subdivision clicks.
 , f 51;
-#X obj 403 149 else/metronome 90 2/4 + 6/8, f 36;
+#X obj 403 149 metronome 90 2/4 + 6/8, f 36;
 #X connect 0 0 7 1;
 #X connect 1 0 7 0;
 #X connect 5 0 16 0;

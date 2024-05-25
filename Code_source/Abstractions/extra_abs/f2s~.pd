@@ -3,13 +3,13 @@
 #X msg 162 285 resize \$1;
 #X obj 75 26 inlet;
 #X obj 130 181 list length;
-#X obj 75 270 else/order;
+#X obj 75 270 order;
 #X obj 75 374 outlet~;
 #X msg 255 289 all \$1;
 #X obj 255 263 f;
 #X obj 255 26 inlet;
 #N canvas 212 149 467 313 init 0;
-#X obj 125 71 else/args;
+#X obj 125 71 args;
 #X obj 125 139 list split 1;
 #X obj 125 37 loadbang;
 #X obj 165 180 route bang;
@@ -25,7 +25,7 @@
 #X text 374 153 Part of ELSE \; https://github.com/porres/pd-else;
 #X text 376 134 Alexandre Torres Porres (2023);
 #X obj 98 91 r \$0-list;
-#X obj 436 250 else/order;
+#X obj 436 250 order;
 #X obj 98 115 t l l;
 #X obj 130 213 t b f;
 #X obj 75 191 t l l;

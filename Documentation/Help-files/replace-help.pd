@@ -55,7 +55,7 @@ to the first and last items of the input message. The right inlet or
 #X listbox 340 197 8 0 0 0 - - - 0;
 #X text 317 171 <-- set item index;
 #X text 393 198 <--- set new element value, f 13;
-#X obj 175 251 else/display;
+#X obj 175 251 display;
 #X obj 127 341 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 233 319 - element index;
@@ -65,7 +65,7 @@ to the first and last items of the input message. The right inlet or
 #X text 233 376 - list with replaced element;
 #X text 172 409 1) float - set item index to replace (default 0);
 #X text 130 427 2) float/symbol - number (default 0);
-#X obj 175 222 else/replace -2 x, f 28;
+#X obj 175 222 replace -2 x, f 28;
 #X connect 15 0 39 1;
 #X connect 18 0 39 0;
 #X connect 19 0 39 0;

@@ -7,7 +7,7 @@
 0;
 #X obj 116 297 cnv 17 3 46 empty empty 0 5 9 0 16 -228856 -162280 0
 ;
-#X obj 205 226 else/out~;
+#X obj 205 226 out~;
 #X obj 4 4 cnv 15 301 42 empty empty comb.rev~ 20 20 2 37 -233017 -1
 0;
 #X obj 307 5 cnv 15 250 40 empty empty empty 12 13 0 18 -128992 -233080
@@ -39,7 +39,7 @@
 #X floatatom 572 162 8 0 100 0 - - -;
 #X obj 575 138 hsl 128 15 -0.99 0.99 0 0 empty empty empty -2 -8 0
 10 -228856 -1 -1 0 1;
-#X obj 487 290 else/out~;
+#X obj 487 290 out~;
 #X obj 487 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X text 502 194 (D);
@@ -47,7 +47,7 @@
 #X msg 425 176 100;
 #X msg 415 151 1000;
 #X text 378 134 change delay size:, f 13;
-#X obj 487 152 else/impseq~;
+#X obj 487 152 impseq~;
 #X obj 56 114 cnv 15 270 120 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 103 127 |;
@@ -104,7 +104,7 @@ for delay time that falls in between sample values., f 61;
 10 -228856 -1 -1 0 1;
 #X text 669 211 (b);
 #X text 744 265 (c);
-#X obj 487 250 else/comb.rev~ 500 1 0.9 0.99;
+#X obj 487 250 comb.rev~ 500 1 0.9 0.99;
 #X connect 0 0 62 1;
 #X connect 1 0 62 2;
 #X connect 2 0 1 0;
@@ -154,8 +154,8 @@ for delay time that falls in between sample values., f 61;
 -262144 -1 -1 0 256;
 #X obj 162 125 noise~;
 #X obj 205 154 *~;
-#X obj 220 126 else/pulse~ 1 0.05;
-#X obj 205 197 else/comb.rev~ 500 1 0.99 0.99;
+#X obj 220 126 pulse~ 1 0.05;
+#X obj 205 197 comb.rev~ 500 1 0.99 0.99;
 #X text 61 89 Use [comb.rev~] as a reverberator \, comb filter and
 delay., f 67;
 #X text 131 487 2) float - a: input gain coefficient (default 0),

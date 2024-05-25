@@ -10,7 +10,7 @@
 #X obj 36 277 r \$0-rate;
 #X obj 36 301 max 1;
 #N canvas 828 124 447 419 init 0;
-#X obj 98 73 else/loadbanger 2, f 24;
+#X obj 98 73 loadbanger 2, f 24;
 #X obj 297 329 s \$0-rate;
 #X msg 297 143 5;
 #X obj 263 363 s \$0-time;
@@ -18,11 +18,11 @@
 #X obj 334 297 v exp_\$0;
 #X msg 334 143 1;
 #X obj 17 193 list split 1;
-#X obj 17 234 else/swap2;
+#X obj 17 234 swap2;
 #X obj 111 193 list split 1;
-#X obj 111 234 else/swap2;
+#X obj 111 234 swap2;
 #X obj 98 143 route -rate -exp float;
-#X obj 98 110 else/args -;
+#X obj 98 110 args -;
 #X connect 0 0 12 0;
 #X connect 0 1 2 0;
 #X connect 0 1 4 0;
@@ -61,7 +61,7 @@
 #X obj 393 144 declare -path else;
 #X obj 250 385 pack;
 #X msg 250 409 in \$1 \$2;
-#X obj 167 453 else/rescale;
+#X obj 167 453 rescale;
 #X obj 218 349 t f f;
 #X connect 0 0 23 0;
 #X connect 1 0 18 0;

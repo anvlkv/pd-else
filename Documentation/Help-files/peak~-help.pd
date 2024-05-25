@@ -132,7 +132,7 @@
 #X obj 121 171 *;
 #X obj 121 34 inlet;
 #X obj 121 211 outlet;
-#X obj 158 170 else/sr~ -khz;
+#X obj 158 170 sr~ -khz;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -152,7 +152,7 @@
 #X msg 539 175 set 1024 256;
 #X msg 529 152 set 8192 256;
 #X text 15 28 The [peak~] object is based on [env~] and has a similar analytical structure.;
-#X obj 516 201 else/peak~ 4096;
+#X obj 516 201 peak~ 4096;
 #X connect 3 0 5 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
@@ -183,7 +183,7 @@
 #X text 61 88 [peak~] is similar to Pd Vanilla's [env~] \, but it reports the peak amplitude value in linear (default) or dBFS.;
 #X text 217 323 - peak amplitude value;
 #X obj 3 349 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000 0;
-#X obj 208 190 else/peak~;
+#X obj 208 190 peak~;
 #X msg 263 155 lin \$1;
 #X obj 263 128 tgl 19 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0 1;
 #X text 137 292 lin <float>;

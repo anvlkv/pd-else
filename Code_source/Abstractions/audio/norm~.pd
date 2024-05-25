@@ -12,14 +12,14 @@
 #X msg 277 186 0;
 #X obj 277 161 route bang float -size;
 #X floatatom 320 187 5 0 0 0 - - - 0;
-#X obj 255 226 else/db2lin;
-#X obj 277 105 else/lb;
+#X obj 255 226 db2lin;
+#X obj 277 105 lb;
 #X obj 363 188 list split 1;
 #X obj 363 231 s \$0-size;
 #X obj 397 209 route bang;
 #X obj 305 69 declare -path else;
-#X obj 277 128 else/args -;
-#X obj 108 199 else/mov.rms~ -lin 1024, f 13;
+#X obj 277 128 args -;
+#X obj 108 199 mov.rms~ -lin 1024, f 13;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 1 0 19 0;

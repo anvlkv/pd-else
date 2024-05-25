@@ -127,11 +127,11 @@
 #X obj 132 249 * -1;
 #X text 29 295 see also;
 #X text 46 91 [slice~] splits a multichannel signal. The 'n' split point is set via argument or float input. If you slice at 'n' \, the left outlet spits the first 'n' channels and the right outlet sends the remaining channels. If you slice at '-n' \, the right outlet spits the last 'n' channels and the left outlet sends the first channels. If the number of channels is less than the split point \, the whole signal is output to the left if 'n' is positive (and the right outlet outputs zeros) \, and to the right if negative (and the left outlet outputs zeros)., f 76;
-#X obj 230 303 else/slice~ -1;
-#X obj 31 340 else/slice;
-#X obj 230 330 else/s2f~;
+#X obj 230 303 slice~ -1;
+#X obj 31 340 slice;
+#X obj 230 330 s2f~;
 #X listbox 230 356 10 0 0 0 - - - 0;
-#X obj 311 330 else/s2f~;
+#X obj 311 330 s2f~;
 #X listbox 311 356 10 0 0 0 - - - 0;
 #X text 153 398 signals - multichannel signal to slice;
 #X text 165 417 float - slice point;
@@ -139,8 +139,8 @@
 #X obj 114 476 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 157 476 signal - the righft output of the sliced signal;
 #X text 167 511 1) float - slice point (default 0);
-#X obj 230 204 else/sigs~ 1 2 3 4;
-#X obj 30 316 else/unmerge~;
+#X obj 230 204 sigs~ 1 2 3 4;
+#X obj 30 316 unmerge~;
 #X connect 18 0 19 0;
 #X connect 19 0 24 0;
 #X connect 20 0 21 0;

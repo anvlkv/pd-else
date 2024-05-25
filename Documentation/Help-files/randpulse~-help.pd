@@ -141,7 +141,7 @@
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 71 pd;
 #N canvas 512 142 541 446 pulse 0;
-#X obj 97 326 else/out~;
+#X obj 97 326 out~;
 #X obj 155 204 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 152 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -153,12 +153,12 @@ and the lasr half is "off".;
 a single sample - thus \, just like an impulse oscillator!;
 #X text 51 114 Conversely \, a pulse width of 1 has the largest (the
 entire period except the last sample).;
-#X obj 152 252 else/float2sig~ 10;
+#X obj 152 252 float2sig~ 10;
 #X text 53 155 The pulse width is set via the second argument or the
 second inlet.;
-#X obj 97 281 else/randpulse~ 100;
-#X obj 348 303 else/out~;
-#X obj 348 264 else/randpulse~ 1 0;
+#X obj 97 281 randpulse~ 100;
+#X obj 348 303 out~;
+#X obj 348 264 randpulse~ 1 0;
 #X text 335 234 regular random impulses;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
@@ -185,22 +185,22 @@ second inlet.;
 #X text 144 268 float/signal - frequency in hz;
 #X text 144 331 float/signal - phase sync (resets internal phase)
 ;
-#X obj 214 184 else/randpulse~ 1;
+#X obj 214 184 randpulse~ 1;
 #X obj 24 40 cnv 4 4 4 empty empty Random 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 60 87 [randpulse~] is a random pulse train oscillator (which
 alternates between a random value and 0 \, or on/off). It accepts negative
 frequencies \, has inlets for pulse width and sync.;
 #N canvas 801 184 450 409 sync 0;
-#X obj 124 182 else/sig2float~;
+#X obj 124 182 sig2float~;
 #X obj 124 214 nbx 8 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 124 252 vsl 18 128 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 235 78 bng 16 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 235 110 else/impseq~;
-#X obj 124 147 else/randpulse~ 0.5;
+#X obj 235 110 impseq~;
+#X obj 124 147 randpulse~ 0.5;
 #X text 31 23 An impulse into its right inlet forces [randpulse~] to
 generate a new random value and restart the cycle.;
 #X connect 0 0 1 0;
@@ -212,9 +212,9 @@ generate a new random value and restart the cycle.;
 #X text 143 287 seed <float>;
 #X text 247 364 random pulse signal;
 #X text 32 174 see also:;
-#X obj 32 225 else/randpulse;
-#X obj 32 199 else/randpulse2~;
-#X obj 214 221 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 32 225 randpulse;
+#X obj 32 199 randpulse2~;
+#X obj 214 221 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 6 391 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
 #X text 135 400 -seed <float>: seed value (default: unique internal)
@@ -230,13 +230,13 @@ a 'seed' message without float \, the object also gets a unique seed
 value., f 57;
 #X msg 339 264 seed;
 #X msg 329 235 seed 123;
-#X obj 60 311 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 190 311 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 60 311 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 190 311 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 60 223 r \$0-randpulse~;
 #X obj 190 223 r \$0-randpulse~;
 #X obj 329 297 s \$0-randpulse~;
-#X obj 190 253 else/randpulse~ -seed 123 1, f 15;
-#X obj 60 253 else/randpulse~ -seed 123 1, f 15;
+#X obj 190 253 randpulse~ -seed 123 1, f 15;
+#X obj 60 253 randpulse~ -seed 123 1, f 15;
 #X text 64 78 Seeds are kept locally \, which means that if two [randpulse~]
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [randpulse~] object twice with the same seed

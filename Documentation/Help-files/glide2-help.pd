@@ -60,8 +60,8 @@
 minimum 1), f 61;
 #X obj 229 252 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 226 137 else/pulse 0.25;
-#X obj 226 161 else/display 2;
+#X obj 226 137 pulse 0.25;
+#X obj 226 161 display 2;
 #X floatatom 287 201 5 0 0 0 - - - 0;
 #N canvas 868 80 383 211 exp 0;
 #X msg 127 34 4;
@@ -70,14 +70,14 @@ minimum 1), f 61;
 #X msg 157 86 exp \$1;
 #X obj 57 163 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 54 76 else/pulse 0.25;
-#X obj 54 98 else/display 2;
+#X obj 54 76 pulse 0.25;
+#X obj 54 98 display 2;
 #X msg 188 34 0.5;
 #X msg 222 34 -0.5;
 #X text 265 68 You can set exponential factors like in [rescale]. Check
 it out as well., f 13;
-#X obj 264 146 else/rescale;
-#X obj 54 136 else/glide2 2000 1000;
+#X obj 264 146 rescale;
+#X obj 54 136 glide2 2000 1000;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -90,19 +90,19 @@ it out as well., f 13;
 #X restore 492 201 pd exp;
 #N canvas 806 193 494 369 example 0;
 #X obj 78 256 osc~;
-#X obj 78 293 else/out~;
+#X obj 78 293 out~;
 #X text 185 29 <= random numbers generated once a second;
 #X text 212 52 <= values rescaled to 200-800 range;
-#X obj 78 30 else/stepnoise 1;
-#X obj 78 53 else/rescale 200 800;
+#X obj 78 30 stepnoise 1;
+#X obj 78 53 rescale 200 800;
 #X floatatom 78 223 8 0 0 0 - - - 0;
 #X text 204 192 <= values are limited \, generating a portamento,
 f 24;
 #X msg 158 141 rate \$1;
 #X floatatom 158 106 5 0 0 0 - - - 0;
 #X text 195 104 <= increasing refresh rate generates steps, f 22;
-#X obj 78 100 else/display;
-#X obj 78 194 else/glide2 750 250;
+#X obj 78 100 display;
+#X obj 78 194 glide2 750 250;
 #X connect 0 0 1 0;
 #X connect 4 0 5 0;
 #X connect 5 0 11 0;
@@ -125,7 +125,7 @@ change it with the -rate flag or the rate message. If you change the.
 , f 35;
 #X obj 149 118 tgl 18 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
-#X obj 149 175 else/glide2 -rate 250 1500 1000;
+#X obj 149 175 glide2 -rate 250 1500 1000;
 #X connect 1 0 8 0;
 #X connect 2 0 5 0;
 #X connect 3 0 5 0;
@@ -136,7 +136,7 @@ change it with the -rate flag or the rate message. If you change the.
 #X restore 486 223 pd rate;
 #X text 61 90 [glide] generates a glide/portamento from its float input
 changes. The glide time in ms.;
-#X obj 226 226 else/glide2 2000 1000;
+#X obj 226 226 glide2 2000 1000;
 #X text 278 168 glide time up, f 7;
 #X floatatom 349 201 5 0 0 0 - - - 0;
 #X text 342 168 glide time down, f 9;
@@ -145,9 +145,9 @@ changes. The glide time in ms.;
 #X text 197 385 float;
 #X text 239 361 - glide up time in ms;
 #X text 239 384 - glide down time in ms;
-#X obj 45 198 else/glide;
-#X obj 45 242 else/glide2~;
-#X obj 45 220 else/slew2;
+#X obj 45 198 glide;
+#X obj 45 242 glide2~;
+#X obj 45 220 slew2;
 #X text 135 496 1) list - glide up and down time in ms (default 0 0)
 ;
 #X connect 30 0 43 0;

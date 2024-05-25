@@ -35,7 +35,7 @@
 #X restore 3 3 graph;
 #X text 61 90 [selector] outputs data from the selected inlet according to the float into the rightmost inlet.;
 #X obj 219 40 cnv 4 4 4 empty empty inlet 0 28 2 18 #e0e0e0 #000000 0;
-#X obj 167 232 else/display;
+#X obj 167 232 display;
 #X text 211 332 - message from the selected inlet;
 #X text 226 276 any message to be selected, f 28;
 #X text 226 300 sets which inlet is selected;
@@ -47,7 +47,7 @@
 #X obj 167 174 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 208 174 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 249 175 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
-#X obj 167 202 else/selector 3 1, f 21;
+#X obj 167 202 selector 3 1, f 21;
 #X text 176 155 0;
 #X text 216 155 1;
 #X text 258 155 2;
@@ -58,7 +58,7 @@
 #X text 353 204 intlet #;
 #X text 384 122 (out of range is 'none');
 #X text 38 198 see also:;
-#X obj 33 224 else/router;
+#X obj 33 224 router;
 #X connect 37 0 51 0;
 #X connect 41 0 44 0;
 #X connect 42 0 44 1;

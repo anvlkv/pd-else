@@ -61,10 +61,10 @@
 #X text 66 91 [drunkard] generates random numbers within a given step
 range from the last output. When reaching the bounds \, the values
 get wrapped., f 68;
-#X obj 206 193 else/drunkard -p 100 0.1;
+#X obj 206 193 drunkard -p 100 0.1;
 #X text 31 187 see also;
-#X obj 32 241 else/brown;
-#X obj 32 214 else/drunkard~;
+#X obj 32 241 brown;
+#X obj 32 214 drunkard~;
 #X text 119 501 -seed <float>: sets seed (default: unique internal)
 , f 54;
 #X text 137 518 -p <float>: sets probability (default 70), f 51;
@@ -96,10 +96,10 @@ set a "seed" value \, which can be any integer number., f 52;
 supply it \, each object gets its own seed internal seed. If you send
 a 'seed' message without float \, the object also gets a unique seed
 value., f 52;
-#X obj 47 210 else/drunkard -seed 1039;
-#X obj 207 210 else/drunkard -seed 1039;
-#X obj 386 205 else/drunkard;
-#X obj 536 205 else/drunkard;
+#X obj 47 210 drunkard -seed 1039;
+#X obj 207 210 drunkard -seed 1039;
+#X obj 386 205 drunkard;
+#X obj 536 205 drunkard;
 #X text 30 98 Seeds are kept locally \, which means that if two [drunkard]
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [drunkard] object twice with the same seed

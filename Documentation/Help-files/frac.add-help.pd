@@ -38,8 +38,8 @@
 ;
 #X text 255 335 none;
 #X text 47 159 see also:;
-#X obj 38 180 else/frac2dec;
-#X obj 224 195 else/display;
+#X obj 38 180 frac2dec;
+#X obj 224 195 display;
 #X text 161 244 anything;
 #X text 172 298 symbol;
 #X text 223 298 - added fraction;
@@ -50,8 +50,8 @@
 #X msg 178 131 13/7;
 #X text 224 244 - fractional value to add to right input;
 #X text 224 266 - fractional value to add to leftt input;
-#X obj 38 200 else/frac.mul;
-#X obj 224 166 else/frac.add;
+#X obj 38 200 frac.mul;
+#X obj 224 166 frac.add;
 #X text 61 86 Use [frac.add] to add two fractions. The output is also
 a fraction.;
 #X connect 0 0 32 0;

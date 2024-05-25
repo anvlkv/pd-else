@@ -7,7 +7,7 @@
 #X obj 72 65 inlet;
 #X text 438 201 Part of ELSE \; https://github.com/porres/pd-else;
 #X text 440 182 Alexandre Torres Porres (2023);
-#X obj 286 212 else/osc.format;
+#X obj 286 212 osc.format;
 #X obj 461 139 declare -path else;
 #X obj 179 236 t a b;
 #N canvas 159 229 357 385 check 0;
@@ -16,9 +16,9 @@
 #X obj 191 78 list length;
 #X obj 117 90 t a a;
 #X obj 191 102 - 1;
-#X obj 117 131 else/router;
+#X obj 117 131 router;
 #X msg 139 197 connect localhost \$1;
-#X obj 191 162 else/insert connect;
+#X obj 191 162 insert connect;
 #X connect 0 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
@@ -29,9 +29,9 @@
 #X connect 6 0 1 0;
 #X connect 7 0 1 0;
 #X restore 179 285 pd check;
-#X obj 179 192 else/changed;
+#X obj 179 192 changed;
 #N canvas 487 137 319 229 init 0;
-#X obj 108 91 else/args;
+#X obj 108 91 args;
 #X obj 108 65 loadbang;
 #X obj 108 115 route bang;
 #X obj 175 159 outlet;

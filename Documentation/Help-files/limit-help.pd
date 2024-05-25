@@ -65,7 +65,7 @@
 #X text 188 419 the last input in the time interval after last output
 , f 54;
 #X text 187 471 initial time limit (default 0 - no limit);
-#X obj 204 317 else/display;
+#X obj 204 317 display;
 #X msg 270 263 1 2 3;
 #X msg 223 217 x;
 #X msg 258 217 a b c;
@@ -75,7 +75,7 @@
 has elapsed since the previous input/output. Otherwise \, it waits
 until that time passes and then sends the last received message since
 the previous output (ignoring the others).;
-#X obj 204 288 else/limit 1000, f 27;
+#X obj 204 288 limit 1000, f 27;
 #N canvas 794 278 505 358 ignore 0;
 #X obj 77 126 tgl 20 0 empty empty empty 17 7 0 10 #d0d0d0 #000000
 #000000 0 1;
@@ -86,14 +86,14 @@ the previous output (ignoring the others).;
 #X floatatom 312 233 5 0 0 0 - - - 0;
 #X text 309 213 change time limit;
 #X text 350 233 milliseconds;
-#X obj 153 287 else/display;
+#X obj 153 287 display;
 #X msg 219 233 1 2 3;
 #X msg 172 187 x;
 #X msg 207 187 a b c;
 #X msg 212 212 symbol dog;
 #X msg 153 165 list one 2 3;
-#X obj 153 258 else/limit 1000 1, f 27;
-#X obj 312 285 else/display;
+#X obj 153 258 limit 1000 1, f 27;
+#X obj 312 285 display;
 #X text 65 19 The second argument sets to ignore mode. In this case
 \, messages received before the time limit are ignored and not sent
 after the period is done. The ignored messages are then sent to the

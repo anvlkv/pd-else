@@ -47,13 +47,13 @@
 #X text 192 336 time interval for combining items to a list;
 #X obj 198 160 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 198 188 else/loop 10;
+#X obj 198 188 loop 10;
 #X text 123 313 anything -;
 #X text 190 313 message to be combined with another input close in
 time;
 #X text 119 374 anything;
 #X text 192 374 combined (or not) messages, f 33;
-#X obj 198 245 else/display;
+#X obj 198 245 display;
 #N canvas 1091 366 464 309 example 0;
 #X obj 100 49 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
@@ -67,9 +67,9 @@ time;
 #X text 223 81 <= change delay time;
 #X text 126 50 <= check if delayed messages can be packed together
 ;
-#X obj 100 177 else/combine 50;
+#X obj 100 177 combine 50;
 #X obj 100 248 print;
-#X obj 100 208 else/display;
+#X obj 100 208 display;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
@@ -82,7 +82,7 @@ time;
 #X connect 12 0 11 0;
 #X restore 464 262 pd example;
 #X text 221 413 initial time in ms (default 0);
-#X obj 198 218 else/combine;
+#X obj 198 218 combine;
 #X text 44 87 [combine] collects messages (with one or more elements)
 into a single list if they come within a certain given amount of time
 \, but not if greater than it. A "0" time is possible if messages are

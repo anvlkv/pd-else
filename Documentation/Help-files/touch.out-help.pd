@@ -35,12 +35,12 @@
 #X text 237 281 -;
 #X text 197 281 float;
 #X obj 153 278 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
-#X obj 31 162 else/touch.in;
-#X obj 224 187 else/touch.out 4;
+#X obj 31 162 touch.in;
+#X obj 224 187 touch.out 4;
 #X text 223 134 pressure;
 #X text 237 236 - Channel Aftertouch value;
 #X text 252 281 MIDI channel;
-#X obj 31 183 else/ptouch.out;
+#X obj 31 183 ptouch.out;
 #X text 69 85 [touch.out] formats and sends raw MIDI aftertouch messages to Pd's MIDI output and its outlet. An argument sets channel number (the default is 1)., f 66;
 #N canvas 480 188 521 291 external 0;
 #X obj 199 213 print;
@@ -51,7 +51,7 @@
 #X obj 292 150 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 305 131 ch;
 #X text 201 131 key;
-#X obj 199 179 else/touch.out 4;
+#X obj 199 179 touch.out 4;
 #X connect 1 0 8 0;
 #X connect 2 0 1 0;
 #X connect 4 0 8 0;

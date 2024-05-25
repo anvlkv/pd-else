@@ -3,7 +3,7 @@
 #X obj 156 67 inlet~;
 #X obj 239 67 inlet~;
 #X obj 86 115 r \$0-set;
-#X obj 74 158 else/wavetable~, f 24;
+#X obj 74 158 wavetable~, f 24;
 #N canvas 395 228 520 331 waveforms 0;
 #N canvas 226 67 443 459 saw 0;
 #X text 163 135 p;
@@ -15,7 +15,7 @@
 #X obj 175 210 list store, f 16;
 #X msg 175 181 append \$1;
 #X obj 175 154 expr 1/($f1+1);
-#X obj 175 116 else/loop;
+#X obj 175 116 loop;
 #X obj 175 241 list prepend sinesum 8192;
 #X obj 319 389 send \$0-saw;
 #X connect 1 0 5 0;
@@ -46,7 +46,7 @@
 #X obj 39 88 trigger bang float bang;
 #X obj 118 233 list store;
 #X msg 118 200 append \$1;
-#X obj 118 141 else/loop;
+#X obj 118 141 loop;
 #X obj 261 389 send \$0-saw2;
 #X connect 1 0 8 0;
 #X connect 2 0 4 0;
@@ -77,7 +77,7 @@
 #X obj 59 410 list trim;
 #X msg 89 171 1 \$1;
 #X obj 57 114 t b f;
-#X obj 89 202 else/loop;
+#X obj 89 202 loop;
 #X obj 204 525 send \$0-tri;
 #X connect 0 0 11 0;
 #X connect 1 0 6 0;
@@ -110,7 +110,7 @@
 #X obj 67 383 list trim;
 #X msg 93 150 1 \$1;
 #X obj 61 94 t b f;
-#X obj 93 181 else/loop;
+#X obj 93 181 loop;
 #X obj 212 473 send \$0-square;
 #X connect 0 0 11 0;
 #X connect 1 0 6 0;
@@ -173,7 +173,7 @@
 #X obj 327 428 max 1;
 #X obj 386 442 s \$0-hz;
 #X obj 450 442 s \$0-ph;
-#X obj 205 80 else/loadbanger 2;
+#X obj 205 80 loadbanger 2;
 #X obj 321 135 s \$0-n;
 #X obj 134 44 inlet;
 #X obj 227 440 pack s \$0;
@@ -181,14 +181,14 @@
 #X msg 227 480 set \$2-\$1;
 #X msg 321 108 1;
 #X obj 359 255 t l l;
-#X obj 433 238 else/pick 1;
+#X obj 433 238 pick 1;
 #X obj 433 267 route symbol float;
-#X obj 359 329 else/router;
+#X obj 359 329 router;
 #X msg 433 293 0;
 #X msg 494 293 1;
 #X obj 433 372 unpack f f f;
 #X obj 327 454 change;
-#X obj 205 117 else/args -;
+#X obj 205 117 args -;
 #X msg 236 243 midi 1;
 #X obj 264 267 s \$0-set;
 #X msg 286 243 soft 1;

@@ -52,7 +52,7 @@ nyquist).;
 #X obj 7 502 cnv 3 550 3 empty empty more_info 8 12 0 13 #dcdcdc #000000
 0;
 #X text 197 411 - sets frequency in hertz (default: nyquist);
-#X obj 212 252 else/out~;
+#X obj 212 252 out~;
 #X text 197 379 - general quadratic map chaotic signal;
 #X text 153 510 Object based on SuperCollider's "QuadN" UGEN.;
 #X text 197 428 - sets a (default 1);
@@ -67,7 +67,7 @@ nyquist).;
 #X text 84 91 [quad~] generates a chaotic signal from the difference
 equation \; y[n] = a * y[n-1]^2 + b * y[n-1] + c;
 #X text 197 480 - sets initial value of y[n-1] (default 0);
-#X obj 212 224 else/quad~;
+#X obj 212 224 quad~;
 #X text 197 346 - 4 floats sets 'a' \, 'b' \, 'c' and y[n-1];
 #X connect 0 0 17 0;
 #X connect 17 0 42 0;

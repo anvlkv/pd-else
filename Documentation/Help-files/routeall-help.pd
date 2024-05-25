@@ -42,13 +42,13 @@
 #X msg 218 258 1 2 3;
 #X obj 75 41 cnv 4 4 4 empty empty all 0 28 2 18 #e0e0e0 #000000 0
 ;
-#X obj 282 340 else/display;
+#X obj 282 340 display;
 #X obj 105 41 cnv 4 4 4 empty empty the 0 28 2 18 #e0e0e0 #000000 0
 ;
 #X text 146 499 1) anything -;
-#X obj 206 317 else/routeall a 1, f 26;
-#X obj 206 341 else/display;
-#X obj 359 339 else/display;
+#X obj 206 317 routeall a 1, f 26;
+#X obj 206 341 display;
+#X obj 359 339 display;
 #X msg 127 245 symbol a;
 #X msg 175 268 a;
 #X msg 264 258 1;
@@ -75,9 +75,9 @@ to the rightmost outlet., f 74;
 #X obj 101 178 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X symbolatom 118 202 10 0 0 0 - - - 0;
-#X obj 212 252 else/display;
-#X obj 101 253 else/display;
-#X obj 101 229 else/routeall float;
+#X obj 212 252 display;
+#X obj 101 253 display;
+#X obj 101 229 routeall float;
 #X text 160 178 implicit "float" selector;
 #X text 187 200 explicit "symbol" selector;
 #X text 29 19 Messages in Pure Data have selectors (bang \, float \,
@@ -86,27 +86,27 @@ has the "float" selector implicitly. A list that starts with numbers
 also has the "list" selector implicitly. On the other hand \, a list
 that starts with a symbol needs the "list" selector explicitly to be
 considered a list \, and so does symbol messages.;
-#X obj 61 444 else/display;
-#X obj 61 416 else/routeall 1 list;
+#X obj 61 444 display;
+#X obj 61 416 routeall 1 list;
 #X msg 86 357 1 2 3;
 #X msg 61 331 list a b;
 #X msg 99 388 a b;
-#X obj 119 445 else/display;
-#X obj 202 409 else/display;
+#X obj 119 445 display;
+#X obj 202 409 display;
 #X text 120 329 matches the list argument;
 #X text 129 359 also a list \, but matches the "1" argument first;
 #X text 129 388 unmatched;
-#X obj 535 214 else/display;
-#X obj 461 215 else/display;
-#X obj 461 178 else/routeall a symbol;
+#X obj 535 214 display;
+#X obj 461 215 display;
+#X obj 461 178 routeall a symbol;
 #X msg 461 106 symbol a;
 #X msg 480 129 a;
 #X msg 498 153 symbol b;
-#X obj 718 214 else/display;
-#X obj 644 215 else/display;
+#X obj 718 214 display;
+#X obj 644 215 display;
 #X msg 644 106 list a b;
 #X msg 663 128 a b;
-#X obj 644 178 else/routeall a list;
+#X obj 644 178 routeall a list;
 #X msg 681 153 list 1 2;
 #X text 426 17 [routeall] can also match a symbol or a list message
 to an argument that corresponds to the symbol or first element on a
@@ -118,19 +118,19 @@ right.;
 #X text 607 355 a list with 1 float is converted to a float, f 22
 ;
 #X msg 561 360 list 1;
-#X obj 479 429 else/display;
+#X obj 479 429 display;
 #X msg 573 390 list a;
 #X text 618 384 a list with 1 symbol is converted to a symbol, f 23
 ;
-#X obj 561 433 else/routeall bang float symbol;
+#X obj 561 433 routeall bang float symbol;
 #X text 434 273 In Pd \, there are special cases of list messages where
 they are converted to other message types - [routeall] also considers
 such messages not as lists.;
 #X text 569 325 a list without elements is converted to a bang, f
 23;
-#X obj 561 459 else/display;
-#X obj 622 459 else/display;
-#X obj 683 459 else/display;
+#X obj 561 459 display;
+#X obj 622 459 display;
+#X obj 683 459 display;
 #X connect 1 0 5 0;
 #X connect 2 0 5 0;
 #X connect 5 0 4 0;
@@ -163,14 +163,14 @@ such messages not as lists.;
 #X restore 463 337 pd selectors;
 #N canvas 983 274 382 310 right-inlet 0;
 #X msg 101 122 1 2 3;
-#X obj 164 225 else/display;
-#X obj 88 226 else/display;
-#X obj 241 224 else/display;
+#X obj 164 225 display;
+#X obj 88 226 display;
+#X obj 241 224 display;
 #X msg 88 99 list a b;
 #X msg 112 145 a 2 3;
 #X msg 241 174 1;
 #X obj 241 147 loadbang;
-#X obj 88 202 else/routeall b 2, f 26;
+#X obj 88 202 routeall b 2, f 26;
 #X msg 122 167 b 1 3;
 #X text 81 38 The right inlet sets element number to match in the incoming
 message - note it is indexed from 0!, f 39;

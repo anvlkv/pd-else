@@ -13,7 +13,7 @@
 ;
 #X text 192 326 signal;
 #X text 192 387 signal;
-#X obj 291 246 else/out~;
+#X obj 291 246 out~;
 #X obj 23 40 cnv 4 4 4 empty empty [pimp~] 0 28 2 18 #e0e0e0 #000000
 0;
 #X obj 91 40 cnv 4 4 4 empty empty multiplier 0 28 2 18 #e0e0e0 #000000
@@ -47,13 +47,13 @@
 from ELSE is both a [phasor~] and an [imp~] oscillator. Use [pimpul~]
 to keep [phasor~] or [pimp~] objects in sync with different frequency
 ratios., f 72;
-#X obj 309 189 else/pimp~ 1;
-#X obj 186 218 else/pimpmul~ 0.75;
+#X obj 309 189 pimp~ 1;
+#X obj 186 218 pimpmul~ 0.75;
 #X obj 291 165 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 294 143 hsl 128 14 0.1 5 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 186 245 else/s2f~;
+#X obj 186 245 s2f~;
 #X obj 143 154 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X text 172 164 <= phase;
@@ -71,15 +71,15 @@ ratios., f 72;
 #000000 #000000;
 #X msg 201 57 0;
 #X msg 169 57 0.5;
-#X obj 134 279 else/out~;
-#X obj 221 242 else/resonant~ 500 1000, f 14;
-#X obj 272 202 else/trig2bang~;
-#X obj 291 176 else/trig2bang~;
-#X obj 407 171 else/s2f~;
-#X obj 484 171 else/s2f~;
-#X obj 134 127 else/pimpmul~ 2;
-#X obj 63 160 else/resonant~ 250 1000, f 14;
-#X obj 135 88 else/pimp~ 1;
+#X obj 134 279 out~;
+#X obj 221 242 resonant~ 500 1000, f 14;
+#X obj 272 202 trig2bang~;
+#X obj 291 176 trig2bang~;
+#X obj 407 171 s2f~;
+#X obj 484 171 s2f~;
+#X obj 134 127 pimpmul~ 2;
+#X obj 63 160 resonant~ 250 1000, f 14;
+#X obj 135 88 pimp~ 1;
 #X obj 382 261 hsl 200 16 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 356 260 bng 16 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
@@ -118,7 +118,7 @@ when changing the frequency or the multiplier., f 30;
 #X restore 468 268 pd example;
 #X text 168 449 1) float - initial multiplier (default 0);
 #X text 19 261 see also:;
-#X obj 19 280 else/pimp~;
+#X obj 19 280 pimp~;
 #X floatatom 143 291 5 0 0 0 - - - 0;
 #X text 240 347 - frequency multiplier;
 #X connect 24 0 25 0;

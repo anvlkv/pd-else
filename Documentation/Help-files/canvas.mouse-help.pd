@@ -28,7 +28,7 @@
 #X text 194 215 click;
 #X text 45 119 Below \, the object gets information when you interact with the parent window., f 62;
 #X text 45 26 An optional argument sets the depth level and can query the parent patch's directory \, or granparent's and so on. This way \, "1" gets the directory of the parent's patch \, "2" the grandparent's and so on. The depth gets clipped to the maximum level. If you do not specify a float as the first argument \, the default level is "0" (which is the current patch's directory)., f 66;
-#X obj 233 168 else/canvas.mouse 1;
+#X obj 233 168 canvas.mouse 1;
 #X obj 298 218 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 363 218 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X connect 6 0 0 0;
@@ -48,7 +48,7 @@
 #X text 106 487 2) float - non zero sets "position mode" (default 0);
 #N canvas 702 91 628 598 position-mode 0;
 #N canvas 351 58 545 514 gop 0;
-#X obj 130 381 else/canvas.mouse 1 1;
+#X obj 130 381 canvas.mouse 1 1;
 #X obj 130 421 outlet;
 #X obj 202 421 outlet;
 #X obj 274 421 outlet;
@@ -75,12 +75,12 @@
 #X obj 123 340 cnv 17 3 34 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 164 338 zero - sets coordinates to zero;
 #X text 157 356 reset - resets mouse coordinates;
-#X obj 54 294 else/mouse;
+#X obj 54 294 mouse;
 #X text 106 507 3) float - non zero enables output in edit mode (default 0);
 #X text 37 88 [canvas.mouse] gets mouse click and mouse coordinates when your mouse is interacting with the canvas window. An optional argument sets the depth level. A second optional argument sets to "position-mode" \, which resets the position coordinates according to the position of the subpatch/abstraction in the parent patch. By default \, there's no output in edit mode \, but a non zero third argument allows output even in edit mode., f 69;
 #X text 233 197 <-- sets coordinates to zero;
 #X text 257 227 <-- resets mouse coordinates;
-#X obj 191 260 else/canvas.mouse 0 0 1;
+#X obj 191 260 canvas.mouse 0 0 1;
 #X connect 31 0 41 0;
 #X connect 32 0 41 0;
 #X connect 41 0 17 0;

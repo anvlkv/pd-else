@@ -49,13 +49,13 @@
 if no symbol is given \, the current folder is opened, f 52;
 #X text 391 156 <= click;
 #N canvas 835 188 458 230 more 0;
-#X obj 98 141 else/openfile http://github.com/porres/pd-else;
+#X obj 98 141 openfile http://github.com/porres/pd-else;
 #X text 97 50 weblink example:;
-#X obj 99 93 else/openfile -h http://github.com/porres/pd-else ELSE
+#X obj 99 93 openfile -h http://github.com/porres/pd-else ELSE
 on Github;
 #X coords 0 230 1 229 85 60 0;
 #X restore 492 157 pd more;
-#X obj 227 156 else/openfile ./README.pdf;
+#X obj 227 156 openfile ./README.pdf;
 #X text 30 146 hyperlink mode (click) ======>, f 15;
 #X text 247 125 <= open file;
 #X text 74 92 [openfile] can be used to open folders and files in your
@@ -64,7 +64,7 @@ computer and also weblinks.;
 #X text 110 332 1) symbol - folder/file/weblink address (default: current
 folder), f 66;
 #X text 162 367 clicking on the object opens file;
-#X obj 122 157 else/openfile -h ./README.pdf Else's README;
+#X obj 122 157 openfile -h ./README.pdf Else's README;
 #X text 191 293 sets to hyperlink (GUI) mode \, 1st element is file
 to open and name to display \, further arguments overwrite display.
 ;

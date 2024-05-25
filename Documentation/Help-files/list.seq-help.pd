@@ -23,7 +23,7 @@
 #X obj 122 373 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 226 374 - the generated incremented list;
 #X obj 189 178 bng 19 250 50 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000;
-#X obj 221 257 else/display;
+#X obj 221 257 display;
 #X text 186 322 bang;
 #X msg 265 188 goto 2;
 #X msg 221 130 list a b c d e;
@@ -35,7 +35,7 @@
 #X text 186 305 list;
 #X text 226 305 - list to sequence through;
 #X text 62 91 Use [list.seq] to sequence through a list \, looping through it.;
-#X obj 221 225 else/list.seq;
+#X obj 221 225 list.seq;
 #X text 227 410 - list to sequence through (default 0);
 #X connect 19 0 32 0;
 #X connect 22 0 32 0;

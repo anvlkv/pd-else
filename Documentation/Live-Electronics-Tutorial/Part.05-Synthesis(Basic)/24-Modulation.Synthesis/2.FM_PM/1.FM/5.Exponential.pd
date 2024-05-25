@@ -24,7 +24,7 @@
 #X text 512 56 Note that oscillators in ELSE can take pitch directly in MIDI \, which is quite useful for exponential FM., f 44;
 #X obj 582 231 numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 60;
 #X obj 582 410 +~;
-#X obj 582 471 else/out~;
+#X obj 582 471 out~;
 #X obj 600 318 sine~ -midi;
 #X obj 582 438 sine~ -midi;
 #X obj 600 281 +~ 7.05;

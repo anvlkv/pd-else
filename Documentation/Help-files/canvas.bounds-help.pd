@@ -40,16 +40,16 @@
 #X text 140 298 1) float - depth \, default 0 (current window);
 #X text 470 161 example:;
 #N canvas 709 470 425 237 depth 0;
-#X obj 138 136 else/display;
-#X obj 138 102 else/canvas.bounds 1;
+#X obj 138 136 display;
+#X obj 138 102 canvas.bounds 1;
 #X text 72 35 You can also query the parent bounds with the depth argument
 (1 goes up to the parent patch \, 2 queries the parent's parent and
 so on)., f 46;
 #X connect 1 0 0 0;
 #X restore 471 184 pd depth;
-#X obj 216 180 else/display;
+#X obj 216 180 display;
 #X text 183 229 (none);
-#X obj 216 155 else/canvas.bounds;
+#X obj 216 155 canvas.bounds;
 #X text 79 91 The [canvas.bounds] object outputs bounds coordinates
 in pixels \, top left coordinate (horizontal \, vertical) and bottom
 right (horizontal \, vertical). Try moving the patch window or change

@@ -1,8 +1,8 @@
 #N canvas 206 56 861 546 12;
 #X declare -path else;
 #X obj 686 105 declare -path else;
-#X obj 517 221 else/graph~ 441 13 -1 1 200 140 #dfdfdf 0 1;
-#X obj 517 375 else/spectrograph~ 1024 0 1 300 140 100;
+#X obj 517 221 graph~ 441 13 -1 1 200 140 #dfdfdf 0 1;
+#X obj 517 375 spectrograph~ 1024 0 1 300 140 100;
 #X obj 601 34 hsl 150 17 0.01 1 1 0 empty empty empty -2 -8 0 10 #dfdfdf
 #000000 #000000 0 1;
 #X text 653 197 waveform;

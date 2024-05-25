@@ -26,8 +26,8 @@
 #N canvas 1049 171 508 284 up/downsampling 0;
 #X obj 123 182 samplerate~;
 #X obj 338 166 block~ 64 1 16;
-#X obj 123 232 else/display 6;
-#X obj 223 210 else/display 6;
+#X obj 123 232 display 6;
+#X obj 223 210 display 6;
 #X obj 223 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X text 54 29 Unlike [samplerate~] \, [sr~] always gives you the global
@@ -36,7 +36,7 @@ rate running in the patch due to [block~]., f 56;
 #X msg 338 102 set 64 1 0.5;
 #X msg 353 131 set 64 1 16;
 #X obj 123 140 loadbang;
-#X obj 223 182 else/nyquist~;
+#X obj 223 182 nyquist~;
 #X obj 123 206 / 2;
 #X connect 0 0 10 0;
 #X connect 4 0 0 0;
@@ -87,18 +87,18 @@ rate running in the patch due to [block~]., f 56;
 #X msg 213 179 khz;
 #X msg 223 201 ms;
 #X msg 256 202 sec;
-#X obj 213 258 else/display;
+#X obj 213 258 display;
 #X text 64 153 The default output is the sample rate frequency in hertz.
 ;
-#X obj 213 232 else/nyquist~ -khz;
+#X obj 213 232 nyquist~ -khz;
 #X text 64 90 [nyquist~] reports the nyquist (which is half the sample
 rate) as a frequency or period. It sends it when loading the patch
 \, when receiving a bang or when the sample rate changes. It reports
 it either in hz or khz and the period either in seconds os milliseconds.
-like [else/sr~] \, it doesn't report up/down sampling rates., f 74
+like [sr~] \, it doesn't report up/down sampling rates., f 74
 ;
 #X text 59 229 see also:;
-#X obj 68 251 else/sr~;
+#X obj 68 251 sr~;
 #X connect 39 0 46 0;
 #X connect 40 0 46 0;
 #X connect 41 0 46 0;

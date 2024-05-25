@@ -35,15 +35,15 @@
 #X text 344 157 1st;
 #X text 344 172 2nd;
 #X text 344 187 3rd;
-#X obj 187 238 else/display;
-#X obj 239 238 else/display;
+#X obj 187 238 display;
+#X obj 239 238 display;
 #X floatatom 187 137 5 0 0 0 - - - 0;
-#X obj 292 238 else/display;
+#X obj 292 238 display;
 #X obj 157 134 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X msg 213 183 hi;
 #X msg 202 159 1 2;
 #X text 363 208 outlet #;
-#X obj 187 210 else/router 3 2, f 18;
+#X obj 187 210 router 3 2, f 18;
 #X text 228 391 - 'n' number of outlets (2 to 512 \, default 2);
 #X msg 326 132 -1;
 #X text 188 264 0;
@@ -52,7 +52,7 @@
 #X text 67 85 [router] routes a message from the left inlet to an outlet number specified by the float into the right inlet (if the number is out of range \, the message is not output)., f 65;
 #X text 228 410 - sets initially open outlet (default 0);
 #X text 38 217 see also:;
-#X obj 33 239 else/selector;
+#X obj 33 239 selector;
 #X msg 296 132 3;
 #X text 355 131 (out of range is 'none');
 #X connect 27 0 28 0;

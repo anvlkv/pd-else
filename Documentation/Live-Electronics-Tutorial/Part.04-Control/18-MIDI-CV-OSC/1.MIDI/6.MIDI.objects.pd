@@ -61,4 +61,4 @@
 #X text 662 210 Note On and Note Off;
 #X obj 557 544 mpe.in;
 #X text 613 546 For MIDI Polyphonic Expression;
-#X text 482 61 The ELSE library also has MIDI objects \, which act the same but can also receive and send raw MIDI data. This means they can be connected to an object like [else/midi].;
+#X text 482 61 The ELSE library also has MIDI objects \, which act the same but can also receive and send raw MIDI data. This means they can be connected to an object like [midi].;

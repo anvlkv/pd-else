@@ -50,9 +50,9 @@
 0;
 #N canvas 900 287 411 216 pd-dsp-started 0;
 #X obj 79 94 r pd-dsp-started;
-#X obj 79 157 else/display 6;
-#X obj 79 129 else/blocksize~;
-#X obj 293 69 else/setdsp~;
+#X obj 79 157 display 6;
+#X obj 79 129 blocksize~;
+#X obj 293 69 setdsp~;
 #X text 52 26 The "pd-dsp-started" message is automatically sent when
 DSP is started in Pd and can also be used to trigger [blocksize~].
 , f 31;
@@ -60,19 +60,19 @@ DSP is started in Pd and can also be used to trigger [blocksize~].
 #X connect 2 0 1 0;
 #X restore 431 240 pd pd-dsp-started;
 #X msg 231 185 ms;
-#X obj 221 239 else/display;
+#X obj 221 239 display;
 #X text 166 314 ms;
 #X text 184 314 - set and get the sample rate period in ms;
 #X text 204 439 - sets to period in ms;
 #X text 180 439 -ms;
-#X obj 494 85 else/setdsp~;
+#X obj 494 85 setdsp~;
 #X msg 221 163 samps;
 #X text 184 357 - block size period or frequency;
 #X text 148 297 samps;
 #X text 184 281 - get block size period or frequency;
 #X text 184 329 - set and get the block size frequency in Hz;
 #X text 184 297 - set and get the block size period in samples;
-#X obj 221 213 else/blocksize~ -ms;
+#X obj 221 213 blocksize~ -ms;
 #X text 180 422 -hz;
 #X text 204 422 - sets to frequency in hz;
 #X text 58 87 [blocksize~] reports the block size when the audio is

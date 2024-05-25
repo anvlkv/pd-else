@@ -35,7 +35,7 @@
 #X restore 306 5 graph;
 #X obj 109 42 cnv 4 4 4 empty empty filter 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 193 243 else/out~;
+#X obj 193 243 out~;
 #X obj 193 182 noise~;
 #X text 177 317 signal;
 #X text 222 317 - signal to be filtered, f 43;
@@ -103,11 +103,11 @@
 #X obj 229 105 block~ 64 1 16;
 #X text 181 168 <= Anti-Aliasing filter;
 #X text 212 84 Oversampling (16x);
-#X obj 58 167 else/brickwall~;
+#X obj 58 167 brickwall~;
 #X text 104 214 note this is the "global" nyquist \, not the upsampled
 running in this subpatch., f 34;
 #X text 209 184 (default frequency is 0.75 * Nyquist), f 19;
-#X obj 58 114 else/saw~;
+#X obj 58 114 saw~;
 #X connect 1 0 8 0;
 #X connect 5 0 0 0;
 #X connect 8 0 5 0;
@@ -115,12 +115,12 @@ running in this subpatch., f 34;
 #X text 51 35 [brickwall~] is really useful as an anti-aliasing filter
 when you do the "upsampling + filtering" technique. See the subpatch
 [pd Anti-Aliasing] below and compare the results., f 72;
-#X obj 105 150 else/saw~;
-#X obj 438 242 else/bl.saw~;
+#X obj 105 150 saw~;
+#X obj 438 242 bl.saw~;
 #X text 356 201 This object is used in many abstractions in ELSE \,
 like [bl.saw~]:, f 27;
-#X obj 195 230 else/out~;
-#X obj 62 231 else/out~;
+#X obj 195 230 out~;
+#X obj 62 231 out~;
 #X connect 12 0 13 0;
 #X connect 12 0 15 0;
 #X connect 13 0 5 0;
@@ -130,7 +130,7 @@ like [bl.saw~]:, f 27;
 #X restore 426 271 pd anti-aliasing;
 #X obj 304 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 193 207 else/brickwall~ 500;
+#X obj 193 207 brickwall~ 500;
 #X text 62 124 By default \, its cutoff frequency is 0.75 * Nyquist
 \, but you can change it with the 1st argument or the second inlet.
 ;

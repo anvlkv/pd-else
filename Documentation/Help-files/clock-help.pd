@@ -79,8 +79,8 @@ patch);
 #X msg 441 275 2;
 #X obj 299 289 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 143 327 else/clock 60;
-#X obj 324 327 else/clock -s 2;
+#X obj 143 327 clock 60;
+#X obj 324 327 clock -s 2;
 #N canvas 791 93 522 502 example 0;
 #X obj 104 240 tgl 18 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
@@ -95,24 +95,24 @@ patch);
 #000000 #000000;
 #X obj 209 239 tgl 18 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
-#X obj 90 331 else/impseq~;
-#X obj 209 341 else/impseq~;
-#X obj 328 341 else/impseq~;
-#X obj 284 236 else/display 4;
+#X obj 90 331 impseq~;
+#X obj 209 341 impseq~;
+#X obj 328 341 impseq~;
+#X obj 284 236 display 4;
 #X msg 284 164 1/3;
 #X msg 298 210 0.75;
 #X msg 292 188 1.5;
-#X obj 397 236 else/display 4;
+#X obj 397 236 display 4;
 #X msg 386 142 3/2;
 #X msg 397 164 0.333333;
 #X msg 411 210 3/4;
 #X msg 405 189 2/3;
 #X obj 238 239 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 90 393 else/drive~ 5;
-#X obj 328 370 else/resonant~ 2350 200, f 14;
-#X obj 90 357 else/resonant~ 450 300, f 14;
-#X obj 209 370 else/resonant~ 1050 200, f 14;
+#X obj 90 393 drive~ 5;
+#X obj 328 370 resonant~ 2350 200, f 14;
+#X obj 90 357 resonant~ 450 300, f 14;
+#X obj 209 370 resonant~ 1050 200, f 14;
 #X text 19 18 In this example we have named the clock so it doesn't
 conflict with the clocks on the parent patch. Hence \, you can have
 different main clocks named differently that are independent in the
@@ -120,14 +120,14 @@ same patch., f 80;
 #X text 19 96 A bang into the main clock restarts the clocks. A bang
 into a synced clock will resync it for the next time the main clock
 bangs., f 80;
-#X obj 122 430 else/out~;
+#X obj 122 430 out~;
 #X msg 90 217 beat \$1;
 #X msg 90 192 1.5;
 #X msg 59 192 0.5;
 #X msg 121 192 1;
-#X obj 90 268 else/clock \$0-clock 90, f 11;
+#X obj 90 268 clock \$0-clock 90, f 11;
 #X msg 273 142 2;
-#X obj 209 278 else/clock -s \$0-clock 0.5, f 13;
+#X obj 209 278 clock -s \$0-clock 0.5, f 13;
 #X obj 328 278 clock -s \$0-clock 2/3, f 12;
 #X text 19 58 When you turn a main clock off \, synced clocks also
 turn off. Synced clocks also need to turn on/off. You can change the
@@ -173,23 +173,23 @@ main clock., f 80;
 #X text 148 470 symbol;
 #X text 77 589 2) float/symbol;
 #X text 16 328 see also:;
-#X obj 14 349 else/metronome;
+#X obj 14 349 metronome;
 #N canvas 831 139 431 409 metronome 0;
 #X obj 76 111 tgl 18 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
 #X obj 76 198 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000;
-#X obj 76 228 else/impseq~;
-#X obj 76 290 else/drive~ 5;
-#X obj 76 254 else/resonant~ 450 300, f 14;
-#X obj 76 323 else/out~;
+#X obj 76 228 impseq~;
+#X obj 76 290 drive~ 5;
+#X obj 76 254 resonant~ 450 300, f 14;
+#X obj 76 323 out~;
 #X obj 228 295 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
 #X obj 228 219 tgl 18 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
-#X obj 228 321 else/impseq~;
-#X obj 228 350 else/resonant~ 1050 200, f 14;
-#X obj 76 165 else/metronome -name \$0-metro 90 6/8;
+#X obj 228 321 impseq~;
+#X obj 228 350 resonant~ 1050 200, f 14;
+#X obj 76 165 metronome -name \$0-metro 90 6/8;
 #X msg 114 112 timesig 3/4;
 #X msg 128 137 timesig 6/8;
 #X text 22 19 A [clock] object can also be synced to a [metronome]
@@ -197,7 +197,7 @@ object \, which also gets a local name relative to the patch's main
 window or a clock name via the '-name' flag \, check it's help file.
 The tempo in a [metronome] depends on the time signature. Note how
 3/4 and 6/8 have different tempos., f 64;
-#X obj 228 258 else/clock -s \$0-metro 2/3, f 13;
+#X obj 228 258 clock -s \$0-metro 2/3, f 13;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;

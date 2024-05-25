@@ -49,5 +49,5 @@ methods:
 draft: false
 ---
 
-[bandpass~] is a 2nd order bandpass resonant filter. Unlike [else/resonant~], it has a maximum and constant gain at 0dB.
+[bandpass~] is a 2nd order bandpass resonant filter. Unlike [resonant~], it has a maximum and constant gain at 0dB.
 

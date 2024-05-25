@@ -4,7 +4,7 @@
 #X obj 182 138 metro 500;
 #X obj 182 161 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 194 223 else/out~;
+#X obj 194 223 out~;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
 0;
 #X obj 345 11 cnv 10 10 10 empty empty ELSE 0 15 2 30 #7c7c7c #e0e4dc
@@ -58,16 +58,16 @@ equal temperament), f 74;
 #N canvas 585 135 781 557 example 0;
 #N canvas 958 281 408 394 tuning 0;
 #X obj 64 339 outlet;
-#X obj 94 236 else/eqdiv;
+#X obj 94 236 eqdiv;
 #X msg 63 80 autotune \$1;
 #X obj 63 54 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000
 0 1;
-#X obj 94 264 else/insert scale;
+#X obj 94 264 insert scale;
 #X text 174 156 You can try other arbitrary scales in the same format
 , f 18;
 #X text 154 137 <= some equal divisions;
 #X text 180 64 The autotune message retunes the reading speed to match
-a given scale \, see [else/autotune] for reference., f 32;
+a given scale \, see [autotune] for reference., f 32;
 #X msg 94 112 13 3;
 #X msg 103 132 13 2;
 #X msg 112 153 12 2;
@@ -123,7 +123,7 @@ amp 0.1 1 \, size 2000 4000 \, pos 0 1 \, rev 100, f 88;
 #X obj 153 253 route dur;
 #X obj 106 279 metro;
 #X floatatom 153 275 5 0 0 0 - - - 0;
-#X obj 99 472 else/out~;
+#X obj 99 472 out~;
 #X text 193 207 Here's some presets for you to have fun with, f 23
 ;
 #X text 71 31 Try some of the presets and also try dfferent parameters
@@ -152,12 +152,12 @@ to sync mode at creation with the -sync flag., f 58;
 #X text 439 462 If a sample has a dfferent sample rate than Pd's \,
 you can set it with the 'sr' message so the player adjusts the reading
 speed., f 49;
-#X obj 550 198 else/function 200 100 empty empty 0 1 220 220 220 50
+#X obj 550 198 function 200 100 empty empty 0 1 220 220 220 50
 50 50 0 0 0 0 0 0.05 1 0.95 0;
-#X obj 550 314 else/display;
-#X obj 550 386 else/insert env;
+#X obj 550 314 display;
+#X obj 550 386 insert env;
 #X msg 492 353 sin;
-#X obj 550 163 else/initmess 0 0.05 1 0.95 0;
+#X obj 550 163 initmess 0 0.05 1 0.95 0;
 #X msg 524 353 tri;
 #X msg 559 353 hann;
 #X text 471 25 By default \, the envelope is a sine shape \, like the
@@ -171,8 +171,8 @@ also given by the [function] GUI object., f 48;
 #X text 482 205 [function];
 #X obj 550 418 s \$0-set;
 #X msg 596 353 gauss 0.3;
-#X obj 91 428 else/grain.sampler~ -n 256 -t \$0-sax -sync, f 26;
-#X obj 290 415 else/sample~ \$0-sax sax.wav;
+#X obj 91 428 grain.sampler~ -n 256 -t \$0-sax -sync, f 26;
+#X obj 290 415 sample~ \$0-sax sax.wav;
 #X connect 0 0 37 0;
 #X connect 1 0 4 0;
 #X connect 1 0 37 0;
@@ -202,9 +202,9 @@ also given by the [function] GUI object., f 48;
 #X restore 468 254 pd example;
 #X text 38 86 [grain.sampler~] is a sample based granulator that generates
 clouds of grains., f 78;
-#X obj 34 248 else/grain.synth~;
+#X obj 34 248 grain.synth~;
 #X text 35 202 see also:;
-#X obj 34 225 else/grain.live~;
+#X obj 34 225 grain.live~;
 #X text 123 328 dur <f> - sets cloud event duration in ms (default
 500), f 69;
 #X text 141 286 bang - plays an event of pitch clouds, f 66;
@@ -224,10 +224,10 @@ to 1), f 72;
 (default 0), f 73;
 #X text 105 356 sr <float> - sets sample rate for reading the buffer
 (default Pd's), f 72;
-#X obj 313 126 else/sample~ \$0-sample violin.wav;
+#X obj 313 126 sample~ \$0-sample violin.wav;
 #X text 111 455 env <any> - envelope type (sin \, hann \, tri \, gauss)
 or function list, f 71;
-#X obj 182 187 else/grain.sampler~ -n 32 -t \$0-sample, f 19;
+#X obj 182 187 grain.sampler~ -n 32 -t \$0-sample, f 19;
 #X text 117 300 n <float> - number of grains in cloud event (minimum
 1 \, maximum 256), f 70;
 #X text 66 586 -n <f> | -t <symbol> (table name) | -dur <f> | -size

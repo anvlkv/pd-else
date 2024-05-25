@@ -27,7 +27,7 @@
 #X text 161 357 anything;
 #X text 162 392 1) float;
 #X obj 291 175 nbx 4 15 -1e+37 1e+37 0 0 xfkvds asfmnv empty 0 -8 0 11 #dcdcdc #000000 #000000 0 256;
-#X obj 204 230 else/display;
+#X obj 204 230 display;
 #X floatatom 204 132 5 0 0 0 - - - 0;
 #X obj 174 133 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X msg 230 178 hi;
@@ -40,7 +40,7 @@
 #X text 227 358 - the delayed message;
 #X text 228 392 - delay time in ms (default 0);
 #X text 227 322 - sets delay time in ms, f 33;
-#X obj 204 205 else/pipe2 2000;
+#X obj 204 205 pipe2 2000;
 #X connect 23 0 37 1;
 #X connect 24 0 31 0;
 #X connect 25 0 37 0;

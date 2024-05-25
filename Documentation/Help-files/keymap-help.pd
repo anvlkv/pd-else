@@ -19,12 +19,12 @@
 #N canvas 649 158 591 465 example 0;
 #X obj 105 158 keyboard 17 80 3 3 0 0 empty empty;
 #X obj 177 345 *~;
-#X obj 105 122 else/keymap;
-#X obj 105 252 else/mono, f 15;
-#X obj 192 302 else/adsr~ 10 10 0.5 50;
-#X obj 177 380 else/out~;
+#X obj 105 122 keymap;
+#X obj 105 252 mono, f 15;
+#X obj 192 302 adsr~ 10 10 0.5 50;
+#X obj 177 380 out~;
 #X floatatom 202 124 5 0 0 0 - - - 0;
-#X obj 65 301 else/bl.saw~ -midi;
+#X obj 65 301 bl.saw~ -midi;
 #X msg 105 90 toggle \$1;
 #X obj 105 58 tgl 22 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0 1;
 #X text 94 17 Using [keymap] to feed [keyboard] and a mono synth.;
@@ -67,7 +67,7 @@
 #X text 193 491 float -;
 #X text 246 491 transposition value;
 #X text 172 528 1 float - number of octaves up or down;
-#X obj 225 320 else/keymap 1;
+#X obj 225 320 keymap 1;
 #X text 139 436 toggle <float> -, f 16;
 #X text 245 436 non zero turns toggle mode on \, zero turns it off;
 #X text 172 544 2 float - non zero sets to toggle mode;

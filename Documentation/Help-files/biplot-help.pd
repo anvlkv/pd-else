@@ -32,8 +32,8 @@
 #X obj 27 36 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 209 16 gain;
-#X obj 6 132 else/biplot;
-#X obj 54 70 else/bicoeff2 eq 500 10 24;
+#X obj 6 132 biplot;
+#X obj 54 70 bicoeff2 eq 500 10 24;
 #X text 341 25 The [biplot] object takes a list of biquad coefficients
 in the same order and format as the [biquad~] object from vanilla.
 Therefore \, it can plot any biquad filter.;
@@ -69,10 +69,10 @@ generates biquad coefficients.;
 #X text 137 238 list;
 #X text 177 238 - list of coefficients is passed through;
 #N canvas 345 214 920 451 cascade 0;
-#X obj 9 132 else/biplot;
-#X obj 9 54 else/bicoeff2 eq 500 10 24;
-#X obj 90 82 else/bicoeff2 eq 900 10 24;
-#X obj 9 29 else/lb 2, f 14;
+#X obj 9 132 biplot;
+#X obj 9 54 bicoeff2 eq 500 10 24;
+#X obj 90 82 bicoeff2 eq 900 10 24;
+#X obj 9 29 lb 2, f 14;
 #X obj 9 84 list;
 #X text 340 49 The [biplot] object can also take list you send to the
 [biquads~] object with multiples of 5! In this way \, the object plots
@@ -84,5 +84,5 @@ the result of the cascading.;
 #X connect 4 0 0 0;
 #X restore 198 162 pd cascade;
 #X text 76 87 [biplot] plots the filter response from biquad coefficients
-\, the ones you send to [biquad~] or [else/biquads~]., f 61;
+\, the ones you send to [biquad~] or [biquads~]., f 61;
 #X text 269 162 <= click to open and check;

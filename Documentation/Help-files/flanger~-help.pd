@@ -41,7 +41,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 2 3 graph;
-#X obj 194 217 else/out~;
+#X obj 194 217 out~;
 #X text 174 467 2) float;
 #X obj 253 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
@@ -65,7 +65,7 @@
 #X text 174 487 3) float;
 #X obj 3 408 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
-#X obj 194 186 else/flanger~ 0.1 20 -0.6 -tri;
+#X obj 194 186 flanger~ 0.1 20 -0.6 -tri;
 #X obj 125 125 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 258 132 rate;
@@ -74,7 +74,7 @@
 #X text 374 132 coefficient;
 #X text 250 352 coefficient for feedforward/feedback lines;
 #X text 237 487 - coefficient (default 0);
-#X obj 125 152 else/bl.saw~ 150;
+#X obj 125 152 bl.saw~ 150;
 #X connect 23 0 40 1;
 #X connect 24 0 40 2;
 #X connect 25 0 40 3;

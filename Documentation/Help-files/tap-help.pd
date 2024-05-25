@@ -42,7 +42,7 @@
 #X text 190 323 - bang according to clock tempo;
 #X obj 3 348 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
-#X obj 205 230 else/display;
+#X obj 205 230 display;
 #X obj 224 168 tgl 17 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
 #X text 231 132 first bang arms \, the second outputs the tempo, f
@@ -55,7 +55,7 @@ f 62;
 #X text 250 162 gate open (arm) and close (output tempo), f 21;
 #X text 190 290 - open/close gate for tempo;
 #X text 190 276 - tap for tempo;
-#X obj 205 199 else/tap -ms;
+#X obj 205 199 tap -ms;
 #X obj 3 378 cnv 3 550 3 empty empty click 8 12 0 13 #dcdcdc #000000
 0;
 #X text 150 389 clicking on the object is the same as bang;

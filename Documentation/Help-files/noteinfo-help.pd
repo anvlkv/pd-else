@@ -55,8 +55,8 @@
 ;
 #X text 31 240 (voice number \, event number \, pitch \, velocity \,
 duration), f 28;
-#X obj 212 245 else/display;
-#X obj 299 214 else/display;
+#X obj 212 245 display;
+#X obj 299 214 display;
 #X text 327 219 number of active voices;
 #X text 170 288 midi pitch, f 54;
 #X text 121 354 list;
@@ -93,7 +93,7 @@ outlet and a list of MIDI note information to the left., f 72;
 #X text 144 152 reset;
 #X obj 185 152 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 212 191 else/noteinfo, f 15;
+#X obj 212 191 noteinfo, f 15;
 #X connect 19 0 47 0;
 #X connect 19 1 47 1;
 #X connect 20 0 19 0;

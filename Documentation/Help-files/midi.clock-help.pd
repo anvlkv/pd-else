@@ -69,11 +69,11 @@ the BPM specified by the float., f 69;
 #X msg 180 132 248;
 #X text 43 40 For a MIDI clock output \, all you need is to send "248"
 to the MIDI out object;
-#X obj 180 104 else/midi.clock 60;
+#X obj 180 104 midi.clock 60;
 #X connect 1 0 0 0;
 #X connect 3 0 1 0;
 #X restore 457 278 pd clock-out;
-#X obj 164 245 else/midi.clock 60;
+#X obj 164 245 midi.clock 60;
 #X text 78 89 [midi.clock] is a MIDI clock abstraction. It works with
 an internal or external clock (from an external MIDI device). It sends
 a bang at each MIDI clock and also sends a time interval (in BPM) from

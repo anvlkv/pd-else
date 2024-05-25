@@ -11,8 +11,8 @@
 #X obj 145 426 out~;
 #X text 240 324 signal trigger;
 #X text 112 320 frequency;
-#X obj 563 277 else/out~;
-#X obj 545 110 else/keyboard 17 80 2 4 0 0 empty empty;
+#X obj 563 277 out~;
+#X obj 545 110 keyboard 17 80 2 4 0 0 empty empty;
 #X listbox 545 206 11 0 0 0 - - - 0;
 #X obj 545 235 damp.osc~ -midi 0 2500;
 #X text 522 28 A list input also triggers the object at control rate \, such as from the output of [keyboard], f 40;

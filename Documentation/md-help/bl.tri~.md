@@ -47,4 +47,4 @@ methods:
 draft: false
 ---
 
-[bl.tri~] is a triangular oscillator like [else/tri~], but it is bandlimited.
+[bl.tri~] is a triangular oscillator like [tri~], but it is bandlimited.

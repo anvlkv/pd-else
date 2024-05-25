@@ -64,7 +64,7 @@ to 105 \, and you can then continue to output the remaining count (from
 #X text 214 217 <= continue from where it was paused, f 20;
 #X text 119 360 This may be useful to stop the loop if a conditional
 was met., f 32;
-#X obj 133 250 else/loop 100 111;
+#X obj 133 250 loop 100 111;
 #X obj 47 227 select 105;
 #X connect 0 0 10 0;
 #X connect 1 0 10 0;
@@ -112,10 +112,10 @@ was met., f 32;
 0.985717;
 #X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 230 98 graph;
-#X obj 54 136 else/loop;
+#X obj 54 136 loop;
 #X text 434 225 0;
 #X text 433 94 1;
-#X obj 54 219 else/display;
+#X obj 54 219 display;
 #X obj 54 163 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X floatatom 54 110 5 0 0 0 - - - 0;
@@ -135,8 +135,8 @@ was met., f 32;
 #dcdcdc #000000 #000000 0 256;
 #X text 169 532 - sets the end value (optional), f 62;
 #X text 230 453 - sets offset value (default 0), f 37;
-#X obj 115 194 else/loop 10;
-#X obj 314 194 else/loop 1 10;
+#X obj 115 194 loop 10;
+#X obj 314 194 loop 1 10;
 #X text 100 269 offset <float>;
 #X text 191 336 - sets the increment value of the counter, f 56;
 #X text 181 506 sets the number of iterations if only one argument
@@ -191,7 +191,7 @@ a third optional element in a list., f 68;
 #X text 23 65 You can also set the number of iterations with the 'set'
 message \, the right inlet and with the argument if you give it just
 one argument., f 65;
-#X obj 270 231 else/loop 5 15 5;
+#X obj 270 231 loop 5 15 5;
 #X obj 355 177 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X msg 355 198 step \$1;
@@ -214,13 +214,13 @@ the "offset" message., f 65;
 #X obj 694 190 bng 17 250 50 0 empty empty empty 0 -6 0 8 #dcdcdc #000000
 #000000;
 #X obj 694 251 print counter;
-#X obj 694 222 else/loop 0.5 1.5 0.1;
+#X obj 694 222 loop 0.5 1.5 0.1;
 #X text 452 32 If you give it two arguments \, you have a start and
 end value. The counter step is "1" by default but can be changed with
 the 3rd argument or the 'step' message., f 65;
-#X obj 79 225 else/loop -offset -5 10;
-#X obj 488 234 else/loop -step 3.3 11;
-#X obj 438 383 else/loop -b 10;
+#X obj 79 225 loop -offset -5 10;
+#X obj 488 234 loop -step 3.3 11;
+#X obj 438 383 loop -b 10;
 #X msg 583 203 range 5 10;
 #X text 453 74 Note the difference when we only have the number of
 iterations and no start/end values. Here we only define the number

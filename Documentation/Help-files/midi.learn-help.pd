@@ -27,7 +27,7 @@
 #X text 186 451 list -;
 #X text 196 376 query;
 #X msg 237 262 query;
-#X obj 317 284 else/display;
+#X obj 317 284 display;
 #X msg 228 237 forget;
 #X text 232 391 - forget input, f 47;
 #X obj 123 472 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
@@ -40,12 +40,12 @@
 #X obj 116 105 bng 18 250 50 0 empty empty empty 17 7 0 10 #dfdfdf #000000 #000000;
 #X text 140 105 <= click to learn, f 18;
 #X msg 169 215 query;
-#X obj 251 289 else/display;
+#X obj 251 289 display;
 #X msg 161 192 forget;
 #X listbox 404 236 9 0 0 0 - - - 16;
 #X listbox 404 277 9 0 0 0 - \$0-name - 16;
 #X obj 404 212 r \$0-name;
-#X obj 116 248 else/midi.learn \$0-name;
+#X obj 116 248 midi.learn \$0-name;
 #A saved;
 #X msg 135 138 set \\\$0-name-2;
 #X listbox 404 154 9 0 0 0 - - - 16;
@@ -62,7 +62,7 @@
 #X connect 12 0 11 0;
 #X connect 15 0 9 0;
 #X restore 457 319 pd send-name;
-#X obj 206 290 else/midi.learn;
+#X obj 206 290 midi.learn;
 #A saved ctlin 19 3;
 #X text 195 503 1) symbol - send name (default none);
 #X text 154 422 set <symbol> - set send name, f 60;

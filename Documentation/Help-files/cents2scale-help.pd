@@ -28,12 +28,12 @@
 #X text 167 244 list;
 #X text 24 125 see also:;
 #X text 74 84 Use [cents2scale] to convert a list of intervals defined as cents to a scale defined as scale steps in semitones.;
-#X obj 190 167 else/cents2scale;
-#X obj 24 146 else/scale2cents;
+#X obj 190 167 cents2scale;
+#X obj 24 146 scale2cents;
 #X text 200 244 - cents values;
 #X text 200 275 - converted scale values;
-#X obj 24 186 else/cents2ratio;
-#X obj 24 206 else/cents2frac;
-#X obj 24 166 else/scales;
+#X obj 24 186 cents2ratio;
+#X obj 24 206 cents2frac;
+#X obj 24 166 scales;
 #X connect 0 0 25 0;
 #X connect 25 0 1 0;

@@ -163,8 +163,8 @@
 #X text 72 91 The [median~] objects returns the median of a number
 of samples (minimum number of samples is 1 and maximum is the block
 size).;
-#X obj 83 225 else/median~;
-#X obj 328 161 else/graph~ 400 7 -1 1 200 140;
+#X obj 83 225 median~;
+#X obj 328 161 graph~ 400 7 -1 1 200 140;
 #X obj 328 135 r~ \$0-median;
 #X obj 83 263 s~ \$0-median;
 #X obj 83 184 osc~ 220;

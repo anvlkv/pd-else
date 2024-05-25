@@ -37,7 +37,7 @@
 0;
 #X obj 122 242 cnv 17 3 35 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 136 198 else/display;
+#X obj 136 198 display;
 #X text 179 295 list;
 #X text 179 245 list;
 #X text 19 154 see also:;
@@ -47,12 +47,12 @@
 #X text 135 331 -list: sets to list mode (output fraction as a list)
 ;
 #N canvas 917 210 357 298 list 0;
-#X obj 125 235 else/display;
+#X obj 125 235 display;
 #X floatatom 125 175 5 0 0 0 - - - 0;
 #X text 43 21 With the -list flag the fraction is output as a list
 of numberator and denominator., f 42;
 #X msg 125 84 498;
-#X obj 125 202 else/cents2frac -list;
+#X obj 125 202 cents2frac -list;
 #X msg 140 109 702;
 #X msg 151 135 204;
 #X connect 1 0 4 0;
@@ -64,7 +64,7 @@ of numberator and denominator., f 42;
 #X text 137 261 res <float>;
 #X text 212 261 - set conversion resolution;
 #N canvas 946 206 365 358 resolution 0;
-#X obj 125 285 else/display;
+#X obj 125 285 display;
 #X floatatom 125 175 5 0 0 0 - - - 0;
 #X msg 151 203 res 1000;
 #X msg 161 226 res 100;
@@ -72,7 +72,7 @@ of numberator and denominator., f 42;
 It then approximates to a simpler ratio/fraction. You can change the
 resolution with an argument (1000 by default) or the 'res' message.
 10 is the minimum allowed value., f 52;
-#X obj 125 252 else/cents2frac 100;
+#X obj 125 252 cents2frac 100;
 #X msg 125 114 700;
 #X msg 136 145 750;
 #X connect 1 0 5 0;
@@ -89,8 +89,8 @@ defined as fraction symbols or lists., f 65;
 #X msg 136 134 0 203.91 386.314 551.318 701.955 840.528 968.826 1088.27
 1200, f 61;
 #X text 212 245 - cents value(s);
-#X obj 14 179 else/frac2cents;
-#X obj 14 203 else/dec2frac;
-#X obj 136 165 else/cents2frac 4;
+#X obj 14 179 frac2cents;
+#X obj 14 203 dec2frac;
+#X obj 136 165 cents2frac 4;
 #X connect 31 0 35 0;
 #X connect 35 0 18 0;

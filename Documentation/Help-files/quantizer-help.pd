@@ -91,7 +91,7 @@ or 3 (ceil) - default 0, f 50;
 #dcdcdc #000000 #000000 0 256;
 #X obj 179 283 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 179 239 else/quantizer -mode 2 1;
+#X obj 179 239 quantizer -mode 2 1;
 #X connect 1 0 11 0;
 #X connect 3 0 13 0;
 #X connect 4 0 5 0;
@@ -101,26 +101,26 @@ or 3 (ceil) - default 0, f 50;
 #X restore 480 156 pd modes;
 #N canvas 805 348 286 221 lists 0;
 #X text 55 31 it also works with lists:;
-#X obj 46 136 else/display;
-#X obj 46 101 else/quantizer 0.25;
-#X obj 46 68 else/initmess 0.333 0.666 0.999;
+#X obj 46 136 display;
+#X obj 46 101 quantizer 0.25;
+#X obj 46 68 initmess 0.333 0.666 0.999;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X restore 481 178 pd lists;
-#X obj 160 175 else/quantizer 0.1;
+#X obj 160 175 quantizer 0.1;
 #N canvas 719 102 441 355 compare 0;
 #X text 249 59 round;
 #X text 250 85 truncate;
 #X text 250 106 floor;
 #X text 250 129 ceil;
-#X obj 175 106 else/floor;
-#X obj 181 129 else/ceil;
+#X obj 175 106 floor;
+#X obj 181 129 ceil;
 #X obj 216 84 int;
 #X text 95 164 The above objects are like the different modes in [quantizer]
 for a setp of 1!, f 40;
 #X obj 147 60 expr round($f1);
 #X text 99 31 Check also these:, f 18;
-#X obj 206 276 else/rint;
+#X obj 206 276 rint;
 #X text 50 222 ELSE also has the [rint] object \, which quite similar
 to the 'round' function and is also present in [expr] \, but 0.5 rounds
 to 0 instead of 1!, f 62;

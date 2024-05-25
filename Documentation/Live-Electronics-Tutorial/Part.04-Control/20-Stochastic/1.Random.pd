@@ -52,7 +52,7 @@ distribution., f 61;
 #X obj 580 264 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X floatatom 690 310 5 1 12 0 - - - 0;
-#X obj 580 524 else/display;
+#X obj 580 524 display;
 #X text 609 263 generate a random series;
 #X msg 690 353 size \$1;
 #X obj 580 423 rand.u 12;

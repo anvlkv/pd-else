@@ -46,13 +46,13 @@
 #X restore 2 4 graph;
 #X obj 58 247 bng 16 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 492 78 else/setdsp~;
+#X obj 492 78 setdsp~;
 #X obj 70 41 cnv 4 4 4 empty empty batch 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 72 190 else/brown~;
+#X obj 72 190 brown~;
 #X obj 223 189 noise~;
-#X obj 58 219 else/batch.write~ \$0-batch 2;
-#X obj 223 137 else/sample~ \$0-batch -ch 2;
+#X obj 58 219 batch.write~ \$0-batch 2;
+#X obj 223 137 sample~ \$0-batch -ch 2;
 #X obj 58 158 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 176 285 bang -;
@@ -64,9 +64,9 @@ an object like [sample~])., f 65;
 #X text 182 404 - number of channels to record (default 1 \, max 64)
 , f 52;
 #X text 479 226 see also:;
-#X obj 448 245 else/batch.rec~;
-#X obj 293 215 else/out~;
-#X obj 304 190 else/tabplayer~ \$0-batch 2;
+#X obj 448 245 batch.rec~;
+#X obj 293 215 out~;
+#X obj 304 190 tabplayer~ \$0-batch 2;
 #X text 167 137 click =>;
 #X text 81 160 <= record;
 #X msg 304 167 play;

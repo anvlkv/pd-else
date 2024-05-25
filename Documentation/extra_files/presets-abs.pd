@@ -9,7 +9,7 @@
 #N canvas 356 221 694 431 shift 0;
 #X msg 137 214 save;
 #X msg 218 214 load;
-#X obj 106 264 else/insert;
+#X obj 106 264 insert;
 #X obj 218 293 s \$0-radio;
 #X obj 175 95 keyname;
 #X obj 214 117 select Shift_L;
@@ -45,11 +45,11 @@
 #X text 170 107 Index;
 #X text 123 107 Mod;
 #X text 55 107 Carrier;
-#X obj 382 250 else/presets \\\$0-A \\\$0-B \\\$0-C;
+#X obj 382 250 presets \\\$0-A \\\$0-B \\\$0-C;
 #A saved -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \; -empty- \;;
 #X text 339 69 Just connect [savestate] and [presets] as below. It'll export the contents as a list and load them. Since this uses [savestate] \, the presets are saved when the parent patch gets saved and are also stored with the parent patch., f 41;
 #X text 156 12 This is an abstraction used as an example for the [presets] object documentation., f 41;
-#X obj 87 197 else/pm~;
+#X obj 87 197 pm~;
 #X connect 0 0 8 0;
 #X connect 1 0 9 0;
 #X connect 2 0 10 0;

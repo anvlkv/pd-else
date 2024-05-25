@@ -54,8 +54,8 @@
 #X text 73 87 [rotate] rotates messages/lists. A rotation number sets
 the offset. If it's positive \, the list is shifted to the right. If
 negative \, to the left.;
-#X obj 233 241 else/display;
-#X obj 233 212 else/rotate 3;
+#X obj 233 241 display;
+#X obj 233 212 rotate 3;
 #X msg 232 163 a b c d e f g;
 #X connect 24 0 31 1;
 #X connect 25 0 31 0;

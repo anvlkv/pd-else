@@ -56,9 +56,9 @@
 #X msg 324 153 16nd;
 #X text 116 30 Examples of common tuplets abbreviated by letters:, f 38;
 #X text 207 57 'd' for duplet \; 't' for triplet \; 'q' for quintuplet \; 's' for septuplet \; 'n' for nonuplet.;
-#X obj 76 280 else/notedur2ratio;
-#X obj 206 280 else/notedur2ratio;
-#X obj 340 280 else/notedur2ratio;
+#X obj 76 280 notedur2ratio;
+#X obj 206 280 notedur2ratio;
+#X obj 340 280 notedur2ratio;
 #X connect 1 0 21 0;
 #X connect 2 0 21 0;
 #X connect 3 0 21 0;
@@ -92,7 +92,7 @@
 #X text 234 255 <= try one yourself;
 #X msg 121 205 4n.[7:4];
 #X text 180 204 <== dotted tuplets are also possible as in here (you can't use 's' in this case and you can use 'd' instead of "." as well as ".."/"dd" for double dotted), f 54;
-#X obj 92 293 else/notedur2ratio;
+#X obj 92 293 notedur2ratio;
 #X connect 2 0 13 0;
 #X connect 4 0 13 0;
 #X connect 5 0 13 0;
@@ -121,9 +121,9 @@
 #X msg 326 122 8ndd;
 #X msg 337 149 8n.;
 #X msg 366 149 8n..;
-#X obj 80 205 else/notedur2ratio;
-#X obj 202 205 else/notedur2ratio;
-#X obj 326 205 else/notedur2ratio;
+#X obj 80 205 notedur2ratio;
+#X obj 202 205 notedur2ratio;
+#X obj 326 205 notedur2ratio;
 #X connect 1 0 17 0;
 #X connect 2 0 17 0;
 #X connect 3 0 17 0;
@@ -150,7 +150,7 @@
 #X msg 157 144 8nt_8ns;
 #X msg 93 59 4n[5:7];
 #X symbolatom 117 278 15 0 0 0 - - - 0;
-#X obj 117 243 else/notedur2ratio;
+#X obj 117 243 notedur2ratio;
 #X connect 0 0 9 0;
 #X connect 3 0 9 0;
 #X connect 4 0 9 0;
@@ -159,7 +159,7 @@
 #X connect 7 0 9 0;
 #X connect 9 0 8 0;
 #X restore 477 243 pd ties;
-#X obj 207 228 else/notedur2ratio;
+#X obj 207 228 notedur2ratio;
 #X text 46 86 [notedur2ratio] converts from a note duration symbolic syntax to a ratio (either as fraction or float). The syntax is: '1n' for whole note \, '2n' for half note \, '4n' for quarter note \, '8n' for eighth note (and so on down to 128n). Dotted notes are possible and you can add tuplets to the symbol in the [x:y] format or you can add the following letters to specify most common tuplets: 'd' for duplet \, 't' for triplet \, 'q' for quintuplet \, 's' for septuplet and 'n' for nonuplet. Tied notes are also possible with "_". Details in the examples below., f 80;
 #X connect 19 0 36 0;
 #X connect 20 0 36 0;

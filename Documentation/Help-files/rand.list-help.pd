@@ -44,7 +44,7 @@
 #X obj 206 42 cnv 4 4 4 empty empty a 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 226 42 cnv 4 4 4 empty empty list 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 182 189 else/display 4;
+#X obj 182 189 display 4;
 #X text 193 229 bang -;
 #X text 236 229 choose an element from a given list randomly, f 46
 ;
@@ -61,7 +61,7 @@ from it., f 48;
 #X text 236 309 random element from list, f 46;
 #X text 175 375 1) list - initial list (default 0);
 #X msg 347 135 1 5 10 30 70 90;
-#X obj 182 163 else/rand.list 13 60 500 700;
+#X obj 182 163 rand.list 13 60 500 700;
 #X msg 214 135 set 11 23 35 47;
 #X obj 6 332 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
@@ -89,9 +89,9 @@ to repeat the output., f 52;
 #X floatatom 382 168 10 0 0 0 - - - 12;
 #X floatatom 562 168 10 0 0 0 - - - 12;
 #X text 387 25 Sync [rand.list] objects with a seed value;
-#X obj 562 125 else/rand.list -seed 123 13 60 500 700 800 870 920,
+#X obj 562 125 rand.list -seed 123 13 60 500 700 800 870 920,
 f 26;
-#X obj 382 125 else/rand.list -seed 123 13 60 500 700 800 870 920,
+#X obj 382 125 rand.list -seed 123 13 60 500 700 800 870 920,
 f 25;
 #X obj 466 63 bng 19 250 50 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000;

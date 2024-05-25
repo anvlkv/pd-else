@@ -25,7 +25,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 4 2 graph;
-#X obj 186 247 else/display;
+#X obj 186 247 display;
 #X text 132 432 2) float;
 #X text 190 348 - a message composed of the merged messages;
 #X text 193 293 - any message type to merged into another, f 42;
@@ -39,14 +39,14 @@
 #X obj 5 377 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000 0;
 #X text 209 384 -trim: trims list selector;
 #X text 191 432 - non-zero makes all inlets hot (default 0);
-#X obj 186 219 else/merge -trim 4 1, f 25;
+#X obj 186 219 merge -trim 4 1, f 25;
 #X text 83 87 [merge] takes any type of messages in any inlet and combines them into a message., f 52;
 #X symbolatom 201 174 10 0 0 0 - - - 0;
 #X msg 186 149 list x y z;
 #X msg 154 148 a;
 #X listbox 235 198 7 0 0 0 - - - 0;
 #X text 29 221 see also:;
-#X obj 31 248 else/merge~;
+#X obj 31 248 merge~;
 #X connect 5 0 36 2;
 #X connect 9 0 36 2;
 #X connect 28 0 36 0;

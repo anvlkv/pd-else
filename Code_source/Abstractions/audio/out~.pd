@@ -24,7 +24,7 @@
 #X obj 98 52 route set on off mute mode gain ramp;
 #X obj 496 139 f \$2;
 #X obj 464 152 f \$1;
-#X obj 464 112 else/lb;
+#X obj 464 112 lb;
 #X connect 1 0 17 0;
 #X connect 2 0 0 0;
 #X connect 4 0 3 0;
@@ -210,7 +210,7 @@
 #X restore 310 198 pd on;
 #X obj 267 233 s \$0-set-slider;
 #X obj 136 100 bng 16 500 250 0 \$0-mute-bng \$0-mute-bng-set empty 17 7 0 10 #dcdcdc #000000 #000000;
-#X obj 64 47 else/lb;
+#X obj 64 47 lb;
 #X connect 1 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 5 0;
@@ -309,7 +309,7 @@
 #X msg 135 117 0;
 #X obj 108 85 delay 5;
 #X obj 59 149 outlet;
-#X obj 168 45 else/lb;
+#X obj 168 45 lb;
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
 #X connect 3 0 2 0;
@@ -553,7 +553,7 @@
 #X connect 10 0 8 0;
 #X restore 354 137 pd on;
 #X obj 295 217 s \$0-set-slider;
-#X obj 206 114 else/lb;
+#X obj 206 114 lb;
 #X connect 0 0 4 0;
 #X connect 0 0 8 0;
 #X connect 1 0 2 0;
@@ -584,7 +584,7 @@
 #X obj 30 36 inlet~ fwd;
 #X obj 105 122 hip~ 3;
 #X obj 30 123 hip~ 3;
-#X obj 105 12 else/initmess 10000;
+#X obj 105 12 initmess 10000;
 #X obj 255 57 declare -path else;
 #N canvas 347 63 396 270 sum/switch 0;
 #X obj 87 152 *~;
@@ -593,10 +593,10 @@
 #X obj 67 218 outlet~;
 #X obj 225 218 outlet~;
 #X obj 225 152 *~;
-#X obj 240 126 else/op~ != 10000;
-#X obj 102 127 else/op~ == 10000;
-#X obj 67 60 else/sum~;
-#X obj 226 63 else/sum~;
+#X obj 240 126 op~ != 10000;
+#X obj 102 127 op~ == 10000;
+#X obj 67 60 sum~;
+#X obj 226 63 sum~;
 #X connect 0 0 4 0;
 #X connect 1 0 9 0;
 #X connect 2 0 8 0;

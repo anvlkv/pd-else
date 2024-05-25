@@ -155,7 +155,7 @@ the window size. This is all also true for [env~] \, by the way.;
 #X obj 121 171 *;
 #X obj 121 34 inlet;
 #X obj 121 211 outlet;
-#X obj 158 170 else/sr~ -khz;
+#X obj 158 170 sr~ -khz;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -180,10 +180,10 @@ set the window or hop size to anything smaller than the current block
 size.;
 #X msg 539 175 set 1024 256;
 #X msg 529 152 set 8192 256;
-#X text 15 19 The [vu~] has the same structure of [else/rms~] and [else/peak~]
+#X text 15 19 The [vu~] has the same structure of [rms~] and [peak~]
 \, both of which inherited it from the [env~] object in Pd Vanilla.
 ;
-#X obj 516 201 else/vu~ 4096;
+#X obj 516 201 vu~ 4096;
 #X floatatom 526 228 9 0 0 0 - - - 0;
 #X floatatom 591 227 9 0 0 0 - - - 0;
 #X connect 3 0 5 0;
@@ -227,7 +227,7 @@ size.;
 #X restore 2 3 graph;
 #X obj 202 40 cnv 4 4 4 empty empty [vu] 0 28 2 18 #e0e0e0 #000000
 0;
-#X text 61 88 [vu~] combines [else/rms~] and [else/peak~] to provide
+#X text 61 88 [vu~] combines [rms~] and [peak~] to provide
 dBFs output to Pd Vanilla's [vu] GUI.;
 #X obj 230 202 nbx 6 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
@@ -245,7 +245,7 @@ dBFs output to Pd Vanilla's [vu] GUI.;
 #X obj 378 159 r \$0-peak;
 #X obj 345 134 r \$0-rms;
 #X text 376 198 <= [vu];
-#X obj 131 178 else/vu~ 1024 128;
+#X obj 131 178 vu~ 1024 128;
 #X connect 5 0 42 0;
 #X connect 8 0 47 0;
 #X connect 34 0 43 0;

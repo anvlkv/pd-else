@@ -82,7 +82,7 @@ f 52;
 -send <symbol> | -receive <symbol>, f 66;
 #X text 227 429 - sets send symbol (default empty), f 52;
 #X text 227 444 - sets receive symbol (default empty), f 52;
-#X obj 197 216 else/range.hsl 135 17 0 127 0 255 255 255 96 96 96 x
+#X obj 197 216 range.hsl 135 17 0 127 0 255 255 255 96 96 96 x
 x;
 #X connect 34 0 33 0;
 #X connect 34 1 32 0;

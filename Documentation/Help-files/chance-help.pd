@@ -38,7 +38,7 @@
 #000000 #000000;
 #X text 315 207 25%;
 #X text 196 207 50%;
-#X obj 222 176 else/chance 50 25 25;
+#X obj 222 176 chance 50 25 25;
 #X obj 115 359 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 179 359 float;
@@ -50,7 +50,7 @@
 #X obj 180 148 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 85 149 50%;
-#X obj 111 118 else/chance, f 12;
+#X obj 111 118 chance, f 12;
 #X text 156 149 50%;
 #X obj 138 432 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
@@ -58,14 +58,14 @@
 #000000 #000000;
 #X obj 225 494 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 138 464 else/chance 70, f 15;
+#X obj 138 464 chance 70, f 15;
 #X obj 91 222 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X obj 91 294 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X obj 160 294 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 91 264 else/chance, f 12;
+#X obj 91 264 chance, f 12;
 #X text 190 237 <= sets chance of left output;
 #X msg 160 237 30;
 #X obj 160 214 loadbang;
@@ -126,7 +126,7 @@ for more info if only one float is given;
 #000000 #000000;
 #X obj 185 467 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 127 435 else/chance 30 40 30;
+#X obj 127 435 chance 30 40 30;
 #X obj 244 467 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X msg 155 402 10 20 50;
@@ -136,7 +136,7 @@ for more info if only one float is given;
 #000000 #000000;
 #X obj 197 220 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 110 190 else/chance 7 1;
+#X obj 110 190 chance 7 1;
 #X msg 135 156 50 50;
 #X text 176 154 <= sets to 50/50;
 #X text 55 284 Below \, by default \, we have 30 \, 40 and 30 out of
@@ -176,7 +176,7 @@ value., f 52;
 #000000;
 #X text 674 95 25%;
 #X text 495 95 50%;
-#X obj 521 64 else/chance -seed 123 50 25 25;
+#X obj 521 64 chance -seed 123 50 25 25;
 #X msg 415 136 seed;
 #X msg 405 107 seed 123;
 #X obj 391 169 s \$0-chance;
@@ -192,7 +192,7 @@ value., f 52;
 #000000 #000000;
 #X text 674 195 25%;
 #X text 495 195 50%;
-#X obj 521 164 else/chance -seed 123 50 25 25;
+#X obj 521 164 chance -seed 123 50 25 25;
 #X obj 521 137 r \$0-chance;
 #X text 38 106 Seeds are kept locally \, which means that if two [chance]
 objects are seeded the same they will have the same output. Conversely
@@ -215,8 +215,8 @@ repeat the output., f 52;
 #X text 229 263 - a float sets seed \, no float sets a unique internal
 ;
 #X text 22 149 see also:;
-#X obj 22 172 else/chance~;
-#X obj 23 197 else/rand.hist;
+#X obj 22 172 chance~;
+#X obj 23 197 rand.hist;
 #X text 229 278 - updates histogram if more than 1 argument is given
 ;
 #X text 229 301 - sets chance number if only one argument is given

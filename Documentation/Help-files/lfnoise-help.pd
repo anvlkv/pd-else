@@ -63,13 +63,13 @@ range for the output., f 53;
 #dcdcdc #000000 #000000 0 256;
 #X text 187 255 cutoff in hertz;
 #X obj 127 365 biquad~;
-#X obj 127 394 else/plate.rev~ 50 0.9 0.9 0.9 0.7, f 18;
-#X obj 127 83 else/lfnoise 0.5 1;
-#X obj 160 335 else/bl.saw~;
+#X obj 127 394 plate.rev~ 50 0.9 0.9 0.9 0.7, f 18;
+#X obj 127 83 lfnoise 0.5 1;
+#X obj 160 335 bl.saw~;
 #X obj 160 312 sig~ 35;
-#X obj 127 227 else/rescale 200 700;
-#X obj 127 282 else/bicoeff2 lowpass 500 20;
-#X obj 137 437 else/out~;
+#X obj 127 227 rescale 200 700;
+#X obj 127 282 bicoeff2 lowpass 500 20;
+#X obj 137 437 out~;
 #X connect 1 0 2 0;
 #X connect 2 0 10 0;
 #X connect 3 0 11 0;
@@ -93,8 +93,8 @@ range for the output., f 53;
 #000000 0 1;
 #X text 155 394 bang;
 #X text 191 394 - reset to a new random value;
-#X obj 37 282 else/lfo;
-#X obj 37 258 else/lfnoise~;
+#X obj 37 282 lfo;
+#X obj 37 258 lfnoise~;
 #X text 37 230 see also:;
 #X text 203 350 non zero sets to linear interpolation;
 #X obj 6 448 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
@@ -119,8 +119,8 @@ to repeat the output., f 52;
 #000000 #000000 0 1;
 #X obj 40 278 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dfdfdf
 #000000 #000000 0 1;
-#X obj 37 210 else/lfnoise -seed 1039 1;
-#X obj 207 210 else/lfnoise -seed 1039 1;
+#X obj 37 210 lfnoise -seed 1039 1;
+#X obj 207 210 lfnoise -seed 1039 1;
 #X text 367 42 You can set a seed with the '-seed' flag. If you don't
 supply it \, each object gets its own seed internal seed. If you send
 a 'seed' message without float \, the object also gets a unique seed
@@ -135,8 +135,8 @@ value., f 52;
 #000000 #000000 0 1;
 #X obj 539 278 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dfdfdf
 #000000 #000000 0 1;
-#X obj 386 205 else/lfnoise 1 1;
-#X obj 536 205 else/lfnoise 1 1;
+#X obj 386 205 lfnoise 1 1;
+#X obj 536 205 lfnoise 1 1;
 #X connect 2 0 5 0;
 #X connect 3 0 4 0;
 #X connect 6 0 2 0;
@@ -154,7 +154,7 @@ value., f 52;
 outputs random values. It doesn't need the DSP on to function. Give
 it a seed value if you want a reproducible output., f 70;
 #X text 309 174 <-- reset to a new random value, f 16;
-#X obj 206 199 else/lfnoise 2;
+#X obj 206 199 lfnoise 2;
 #X text 191 425 - Low Frequency Noise output in the range from 0 -
 127;
 #X connect 17 0 18 0;

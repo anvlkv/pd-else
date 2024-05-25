@@ -1,7 +1,7 @@
 #N canvas 365 23 560 629 10;
 #X obj 226 235 hsl 128 15 1 44100 1 0 empty empty empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
-#X obj 223 323 else/out~;
+#X obj 223 323 out~;
 #X obj 2 3 cnv 15 301 42 empty empty lfnoise~ 20 20 2 37 #e0e0e0 #000000
 0;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
@@ -39,7 +39,7 @@
 #X obj 223 264 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 239 234 frequency in Hz;
-#X obj 223 290 else/lfnoise~ 400;
+#X obj 223 290 lfnoise~ 400;
 #X text 213 561 - frequency in hertz (default 0);
 #X text 219 497 - bandlimited noise;
 #X obj 95 398 cnv 17 3 55 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
@@ -60,38 +60,38 @@ sample rate \, and when that happens \, it's basically a white noise
 generator., f 62;
 #N canvas 357 55 923 480 interpolation 0;
 #X obj 685 178 noise~;
-#X obj 685 210 else/sh~;
-#X obj 730 177 else/imp~ 300;
+#X obj 685 210 sh~;
+#X obj 730 177 imp~ 300;
 #X obj 648 117 sig~ 300;
 #X obj 648 97 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 554 179 else/lfnoise~ 300;
-#X obj 554 245 else/out~;
-#X obj 685 244 else/out~;
+#X obj 554 179 lfnoise~ 300;
+#X obj 554 245 out~;
+#X obj 685 244 out~;
 #X obj 764 91 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 521 29 [lfnoise~] without interpolation is also similar to
 [noise~] going thgouh [sh~] and being controlled with [imp~].;
 #X obj 54 101 noise~;
-#X obj 72 194 else/out~;
+#X obj 72 194 out~;
 #X msg 142 107 interp \$1;
 #X obj 142 80 tgl 16 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
-#X obj 271 155 else/lfnoise~ 300;
+#X obj 271 155 lfnoise~ 300;
 #X obj 271 113 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 54 155 else/downsample~ 300;
-#X obj 292 199 else/out~;
+#X obj 54 155 downsample~ 300;
+#X obj 292 199 out~;
 #X text 79 26 [lfnoise~] is similar/related to [noise~] going thgouh
 [downsample~] \, which also has linear interpolation.;
 #X text 534 336 See also two simplified versions of [lfnoise~] \, which
 are: [stepnoise~] (without interpolation) and [rampnoise~] (with interpolation.
 ;
-#X obj 696 412 else/rampnoise~;
-#X obj 696 388 else/stepnoise~;
-#X obj 764 116 else/impseq~;
-#X obj 272 292 else/graph~ 1500 10;
-#X obj 55 290 else/graph~ 1500 10;
+#X obj 696 412 rampnoise~;
+#X obj 696 388 stepnoise~;
+#X obj 764 116 impseq~;
+#X obj 272 292 graph~ 1500 10;
+#X obj 55 290 graph~ 1500 10;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 2 0 1 1;
@@ -118,8 +118,8 @@ are: [stepnoise~] (without interpolation) and [rampnoise~] (with interpolation.
 #X text 162 462 signal;
 #X text 213 463 - impulse forces a new random value;
 #N canvas 801 184 416 409 sync 0;
-#X obj 143 180 else/sig2float~;
-#X obj 143 145 else/lfnoise~ 0.5;
+#X obj 143 180 sig2float~;
+#X obj 143 145 lfnoise~ 0.5;
 #X obj 143 212 nbx 8 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 143 250 vsl 18 128 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
@@ -128,7 +128,7 @@ are: [stepnoise~] (without interpolation) and [rampnoise~] (with interpolation.
 #000000;
 #X text 39 18 An impulse into its right inlet forces [lfnoise~] to
 generate a new random value.;
-#X obj 242 100 else/impseq~;
+#X obj 242 100 impseq~;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -138,19 +138,19 @@ generate a new random value.;
 #X text 126 398 float/signal;
 #X text 212 397 - frequency input in hertz;
 #X text 44 281 see also:;
-#X obj 45 332 else/rampnoise~;
-#X obj 45 308 else/stepnoise~;
+#X obj 45 332 rampnoise~;
+#X obj 45 308 stepnoise~;
 #N canvas 806 202 450 300 control 0;
 #X obj 267 157 osc~;
-#X obj 267 194 else/out~;
+#X obj 267 194 out~;
 #X obj 69 163 osc~;
-#X obj 69 200 else/out~;
-#X obj 69 133 else/rescale~ 200 800;
+#X obj 69 200 out~;
+#X obj 69 133 rescale~ 200 800;
 #X text 50 33 [lfnoise~] can be used to control parameters of other
 objects. Here we control the frequency of an oscillator.;
-#X obj 267 96 else/lfnoise~ 10 1;
-#X obj 267 127 else/rescale~ 200 800;
-#X obj 69 103 else/lfnoise~ 10;
+#X obj 267 96 lfnoise~ 10 1;
+#X obj 267 127 rescale~ 200 800;
+#X obj 69 103 lfnoise~ 10;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 4 0 2 0;
@@ -180,18 +180,18 @@ set a "seed" value \, which can be any integer number., f 52;
 supply it \, each object gets its own seed internal seed. If you send
 a 'seed' message without float \, the object also gets a unique seed
 value., f 52;
-#X obj 600 134 else/graph~ 441 0 -1.05 1.05 200 140;
-#X obj 383 134 else/graph~ 441 0 -1.05 1.05 200 140;
+#X obj 600 134 graph~ 441 0 -1.05 1.05 200 140;
+#X obj 383 134 graph~ 441 0 -1.05 1.05 200 140;
 #X msg 539 21 seed 319;
 #X msg 496 22 seed;
 #X text 30 120 Seeds are kept locally \, which means that if two [lfnoise~]
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [lfnoise~] object twice with the same seed
 to repeat the output., f 52;
-#X obj 383 72 else/lfnoise~ -seed 319 1;
-#X obj 600 71 else/lfnoise~ -seed 319 1;
-#X obj 383 98 else/numbox~ 6 14 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 600 98 else/numbox~ 6 14 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 383 72 lfnoise~ -seed 319 1;
+#X obj 600 71 lfnoise~ -seed 319 1;
+#X obj 383 98 numbox~ 6 14 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 600 98 numbox~ 6 14 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 5 0 8 0;
 #X connect 5 0 9 0;
 #X connect 6 0 8 0;
@@ -201,7 +201,7 @@ to repeat the output., f 52;
 #X connect 10 0 4 0;
 #X connect 11 0 3 0;
 #X restore 492 333 pd seed;
-#X obj 45 356 else/lfnoise;
+#X obj 45 356 lfnoise;
 #X connect 0 0 19 0;
 #X connect 19 0 21 0;
 #X connect 21 0 1 0;

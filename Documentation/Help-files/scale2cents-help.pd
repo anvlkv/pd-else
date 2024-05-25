@@ -28,11 +28,11 @@
 #X text 23 128 see also:;
 #X text 61 86 Use [scale2cents] to convert a scale defined as scale steps in semitones to cents.;
 #X msg 179 138 2 2 1 2 2 2 1;
-#X obj 179 164 else/scale2cents;
-#X obj 24 150 else/cents2scale;
+#X obj 179 164 scale2cents;
+#X obj 24 150 cents2scale;
 #X text 189 244 - scale steps;
 #X text 189 275 - converted cents values;
-#X obj 25 173 else/scale2freq;
-#X obj 25 197 else/scales;
+#X obj 25 173 scale2freq;
+#X obj 25 197 scales;
 #X connect 24 0 25 0;
 #X connect 25 0 0 0;

@@ -139,18 +139,18 @@
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 61 pd;
-#X obj 46 150 else/imp~ 1;
+#X obj 46 150 imp~ 1;
 #X text 134 307 signal;
 #X obj 101 270 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 134 270 signal;
 #X obj 305 150 osc~ 1;
 #X text 179 269 - any signal to trigger the object;
-#X obj 46 184 else/detect~;
-#X obj 305 184 else/detect~ ms;
+#X obj 46 184 detect~;
+#X obj 305 184 detect~ ms;
 #X obj 432 150 osc~ 441;
-#X obj 432 184 else/detect~ hz;
-#X obj 164 184 else/detect~ bpm;
+#X obj 432 184 detect~ hz;
+#X obj 164 184 detect~ bpm;
 #X text 73 93 [detect~] detects the frequency/period between trigger
 events. A trigger happens on a transition from non positive to positive.
 , f 64;
@@ -158,11 +158,11 @@ events. A trigger happens on a transition from non positive to positive.
 #X text 119 341 1) symbol -;
 #X text 191 341 detection type: <samps> (default) \, <bpm> \, <ms>
 and <hz>;
-#X obj 164 150 else/tempo~ -on 60;
-#X obj 305 216 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 46 216 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 432 216 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 164 216 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 164 150 tempo~ -on 60;
+#X obj 305 216 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 46 216 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 432 216 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 164 216 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 18 0 24 0;
 #X connect 22 0 25 0;
 #X connect 24 0 35 0;

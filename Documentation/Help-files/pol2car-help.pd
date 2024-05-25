@@ -45,7 +45,7 @@ float grid;
 #X text 190 331 - phase (in radians) from the polar coordinates;
 #X text 190 366 - real part of the cartesian form;
 #X text 190 389 - imaginary part of the cartesian form, f 51;
-#X obj 191 206 else/pol2car;
+#X obj 191 206 pol2car;
 #X text 83 89 [pol2car] converts polar coordinates (amplitude / phase)
 to cartesian coordinates (real / imaginary)., f 58;
 #X obj 307 5 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
@@ -78,26 +78,26 @@ to cartesian coordinates (real / imaginary)., f 58;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 3 4 graph;
 #N canvas 920 123 538 605 example 0;
-#X obj 101 197 else/display;
-#X obj 101 237 else/car2pol;
+#X obj 101 197 display;
+#X obj 101 237 car2pol;
 #X obj 170 275 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 101 276 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 101 306 else/pol2car;
+#X obj 101 306 pol2car;
 #X obj 101 343 pack;
 #X text 63 12 cartesian x polar conversion;
 #X text 238 112 <= click/drag;
-#X obj 101 58 else/circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0
+#X obj 101 58 circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0
 0 0 1 0 0 63.5 63.5 empty empty 1;
-#X obj 101 375 else/circle 127 -1 1 -1 1 1 255 255 255 255 255 255
+#X obj 101 375 circle 127 -1 1 -1 1 1 255 255 255 255 255 255
 0 0 0 1 0 0 63.5 63.5 empty empty 1;
 #X text 57 276 amp =>;
 #X obj 200 330 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 231 274 <= phase (in radians);
 #X text 281 329 <= phase (in degrees);
-#X obj 200 305 else/rad2deg;
+#X obj 200 305 rad2deg;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -111,8 +111,8 @@ to cartesian coordinates (real / imaginary)., f 58;
 #X connect 14 0 11 0;
 #X restore 461 234 pd example;
 #X text 20 194 see also:;
-#X obj 20 216 else/pol2car~;
-#X obj 20 239 else/car2pol;
+#X obj 20 216 pol2car~;
+#X obj 20 239 car2pol;
 #X connect 20 0 29 0;
 #X connect 21 0 24 0;
 #X connect 24 0 29 0;

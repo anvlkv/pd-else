@@ -42,7 +42,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
-#X obj 176 242 else/display;
+#X obj 176 242 display;
 #X obj 288 40 cnv 4 4 4 empty empty conversion 0 28 2 18 -233017 -1
 0;
 #X msg 201 160 0.5 0.5 0.5 -0.5;
@@ -75,9 +75,9 @@ to biquad coefficients., f 67;
 #X msg 146 134 0.5 0.5 0.5 -0.5 -0.5 0.5 -0.5 -0.5 0.2;
 #X text 392 125 a list of 9 elements spread the values to the other
 inlets., f 20;
-#X obj 176 214 else/pz2coeff;
+#X obj 176 214 pz2coeff;
 #X text 32 212 see also:;
-#X obj 32 236 else/coeff2pz;
+#X obj 32 236 coeff2pz;
 #X text 126 348 gain <float>;
 #X connect 6 0 50 0;
 #X connect 24 0 50 0;

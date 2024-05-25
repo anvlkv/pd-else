@@ -47,12 +47,12 @@
 #X obj 269 136 hsl 128 15 441 44100 1 0 empty empty empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 266 158 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 351 157 rate in Hz;
-#X obj 266 206 else/out~;
+#X obj 266 206 out~;
 #N canvas 615 81 480 516 parameters 0;
 #X obj 66 113 hsl 128 15 441 44100 1 0 empty empty empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 63 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 93 112 rate in Hz;
-#X obj 87 410 else/out~;
+#X obj 87 410 out~;
 #X floatatom 87 180 5 0 0 0 - - - 0;
 #X floatatom 169 181 5 0 0 0 - - - 0;
 #X text 85 161 x[n-1];
@@ -70,10 +70,10 @@
 #X text 260 275 r;
 #X text 321 275 b;
 #X text 379 275 h;
-#X obj 87 363 else/lorenz~;
-#X obj 87 201 else/pack2 float float float;
+#X obj 87 363 lorenz~;
+#X obj 87 201 pack2 float float float;
 #X msg 122 333 clear;
-#X obj 106 295 else/pack2 coeffs 10 28 2.667 0.05, f 40;
+#X obj 106 295 pack2 coeffs 10 28 2.667 0.05, f 40;
 #X text 61 15 By default \, the initial s \, r \, b and h values are 10 \, 28 \, 2.667 and 0.05 respectively \, but can be changed via arguments or via the "coeffs" message.;
 #X connect 0 0 1 0;
 #X connect 1 0 21 0;
@@ -89,7 +89,7 @@
 #X connect 23 0 21 0;
 #X connect 24 0 21 0;
 #X restore 443 235 pd parameters;
-#X obj 266 181 else/lorenz~;
+#X obj 266 181 lorenz~;
 #X text 178 306 list;
 #X text 213 292 - list sets values of 's' \, 'r' \, 'b' and 'h', f 49;
 #X text 213 307 - 3 floats set x[n-1] \, y[n-1] and z[n-1] respectively;

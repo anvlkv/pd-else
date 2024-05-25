@@ -43,13 +43,13 @@
 0;
 #X text 140 302 1) float - depth \, default 0 (current window);
 #X text 458 162 example:;
-#X obj 216 135 else/canvas.edit;
+#X obj 216 135 canvas.edit;
 #X text 79 91 The [canvas.edit] object outputs edit status - 1 when
 the window is in edit mode and 0 when it is in run mode.;
 #N canvas 609 221 455 305 depth 0;
 #X obj 76 125 tgl 18 0 empty empty empty 0 -6 0 8 #d0d0d0 #404040 #000000
 0 1;
-#X obj 76 105 else/canvas.edit;
+#X obj 76 105 canvas.edit;
 #X obj 76 152 sel 0 1;
 #X msg 95 200 in edit mode;
 #X msg 76 176 not in edit mode;
@@ -60,7 +60,7 @@ the window is in edit mode and 0 when it is in run mode.;
 #X msg 260 177 not in edit mode;
 #X obj 260 226 print parent-status;
 #X obj 76 225 print subpatch-status;
-#X obj 260 106 else/canvas.edit 1;
+#X obj 260 106 canvas.edit 1;
 #X text 72 35 You can also query the parent status with the depth argument
 (1 goes up to the parent patch \, 2 queries the parent's parent and
 so on)., f 46;
@@ -77,7 +77,7 @@ so on)., f 46;
 #X connect 8 0 9 0;
 #X connect 11 0 5 0;
 #X restore 459 185 pd depth;
-#X obj 216 186 else/display;
+#X obj 216 186 display;
 #X text 272 268 edit status;
 #X obj 185 234 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;

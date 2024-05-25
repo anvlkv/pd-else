@@ -11,13 +11,13 @@
 #X obj 210 300 ==;
 #X obj 105 237 t a a;
 #X obj 210 210 list length;
-#X obj 105 276 else/router;
-#X obj 104 348 else/iterate;
-#X obj 379 356 else/iterate;
-#X obj 312 432 else/store;
+#X obj 105 276 router;
+#X obj 104 348 iterate;
+#X obj 379 356 iterate;
+#X obj 312 432 store;
 #A saved;
 #X obj 73 180 t b a;
-#X obj 401 124 else/args;
+#X obj 401 124 args;
 #X obj 401 98 loadbang;
 #X obj 104 385 t a b;
 #X obj 97 470 route symbol float;

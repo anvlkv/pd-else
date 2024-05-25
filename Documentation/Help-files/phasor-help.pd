@@ -50,8 +50,8 @@
 #X text 320 147 <= resets phase.;
 #X msg 299 179 0.5;
 #N canvas 971 247 651 298 rate 0;
-#X obj 196 104 else/display;
-#X obj 196 72 else/sr~ -ms;
+#X obj 196 104 display;
+#X obj 196 72 sr~ -ms;
 #X msg 432 104 rate \$1;
 #X obj 432 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
@@ -69,7 +69,7 @@ can run is half the frequency of the given rate (500 hz default).,
 f 50;
 #X obj 435 173 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 432 136 else/phasor 0.5 -rate 20;
+#X obj 432 136 phasor 0.5 -rate 20;
 #X connect 1 0 0 0;
 #X connect 2 0 10 0;
 #X connect 3 0 2 0;
@@ -87,7 +87,7 @@ f 50;
 #X text 171 266 float -;
 #X text 122 286 rate <float> -;
 #X text 241 287 rate period in ms;
-#X obj 194 179 else/phasor 1;
+#X obj 194 179 phasor 1;
 #X obj 197 217 hsl 128 18 0 127 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X text 171 350 float -;

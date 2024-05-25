@@ -31,7 +31,7 @@
 #X obj 238 40 cnv 4 4 4 empty empty generator 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 282 207 rate in Hz;
-#X obj 223 257 else/out~;
+#X obj 223 257 out~;
 #X text 172 347 list;
 #X text 83 149 The output rate of the equation is given in hertz (default:
 nyquist).;
@@ -40,7 +40,7 @@ nyquist).;
 #X obj 7 508 cnv 3 550 3 empty empty more_info 8 12 0 13 #dcdcdc #000000
 0;
 #X text 207 413 - sets frequency in hertz (default: nyquist);
-#X obj 223 232 else/lincong~;
+#X obj 223 232 lincong~;
 #X obj 79 40 cnv 4 4 4 empty empty congruential 0 28 2 18 #e0e0e0 #000000
 0;
 #X text 153 516 Object based on SuperCollider's "LincongN" UGEN.;

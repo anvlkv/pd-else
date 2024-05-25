@@ -59,11 +59,11 @@
 #X text 130 321 anything;
 #X text 189 300 - output a message if the gate is opened;
 #X text 189 322 - output a message if the gate is closed;
-#X obj 291 198 else/display;
-#X obj 222 199 else/display;
+#X obj 291 198 display;
+#X obj 222 199 display;
 #X floatatom 197 142 3 0 0 0 - - -;
 #X msg 252 142 1 2;
-#X obj 222 174 else/nmess 4;
+#X obj 222 174 nmess 4;
 #X msg 166 142 hi;
 #X text 74 87 [nmess] allows 'n' number of messages to be gated through
 the left outlet (it goes to the right outlet otherwise). A bang in

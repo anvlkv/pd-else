@@ -50,10 +50,10 @@
 #X text 187 309 signal;
 #X msg 161 122 reset;
 #X text 71 88 [range~] analyxes a float input's range values.;
-#X obj 218 155 else/range, f 15;
-#X obj 218 183 else/display;
-#X obj 305 183 else/display;
-#X obj 218 121 else/lfnoise 1;
+#X obj 218 155 range, f 15;
+#X obj 218 183 display;
+#X obj 305 183 display;
+#X obj 218 121 lfnoise 1;
 #X connect 28 0 30 0;
 #X connect 30 0 31 0;
 #X connect 30 1 32 0;

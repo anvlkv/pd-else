@@ -4,10 +4,10 @@
 #X obj 75 122 inlet~;
 #X text 296 348 Part of ELSE \; https://github.com/porres/pd-else;
 #X text 298 330 Alexandre Torres Porres (2018);
-#X obj 453 247 else/sr~;
-#X obj 118 326 else/downsample~ 0 \$2;
-#X obj 75 281 else/quantizer~ 0 \$1;
-#X obj 453 224 else/lb;
+#X obj 453 247 sr~;
+#X obj 118 326 downsample~ 0 \$2;
+#X obj 75 281 quantizer~ 0 \$1;
+#X obj 453 224 lb;
 #X obj 361 182 declare -path else;
 #X obj 270 277 expr~ (1 - pow($v1 \, 0.1)) * $f2;
 #X obj 192 237 clip~ 0 1;
@@ -16,8 +16,8 @@
 #X obj 84 111 unpack;
 #X obj 83 147 outlet;
 #X obj 134 149 outlet;
-#X obj 84 81 else/args;
-#X obj 84 41 else/lb;
+#X obj 84 81 args;
+#X obj 84 41 lb;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 3 0 0 0;

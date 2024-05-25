@@ -66,8 +66,8 @@ filter.;
 0;
 #X text 94 92 [crossover~] is a of 3rd order butterworth crossover
 filter.;
-#X obj 195 201 else/crossover~ 500;
-#X obj 208 236 else/out~;
+#X obj 195 201 crossover~ 500;
+#X obj 208 236 out~;
 #X connect 14 0 40 0;
 #X connect 15 0 16 0;
 #X connect 16 0 40 1;

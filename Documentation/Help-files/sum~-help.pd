@@ -23,9 +23,9 @@
 #X text 124 451 1) float;
 #X obj 171 157 osc~ 440;
 #X obj 240 157 osc~ 660;
-#X obj 171 247 else/sum~;
+#X obj 171 247 sum~;
 #X obj 171 186 snake~ in 2, f 12;
-#X obj 171 281 else/out.mc~;
+#X obj 171 281 out.mc~;
 #X obj 264 185 tgl 16 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0 1;
 #X msg 264 211 sum \$1;
 #X text 358 199 zero passes unchanged;

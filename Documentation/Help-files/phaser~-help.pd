@@ -1,5 +1,5 @@
 #N canvas 484 23 568 518 10;
-#X obj 185 236 else/out~;
+#X obj 185 236 out~;
 #X obj 306 6 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
 0;
 #X obj 345 13 cnv 10 10 10 empty empty ELSE 0 15 2 30 #7c7c7c #e0e4dc
@@ -42,8 +42,8 @@
 0;
 #X obj 80 42 cnv 4 4 4 empty empty effect 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 185 165 else/play.file~ guitar.wav 1 1, f 15;
-#X obj 314 179 else/rescale~ 100 1000;
+#X obj 185 165 play.file~ guitar.wav 1 1, f 15;
+#X obj 314 179 rescale~ 100 1000;
 #X text 190 403 signal - phaser output;
 #X text 189 365 signal - frequency;
 #X text 75 90 [phaser~] is a mono phaser effect abstraction. You can
@@ -57,7 +57,7 @@ It requires a signal LFO to control the frequency sweep., f 71;
 #X text 126 453 2) float;
 #X text 190 467 -;
 #X text 126 468 3) float;
-#X obj 185 203 else/phaser~ 6 2 0.7, f 22;
+#X obj 185 203 phaser~ 6 2 0.7, f 22;
 #X text 203 453 q- resonance (default 1), f 34;
 #X text 203 468 dry/wet ratio from 0-1 (default 1);
 #X text 171 325 q <float> - internal allpass resonance;

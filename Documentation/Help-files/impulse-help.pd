@@ -57,10 +57,10 @@ in a control rate (with a resolution of 1 ms) and sends bangs. The
 difference between this and objects like [tempo] or [metro] is that
 a speed change takes effect right away.;
 #X msg 303 209 0.5;
-#X obj 191 209 else/impulse 1;
+#X obj 191 209 impulse 1;
 #N canvas 503 193 721 374 rate 0;
-#X obj 204 159 else/display;
-#X obj 204 127 else/sr~ -ms;
+#X obj 204 159 display;
+#X obj 204 127 sr~ -ms;
 #X obj 498 210 timer;
 #X msg 498 112 rate \$1;
 #X obj 498 86 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -79,7 +79,7 @@ rate which has a period in ms given by the [sr~] object., f 56;
 is 1 ms and the minimum rate is 0.1 ms. The maximum frequency that
 [pulse] can run is half the frequency of the given rate (500 hz default).
 , f 56;
-#X obj 498 139 else/impulse -rate 20 6;
+#X obj 498 139 impulse -rate 20 6;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
 #X connect 3 0 11 0;

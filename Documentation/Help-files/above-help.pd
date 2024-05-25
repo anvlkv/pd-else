@@ -53,7 +53,7 @@ or below it. You can set the threshold value with the argument or the
 2nd inlet., f 64;
 #X obj 217 178 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 214 236 else/above 64;
+#X obj 214 236 above 64;
 #X obj 214 209 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 171 341 float - set threshold, f 37;

@@ -41,7 +41,7 @@
 #X restore 3 4 graph;
 #X text 207 342 (none);
 #X msg 222 135 1 2 3 4 5 6;
-#X obj 222 192 else/display;
+#X obj 222 192 display;
 #X obj 195 135 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 196 245 - sums the last received list;
@@ -50,7 +50,7 @@
 #X text 153 303 float;
 #X text 196 302 - summed value of input list;
 #X text 70 93 [sum] sums a list of values., f 70;
-#X obj 222 165 else/sum;
+#X obj 222 165 sum;
 #X connect 21 0 30 0;
 #X connect 23 0 30 0;
 #X connect 30 0 22 0;

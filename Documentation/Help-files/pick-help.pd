@@ -33,15 +33,15 @@
 #X text 233 298 - element number;
 #X msg 315 155 -2;
 #X msg 347 155 2;
-#X obj 240 205 else/pick -2, f 13;
-#X obj 240 234 else/display;
+#X obj 240 205 pick -2, f 13;
+#X obj 240 234 display;
 #X text 176 330 anything;
 #X text 233 330 - the element from the input message;
 #X text 159 365 1) float - element number (default 0 \, none);
 #X text 62 85 [pick] picks an element from an input message according to an element number. Negative values count from last to the first element. If you ask for an element number out of the range \, nothing is output., f 63;
 #X text 357 180 <= set element;
 #X text 25 213 see also;
-#X obj 25 232 else/pick~;
+#X obj 25 232 pick~;
 #X connect 15 0 30 1;
 #X connect 21 0 30 0;
 #X connect 22 0 30 0;

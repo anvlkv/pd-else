@@ -37,17 +37,17 @@
 ;
 #X text 152 323 1) float - depth \, default 0 (current window);
 #N canvas 761 302 427 348 subpatch 0;
-#X obj 162 130 else/display;
-#X obj 162 103 else/canvas.pos;
+#X obj 162 130 display;
+#X obj 162 103 canvas.pos;
 #X obj 162 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
 #X text 97 135 position:;
 #X text 60 23 Here \, [canvas.pos] reports the position of this subpatch's
 canvas in the parent patch., f 43;
-#X obj 99 255 else/display;
+#X obj 99 255 display;
 #X obj 99 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856 -1
 -1;
-#X obj 99 228 else/canvas.pos 1;
+#X obj 99 228 canvas.pos 1;
 #X text 215 227 <= parent \; s position;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -55,7 +55,7 @@ canvas in the parent patch., f 43;
 #X connect 7 0 5 0;
 #X restore 454 211 pd subpatch;
 #X text 391 210 examples:;
-#X obj 217 204 else/display;
+#X obj 217 204 display;
 #X obj 137 257 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
 ;
 #X text 173 258 bang -;
@@ -66,7 +66,7 @@ canvas in the parent canvas. The output is the x/y coordinates. It
 can also query the parent status with the depth argument (1 goes up
 to the parent patch \, 2 queries the parent's parent and so on).,
 f 71;
-#X obj 217 177 else/canvas.pos;
+#X obj 217 177 canvas.pos;
 #X text 89 202 if not a subwindow the output is (0 0), f 19;
 #X text 224 257 query for position;
 #X text 173 291 list -;

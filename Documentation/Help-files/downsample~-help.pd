@@ -2,7 +2,7 @@
 #X obj 205 148 noise~;
 #X obj 301 163 hsl 128 15 10 44100 1 0 empty empty empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
-#X obj 205 242 else/out~;
+#X obj 205 242 out~;
 #X obj 2 3 cnv 15 301 42 empty empty downsample~ 20 20 2 37 #e0e0e0
 #000000 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -38,29 +38,29 @@
 #X obj 298 187 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #N canvas 357 108 802 350 example 0;
-#X obj 199 192 else/sh~;
+#X obj 199 192 sh~;
 #X obj 147 109 noise~;
 #X obj 247 97 hsl 128 15 -44100 44100 0 0 empty empty empty -2 -8 0
 10 #dcdcdc #000000 #000000 0 1;
-#X obj 199 227 else/out~;
+#X obj 199 227 out~;
 #X obj 244 126 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 518 141 noise~;
 #X obj 572 93 hsl 128 15 441 44100 1 0 empty empty empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
-#X obj 518 229 else/out~;
+#X obj 518 229 out~;
 #X obj 569 122 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 569 155 phasor~;
 #X obj 518 188 samphold~;
-#X obj 244 159 else/imp~;
+#X obj 244 159 imp~;
 #X text 25 26 You can implement downsample without interpolation with
 other two objects from the else library.;
 #X text 404 22 Note you cannot do it with vanilla's [samphold~] \,
 cause you can't go up to the sample rate (it stops sampling then) or
 use negative frequencies.;
-#X obj 74 228 else/out~;
-#X obj 74 194 else/downsample~;
+#X obj 74 228 out~;
+#X obj 74 194 downsample~;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 1 0 15 0;
@@ -103,7 +103,7 @@ at a frequency rate in hertz. It can operate with or without interpolation.
 0;
 #X obj 501 26 cnv 10 10 10 empty empty library 0 6 2 13 #7c7c7c #e0e4dc
 0;
-#X obj 205 211 else/downsample~;
+#X obj 205 211 downsample~;
 #X text 215 437 - rate in hertz (default is Pd's sample rate);
 #X obj 222 178 bng 17 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;

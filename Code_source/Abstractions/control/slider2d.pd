@@ -106,7 +106,7 @@
 #X obj 707 258 r \$0-set-r-sym;
 #X obj 635 171 r \$0-initvalues;
 #X obj 635 192 unpack;
-#X obj 137 287 else/pack2 127 127 0 127 0 127 1 255 255 255 0 0 0 0 0 0 0 0 empty empty, f 92;
+#X obj 137 287 pack2 127 127 0 127 0 127 1 255 255 255 0 0 0 0 0 0 0 0 empty empty, f 92;
 #X connect 0 0 23 0;
 #X connect 1 0 23 2;
 #X connect 1 1 2 0;
@@ -627,7 +627,7 @@
 #X obj 208 91 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 229 124 message \; \$0-this-patch donecanvasdialog 1 -1 0 0 0 0 0 0 0 0 0, f 31;
 #X obj 312 55 declare -path else;
-#X obj 50 73 else/lb;
+#X obj 50 73 lb;
 #X connect 0 0 13 0;
 #X connect 1 0 2 0;
 #X connect 3 0 2 0;
@@ -661,10 +661,10 @@
 #X obj 36 68 unpack float float, f 27;
 #X obj 174 278 pack float float;
 #X obj 336 123 r \$0-ysize;
-#X obj 94 182 else/pack2 in 0 0;
-#X obj 94 235 else/rescale;
-#X obj 267 144 else/rescale;
-#X obj 265 98 else/pack2 in 0 0;
+#X obj 94 182 pack2 in 0 0;
+#X obj 94 235 rescale;
+#X obj 267 144 rescale;
+#X obj 265 98 pack2 in 0 0;
 #X obj 292 44 r \$0-min-y;
 #X obj 316 69 r \$0-max-y;
 #X listbox 97 41 20 0 0 0 - - - 0;
@@ -813,10 +813,10 @@
 #X obj 305 127 pack2 127 127;
 #X obj 91 266 lastvalue;
 #X msg 91 292 in 0 \$1;
-#X obj 76 322 else/rescale 0 127;
+#X obj 76 322 rescale 0 127;
 #X obj 255 271 lastvalue;
 #X msg 255 297 in 0 \$1;
-#X obj 240 327 else/rescale 0 127;
+#X obj 240 327 rescale 0 127;
 #X obj 316 245 r \$0-ysize;
 #X obj 325 289 r \$0-1st-y;
 #X connect 0 0 3 0;
@@ -1169,9 +1169,9 @@
 #X obj 65 71 unpack float float, f 23;
 #X obj 135 238 changed;
 #X msg 79 135 in 0 \$1;
-#X obj 65 170 else/rescale 0 127;
+#X obj 65 170 rescale 0 127;
 #X msg 269 117 in 0 \$1;
-#X obj 255 152 else/rescale 0 127;
+#X obj 255 152 rescale 0 127;
 #X obj 311 81 r \$0-ysize;
 #X obj 325 100 r \$0-min-y;
 #X obj 362 119 r \$0-max-y;
@@ -1220,7 +1220,7 @@
 #X obj 127 170 s \$0-mouse-x;
 #X obj 75 18 inlet;
 #X obj 106 239 sel 1;
-#X obj 106 213 else/mouse;
+#X obj 106 213 mouse;
 #X connect 1 0 0 0;
 #X connect 1 1 2 0;
 #X connect 2 0 5 0;

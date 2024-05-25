@@ -42,7 +42,7 @@
 0;
 #X obj 502 27 cnv 10 10 10 empty empty library 0 6 2 13 #7c7c7c #e0e4dc
 0;
-#X obj 58 204 else/trighold~;
+#X obj 58 204 trighold~;
 #X text 232 393 (none);
 #X text 230 362 - held trigger;
 #X text 61 91 [trighold~] holds a trigger value. A trigger happens
@@ -256,18 +256,18 @@ when a transition from 0 to non-zero occurs.;
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 505 61 pd;
-#X obj 58 172 else/dust2~ 5;
+#X obj 58 172 dust2~ 5;
 #X obj 379 140 noise~;
 #X obj 379 175 *~;
-#X obj 421 173 else/pulse~ 1;
-#X obj 379 236 else/trighold~;
-#X obj 207 239 else/trighold~;
-#X obj 207 170 else/randpulse~ 1;
-#X obj 379 266 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 207 269 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 379 200 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 207 203 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 58 232 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 421 173 pulse~ 1;
+#X obj 379 236 trighold~;
+#X obj 207 239 trighold~;
+#X obj 207 170 randpulse~ 1;
+#X obj 379 266 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 207 269 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 379 200 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 207 203 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 58 232 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X text 187 330 clear;
 #X text 230 330 - clear and set output to zero;
 #X msg 168 139 clear;

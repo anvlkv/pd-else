@@ -46,8 +46,8 @@
 0;
 #N canvas 787 108 557 486 more_details 0;
 #X obj 53 186 noise~;
-#X obj 263 311 else/graph~;
-#X obj 53 312 else/graph~;
+#X obj 263 311 graph~;
+#X obj 53 312 graph~;
 #X msg 282 236 size 10;
 #X msg 263 206 size 100;
 #X text 51 15 A moving/running average outputs an arithmetic mean between
@@ -67,8 +67,8 @@ value is "1" \, which makes it the same as the input signal., f 61
 #X text 51 119 By default \, the buffers size 100 samples long. You
 can also set the maximum value with the -size flag or message., f
 61;
-#X obj 460 37 else/setdsp~;
-#X obj 263 275 else/mov.avg~ -size 10;
+#X obj 460 37 setdsp~;
+#X obj 263 275 mov.avg~ -size 10;
 #X connect 0 0 2 0;
 #X connect 0 0 13 0;
 #X connect 3 0 13 0;
@@ -87,7 +87,7 @@ can also set the maximum value with the -size flag or message., f
 #X text 120 325 size <float>;
 #X text 200 325 - sets new maximum size and clears filter's memory
 ;
-#X obj 222 162 else/ramp~;
+#X obj 222 162 ramp~;
 #X msg 178 197 clear;
 #X obj 235 199 print~ Ramp;
 #X obj 94 346 cnv 17 3 31 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
@@ -95,12 +95,12 @@ can also set the maximum value with the -size flag or message., f
 #X text 120 347 float/signal;
 #N canvas 736 257 450 273 lowpass 0;
 #X obj 91 76 noise~;
-#X obj 91 180 else/out~;
-#X obj 215 179 else/out~;
+#X obj 91 180 out~;
+#X obj 215 179 out~;
 #X obj 290 109 nbx 5 14 1 100 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 279 88 'n' samples;
-#X obj 215 133 else/mov.avg~;
+#X obj 215 133 mov.avg~;
 #X text 47 19 [mov.avg~] is nothing but a moving average filter \,
 which is a kind of lowpass filter. Listen to it below.;
 #X connect 0 0 1 0;
@@ -117,8 +117,8 @@ or argument's value if given), f 53;
 #000000 #000000;
 #X text 213 347 'n' number of last samples to apply the average to
 (if different than the last \, the filter is cleared), f 51;
-#X obj 500 70 else/setdsp~;
-#X obj 222 227 else/mov.avg~ 2;
+#X obj 500 70 setdsp~;
+#X obj 222 227 mov.avg~ 2;
 #X text 62 90 [mov.avg~] gives you a signal running/moving average
 over the last 'n' given samples. This is also a type of lowpass filter.
 ;
@@ -128,15 +128,15 @@ over the last 'n' given samples. This is also a type of lowpass filter.
 #X text 214 450 sets to absolute average mode, f 53;
 #N canvas 785 167 406 368 abs 0;
 #X obj 38 121 noise~;
-#X obj 85 195 else/graph~;
+#X obj 85 195 graph~;
 #X obj 190 129 nbx 3 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 12
 #dcdcdc #000000 #000000 0 256;
 #X obj 193 84 hsl 150 15 1 100 1 0 adsfadsg ahhah empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
 #X text 198 83 'n' samples to average;
 #X obj 190 107 int;
-#X obj 330 171 else/setdsp~;
-#X obj 85 159 else/mov.avg~ -abs;
+#X obj 330 171 setdsp~;
+#X obj 85 159 mov.avg~ -abs;
 #X msg 85 120 abs \$1;
 #X obj 85 91 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000
 0 1;

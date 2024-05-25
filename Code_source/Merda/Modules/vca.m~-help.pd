@@ -13,7 +13,7 @@
 #N canvas 439 168 257 249 messages 0;
 #X obj 90 158 outlet;
 #X msg 90 122 master \$1;
-#X obj 90 40 else/knob 40 0.1 10 1 1 \$0-master \$0-set-master #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 1;
+#X obj 90 40 knob 40 0.1 10 1 1 \$0-master \$0-set-master #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 1;
 #X floatatom 90 90 5 0 0 0 - - - 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;

@@ -23,7 +23,7 @@
 #X restore 3 3 graph;
 #X obj 31 40 cnv 4 4 4 empty empty Echo 0 28 2 18 #e0e0e0 #000000 0
 ;
-#X obj 186 263 else/out~;
+#X obj 186 263 out~;
 #X obj 78 40 cnv 4 4 4 empty empty reverb 0 28 2 18 #e0e0e0 #000000
 0;
 #X obj 4 323 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000
@@ -45,8 +45,8 @@
 #X text 81 85 [echo.rev~] is an echo/reverb abstraction. It only contains
 feedforward lines and can be used to produce early reflections in a
 reverb algorithm. But it can also be used on its own., f 62;
-#X obj 186 187 else/play.file~ bubul.wav 1 1;
-#X obj 186 234 else/echo.rev~ 8 1;
+#X obj 186 187 play.file~ bubul.wav 1 1;
+#X obj 186 234 echo.rev~ 8 1;
 #X text 197 354 float;
 #X text 250 354 - room size from 0 to 1, f 24;
 #X text 246 383 - echo/reverb output;

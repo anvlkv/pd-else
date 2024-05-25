@@ -40,13 +40,13 @@
 0;
 #X text 476 175 example:;
 #N canvas 935 108 480 385 depth 0;
-#X obj 141 180 else/display;
-#X obj 264 180 else/display;
+#X obj 141 180 display;
+#X obj 264 180 display;
 #X text 60 87 See the example below with an abstraction., f 47;
 #X text 59 38 The depth level is convenient for abstractions \, so
 you can get the font size of a parent patch. By default \, the depth
 level is 0 \, which means this main patch and its subpatches.;
-#X obj 141 140 else/fontsize-example;
+#X obj 141 140 fontsize-example;
 #X text 56 288 A float argument specifies this patch (0 \, the default)
 \, owning patch (1) \, its own owner (2) \, and so on - ownership number
 is silently reduced if owners don't exist \, so here anything greater
@@ -57,10 +57,10 @@ The font size is the same., f 62;
 #X connect 4 0 0 0;
 #X connect 4 1 1 0;
 #X restore 477 198 pd depth;
-#X obj 226 199 else/display;
+#X obj 226 199 display;
 #X text 253 279 font size;
 #X text 161 203 font size;
-#X obj 226 168 else/fontsize;
+#X obj 226 168 fontsize;
 #X text 141 313 1) float - depth \, default 0 (current);
 #X obj 226 145 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;

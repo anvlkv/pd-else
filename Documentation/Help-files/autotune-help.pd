@@ -43,13 +43,13 @@
 #X obj 439 155 r \$0-pitch;
 #X obj 141 363 s \$0-pitch;
 #X text 373 347 see also:;
-#X obj 442 344 else/retune;
+#X obj 442 344 retune;
 #X floatatom 40 216 5 0 0 0 - - - 0;
 #X msg 40 239 base \$1;
 #X text 59 90 [autotune] receives a scale as a list of steps in cents and a base MIDI pitch value (default 60). It then retunes incoming MIDI pitches to the closest step in the scale., f 67;
-#X obj 141 291 else/autotune -base 57 0 110 190 320 410 480 590 610 690 805 895 990 1110 1200, f 40;
-#X obj 442 323 else/autotune2;
-#X obj 442 365 else/frac2dec;
+#X obj 141 291 autotune -base 57 0 110 190 320 410 480 590 610 690 805 895 990 1110 1200, f 40;
+#X obj 442 323 autotune2;
+#X obj 442 365 frac2dec;
 #X msg 217 263 bypass \$1;
 #X obj 217 239 tgl 17 0 empty empty empty 17 7 0 10 #dfdfdf #000000 #000000 0 1;
 #X text 156 431 bypass <float>;

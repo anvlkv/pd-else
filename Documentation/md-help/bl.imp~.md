@@ -34,4 +34,4 @@ methods:
 draft: false
 ---
 
-[bl.imp~] is an impulse oscillator like [else/imp~], but it is bandlimited.
+[bl.imp~] is an impulse oscillator like [imp~], but it is bandlimited.

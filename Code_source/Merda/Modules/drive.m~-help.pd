@@ -11,9 +11,9 @@
 #N canvas 124 163 346 275 messages 0;
 #X obj 103 218 outlet;
 #X msg 103 136 drive \$1;
-#X obj 103 41 else/knob 40 0 1 0 0 empty empty #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 0;
+#X obj 103 41 knob 40 0 1 0 0 empty empty #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 0;
 #X floatatom 103 106 9 0 0 0 - - - 0;
-#X obj 202 41 else/knob 40 -1 1 0 0 \$0-att \$0-att-set #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 202 41 knob 40 -1 1 0 0 \$0-att \$0-att-set #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X floatatom 202 106 10 0 0 0 - - - 0;
 #X msg 202 136 att \$1;
 #X connect 1 0 0 0;

@@ -197,7 +197,7 @@ amplitudes from 0hz to Nyquist. It uses a hann table for the analysis.
 #X text 145 113 default;
 #X text 119 65 graph rate rate in ms;
 #X floatatom 102 142 5 0 1000 0 - - - 0;
-#X obj 72 273 else/spectrograph~ 1024 0 0 300 140 100;
+#X obj 72 273 spectrograph~ 1024 0 0 300 140 100;
 #X connect 0 0 12 0;
 #X connect 1 0 12 0;
 #X connect 2 0 12 0;
@@ -212,7 +212,7 @@ amplitudes from 0hz to Nyquist. It uses a hann table for the analysis.
 #X text 250 407 - sets graph rate in ms;
 #X text 106 540 -rate <float>;
 #X text 191 540 - sets graph rate in ms (default 100), f 51;
-#X obj 60 158 else/spectrograph~ 1024 0 0 300 140 100;
+#X obj 60 158 spectrograph~ 1024 0 0 300 140 100;
 #X connect 20 0 28 0;
 #X connect 21 0 22 0;
 #X connect 22 0 28 0;

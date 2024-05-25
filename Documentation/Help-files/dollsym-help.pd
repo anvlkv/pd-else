@@ -41,21 +41,21 @@
 0;
 #X msg 271 154 symbol \\\$0-x;
 #X symbolatom 271 179 10 0 0 0 - - - 0;
-#X obj 220 231 else/display;
+#X obj 220 231 display;
 #X text 141 271 symbol;
 #X text 141 329 symbol;
 #X text 183 329 - the expanded symbol;
 #N canvas 947 69 396 460 depth 0;
-#X obj 112 294 else/display;
+#X obj 112 294 display;
 #X text 57 42 The depth level is convenient for abstractions \, so
 you can expand according to parent patches. By default \, the depth
 level is 0 \, which means this main patch and its subpatches., f 47
 ;
 #X symbolatom 112 215 10 0 0 0 - - - 0;
-#X obj 241 294 else/display;
+#X obj 241 294 display;
 #X msg 127 181 symbol \\\$0-x;
 #X msg 112 146 symbol \\\$1-x;
-#X obj 112 254 else/dollsym-example A;
+#X obj 112 254 dollsym-example A;
 #X text 57 96 See the example below with an abstraction., f 47;
 #X text 63 358 Note how "\$0" gets expanded to different values and
 that "\$1" doesn't get expanded according to this patch because it
@@ -77,7 +77,7 @@ without dollar arguments are passed through unchanged., f 63;
 #X text 183 286 - a one element symbol is also expanded;
 #X obj 190 171 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 220 203 else/dollsym \$0-z;
+#X obj 220 203 dollsym \$0-z;
 #X text 159 364 1) float - (optional) depth (default 0);
 #X text 153 380 2) symbol - symbol to be expanded, f 40;
 #X text 153 300 bang;

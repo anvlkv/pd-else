@@ -154,7 +154,7 @@
 #X obj 121 171 *;
 #X obj 121 34 inlet;
 #X obj 121 211 outlet;
-#X obj 158 170 else/sr~ -khz;
+#X obj 158 170 sr~ -khz;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -171,7 +171,7 @@
 #X obj 525 223 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X msg 539 175 set 1024 256;
 #X msg 529 152 set 8192 256;
-#X obj 516 201 else/rms~ 4096;
+#X obj 516 201 rms~ 4096;
 #X connect 4 0 6 0;
 #X connect 5 0 6 0;
 #X connect 9 0 10 0;
@@ -184,10 +184,10 @@
 #X restore 476 196 pd analysis;
 #X obj 3 330 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000 0;
 #X text 32 174 see also:;
-#X obj 34 199 else/mov.rms~;
+#X obj 34 199 mov.rms~;
 #X msg 272 153 lin \$1;
 #X obj 272 125 tgl 19 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0 1;
-#X obj 218 181 else/rms~;
+#X obj 218 181 rms~;
 #X text 185 334 -lin;
 #X text 221 334 - sets the output to linear (default dBFS), f 53;
 #X text 143 278 lin <float>;

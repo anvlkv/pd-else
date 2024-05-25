@@ -49,8 +49,8 @@
 #X obj 93 318 cnv 17 3 30 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 152 318 float;
-#X obj 196 166 else/display 2;
-#X obj 196 230 else/display 2;
+#X obj 196 166 display 2;
+#X obj 196 230 display 2;
 #X text 92 169 current value =>;
 #X text 110 233 last value =>;
 #X floatatom 289 173 5 0 0 0 - - - 0;
@@ -63,13 +63,13 @@
 #X obj 129 140 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X obj 129 167 random 100;
-#X obj 129 193 else/display 2;
-#X obj 129 334 else/display 2;
+#X obj 129 193 display 2;
+#X obj 129 334 display 2;
 #X text 25 196 current value =>;
 #X text 43 337 last value =>;
 #X floatatom 210 215 5 0 0 0 - - - 0;
 #X text 248 214 <= set last value;
-#X obj 129 301 else/lastvalue;
+#X obj 129 301 lastvalue;
 #X obj 224 250 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 245 248 <= set to none;
@@ -97,7 +97,7 @@ is given \, it sets to 'none'., f 51;
 #X text 104 297 reset <float>;
 #X text 192 297 - resets object and sets last value \, no float sets
 to none;
-#X obj 196 198 else/lastvalue 4;
+#X obj 196 198 lastvalue 4;
 #X obj 237 171 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 158 283 bang;

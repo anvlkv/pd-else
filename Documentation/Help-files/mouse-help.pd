@@ -37,9 +37,9 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 3 5 graph;
-#X obj 279 176 else/mouse;
+#X obj 279 176 mouse;
 #X text 158 398 (none);
-#X obj 279 208 else/display;
+#X obj 279 208 display;
 #X floatatom 312 208 5 0 0 0 - - - 0;
 #X floatatom 367 208 5 0 0 0 - - - 0;
 #X msg 279 146 zero;
@@ -59,11 +59,11 @@
 Click and see. This works for any click Pd receives in any window \,
 not only this patch's., f 62;
 #X text 72 158 see also:;
-#X obj 74 182 else/canvas.mouse;
+#X obj 74 182 canvas.mouse;
 #X text 50 204 for coordinates relative to specific windows, f 24
 ;
 #N canvas 700 250 524 347 bounds 0;
-#X obj 270 135 else/canvas.bounds;
+#X obj 270 135 canvas.bounds;
 #X obj 270 173 unpack;
 #X obj 226 235 -;
 #X obj 288 238 -;
@@ -71,7 +71,7 @@ not only this patch's., f 62;
 #dcdcdc #000000 #000000 0 256;
 #X obj 226 274 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 167 176 else/mouse;
+#X obj 167 176 mouse;
 #X text 73 48 You can use [canvas.bounds] to get patch window's bound
 coordinates and then get mouse coordinates relative to the patch window.
 , f 56;

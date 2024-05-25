@@ -9,7 +9,7 @@
 #X obj 206 88 declare -path else;
 #X text 200 138 A signal generator.;
 #X obj 272 195 about.MERDA;
-#X obj 63 28 else/knob 40 -1 1 0 0 \$0-sig \$0-set-sig #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 0;
+#X obj 63 28 knob 40 -1 1 0 0 \$0-sig \$0-set-sig #000000 #404040 #ffffff 1 0 0 0 1 320 0 0 0;
 #X msg 63 83 set \$1;
 #X connect 1 0 0 0;
 #X connect 7 0 8 0;

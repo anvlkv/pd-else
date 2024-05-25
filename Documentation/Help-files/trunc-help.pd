@@ -20,7 +20,7 @@
 #X text 227 358 (none);
 #X text 294 198 input;
 #X text 159 255 output;
-#X obj 209 223 else/trunc;
+#X obj 209 223 trunc;
 #X obj 23 40 cnv 4 4 4 empty empty Truncate 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 94 40 cnv 4 4 4 empty empty to 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 3 2 cnv 15 301 42 empty empty trunc 20 20 2 37 #e0e0e0 #000000 0;
@@ -29,13 +29,13 @@
 #X restore 3 3 graph;
 #X obj 116 40 cnv 4 4 4 empty empty integer 0 28 2 18 #e0e0e0 #000000 0;
 #X text 16 227 see also:;
-#X obj 16 246 else/trunc~;
+#X obj 16 246 trunc~;
 #X text 74 86 [trunc] truncates floats and lists towards zero \, that means only the integer value is considered \, like in vanilla's [int]., f 63;
 #X text 211 291 - input value(s) to trunc function;
 #X text 211 324 - output value(s) of trunc function;
 #X text 176 291 list;
 #X text 176 324 list;
-#X obj 159 127 else/initmess -3.2 4.1 7.9;
+#X obj 159 127 initmess -3.2 4.1 7.9;
 #X listbox 159 148 15 0 0 0 - - - 0;
 #X listbox 209 255 20 0 0 0 - - - 0;
 #X connect 6 0 7 0;

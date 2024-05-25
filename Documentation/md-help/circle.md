@@ -57,4 +57,4 @@ flags:
 draft: false
 ---
 
-[circle] is a two dimensional slider GUI abstraction (see also [else/slider2d).
+[circle] is a two dimensional slider GUI abstraction (see also [slider2d).

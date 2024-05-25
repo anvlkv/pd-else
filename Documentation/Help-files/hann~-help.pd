@@ -38,18 +38,18 @@
 0;
 #X obj 502 26 cnv 10 10 10 empty empty library 0 6 2 13 #7c7c7c #e0e4dc
 0;
-#X obj 125 176 else/hann~;
+#X obj 125 176 hann~;
 #X text 189 369 signal;
 #X text 253 446 (none);
 #X obj 125 147 sig~ 1;
-#X obj 125 205 else/graph~ 256 0 -1 1 200 140;
+#X obj 125 205 graph~ 256 0 -1 1 200 140;
 #X obj 449 250 block~ 256;
 #X text 237 369 - input to hann window;
 #X text 237 410 - output of hann window;
 #X text 75 91 [hann~] is an abstraction that applies a hann window
 into a signal input. the window size is the same as the block size.
 This is meant for FFT analysis., f 52;
-#X obj 483 79 else/setdsp~;
+#X obj 483 79 setdsp~;
 #X text 356 233 Block size of this example patch :, f 19;
 #X connect 19 0 23 0;
 #X connect 22 0 19 0;

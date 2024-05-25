@@ -35,10 +35,10 @@
 ;
 #X obj 78 318 cnv 17 3 73 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 190 278 else/display;
+#X obj 190 278 display;
 #X text 131 318 float -;
 #X text 132 407 float -;
-#X obj 190 253 else/speed 60;
+#X obj 190 253 speed 60;
 #X text 180 407 bpm change.;
 #X text 137 461 1) float - initial bpm (default 120);
 #X floatatom 149 185 5 0 0 0 - - - 0;
@@ -72,10 +72,10 @@ floats set start \, target and number of beats;
 #X msg 255 185 set 60 4;
 #X msg 246 162 set 90 4;
 #X msg 234 141 set 60 90 4;
-#X obj 234 213 else/speed 60;
-#X obj 52 229 else/impseq~;
-#X obj 52 293 else/out~;
-#X obj 52 258 else/resonant~ 800 500;
+#X obj 234 213 speed 60;
+#X obj 52 229 impseq~;
+#X obj 52 293 out~;
+#X obj 52 258 resonant~ 800 500;
 #X text 63 20 In this example we use [speed] to implement accellerando
 or ritardando with [metro]. We use the 'set' message to arm the object
 and wait for a bang to trigger it., f 43;
@@ -92,7 +92,7 @@ and wait for a bang to trigger it., f 43;
 #X connect 9 0 11 0;
 #X connect 11 0 10 0;
 #X restore 447 275 pd example;
-#X obj 265 278 else/display;
+#X obj 265 278 display;
 #X obj 78 427 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 132 428 float -;

@@ -1,13 +1,13 @@
 # project aubio (0.5.0-alpha) configured on Tue Nov 15 19:27:39 2022 by
 # waf 2.0.21 (abi 20, python 20712f0 on darwin)
-# using waf configure --verbose --destdir /Users/timschoen/Projecten/pd-else/shared/aubio/build/dist --jobs 4
+# using waf configure --verbose --destdir /Users/timschoen/Projecten/pd-shared/aubio/build/dist --jobs 4
 #
 ----------------------------------------
 Setting top to
-/Users/timschoen/Projecten/pd-else/shared/aubio
+/Users/timschoen/Projecten/pd-shared/aubio
 ----------------------------------------
 Setting out to
-/Users/timschoen/Projecten/pd-else/shared/aubio/build
+/Users/timschoen/Projecten/pd-shared/aubio/build
 ----------------------------------------
 Checking for 'clang' (C compiler)
 find program=['clang'] paths=['/Users/timschoen/.pyenv/versions/2.7.18/bin', '/opt/homebrew/Cellar/pyenv/2.3.5/libexec', '/opt/homebrew/Cellar/pyenv/2.3.5/plugins/python-build/bin', '/Users/timschoen/.pyenv/shims', '/Users/timschoen/bin', '/usr/local/bin', '/Users/timschoen/.pyenv/versions/2.7.18/bin', '/Library/Frameworks/Python.framework/Versions/3.10/bin', '/Library/Frameworks/Python.framework/Versions/3.11/bin', '/opt/local/bin', '/opt/local/sbin', '/opt/homebrew/bin', '/opt/homebrew/sbin', '/usr/local/bin', '/System/Cryptexes/App/usr/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/Applications/VMware Fusion Tech Preview.app/Contents/Public', '/Users/timschoen/Library/Python/3.9/bin', '/opt/X11/bin', '/Library/Apple/usr/bin'] var='CC' -> ['/opt/homebrew/bin/clang']
@@ -355,20 +355,20 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_895877dc439f94dc29db32a791da014e/test.c[0m
 
-['/opt/homebrew/bin/clang', '../test.c', '-c', '-o/Users/timschoen/Projecten/pd-else/shared/aubio/build/.conf_check_895877dc439f94dc29db32a791da014e/testbuild/test.c.1.o']
+['/opt/homebrew/bin/clang', '../test.c', '-c', '-o/Users/timschoen/Projecten/pd-shared/aubio/build/.conf_check_895877dc439f94dc29db32a791da014e/testbuild/test.c.1.o']
 err: clang: error: invalid version number in '-mmacosx-version-min=13.0'
 
-from /Users/timschoen/Projecten/pd-else/shared/aubio: Test does not build: Traceback (most recent call last):
-  File "/Users/timschoen/Projecten/pd-else/shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Configure.py", line 335, in run_build
+from /Users/timschoen/Projecten/pd-shared/aubio: Test does not build: Traceback (most recent call last):
+  File "/Users/timschoen/Projecten/pd-shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/Users/timschoen/Projecten/pd-else/shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Tools/errcheck.py", line 140, in check_compile
+  File "/Users/timschoen/Projecten/pd-shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Tools/errcheck.py", line 140, in check_compile
     ret=self.orig_compile()
-  File "/Users/timschoen/Projecten/pd-else/shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Build.py", line 176, in compile
+  File "/Users/timschoen/Projecten/pd-shared/aubio/.waf-2.0.21-913aa4c3d3220522aa9bf2e33bd5b010/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed with exit status 1: 
 	{task 4343564552: c test.c -> test.c.1.o}
-['/opt/homebrew/bin/clang', '../test.c', '-c', '-o/Users/timschoen/Projecten/pd-else/shared/aubio/build/.conf_check_895877dc439f94dc29db32a791da014e/testbuild/test.c.1.o']
+['/opt/homebrew/bin/clang', '../test.c', '-c', '-o/Users/timschoen/Projecten/pd-shared/aubio/build/.conf_check_895877dc439f94dc29db32a791da014e/testbuild/test.c.1.o']
 
 not found
-from /Users/timschoen/Projecten/pd-else/shared/aubio: The configuration failed
+from /Users/timschoen/Projecten/pd-shared/aubio: The configuration failed

@@ -19,10 +19,10 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
-#X obj 221 160 else/gendyn~;
-#X obj 221 189 else/out~;
+#X obj 221 160 gendyn~;
+#X obj 221 189 out~;
 #X text 41 178 see also;
-#X obj 41 200 else/brown~;
+#X obj 41 200 brown~;
 #X text 151 430 signal;
 #X text 133 263 n <float>;
 #X text 193 263 - set number of points (default 12), f 59;
@@ -36,8 +36,8 @@
 #X floatatom 658 132 5 0 0 2 - - - 0;
 #X msg 687 303 amp_step \$1;
 #X msg 674 244 freq_step \$1;
-#X obj 641 460 else/gendyn~;
-#X obj 641 553 else/out~;
+#X obj 641 460 gendyn~;
+#X obj 641 553 out~;
 #X floatatom 733 132 5 0 0 2 - - - 0;
 #X floatatom 641 47 5 1 128 2 - - - 0;
 #X floatatom 687 278 5 0 100 2 - - - 0;
@@ -50,7 +50,7 @@
 #X text 682 50 number of points in the waveform (1 - 128), f 23;
 #X obj 37 427 r~ \$0-gendyn;
 #X obj 663 507 s~ \$0-gendyn;
-#X obj 37 456 else/graph~ 441 13 -1 1 380 150 #dfdfdf 0 1;
+#X obj 37 456 graph~ 441 13 -1 1 380 150 #dfdfdf 0 1;
 #X text 18 262 You can set the maximum amplitude step with the 'amp_step' message or '-amp_step' flag. This is also set in percentage \, where 100% means that the amplitude deviation is up to a value of '2'. Note that if the amplitude goes out of the -1 to 1 bounds \, it is folded back - same is true for frequency deviation outside the frequency range. The higher the amplitude step \, the closest the sound is to white noise., f 69;
 #X obj 711 350 vradio 16 1 0 3 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0;
 #X text 731 350 0: no interpolation;
@@ -101,7 +101,7 @@
 #X obj 53 353 expr 2 * $f1 - 1;
 #X obj 53 312 expr log($f1 * 0.999 + 0.001) * -0.144765, f 30;
 #X obj 124 55 hsl 162 19 0.0001 1 0 0 empty empty empty -2 -10 0 12 #dfdfdf #000000 #000000 0 1;
-#X obj 53 137 else/loop 1024;
+#X obj 53 137 loop 1024;
 #X floatatom 148 114 7 0 0 0 - - - 0;
 #X obj 344 221 cnv 16 198 138 empty empty empty 20 12 0 10 #e0e0e0 #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -137,8 +137,8 @@
 #X obj 229 234 v pi;
 #X obj 53 268 expr sin(pi * ($f1/1023 - 0.5) * p) / c \; $f1;
 #X obj 124 47 hsl 162 19 0.0001 1 0 0 empty empty empty -2 -10 0 12 #dfdfdf #000000 #000000 0 1;
-#X obj 229 210 else/pi;
-#X obj 53 142 else/loop 1024;
+#X obj 229 210 pi;
+#X obj 53 142 loop 1024;
 #X floatatom 148 108 7 0 0 0 - - - 0;
 #X obj 357 195 cnv 16 198 138 empty empty empty 20 12 0 10 #e0e0e0 #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -174,7 +174,7 @@
 #X obj 46 361 tabwrite \$0-cauchy;
 #X obj 46 255 expr (1./p) * tan(c * (2*($f1/1023.) -1)) \; $f1;
 #X obj 119 67 t b f;
-#X obj 46 129 else/loop 1024;
+#X obj 46 129 loop 1024;
 #X floatatom 146 98 7 0 0 0 - - - 0;
 #X obj 355 217 cnv 16 198 138 empty empty empty 20 12 0 10 #e0e0e0 #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -210,7 +210,7 @@
 #X obj 53 268 expr log(1.0 - ($f1/1023. * 0.999 * p)) / c \; $f1;
 #X obj 53 320 expr 2 * $f1 - 1;
 #X obj 124 45 hsl 162 19 0.0001 1 0 0 empty empty empty -2 -10 0 12 #dfdfdf #000000 #000000 0 1;
-#X obj 53 137 else/loop 1024;
+#X obj 53 137 loop 1024;
 #X floatatom 148 105 7 0 0 0 - - - 0;
 #X obj 395 226 cnv 16 198 138 empty empty empty 20 12 0 10 #e0e0e0 #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -236,8 +236,8 @@
 #X restore 344 312 pd Expon;
 #X listbox 45 232 13 0 0 0 - - - 0;
 #X msg 45 259 dist \$1 \$2 \$3 \$4;
-#X obj 45 290 else/gendyn~;
-#X obj 45 321 else/out~;
+#X obj 45 290 gendyn~;
+#X obj 45 321 out~;
 #X obj 45 159 loadbang;
 #X text 130 204 distribution 5 (expon) and parameter 0.3 for frequency;
 #X text 130 187 distribution 1 (cauchy) and parameter 0.7 for amplitude;
@@ -254,7 +254,7 @@
 #X obj 53 258 expr (($f1/1023. - 0.5) * 0.998 * p) + 0.5 \; $f1;
 #X obj 53 312 expr log((1 - $f1) / $f1) / c;
 #X obj 124 35 hsl 162 19 0.0001 1 0 0 empty empty empty -2 -10 0 12 #dfdfdf #000000 #000000 0 1;
-#X obj 53 127 else/loop 1024;
+#X obj 53 127 loop 1024;
 #X floatatom 148 99 7 0 0 0 - - - 0;
 #X obj 404 194 cnv 16 198 138 empty empty empty 20 12 0 10 #e0e0e0 #404040 0;
 #N canvas 0 22 450 278 (subpatch) 0;
@@ -290,7 +290,7 @@
 #X text 85 398 dist <f \, f \, f \, f>;
 #X text 193 398 - sets distributions and parameters \, see [pd distributions];
 #N canvas 697 82 417 377 seed 0;
-#X obj 258 280 else/gendyn~;
+#X obj 258 280 gendyn~;
 #X text 37 21 Pseudo random number generators aren't true random number generators. Instead \, an algorithm is used to provide a sequence of numbers that seems random. The same sequence can be reproduced if you set a "seed" value \, which can be any integer number., f 52;
 #X text 16 217 You can set a seed with the '-seed' flag. If you don't supply it \, each object gets its own seed internal seed. If you send a 'seed' message without float \, the object also gets a unique seed value., f 27;
 #X msg 268 211 seed;
@@ -313,7 +313,7 @@
 #X text 194 430 - dynamic stochastic synthesis output;
 #X text 42 89 [gendyn~] implements "Dynamic Strochastic Synthesis" based on Xenakis' 'GenDyn' algorithm. The waveform has a given number of points (linearly interpolated by default). The period of each point and its value changes according to a random walk (a.k.a. brownian motion) with given distributions., f 79;
 #X text 193 367 - sets interpolation mode (default 1 \, linear), f 59;
-#X obj 41 223 else/rand.dist;
+#X obj 41 223 rand.dist;
 #X text 109 322 frange <f \, f>;
 #X text 115 278 float/signal;
 #X text 193 278 - center frequency in herts (default 440), f 59;

@@ -46,7 +46,7 @@
 #X obj 106 313 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 71 88 [chrono] is a stopwatch chronometer or a timer.;
-#X obj 216 163 else/chrono, f 12;
+#X obj 216 163 chrono, f 12;
 #X listbox 216 189 11 0 0 0 - - - 0;
 #X text 137 125 rewind;
 #X text 240 126 start/stop/continue;

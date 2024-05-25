@@ -10,14 +10,14 @@
 #X obj 350 288 about.MERDA;
 #N canvas 271 115 656 351 messages 0;
 #X obj 294 268 outlet;
-#X obj 49 86 else/knob 40 0.1 20 1 0.1 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0.1;
+#X obj 49 86 knob 40 0.1 20 1 0.1 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0.1;
 #X obj 294 31 vradio 20 1 0 5 empty empty empty 0 -10 0 12 #dfdfdf #000000 #000000 0;
 #X text 320 32 sine;
 #X text 320 53 tri;
 #X text 320 72 saw;
 #X text 319 93 vsaw;
 #X text 317 113 square;
-#X obj 114 86 else/knob 40 -1 1 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 114 86 knob 40 -1 1 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X obj 183 136 tgl 22 0 empty empty empty 0 -10 0 12 #dfdfdf #000000 #000000 0 1;
 #X text 208 137 Unipolar;
 #X msg 49 171 hz \$1;
@@ -27,8 +27,8 @@
 #X msg 183 171 unipolar \$1;
 #X msg 294 171 waveform \$1;
 #X floatatom 294 139 4 0 0 0 - - - 0;
-#X obj 416 95 else/knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 506 95 else/knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 416 95 knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 506 95 knob 35 -1 1 0 0 empty empty #bbbbbb #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 416 171 att_fm \$1;
 #X floatatom 416 139 5 0 0 0 - - - 0;
 #X floatatom 506 139 5 0 0 0 - - - 0;

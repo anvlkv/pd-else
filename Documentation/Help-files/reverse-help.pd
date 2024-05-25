@@ -39,8 +39,8 @@
 ;
 #X obj 5 345 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 233 211 else/display;
-#X obj 233 180 else/reverse;
+#X obj 233 211 display;
+#X obj 233 180 reverse;
 #X msg 233 125 a b c d;
 #X msg 252 152 list x y z;
 #X msg 177 125 1 2 3 4;

@@ -1,5 +1,5 @@
 #N canvas 476 63 559 436 10;
-#X obj 213 227 else/display;
+#X obj 213 227 display;
 #X obj 328 163 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X obj 185 162 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X obj 223 162 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
@@ -31,7 +31,7 @@
 #X text 155 346 symbol;
 #X obj 123 311 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 167 290 bang;
-#X obj 213 195 else/dec2hex 10 16;
+#X obj 213 195 dec2hex 10 16;
 #X msg 318 138 100 200;
 #X msg 213 131 248 256;
 #X text 198 272 - decimal value(s) to convert (outputs the result);
@@ -40,7 +40,7 @@
 #X text 167 272 list;
 #X text 167 312 list;
 #X text 62 92 [dec2hex] converts decimal values to hexadecimal ones. The output is preceded by "0x" and the letters in the hexadecimal values are upper case., f 67;
-#X obj 39 221 else/hex2dec;
+#X obj 39 221 hex2dec;
 #X text 37 195 see also:;
 #X text 149 381 1) list - decimal value(s) to convert (default 0);
 #X connect 1 0 28 1;

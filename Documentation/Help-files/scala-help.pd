@@ -40,9 +40,9 @@
 #X restore 3 3 graph;
 #X obj 180 247 print scale;
 #X obj 315 247 print info;
-#X obj 415 144 else/openfile -h https://en.wikipedia.org/wiki/Scala_(software)
+#X obj 415 144 openfile -h https://en.wikipedia.org/wiki/Scala_(software)
 About scala;
-#X obj 415 163 else/openfile -h https://www.huygens-fokker.org/scala/downloads.html?fbclid=IwAR1U9Nh8tTod4-6aTTksWaEjHBFSeEVPKirFgOH47r1FT_R0XFNNLCRFZgM
+#X obj 415 163 openfile -h https://www.huygens-fokker.org/scala/downloads.html?fbclid=IwAR1U9Nh8tTod4-6aTTksWaEjHBFSeEVPKirFgOH47r1FT_R0XFNNLCRFZgM
 Scala Downloads;
 #X text 414 181 (scale archive at the bottom), f 15;
 #X text 62 88 [scala] imports scales saved in the .scl format and outputs
@@ -54,7 +54,7 @@ They provide a database of scales with over 5100 tunings. Check links:
 #X text 70 211 click to open -->;
 #X msg 180 157 open diamond7.scl;
 #X text 219 186 convert/reconvert;
-#X obj 180 214 else/scala diamond7.scl;
+#X obj 180 214 scala diamond7.scl;
 #X text 196 291 - convert/reconvert;
 #X text 110 311 open <symbol>;
 #X text 196 311 - open .scl file and convert (no symbol opens dialog

@@ -23,34 +23,34 @@
 #X obj 74 213 throw~ \$0-input;
 #X obj 301 169 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 301 197 else/impseq~;
+#X obj 301 197 impseq~;
 #X obj 301 232 throw~ \$0-input;
 #X obj 89 113 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 89 155 else/decay2~ 50 1000;
+#X obj 89 155 decay2~ 50 1000;
 #N canvas 780 129 455 228 tone 0;
 #X obj 71 94 mtof;
 #X obj 71 43 inlet;
 #X obj 71 158 outlet~;
-#X obj 71 121 else/oscbank~ 6 -ratio 1 3 5.01 7.02 9.03 11.04 -amp
+#X obj 71 121 oscbank~ 6 -ratio 1 3 5.01 7.02 9.03 11.04 -amp
 1 0.3 0.2 0.15 0.1 0.1, f 47;
-#X obj 71 70 else/rand.i 36 84;
+#X obj 71 70 rand.i 36 84;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 3 0 2 0;
 #X connect 4 0 0 0;
 #X restore 27 154 pd tone;
-#X obj 657 43 else/gain~;
+#X obj 657 43 gain~;
 #X obj 410 140 throw~ \$0-input;
 #X msg 365 79 open;
 #X text 83 43 Test the reverb with many sound input sources, f 25
 ;
 #X obj 169 403 *~;
 #X obj 169 432 throw~ \$0-input;
-#X obj 184 354 else/decay~ 200;
+#X obj 184 354 decay~ 200;
 #X obj 184 264 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 40 363 else/lowpass~ 0 5;
+#X obj 40 363 lowpass~ 0 5;
 #X text 322 170 impulse;
 #X text 385 52 sample;
 #X text 697 82 audio input;
@@ -63,7 +63,7 @@
 #N canvas 311 360 450 300 init 0;
 #X obj 112 43 inlet;
 #X obj 112 95 f \$0;
-#X obj 112 72 else/lb;
+#X obj 112 72 lb;
 #X msg 112 118 \; \$1-decay 3 \; \$1-damping 0.25 \; \$1-size 0.475
 \; \$1-wet 0.75;
 #X connect 0 0 2 0;
@@ -73,11 +73,11 @@
 #X obj 719 199 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 739 200 reload args;
-#X obj 321 389 else/out~;
-#X obj 321 355 else/mono.rev~;
+#X obj 321 389 out~;
+#X obj 321 355 mono.rev~;
 #X obj 40 332 noise~;
-#X obj 89 326 else/rand.f 500 3000, f 12;
-#X obj 410 113 else/play.file~ didge.aif -loop;
+#X obj 89 326 rand.f 500 3000, f 12;
+#X obj 410 113 play.file~ didge.aif -loop;
 #X obj 479 202 hsl 128 15 0.1 100 1 0 empty \$0-decay empty -2 -8 0
 10 #dcdcdc #000000 #000000 0 1;
 #X floatatom 476 226 5 0 0 0 - - - 0;
@@ -145,11 +145,11 @@
 #X restore 2 3 graph;
 #X obj 30 40 cnv 4 4 4 empty empty Mono 0 28 2 18 #e0e0e0 #000000 0
 ;
-#X obj 202 170 else/play.file~ vacuous.wav 1 1;
+#X obj 202 170 play.file~ vacuous.wav 1 1;
 #X obj 83 40 cnv 4 4 4 empty empty reverb 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 202 204 else/mono.rev~;
-#X obj 45 255 else/stereo.rev~;
+#X obj 202 204 mono.rev~;
+#X obj 45 255 stereo.rev~;
 #X text 42 233 see also:;
 #X obj 3 297 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000
 0;
@@ -192,7 +192,7 @@ value is around 0.5 \, values closer to 0 and 1 may create unusual
 results. Changing size values may generates unusual artifacts (you
 can clear the delay buffers when you do it to prevent it \, but you
 may get clicks)., f 70;
-#X obj 198 235 else/out~;
+#X obj 198 235 out~;
 #X text 129 515 4) float - wet ratio - (default 0.5), f 57;
 #X connect 12 0 14 0;
 #X connect 14 0 44 0;

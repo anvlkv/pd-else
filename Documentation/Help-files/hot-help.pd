@@ -57,16 +57,16 @@
 #X text 201 283 -;
 #X obj 154 40 cnv 4 4 4 empty empty hot 0 28 2 18 #e0e0e0 #000000 0
 ;
-#X obj 298 220 else/display 4;
-#X obj 240 220 else/display 4;
+#X obj 298 220 display 4;
+#X obj 240 220 display 4;
 #X text 213 283 any messages go to the corresponding outlet.;
-#X obj 240 195 else/hot 3, f 20;
+#X obj 240 195 hot 3, f 20;
 #X text 67 87 [hot] outputs messages when any inlet gets a message
 \, making them all hot. Output is from right to left.;
 #X text 193 372 sets 'n' number of inlets/outlets (default 2 \, max
 128);
 #X symbolatom 357 161 10 0 0 0 - - - 0;
-#X obj 357 220 else/display;
+#X obj 357 220 display;
 #X msg 340 136 hi;
 #X connect 22 0 38 0;
 #X connect 23 0 38 1;

@@ -4,7 +4,7 @@
 #X obj 212 153 metro 500;
 #X obj 212 176 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 245 238 else/out~;
+#X obj 245 238 out~;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
 0;
 #X obj 345 11 cnv 10 10 10 empty empty ELSE 0 15 2 30 #7c7c7c #e0e4dc
@@ -622,15 +622,15 @@ equal temperament), f 72;
 #N canvas 565 116 801 548 example 0;
 #N canvas 552 271 592 396 tuning 0;
 #X obj 64 339 outlet;
-#X obj 94 236 else/eqdiv;
+#X obj 94 236 eqdiv;
 #X msg 63 80 autotune \$1;
 #X obj 63 54 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000
 0 1;
-#X obj 94 264 else/insert scale;
+#X obj 94 264 insert scale;
 #X text 174 156 You can try other arbitrary scales in the same format
 , f 18;
 #X text 180 64 The autotune message retunes to a given scale \, see
-[else/autotune] for reference. The [grainsynth~] object also takes
+[autotune] for reference. The [grainsynth~] object also takes
 a base value., f 50;
 #X text 154 137 <= some equal divisions;
 #X msg 94 112 13 3;
@@ -683,7 +683,7 @@ parameters. The pan range is from -1 (left) to 1 (right)., f 37;
 #X obj 187 247 route dur;
 #X obj 140 273 metro;
 #X floatatom 187 269 5 0 0 0 - - - 0;
-#X obj 130 466 else/out~;
+#X obj 130 466 out~;
 #X text 225 191 Here's some presets for you to have fun with, f 23
 ;
 #X msg 234 302 sync \$1;
@@ -703,13 +703,13 @@ means that the interval between grains are random. On the other hand
 \, synchronous mode spaces the grains equally within a cloud event.
 This is more noticeable if you have less density. You can set the object
 to sync mode at creation with the -sync flag., f 58;
-#X obj 513 251 else/function 200 100 empty empty 0 1 220 220 220 50
+#X obj 513 251 function 200 100 empty empty 0 1 220 220 220 50
 50 50 0 0 0 0 0 0.05 1 0.95 0;
 #X obj 513 471 s \$0-set-env;
-#X obj 513 367 else/display;
-#X obj 513 439 else/insert env;
+#X obj 513 367 display;
+#X obj 513 439 insert env;
 #X msg 455 406 sin;
-#X obj 513 216 else/initmess 0 0.05 1 0.95 0;
+#X obj 513 216 initmess 0 0.05 1 0.95 0;
 #X obj 238 335 r \$0-set-env;
 #X msg 487 406 tri;
 #X msg 522 406 hann;
@@ -723,7 +723,7 @@ as taken by [function~] (which is used internally). This syntax is
 also given by the [function] GUI object., f 48;
 #X text 445 258 [function];
 #X msg 559 406 gauss 0.3;
-#X obj 124 421 else/grain.synth~ -n 256 -t \$0-wave -sync, f 24;
+#X obj 124 421 grain.synth~ -n 256 -t \$0-wave -sync, f 24;
 #X connect 0 0 31 0;
 #X connect 1 0 4 0;
 #X connect 1 0 31 0;
@@ -754,9 +754,9 @@ also given by the [function] GUI object., f 48;
 #X msg 32 177 sinesum 4096 1;
 #X text 96 86 [grain.synth~] is a waveform based granular synthesizer
 that generates clouds of pitched grains., f 55;
-#X obj 57 247 else/grain.sampler~;
+#X obj 57 247 grain.sampler~;
 #X text 113 227 see also:;
-#X obj 76 267 else/grain.live~;
+#X obj 76 267 grain.live~;
 #X text 128 360 dur <f> - sets cloud event duration in ms (default
 500), f 69;
 #X text 104 374 size <f \, f> - sets min/max grain sizes in ms (default
@@ -777,7 +777,7 @@ or function list, f 69;
 #X text 99 548 -n <float> | -t <symbol> (table name) | -dur <f> | -size
 <f \, f> | -pitch <f \, f> | -pan <f \, f> | -amps <f \, f> | -autotune
 <f> | -scale <list> | -base <f> | -env <any> | -sync, f 65;
-#X obj 213 205 else/grain.synth~ -n 32 -t \$0-wave;
+#X obj 213 205 grain.synth~ -n 32 -t \$0-wave;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 51 0;

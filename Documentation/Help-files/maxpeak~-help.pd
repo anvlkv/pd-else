@@ -23,7 +23,7 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
 #X obj 271 165 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
-#X obj 196 231 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 196 231 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X obj 142 311 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 210 312 bang;
 #X text 198 273 signal;
@@ -37,10 +37,10 @@
 #X text 246 373 - when input gets clipped;
 #X obj 196 172 *~ 2;
 #X obj 196 146 adc~ 1;
-#X obj 490 78 else/setdsp~;
+#X obj 490 78 setdsp~;
 #X msg 141 171 lin \$1;
 #X obj 141 142 tgl 19 0 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0 1;
-#X obj 196 200 else/maxpeak~;
+#X obj 196 200 maxpeak~;
 #X obj 271 230 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X text 295 232 <-- clipped;
 #X text 293 164 <-- resets;

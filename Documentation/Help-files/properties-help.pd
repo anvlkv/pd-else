@@ -43,7 +43,7 @@
 #X obj 128 187 outlet;
 #X obj 128 139 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
-#X obj 128 96 else/properties 1;
+#X obj 128 96 properties 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X restore 193 200 pd a_subpatch;

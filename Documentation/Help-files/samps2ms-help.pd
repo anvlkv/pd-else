@@ -54,7 +54,7 @@ values number of samples to ms., f 53;
 ;
 #X text 216 265 - time value in number of samples;
 #X text 212 298 - converted value in ms;
-#X obj 198 197 else/samps2ms;
+#X obj 198 197 samps2ms;
 #X connect 5 0 6 0;
 #X connect 6 0 32 0;
 #X connect 32 0 17 0;

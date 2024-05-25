@@ -36,7 +36,7 @@
 #X text 189 282 signal;
 #X obj 138 303 cnv 17 3 52 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 193 207 else/out~;
+#X obj 193 207 out~;
 #X obj 193 134 noise~;
 #X msg 292 126 1;
 #X msg 304 150 0;
@@ -56,9 +56,9 @@
 #X text 189 322 freeze;
 #X text 177 338 unfreeze;
 #X text 241 338 - unfreezes;
-#X obj 193 174 else/pvoc.freeze~;
+#X obj 193 174 pvoc.freeze~;
 #X text 436 216 see also:;
-#X obj 441 238 else/freeze~;
+#X obj 441 238 freeze~;
 #X text 241 304 - non-zero freezes (or refreezes) \, 0 unfreezes;
 #X text 241 322 - freezes/refreezes;
 #X connect 20 0 35 0;

@@ -48,7 +48,7 @@
 #X obj 208 155 noise~;
 #X obj 263 170 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 208 234 else/out~;
+#X obj 208 234 out~;
 #X obj 266 146 hsl 128 15 100 22000 1 0 empty empty empty -2 -8 0 10
 #dcdcdc #000000 #000000 0 1;
 #X text 320 171 cuttof;
@@ -63,9 +63,9 @@
 #X text 130 436 1) float;
 #X text 195 435 - order of the filter from 2 to 100 (default 2);
 #X text 63 91 [lop.bw~] is a lowpass butterworth filter abstraction
-based on [else/biquads~]. You can specify the cuttoff frequency and
+based on [biquads~]. You can specify the cuttoff frequency and
 the order of the filter (from 2nd order to 100th order).;
-#X obj 208 197 else/lop.bw~ 500 10;
+#X obj 208 197 lop.bw~ 500 10;
 #X connect 25 0 39 0;
 #X connect 26 0 39 1;
 #X connect 28 0 26 0;

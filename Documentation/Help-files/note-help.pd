@@ -69,9 +69,9 @@
 #X text 225 330 - sets justification (0: left \, 1: center \, 2: right)
 ;
 #X text 127 358 color <f \, f \, f>;
-#X obj 216 152 else/note 131 20 Times empty 3 150 0 0 1 230 235 240
+#X obj 216 152 note 131 20 Times empty 3 150 0 0 1 230 235 240
 1 1 Hi \, I'm the [note] object!;
-#X text 115 157 the default [else/note], f 11;
+#X text 115 157 the default [note], f 11;
 #N canvas 410 87 865 574 details 0;
 #X msg 659 199 set hi \, append there;
 #X msg 669 222 set note \, prepend this;
@@ -119,9 +119,9 @@ So just be sure you have the fonts you want properly installed., f
 #X obj 25 218 tgl 18 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
 #X msg 257 252 bgcolor 200 200 100;
-#X obj 179 314 else/note 0 50 Menlo empty 0 0 0 0 0 255 255 255 0 0
+#X obj 179 314 note 0 50 Menlo empty 0 0 0 0 0 255 255 255 0 0
 note;
-#X obj 546 390 else/note 0 50 Menlo \$0-note 0 0 0 0 0 255 255 255
+#X obj 546 390 note 0 50 Menlo \$0-note 0 0 0 0 0 255 255 255
 0 0 note;
 #X msg 456 202 outline \$1;
 #X obj 456 178 tgl 18 0 empty empty empty 17 7 0 10 #dcdcdc #000000
@@ -135,7 +135,7 @@ symbol can be set with the receive message or the @receive attribute.
 If you set a receive name as "empty" then it it can't receive messages
 anymore and the inlet is show again., f 74;
 #X text 497 479 Note: when in edit mode \, you can click on the text
-to select it and then press <F5> to copy the text from [else/note]
+to select it and then press <F5> to copy the text from [note]
 into a vanilla comment box. So far \, this is the only way to copy
 the text from note into Pd (control+c / control+v doesn't work).,
 f 53;
@@ -170,7 +170,7 @@ f 53;
 #X connect 35 0 34 0;
 #X restore 477 148 pd details;
 #N canvas 553 129 582 418 +details 0;
-#X obj 75 300 else/note 0 20 dejavu\ sans\ mono empty 0 0 0 0 0 200
+#X obj 75 300 note 0 20 dejavu\ sans\ mono empty 0 0 0 0 0 200
 200 200 1 1 Note can be justified in different ways;
 #X obj 75 143 vradio 15 1 0 3 empty empty empty 0 -8 0 10 #dcdcdc #000000
 #000000 0;
@@ -206,18 +206,18 @@ left (0: default) \, center (1) and right (2).;
 #X msg 417 62 prepend 1 \\\, 2 \\\,;
 #X msg 398 24 set 3 \\\, 4!;
 #X msg 223 62 append \\\, 3 \\\, 4!;
-#X obj 398 97 else/note 120 16 dejavu\ sans\ mono empty 0 0 0 0 0 255
+#X obj 398 97 note 120 16 dejavu\ sans\ mono empty 0 0 0 0 0 255
 255 255 0 0 note;
 #X msg 64 212 set カラオケ, f 11;
-#X obj 64 242 else/note 243 60 dejavu\ sans\ mono empty 0 20 25 30
+#X obj 64 242 note 243 60 dejavu\ sans\ mono empty 0 20 25 30
 1 225 215 215 1 0 カラオケ;
-#X obj 351 194 else/note 151 50 dejavu\ sans\ mono empty 0 160 40 50
+#X obj 351 194 note 151 50 dejavu\ sans\ mono empty 0 160 40 50
 0 225 215 215 0 0 عَلَيْكُمْ ٱلسَّلَامُ;
 #X msg 359 346 set 晚安, f 8;
-#X obj 359 371 else/note 166 80 dejavu\ sans\ mono empty 1 200 205
+#X obj 359 371 note 166 80 dejavu\ sans\ mono empty 1 200 205
 210 1 75 85 95 1 0 晚安;
 #X msg 90 335 set हिन्दी;
-#X obj 90 365 else/note 160 80 dejavu\ sans\ mono empty 0 200 100 100
+#X obj 90 365 note 160 80 dejavu\ sans\ mono empty 0 200 100 100
 0 200 200 200 0 0 हिन्दी;
 #X msg 351 156 set عَلَيْكُمْ \, append ٱلسَّلَامُ
 ;
@@ -225,7 +225,7 @@ left (0: default) \, center (1) and right (2).;
 and semicolons., f 22;
 #X text 86 141 [note] also takes characters from different alphabets
 like elsewhere in Pd (such as in messages or comments)., f 29;
-#X obj 205 97 else/note 120 16 dejavu\ sans\ mono empty 0 0 0 0 0 255
+#X obj 205 97 note 120 16 dejavu\ sans\ mono empty 0 0 0 0 0 255
 255 255 0 0 note;
 #X connect 0 0 15 0;
 #X connect 1 0 4 0;
@@ -244,7 +244,7 @@ italic \, underline and justification., f 68;
 #X text 225 400 - non zero sets an outline, f 51;
 #X text 356 159 <-- right click for properties, f 15;
 #X text 93 157 <--;
-#X obj 52 160 else/note 0 10 Menlo empty 0 0 0 0 0 255 255 255 0 0
+#X obj 52 160 note 0 10 Menlo empty 0 0 0 0 0 255 255 255 0 0
 note;
 #X text 72 498 -font <symbol> (default: 'dejavu sans mono' or 'menlo'
 for mac) | -bold | -italic | -size <float> (default patch's) | -just

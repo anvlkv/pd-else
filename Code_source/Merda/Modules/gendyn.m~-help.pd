@@ -17,11 +17,11 @@
 #X obj 421 162 about.MERDA;
 #N canvas 74 51 503 377 references 0;
 #X obj 212 275 outlet;
-#X obj 60 66 else/knob 50 0 2400 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 60 66 knob 50 0 2400 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X obj 356 73 vradio 16 1 0 3 empty empty empty 0 -8 0 10 #dfdfdf #000000 #000000 0;
 #X floatatom 295 138 4 1 128 0 - - - 0;
-#X obj 142 66 else/knob 50 0 100 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
-#X obj 212 66 else/knob 50 0 100 0 0 \$0-astep \$0-set-astep #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 142 66 knob 50 0 100 0 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
+#X obj 212 66 knob 50 0 100 0 0 \$0-astep \$0-set-astep #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X text 376 73 none;
 #X text 376 90 linear;
 #X text 376 107 cosine;

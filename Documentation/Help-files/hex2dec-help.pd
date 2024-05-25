@@ -1,5 +1,5 @@
 #N canvas 483 33 560 450 10;
-#X obj 197 243 else/display;
+#X obj 197 243 display;
 #X obj 169 188 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc 0;
 #N canvas 382 141 749 319 (subpatch) 0;
@@ -38,10 +38,10 @@
 #X text 160 363 list;
 #X text 55 86 [hex2dec] converts hexadecimal values to decimal ones. It takes symbols whose format allows lower and upper case letters and can also include "0x" or "0X" prefixes (necessary in the case of lists and arguments to avoid confusion with floats \, which are ignored). List and symbol selectors aren't necessary., f 71;
 #X msg 347 215 0x96;
-#X obj 197 216 else/hex2dec 0xf0 0xf8;
+#X obj 197 216 hex2dec 0xf0 0xf8;
 #X text 118 398 1) anything - hexadecimal values to convert (default 0x0);
 #X text 36 217 see also:;
-#X obj 37 242 else/dec2hex;
+#X obj 37 242 dec2hex;
 #X msg 326 165 list 0xAB 0xCD;
 #X msg 197 161 0xe0 0xb0;
 #X connect 1 0 35 0;

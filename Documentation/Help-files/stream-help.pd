@@ -51,8 +51,8 @@
 #X obj 141 40 cnv 4 4 4 empty empty of 0 28 2 18 -233017 -1 0;
 #X obj 168 40 cnv 4 4 4 empty empty numbers 0 28 2 18 -233017 -1 0
 ;
-#X obj 240 182 else/stream 4;
-#X obj 240 207 else/display;
+#X obj 240 182 stream 4;
+#X obj 240 207 display;
 #X text 167 364 1) float - N group size (default 1);
 #X text 201 298 - N group size;
 #X obj 240 128 nbx 3 14 0 100 0 0 empty empty empty 0 -8 0 10 -228856

@@ -1,5 +1,5 @@
 #N canvas 481 53 561 468 10;
-#X obj 187 260 else/display;
+#X obj 187 260 display;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
 0;
 #N canvas 382 141 749 319 (subpatch) 0;
@@ -55,14 +55,14 @@
 #X text 231 324 - list of input values;
 #X text 231 307 - float input value;
 #X text 231 346 - float input value;
-#X obj 187 230 else/gcd, f 15;
+#X obj 187 230 gcd, f 15;
 #X text 84 97 [gcd] returns the greatest common divisor of two or more
 numbers. Floats are truncated to integers. Negative values are accepted
 \, "0" is treated as "1". It has two inlets for setting two floats
 \, but a list input to the left sets 2 or more floats to get their
 gcd., f 67;
 #X text 457 233 see also:;
-#X obj 464 256 else/lcm;
+#X obj 464 256 lcm;
 #X text 148 415 1) float - set right inlet value (default 0);
 #X connect 14 0 32 0;
 #X connect 15 0 32 1;

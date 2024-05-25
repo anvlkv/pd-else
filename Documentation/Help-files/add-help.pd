@@ -41,10 +41,10 @@
 #X text 230 294 - resets sum to starting point;
 #X text 230 310 - sets starting sum;
 #X text 166 372 1) float - starting sum (default 0);
-#X obj 254 203 else/add 10;
+#X obj 254 203 add 10;
 #X obj 254 148 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -228856 -1 -1 -2 256;
-#X obj 254 231 else/display;
+#X obj 254 231 display;
 #X text 186 345 float;
 #X text 186 277 float;
 #X text 64 92 [add] starts accumulating input values to a starting

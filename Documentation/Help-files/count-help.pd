@@ -40,7 +40,7 @@
 0;
 #X obj 228 125 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 228 178 else/display;
+#X obj 228 178 display;
 #X text 167 364 list;
 #X text 157 394 float;
 #X text 165 217 bang;
@@ -77,10 +77,10 @@ float sets a new reset point as well, f 53;
 #000000 #000000;
 #X obj 251 100 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 251 164 else/display;
-#X obj 174 164 else/display;
-#X obj 246 360 else/display;
-#X obj 126 361 else/display;
+#X obj 251 164 display;
+#X obj 174 164 display;
+#X obj 246 360 display;
+#X obj 126 361 display;
 #X msg 126 287 reset;
 #X text 14 16 By default \, the direction is upwards \, the minimum
 and reset (or starting)) value is 0 and the maximum is 16.777.216 (2^24)
@@ -95,18 +95,18 @@ is the maximum). But if the first argument is greater than the second
 \, then the count order is set to downwards and it starts with the
 maximum value. The first of two arguments also sets the reset/starting
 point.;
-#X obj 456 333 else/display;
+#X obj 456 333 display;
 #X msg 456 270 reset;
 #X obj 429 269 bng 19 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X msg 567 220 4;
 #X msg 580 246 10 15;
 #X msg 590 275 15 10;
-#X obj 174 138 else/count;
-#X obj 251 138 else/count 4;
-#X obj 126 331 else/count 10 15;
-#X obj 246 321 else/count 15 10;
-#X obj 456 307 else/count -reset 5;
+#X obj 174 138 count;
+#X obj 251 138 count 4;
+#X obj 126 331 count 10 15;
+#X obj 246 321 count 15 10;
+#X obj 456 307 count -reset 5;
 #X text 428 55 The right inlet resets these arguments. It makes a difference
 if you send it 1 or 2 arguments. It's like the object has been reinitialized
 with such arguments., f 25;
@@ -149,7 +149,7 @@ with such arguments., f 25;
 with the "up" and "down" message.The alternanting mode \, set with
 the "-alt" flag or message \, alternates between these two directions
 after reaching a limit (minimum or maximum value), f 64;
-#X obj 169 165 else/count -alt 5 1;
+#X obj 169 165 count -alt 5 1;
 #X connect 1 0 8 0;
 #X connect 3 0 8 0;
 #X connect 4 0 8 0;
@@ -191,7 +191,7 @@ after reaching a limit (minimum or maximum value), f 64;
 #X obj 370 225 nbx 3 16 0 10 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 38 14 The remaining messages:;
-#X obj 218 287 else/count -reset 10 1 20;
+#X obj 218 287 count -reset 10 1 20;
 #X text 146 76 without float \, resets to the reset point \, but a
 float sets a new reset point as well (you can also use the -reset flag)
 ;
@@ -218,7 +218,7 @@ them.;
 #X text 208 416 - bang when reaching count limits;
 #X text 106 488 -reset <float> - sets start & reset value;
 #X text 198 446 1 float sets: max / 2 floats set: min & max;
-#X obj 228 151 else/count 1 4;
+#X obj 228 151 count 1 4;
 #X connect 19 0 57 0;
 #X connect 57 0 20 0;
 #X connect 57 1 32 0;

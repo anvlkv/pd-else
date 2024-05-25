@@ -60,7 +60,7 @@
 #X msg 244 164 100;
 #X msg 280 164 5;
 #X msg 317 164 70;
-#X obj 133 221 else/interpolate 50;
+#X obj 133 221 interpolate 50;
 #X text 151 289 start <list>;
 #X text 157 317 exp <float>;
 #X text 236 317 - sets exponential factor, f 43;
@@ -78,14 +78,14 @@ direction., f 26;
 #X obj 124 173 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X obj 121 272 display;
-#X obj 390 231 else/interpolate;
-#X obj 121 226 else/interpolate;
+#X obj 390 231 interpolate;
+#X obj 121 226 interpolate;
 #X text 46 28 [interpolate] also works with lists \, the start values
 can be set with a list of arguments \, but you can also set it via
 the "start" message. The "start" message also updates the values at
 any given time and updates the current values at the current side of
 the slider., f 79;
-#X obj 121 314 else/multi.vsl 150 100 0 127 3 empty empty empty 255
+#X obj 121 314 multi.vsl 150 100 0 127 3 empty empty empty 255
 255 255 220 220 220 0 0 0 0 0 holder holder holder 38.3622 74.0945
 52 0 95.25 31.75 107.95 12.7;
 #X msg 280 188 40 70 0;

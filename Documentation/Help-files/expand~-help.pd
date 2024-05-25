@@ -45,14 +45,14 @@
 #X text 146 408 2) float;
 #X text 211 423 - attack time in ms (default 10), f 46;
 #X text 211 408 - attenuation ratio (default 1), f 46;
-#X obj 184 206 else/out~;
+#X obj 184 206 out~;
 #X text 211 438 - release time in ms (default 10), f 46;
 #X text 211 393 - threshold in dB (default -10), f 46;
 #X text 181 363 signal - compressed signal, f 46;
 #X text 146 438 4) float;
-#X obj 184 140 else/play.file~ 1 kantele.wav 1 1;
+#X obj 184 140 play.file~ 1 kantele.wav 1 1;
 #X text 66 94 [expand~] is an abstraction that performs expanding.
 It attenuates an input signal below a given threshold.;
-#X obj 184 167 else/expand~ -15 5 10 10 0;
+#X obj 184 167 expand~ -15 5 10 10 0;
 #X connect 32 0 34 0;
 #X connect 34 0 27 0;

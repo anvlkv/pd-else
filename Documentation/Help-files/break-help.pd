@@ -33,7 +33,7 @@
 0;
 #X obj 3 375 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 209 214 else/break -;
+#X obj 209 214 break -;
 #X obj 209 248 print Break;
 #X msg 208 146 no separators at all;
 #X text 177 288 anything - any message to be broken apart;
@@ -58,7 +58,7 @@ not as a symbol message anymore. That means it loses its "symbol" selector.
 won't be able to route a symbol message., f 52;
 #X text 158 162 <= loses symbol selector and is routed;
 #X msg 75 163 symbol @this;
-#X obj 75 227 else/break @;
+#X obj 75 227 break @;
 #X obj 75 271 route @this that symbol;
 #X text 162 191 <= doesn't lose it and isn't routed;
 #X text 64 111 See below:;
@@ -75,14 +75,14 @@ won't be able to route a symbol message., f 52;
 #N canvas 899 67 514 395 [args] 0;
 #X obj 131 93 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 131 167 else/display;
+#X obj 131 167 display;
 #X text 87 169 args;
 #X obj 131 248 route -freq -amp;
-#X obj 177 278 else/display;
-#X obj 131 313 else/display;
-#X obj 131 214 else/break -;
+#X obj 177 278 display;
+#X obj 131 313 display;
+#X obj 131 214 break -;
 #X text 154 92 <= get arguments;
-#X obj 131 121 else/args-example -freq 100 200 -amp 1 0.5;
+#X obj 131 121 args-example -freq 100 200 -amp 1 0.5;
 #X text 268 219 <= this would also be inside the abstraction \, of
 course, f 23;
 #X text 40 37 You can use break to split an argument list from [args]
@@ -99,7 +99,7 @@ and furtherly route it.;
 set via the argument., f 55;
 #N canvas 799 151 469 288 more 0;
 #X obj 132 203 print Break;
-#X obj 132 164 else/break ||;
+#X obj 132 164 break ||;
 #X text 58 42 You can set a symbol argument of any size and if an element
 in a list matches to that symbol \, the message is also broken. Otherwise
 \, if the first character(s) of the element match the symbol \, the

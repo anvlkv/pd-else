@@ -53,12 +53,12 @@
 #X text 196 309 - set tempo value in BPM, f 47;
 #X text 196 330 - set tempo value in BPM, f 47;
 #X text 12 184 see also:;
-#X obj 12 227 else/clock;
+#X obj 12 227 clock;
 #X text 121 182 start/stop;
-#X obj 13 248 else/metronome~;
+#X obj 13 248 metronome~;
 #X floatatom 336 244 5 0 0 0 - - - 0;
 #X floatatom 213 245 5 0 0 0 - - - 0;
-#X obj 213 221 else/polymetro 90 3/2;
+#X obj 213 221 polymetro 90 3/2;
 #X text 180 158 sync;
 #X text 196 279 - non-zero starts \, zero stops, f 47;
 #X text 160 382 float;
@@ -79,19 +79,19 @@
 ;
 #X text 142 470 1) float - tempo in BPM (default 120), f 49;
 #N canvas 714 78 477 514 example 0;
-#X obj 168 424 else/out~;
+#X obj 168 424 out~;
 #X obj 132 184 tgl 20 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
-#X obj 132 324 else/impseq~;
+#X obj 132 324 impseq~;
 #X obj 132 299 b;
-#X obj 255 324 else/impseq~;
+#X obj 255 324 impseq~;
 #X obj 255 299 b;
 #X obj 255 259 display;
 #X obj 132 259 display;
 #X floatatom 193 187 5 0 0 0 - - - 12;
-#X obj 132 223 else/polymetro 90 3/2;
-#X obj 132 355 else/resonant~ 600 200, f 14;
-#X obj 255 355 else/resonant~ 750 200, f 14;
+#X obj 132 223 polymetro 90 3/2;
+#X obj 132 355 resonant~ 600 200, f 14;
+#X obj 255 355 resonant~ 750 200, f 14;
 #X text 195 262 relative;
 #X text 54 262 base rhythm;
 #X text 191 167 tempo;
@@ -131,14 +131,14 @@
 #X connect 26 0 9 2;
 #X restore 472 216 pd example;
 #N canvas 741 72 442 488 flag 0;
-#X obj 119 376 else/out~;
+#X obj 119 376 out~;
 #X obj 65 181 tgl 20 0 empty empty empty 17 7 0 10 #dfdfdf #000000
 #000000 0 1;
-#X obj 65 282 else/impseq~;
-#X obj 206 282 else/impseq~;
+#X obj 65 282 impseq~;
+#X obj 206 282 impseq~;
 #X floatatom 135 186 5 0 0 0 - - - 12;
-#X obj 65 313 else/resonant~ 600 200, f 14;
-#X obj 206 313 else/resonant~ 750 200, f 14;
+#X obj 65 313 resonant~ 600 200, f 14;
+#X obj 206 313 resonant~ 750 200, f 14;
 #X text 134 167 tempo;
 #X msg 207 108 10/13;
 #X obj 207 172 display;
@@ -149,7 +149,7 @@
 #X msg 117 108 3/2;
 #X msg 87 108 2/3;
 #X msg 323 108 19/13;
-#X obj 65 220 else/polymetro -b 90 3/2;
+#X obj 65 220 polymetro -b 90 3/2;
 #X obj 216 246 bng 18 250 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
 #X obj 75 246 bng 18 250 50 0 empty empty empty 17 7 0 10 #dfdfdf #000000
@@ -188,7 +188,7 @@ based on synced [clock] objects., f 81;
 ;
 #X text 100 485 2) symbol/float - polyrhythmic multiplier ratio (default
 1/1) or float, f 70;
-#X obj 12 206 else/polymetro~;
+#X obj 12 206 polymetro~;
 #X connect 6 0 35 0;
 #X connect 17 0 35 1;
 #X connect 20 0 35 0;

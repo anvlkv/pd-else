@@ -32,8 +32,8 @@
 #X text 49 85 [morph~] allows you to make a spectral crossfade between
 the amplitudes and phases of two inputs. You can then do cross synthesis
 and spectral morphing., f 76;
-#X obj 205 172 else/player~ numbers.wav 1 1;
-#X obj 184 139 else/player~ 1 kantele.wav 1 1;
+#X obj 205 172 player~ numbers.wav 1 1;
+#X obj 184 139 player~ 1 kantele.wav 1 1;
 #X obj 1 455 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000
 0;
 #X obj 1 487 cnv 3 550 3 empty empty arguments 8 12 0 13 #dcdcdc #000000
@@ -62,7 +62,7 @@ and spectral morphing., f 76;
 #X text 188 431 - initial phases cross fading (between -1 and 1);
 #X text 141 466 signal;
 #X text 189 465 - signal morph between A/B, f 32;
-#X obj 184 247 else/morph~;
+#X obj 184 247 morph~;
 #X text 167 138 A;
 #X text 189 173 B;
 #X text 212 198 A;
@@ -72,7 +72,7 @@ and spectral morphing., f 76;
 #X text 135 495 1) float - amplitude cross fade (default 1 - "B");
 #X text 135 513 2) float - initial phase cross fade (default -1 - "A")
 ;
-#X obj 184 284 else/out~;
+#X obj 184 284 out~;
 #X connect 0 0 36 2;
 #X connect 1 0 36 3;
 #X connect 15 0 36 1;

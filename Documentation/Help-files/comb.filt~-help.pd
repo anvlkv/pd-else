@@ -7,7 +7,7 @@
 0;
 #X obj 108 292 cnv 17 3 45 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 191 219 else/out~;
+#X obj 191 219 out~;
 #X obj 4 4 cnv 15 301 42 empty empty comb.filter~ 20 20 2 37 #e0e0e0
 #000000 0;
 #X obj 307 5 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
@@ -40,10 +40,10 @@
 #X floatatom 575 211 8 0 100 0 - - - 0;
 #X obj 578 187 hsl 128 15 -0.99 0.99 0 0 empty empty empty -2 -8 0
 10 #dcdcdc #000000 #000000 0 1;
-#X obj 422 277 else/out~;
+#X obj 422 277 out~;
 #X obj 391 159 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 391 183 else/impseq~;
+#X obj 391 183 impseq~;
 #X obj 35 78 cnv 15 270 120 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X text 82 91 |;
@@ -97,7 +97,7 @@ a frequency input of 0hz \, the filter is bypassed., f 61;
 the decay time parameter (t60) and delay time (D) according to the
 expression: a = exp(log(0.001) * D/t60).;
 #X text 121 216 D = delay time;
-#X obj 422 237 else/comb.filt~ 100 0.99 1;
+#X obj 422 237 comb.filt~ 100 0.99 1;
 #X connect 0 0 52 1;
 #X connect 1 0 52 2;
 #X connect 2 0 1 0;
@@ -129,14 +129,14 @@ expression: a = exp(log(0.001) * D/t60).;
 10 #dcdcdc #000000 #000000 0 1;
 #X msg 140 141 clear;
 #X text 220 344 - frequency in hz;
-#X obj 191 140 else/imp~ 1;
-#X obj 191 185 else/comb.filt~ 200 1000;
+#X obj 191 140 imp~ 1;
+#X obj 191 185 comb.filt~ 200 1000;
 #X text 384 158 decay time in ms;
 #N canvas 747 220 498 284 gain 0;
-#X obj 234 125 else/impseq~;
+#X obj 234 125 impseq~;
 #X obj 234 98 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 234 202 else/out~;
+#X obj 234 202 out~;
 #X msg 170 127 gain \$1;
 #X obj 170 102 tgl 16 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000 0 1;
@@ -146,7 +146,7 @@ in energy. You can change this parameter to a gain coefficient value
 with the third argument \, where a non zero value sets to "gain mode"
 or the -gain flag. You can also change that with the "gain" message.
 , f 72;
-#X obj 234 159 else/comb.filt~ 440 0.99 1;
+#X obj 234 159 comb.filt~ 440 0.99 1;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
 #X connect 3 0 6 0;
@@ -160,7 +160,7 @@ or the -gain flag. You can also change that with the "gain" message.
 #X text 163 429 -gain;
 #X text 217 429 sets feedback mode to gain;
 #X text 46 217 see also:;
-#X obj 37 239 else/fbdelay~;
+#X obj 37 239 fbdelay~;
 #X text 315 134 frequency;
 #X text 186 491 decay mode: <0> ("t60" \, default) or <non-0> (gain
 mode);

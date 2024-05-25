@@ -29,14 +29,14 @@
 #X msg 52 134 0;
 #X obj 56 249 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 56 211 else/sig2float~;
+#X obj 56 211 sig2float~;
 #X msg 86 134 0.25;
 #X msg 163 133 0.75;
 #X msg 206 133 1;
 #X msg 128 133 0.5;
 #X obj 289 249 vsl 15 100 -1 1 0 0 empty empty empty 0 -9 0 10 #dcdcdc
 #000000 #000000 0 1;
-#X obj 289 217 else/sig2float~;
+#X obj 289 217 sig2float~;
 #X text 240 132 <= reset =>;
 #X text 34 15 The second inlet resets the phase ands behaves in the
 same way for control data as objects like [osc~] and [phasor~] in Pd.
@@ -48,12 +48,12 @@ phase is synced to the given value. The phase values are from 0 to
 LFOs and control with MIDI. A sync with audio is useful for the "hard
 sync" technique \, where an oscillator is synced according to the frequency
 of a master frequency., f 44;
-#X obj 556 252 else/out~;
+#X obj 556 252 out~;
 #X obj 593 149 nbx 5 14 110 200 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X text 694 175 Master oscillator;
 #X text 672 210 Slave oscillator;
-#X obj 593 175 else/imp~ 110;
+#X obj 593 175 imp~ 110;
 #X text 509 349 NOTE:;
 #X text 525 382 The "phase sync" inlet is quite different from the
 "phase offset" inlet. This means that the are completely independent.
@@ -173,10 +173,10 @@ to another phase value.;
 #X msg 361 133 0.75;
 #X msg 329 133 1;
 #X msg 401 133 0.5;
-#X obj 329 165 else/impseq~;
-#X obj 56 181 else/tri~ 0.25;
-#X obj 289 193 else/tri~ 0.25;
-#X obj 556 209 else/tri~ 200;
+#X obj 329 165 impseq~;
+#X obj 56 181 tri~ 0.25;
+#X obj 289 193 tri~ 0.25;
+#X obj 556 209 tri~ 200;
 #X connect 0 0 26 1;
 #X connect 2 0 1 0;
 #X connect 3 0 26 1;
@@ -196,27 +196,27 @@ to another phase value.;
 #X connect 28 0 12 0;
 #X restore 490 200 pd sync;
 #N canvas 430 175 895 349 phase 0;
-#X obj 571 186 else/out~;
+#X obj 571 186 out~;
 #X text 663 142 Phase Modulation:;
 #X obj 646 112 osc~ 50.01;
 #X text 29 31 The second argument sets an initial phase (or "phase
 offset"). This is also settable with the third inlet. This allows you
 to control two oscillators with the same frequency falling in and out
 of phase. Another feature is phase modulation., f 53;
-#X obj 191 251 else/out~;
+#X obj 191 251 out~;
 #X obj 191 215 +~;
 #X text 419 114 1;
 #X obj 287 114 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 284 138 4 0 0 0 - - - 0;
 #X text 267 114 0;
-#X obj 284 162 else/float2sig~ 10;
+#X obj 284 162 float2sig~ 10;
 #X text 472 48 The phase values are wrapped into the 0-1 range \, since
 the phase cycle is from 0 to 1 (where 1 is also the start of another
 cycle).;
-#X obj 150 150 else/tri~ 220 0.5;
-#X obj 209 188 else/tri~ 220;
-#X obj 571 140 else/tri~ 200;
+#X obj 150 150 tri~ 220 0.5;
+#X obj 209 188 tri~ 220;
+#X obj 571 140 tri~ 200;
 #X connect 2 0 14 2;
 #X connect 5 0 4 0;
 #X connect 7 0 8 0;
@@ -228,7 +228,7 @@ cycle).;
 #X restore 442 224 pd phase offset;
 #X text 243 403 - initial phase offset (default 0);
 #X text 243 384 - frequency in hertz (default 0);
-#X obj 218 204 else/out~;
+#X obj 218 204 out~;
 #X text 184 403 2) float;
 #X text 165 296 float/signal -;
 #X obj 306 4 cnv 15 250 40 empty empty empty 12 13 0 18 #7c7c7c #e0e4dc
@@ -308,14 +308,14 @@ cycle).;
 #X restore 116 85 graph;
 #X text 86 26 This is the waveform of this oscillator.;
 #X text 110 301 see also:;
-#X obj 182 300 else/vsaw~;
+#X obj 182 300 vsaw~;
 #X text 82 333 For different triangular waveforms;
 #X restore 466 176 pd waveform;
 #X text 267 348 triangular wave signal;
-#X obj 218 169 else/tri~ 440;
+#X obj 218 169 tri~ 440;
 #X text 60 89 [tri~] is a triangular wave oscillator that accepts negative
 frequencies \, has inlets for phase sync and phase modulation.;
 #X text 393 150 see also:;
-#X obj 461 150 else/bl.tri~;
+#X obj 461 150 bl.tri~;
 #X connect 15 0 39 0;
 #X connect 39 0 21 0;

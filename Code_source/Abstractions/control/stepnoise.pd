@@ -23,10 +23,10 @@
 #X obj 119 62 route float seed;
 #X obj 119 24 inlet;
 #X obj 412 265 s \$0-hz;
-#X obj 475 219 else/swap2;
+#X obj 475 219 swap2;
 #X obj 498 185 list split 1;
-#X obj 412 123 else/args -;
-#X obj 313 89 else/loadbanger 2;
+#X obj 412 123 args -;
+#X obj 313 89 loadbanger 2;
 #X obj 165 97 s \$0-seed;
 #X obj 532 271 s \$0-seed;
 #X obj 412 158 route float -seed;
@@ -50,7 +50,7 @@
 #X connect 18 0 11 0;
 #X connect 18 1 13 0;
 #X restore 101 75 pd init;
-#X obj 101 254 else/rand.f 0 127;
+#X obj 101 254 rand.f 0 127;
 #X obj 283 104 declare -path else;
 #N canvas 250 48 312 259 rand 0;
 #X obj 130 151 r \$0-rand;

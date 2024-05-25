@@ -20,7 +20,7 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 3 3 graph;
 #X text 165 287 float;
-#X obj 222 164 else/keycode, f 15;
+#X obj 222 164 keycode, f 15;
 #X text 173 346 NONE;
 #X obj 136 310 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 165 310 float;

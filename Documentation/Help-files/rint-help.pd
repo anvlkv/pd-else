@@ -21,9 +21,9 @@
 #X obj 145 40 cnv 4 4 4 empty empty nearest 0 28 2 18 #e0e0e0 #000000 0;
 #X obj 110 40 cnv 4 4 4 empty empty the 0 28 2 18 #e0e0e0 #000000 0;
 #X text 63 88 [rint] takes floats and rounds them to the nearest integer value., f 67;
-#X obj 177 216 else/display;
-#X obj 177 189 else/rint 4.5;
-#X obj 26 211 else/rint~;
+#X obj 177 216 display;
+#X obj 177 189 rint 4.5;
+#X obj 26 211 rint~;
 #X text 30 186 see also:;
 #X obj 4 260 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000 0;
 #X obj 4 292 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000 0;
@@ -35,7 +35,7 @@
 #X text 221 301 - output value(s) of round function;
 #X text 188 268 list;
 #X text 188 301 list;
-#X obj 253 122 else/initmess 0.333 0.666 -0.999;
+#X obj 253 122 initmess 0.333 0.666 -0.999;
 #X listbox 253 147 20 0 0 0 - - - 0;
 #X connect 0 0 19 0;
 #X connect 19 0 18 0;

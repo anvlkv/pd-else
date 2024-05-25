@@ -67,14 +67,14 @@
 #N canvas 837 109 449 327 sync 0;
 #X obj 189 166 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
-#X obj 189 198 else/impseq~;
-#X obj 189 245 else/out~;
+#X obj 189 198 impseq~;
+#X obj 189 245 out~;
 #X obj 142 166 bng 20 50 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 51 24 You can sync a [tempo] object to an external sync source
 with an incoming bang.;
-#X obj 142 100 else/tempo -on 30;
-#X obj 189 139 else/tempo -on 70;
+#X obj 142 100 tempo -on 30;
+#X obj 189 139 tempo -on 70;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 5 0 6 0;
@@ -119,8 +119,8 @@ bpm or ms. It has a swing parameter and is turned on and off by a toggle.
 #X msg 423 87 hz 2 0 \, bang;
 #X text 314 24 These messages takes optional float arguments to set
 tempo and swing, f 35;
-#X obj 108 139 else/tempo -ms 150;
-#X obj 360 153 else/tempo -hz 2;
+#X obj 108 139 tempo -ms 150;
+#X obj 360 153 tempo -hz 2;
 #X connect 0 0 13 0;
 #X connect 3 0 13 0;
 #X connect 4 0 13 0;
@@ -141,29 +141,29 @@ tempo and swing, f 35;
 ;
 #X text 213 362 sets time to bpm \, optional floats set tempo and swing
 ;
-#X obj 178 198 else/tempo 60, f 25;
+#X obj 178 198 tempo 60, f 25;
 #X text 124 304 mul <float> -;
 #X text 119 522 -mul <float>;
 #N canvas 837 109 419 407 multiplier 0;
 #X obj 117 137 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 221 179 else/bangdiv 4;
+#X obj 221 179 bangdiv 4;
 #X obj 221 210 bng 20 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 117 287 else/impseq~;
+#X obj 117 287 impseq~;
 #X obj 117 253 sel 1;
-#X obj 204 287 else/impseq~;
+#X obj 204 287 impseq~;
 #X obj 204 254 b;
-#X obj 117 221 else/display;
-#X obj 117 194 else/count 1 4;
-#X obj 117 331 else/out~;
+#X obj 117 221 display;
+#X obj 117 194 count 1 4;
+#X obj 117 331 out~;
 #X text 28 23 You can set a tempo (or 'frequency') multiplier with
 the -mul flag or the "mul" message". In practice \, this subdivides
 the tempo into fractions. So if you multiply by four your tempo is
 actually 1/4 of the original. You can also use object like [count]
 and [bangdiv] to manage tempo subdivisions.;
 #X text 250 213 back to the original;
-#X obj 117 109 else/tempo -on -mul 4 30;
+#X obj 117 109 tempo -on -mul 4 30;
 #X connect 0 0 1 0;
 #X connect 0 0 8 0;
 #X connect 1 0 2 0;
@@ -189,15 +189,15 @@ is no maximum value., f 43;
 #000000;
 #X obj 211 171 nbx 4 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
-#X obj 94 253 else/impseq~;
-#X obj 94 287 else/out~;
+#X obj 94 253 impseq~;
+#X obj 94 287 out~;
 #X text 207 152 swing (%);
 #X text 42 17 The swing paraneter sets a tempo deviation for irregular
 beats. it is set as percentage and corresponds to a time ratio. For
 example \, say you have a tempo at 60 bpm \, a swing value of 100%
 creates random fluctuations 100% faster or slower \, and that corresponds
 to a deviation from 60 to 120 bpm and 60 to 30 bpm., f 43;
-#X obj 94 195 else/tempo -on 60 10;
+#X obj 94 195 tempo -on 60 10;
 #X text 323 28 Pseudo random number generators aren't true random number
 generators. Instead \, an algorithm is used to provide a sequence of
 numbers that seems random. The same sequence can be reproduced if you
@@ -217,8 +217,8 @@ repeat the output., f 79;
 #X msg 579 205 seed 1234;
 #X obj 579 299 bng 30 400 50 0 empty empty empty 17 7 0 10 #dfdfdf
 #000000 #000000;
-#X obj 355 259 else/tempo -on -seed 1234 60 100;
-#X obj 579 259 else/tempo -on -seed 1234 60 100;
+#X obj 355 259 tempo -on -seed 1234 60 100;
+#X obj 579 259 tempo -on -seed 1234 60 100;
 #X connect 1 0 3 0;
 #X connect 2 0 7 2;
 #X connect 3 0 4 0;
@@ -231,7 +231,7 @@ repeat the output., f 79;
 #X connect 17 0 15 0;
 #X restore 454 198 pd swing/seed;
 #X text 22 190 see also:;
-#X obj 23 212 else/tempo~;
+#X obj 23 212 tempo~;
 #X connect 20 0 64 0;
 #X connect 21 0 64 1;
 #X connect 36 0 64 0;

@@ -40,12 +40,12 @@
 #X obj 247 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 133 510 1) anything -;
-#X obj 247 373 else/display;
-#X obj 370 312 else/display;
+#X obj 247 373 display;
+#X obj 370 312 display;
 #X msg 162 156 symbol x;
 #X msg 316 255 any other;
 #X msg 306 230 list x y;
-#X obj 308 342 else/display;
+#X obj 308 342 display;
 #X msg 296 205 2 3 4;
 #X msg 226 156 x y z;
 #X text 127 417 anything - any message to be routed according to its
@@ -57,7 +57,7 @@
 0;
 #X text 152 477 list -;
 #X text 196 477 input message if no match was found, f 51;
-#X obj 247 285 else/route2 x 2, f 21;
+#X obj 247 285 route2 x 2, f 21;
 #X obj 36 373 route;
 #X text 219 510 list of addresses to route to (floats or symbols);
 #X text 64 84 [route2] is similar to route \, but it doesn't trim the
@@ -67,8 +67,8 @@ argument creates a corresponding outlet and there's an extra rightmost
 outlet for messages that don't match the arguments., f 70;
 #X text 31 262 in order to route according to message type \, see:
 , f 20;
-#X obj 103 292 else/routetype;
-#X obj 36 346 else/routeall;
+#X obj 103 292 routetype;
+#X obj 36 346 routeall;
 #X text 33 323 and see also:;
 #X connect 0 0 34 0;
 #X connect 18 0 34 0;

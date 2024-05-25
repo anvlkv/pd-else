@@ -149,13 +149,13 @@
 #X text 176 285 signal;
 #X text 224 285 - impulse trigger with the gate value;
 #N canvas 639 96 517 475 example 0;
-#X obj 125 163 else/sine~ 50;
-#X obj 81 278 else/sine~ 200;
+#X obj 125 163 sine~ 50;
+#X obj 81 278 sine~ 200;
 #X obj 162 246 *~;
 #X obj 278 334 *~;
-#X obj 177 201 else/adsr~ 400 200 0.5 1000, f 14;
-#X obj 293 198 else/gatehold~ 500;
-#X obj 293 225 else/adsr~ 100 100 0.5 750;
+#X obj 177 201 adsr~ 400 200 0.5 1000, f 14;
+#X obj 293 198 gatehold~ 500;
+#X obj 293 225 adsr~ 100 100 0.5 750;
 #X text 76 21 [gatehold~] allows the one gate to have a different duration
 to control a separate parameter.;
 #X text 77 56 In this example we have a gate controlling two independent
@@ -163,8 +163,8 @@ envelopes (one that controls the phase modulation index and another
 that controls the amplitude). The envelope that controls the amplitude
 has its sustain period enlarged by 500 ms because of the [gatehold~]
 object.;
-#X obj 293 153 else/pulse~ 0.2 0.25;
-#X obj 278 375 else/out~;
+#X obj 293 153 pulse~ 0.2 0.25;
+#X obj 278 375 out~;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 2;
@@ -178,22 +178,22 @@ object.;
 #X text 224 312 - hold time in ms;
 #X text 224 344 - held gate;
 #X text 139 376 1) float - hold time in ms (default 0 \, no hold);
-#X obj 246 207 else/gatehold~ 500;
+#X obj 246 207 gatehold~ 500;
 #X obj 351 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 184 312 float;
 #X text 408 183 hold time;
-#X obj 246 146 else/randpulse~ 0.5 0.25;
+#X obj 246 146 randpulse~ 0.5 0.25;
 #X text 70 88 [gatehold~] holds a gate value for a certain amount of
 time (specified in ms) after the gate has closed. If a new gate starts
 before the hold time is finished \, the object is retriggered.;
-#X obj 88 212 else/gatehold~ 500;
-#X obj 88 164 else/imp~ 1;
+#X obj 88 212 gatehold~ 500;
+#X obj 88 164 imp~ 1;
 #X obj 88 188 *~;
 #X obj 123 188 noise~;
-#X obj 246 239 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 88 239 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 246 173 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 246 239 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 88 239 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 246 173 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 28 0 38 0;
 #X connect 29 0 28 1;
 #X connect 32 0 40 0;

@@ -49,7 +49,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -61,7 +61,7 @@
 #X connect 8 1 0 0;
 #X connect 9 0 1 0;
 #X restore 31 117 pd voice;
-#X obj 92 74 else/voices -split 6 1, f 38;
+#X obj 92 74 voices -split 6 1, f 38;
 #N canvas 292 354 342 369 voice 0;
 #X obj 197 123 / 127;
 #X obj 182 228 *~;
@@ -72,7 +72,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -94,7 +94,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -116,7 +116,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -138,7 +138,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -160,7 +160,7 @@
 #X obj 197 183 line~;
 #X msg 197 148 \$1 250;
 #X obj 92 83 unpack float float;
-#X obj 92 146 else/bl.saw~;
+#X obj 92 146 bl.saw~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -193,11 +193,11 @@
 #X text 221 48 generates random note-on messages;
 #X text 31 125 Flush them off;
 #X obj 195 127 pack f 100;
-#X obj 195 210 else/panic;
-#X obj 195 74 else/rand.i 50 80;
-#X obj 195 155 else/note.out;
-#X obj 195 262 else/note.in;
-#X obj 195 340 else/out~;
+#X obj 195 210 panic;
+#X obj 195 74 rand.i 50 80;
+#X obj 195 155 note.out;
+#X obj 195 262 note.in;
+#X obj 195 340 out~;
 #X connect 0 0 12 0;
 #X connect 1 0 8 0;
 #X connect 2 0 7 0;
@@ -216,7 +216,7 @@
 #X coords 0 1 100 -1 302 42 1;
 #X restore 4 4 graph;
 #X obj 191 41 cnv 4 4 4 empty empty notes 0 28 2 18 #e0e0e0 #000000 0;
-#X obj 219 250 else/panic;
+#X obj 219 250 panic;
 #X connect 16 0 41 0;
 #X connect 24 0 41 0;
 #X connect 25 0 41 0;

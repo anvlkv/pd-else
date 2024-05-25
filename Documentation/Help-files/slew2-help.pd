@@ -24,17 +24,17 @@
 #X restore 2 3 graph;
 #N canvas 716 92 494 369 example 0;
 #X obj 78 236 osc~;
-#X obj 78 283 else/out~;
+#X obj 78 283 out~;
 #X text 185 44 <= random numbers generated once a second;
 #X text 212 87 <= values rescaled to 200-800 range;
-#X obj 78 45 else/stepnoise 1;
-#X obj 78 88 else/rescale 200 800;
+#X obj 78 45 stepnoise 1;
+#X obj 78 88 rescale 200 800;
 #X floatatom 78 203 8 0 0 0 - - - 0;
 #X text 200 174 <= values are limited \, generating a portamento;
 #X msg 103 140 rate \$1;
 #X floatatom 103 118 5 0 0 0 - - - 0;
 #X text 140 117 <= increasing refresh rate generates steps;
-#X obj 78 174 else/slew2 4000 800;
+#X obj 78 174 slew2 4000 800;
 #X connect 0 0 1 0;
 #X connect 4 0 5 0;
 #X connect 5 0 11 0;
@@ -66,7 +66,7 @@
 #X obj 173 292 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 118 225 6 0 0 0 - - - 0;
-#X obj 118 202 else/rand.f 0 1;
+#X obj 118 202 rand.f 0 1;
 #X obj 118 178 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 187 332 float;
@@ -86,7 +86,7 @@
 #X obj 116 375 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc
 #000000 #000000 0 1;
 #X floatatom 113 311 7 0 0 0 - - - 0;
-#X obj 113 282 else/rand.f 0 1;
+#X obj 113 282 rand.f 0 1;
 #X obj 113 258 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X msg 193 224 0.1;
@@ -114,7 +114,7 @@ or the rate message. If you change the rate \, the step limit changes
 200 values in a second. If the speed is then "1" \, this means that
 the step value is 1/200 (0.005). So a shift between 0 and 1 takes 200
 steps of 0.005 and a second to reach 1!, f 61;
-#X obj 113 347 else/slew2 0.1 0.5 -rate 100, f 38;
+#X obj 113 347 slew2 0.1 0.5 -rate 100, f 38;
 #X connect 0 0 22 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -140,7 +140,7 @@ steps of 0.005 and a second to reach 1!, f 61;
 #X text 230 348 - sets new start point and goes back to target;
 #X text 114 474 -rate <float>: sets refresh rate in ms (default 5 \,
 minimum 1), f 61;
-#X obj 28 264 else/slew;
+#X obj 28 264 slew;
 #X floatatom 323 246 5 0 0 0 - - - 0;
 #X msg 332 201 0;
 #X msg 340 222 -1;
@@ -155,7 +155,7 @@ minimum 1), f 61;
 #X msg 214 173 0.1;
 #X msg 246 173 0.5;
 #X msg 323 174 0.5;
-#X obj 170 265 else/slew2 1 1, f 26;
+#X obj 170 265 slew2 1 1, f 26;
 #X obj 119 404 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 187 405 float;
@@ -166,7 +166,7 @@ towards the incoming value. The difference between [slew] and [line]
 is that [slew] has a fixed speed \, not a fixed period. A limit of
 zero stops the line generation and a negative value turns the limiter
 off., f 77;
-#X obj 27 286 else/slew2~;
+#X obj 27 286 slew2~;
 #X text 227 152 up;
 #X text 312 153 down;
 #X text 230 383 - up speed limit (negative values = no limit);

@@ -23,7 +23,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 2 4 graph;
-#X obj 174 232 else/out~;
+#X obj 174 232 out~;
 #X obj 256 174 nbx 6 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 339 174 nbx 6 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -58,19 +58,19 @@ f 49;
 ;
 #X text 148 466 3) float - sets transposition in cents (default 0)
 , f 61;
-#X obj 174 132 else/play.file~ 1 violin.wav 1 1;
+#X obj 174 132 play.file~ 1 violin.wav 1 1;
 #X obj 141 154 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 175 397 signal - processed output;
-#X obj 174 197 else/pvoc.live~ 6000 50 -600;
+#X obj 174 197 pvoc.live~ 6000 50 -600;
 #X text 52 89 [pvoc.live~] is like [pvoc.player~] \, but for live input.
 It provides independent time stretching and pitch shifting via granulation.
 , f 69;
 #X text 86 154 reset =>;
 #X text 148 432 1) float - sets buffer size in ms (default 5000),
 f 61;
-#X obj 418 260 else/stretch.shift~;
-#X obj 429 238 else/pvoc.player~;
+#X obj 418 260 stretch.shift~;
+#X obj 429 238 pvoc.player~;
 #X connect 12 0 35 1;
 #X connect 13 0 35 2;
 #X connect 32 0 35 0;

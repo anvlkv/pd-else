@@ -32,9 +32,9 @@
 #X text 179 348 float;
 #X text 185 378 list;
 #X text 185 400 list;
-#X obj 224 239 else/slice 2;
-#X obj 293 260 else/display;
-#X obj 293 288 else/display;
+#X obj 224 239 slice 2;
+#X obj 293 260 display;
+#X obj 293 288 display;
 #X text 238 348 split point, f 37;
 #X text 222 378 - the left part of the split list, f 40;
 #X text 222 400 - the right part of the split list, f 40;
@@ -49,8 +49,8 @@
 #X msg 199 168 list a b c d e f;
 #X text 39 84 [slice] splits lists. The 'n' split point is set via argument or right inlet. If you slice at 'n' \, the left outlet spits the first 'n' elements and the right outlet sends the remaining elements. If you slice at '-n' \, the right outlet spits the last 'n' elements and the left outlet sends the first elements. If the number of elements is less than the split point \, the whole list is output to the left if 'n' is positive \, and to the right if negative. Symbols and floats are also taken., f 81;
 #X text 30 230 see also:;
-#X obj 30 277 else/slice~;
-#X obj 30 252 else/unmerge;
+#X obj 30 277 slice~;
+#X obj 30 252 unmerge;
 #X connect 0 0 29 1;
 #X connect 29 0 31 0;
 #X connect 29 1 30 0;

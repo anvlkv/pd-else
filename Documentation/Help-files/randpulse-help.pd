@@ -55,16 +55,16 @@
 0;
 #X text 143 287 seed <float>;
 #X text 245 364 random pulse signal;
-#X obj 251 168 else/randpulse 1;
-#X obj 251 200 else/display;
+#X obj 251 168 randpulse 1;
+#X obj 251 200 display;
 #X text 59 87 [randpulse] is a random pulse oscillator (which alternates
 between a random value and 0 \, or on/off) at control rate with a default
 resolution of 1 ms). It accepts negative frequencies \, has inlets
 for pulse width and sync., f 67;
 #N canvas 411 138 721 374 rate 0;
-#X obj 204 159 else/display;
-#X obj 204 127 else/sr~ -ms;
-#X obj 498 214 else/status;
+#X obj 204 159 display;
+#X obj 204 127 sr~ -ms;
+#X obj 498 214 status;
 #X obj 513 250 timer;
 #X msg 498 112 rate \$1;
 #X obj 498 86 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -84,7 +84,7 @@ rate which has a period in ms given by the [sr~] object., f 55;
 is 1 ms and the minimum rate is 0.1 ms. The maximum frequency that
 [pulse] can run is half the frequency of the given rate (500 hz default).
 , f 55;
-#X obj 498 139 else/randpulse -rate 20 3;
+#X obj 498 139 randpulse -rate 20 3;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 2 1 3 1;
@@ -96,7 +96,7 @@ is 1 ms and the minimum rate is 0.1 ms. The maximum frequency that
 #X connect 12 0 7 0;
 #X restore 481 175 pd rate;
 #X text 34 167 see also:;
-#X obj 34 190 else/randpulse~;
+#X obj 34 190 randpulse~;
 #X obj 6 388 cnv 3 550 3 empty empty flags 8 12 0 13 #dcdcdc #000000
 0;
 #X text 116 418 -seed <float>: sets seed (default: unique internal)
@@ -124,8 +124,8 @@ to repeat the output., f 52;
 #000000;
 #X msg 572 63 seed 123;
 #X floatatom 572 178 10 0 0 0 - - - 16;
-#X obj 382 135 else/randpulse -seed 123 0.5;
-#X obj 572 135 else/randpulse -seed 123 0.5;
+#X obj 382 135 randpulse -seed 123 0.5;
+#X obj 572 135 randpulse -seed 123 0.5;
 #X connect 4 0 10 0;
 #X connect 4 0 11 0;
 #X connect 7 0 10 0;
@@ -141,6 +141,6 @@ to repeat the output., f 52;
 #X text 223 269 - sets refresh rate in ms;
 #X text 116 400 -rate <float>: sets refresh rate in ms (default 1)
 , f 54;
-#X obj 34 213 else/randpulse2;
+#X obj 34 213 randpulse2;
 #X connect 16 0 32 0;
 #X connect 32 0 33 0;

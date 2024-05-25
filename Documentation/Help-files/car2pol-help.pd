@@ -76,29 +76,29 @@ to polar coordinates (amplitude / phase).;
 0;
 #X obj 166 41 cnv 4 4 4 empty empty conversion 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 190 217 else/car2pol, f 16;
-#X obj 19 250 else/mag;
+#X obj 190 217 car2pol, f 16;
+#X obj 19 250 mag;
 #N canvas 920 123 538 605 example 0;
-#X obj 101 197 else/display;
-#X obj 101 237 else/car2pol;
+#X obj 101 197 display;
+#X obj 101 237 car2pol;
 #X obj 170 275 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 101 276 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
-#X obj 101 306 else/pol2car;
+#X obj 101 306 pol2car;
 #X obj 101 343 pack;
 #X text 63 12 cartesian x polar conversion;
 #X text 238 112 <= click/drag;
-#X obj 101 58 else/circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0
+#X obj 101 58 circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0
 0 0 1 0 0 63.5 63.5 empty empty 1;
-#X obj 101 375 else/circle 127 -1 1 -1 1 1 255 255 255 255 255 255
+#X obj 101 375 circle 127 -1 1 -1 1 1 255 255 255 255 255 255
 0 0 0 1 0 0 63.5 63.5 empty empty 1;
 #X text 57 276 amp =>;
 #X obj 200 330 nbx 8 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 231 274 <= phase (in radians);
 #X text 281 329 <= phase (in degrees);
-#X obj 200 305 else/rad2deg;
+#X obj 200 305 rad2deg;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -112,8 +112,8 @@ to polar coordinates (amplitude / phase).;
 #X connect 14 0 11 0;
 #X restore 461 248 pd example;
 #X text 19 184 see also:;
-#X obj 19 206 else/car2pol~;
-#X obj 19 229 else/pol2car;
+#X obj 19 206 car2pol~;
+#X obj 19 229 pol2car;
 #X connect 19 0 43 0;
 #X connect 20 0 27 0;
 #X connect 27 0 43 0;

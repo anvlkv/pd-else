@@ -11,12 +11,12 @@
 #X obj 420 397 about.MERDA;
 #N canvas 189 62 742 352 messages 0;
 #X obj 387 247 outlet;
-#X obj 163 68 else/knob 41 100 5000 2 100 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 100;
-#X obj 387 68 else/knob 41 -2 2 0 0 empty empty #000000 #afafaf #ffffff 1 0 0 0 1 320 0 0 0;
-#X obj 88 68 else/knob 41 10 5000 4 100 empty empty #000000 #dfdfdf #ffffff 1 0 0 0 1 320 0 0 10;
-#X obj 497 68 else/knob 41 0 1 0 0 \$0-reson empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
+#X obj 163 68 knob 41 100 5000 2 100 empty empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 100;
+#X obj 387 68 knob 41 -2 2 0 0 empty empty #000000 #afafaf #ffffff 1 0 0 0 1 320 0 0 0;
+#X obj 88 68 knob 41 10 5000 4 100 empty empty #000000 #dfdfdf #ffffff 1 0 0 0 1 320 0 0 10;
+#X obj 497 68 knob 41 0 1 0 0 \$0-reson empty #dfdfdf #afafaf black 1 0 0 0 1 320 0 0 0;
 #X obj 243 100 tgl 23 0 empty empty empty 17 7 0 10 #dfdfdf #000000 #000000 0 1;
-#X obj 587 68 else/knob 41 0 1 0 0.5 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0.5;
+#X obj 587 68 knob 41 0 1 0 0.5 empty empty #9f9f9f #afafaf black 1 0 0 0 1 320 0 0 0.5;
 #X msg 88 145 time \$1;
 #X msg 163 145 cutoff \$1;
 #X msg 243 145 freeze \$1;

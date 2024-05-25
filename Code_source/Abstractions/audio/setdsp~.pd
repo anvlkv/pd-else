@@ -47,8 +47,8 @@
 #X obj 91 169 != 0;
 #X obj 91 143 route float bang;
 #X obj 295 233 change -1;
-#X obj 210 120 else/args;
-#X obj 210 90 else/lb;
+#X obj 210 120 args;
+#X obj 210 90 lb;
 #X obj 325 161 r pd-dsp-stopped;
 #X obj 324 133 r pd-dsp-started;
 #X connect 1 0 0 0;

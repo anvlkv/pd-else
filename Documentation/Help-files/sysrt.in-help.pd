@@ -72,7 +72,7 @@
 0;
 #X text 79 93 [sysrt.in] detects System and real-time MIDI messages
 from raw MIDI data.;
-#X obj 136 171 else/sysrt.in, f 47;
+#X obj 136 171 sysrt.in, f 47;
 #X text 126 222 clock;
 #X text 216 222 start;
 #X text 255 222 continue;

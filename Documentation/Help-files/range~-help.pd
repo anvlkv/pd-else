@@ -39,7 +39,7 @@
 0;
 #X obj 111 300 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
-#X obj 190 181 else/range~, f 21;
+#X obj 190 181 range~, f 21;
 #X text 265 394 none;
 #X obj 111 360 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
@@ -50,9 +50,9 @@
 #X text 237 337 - minimum range;
 #X text 237 360 - maximum range;
 #X text 187 361 signal;
-#X obj 190 147 else/stepnoise~ 5;
-#X obj 489 66 else/setdsp~;
-#X obj 313 148 else/impseq~;
+#X obj 190 147 stepnoise~ 5;
+#X obj 489 66 setdsp~;
+#X obj 313 148 impseq~;
 #X obj 313 125 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 237 301 - impulse resets at signal rate;
@@ -65,8 +65,8 @@
 #X text 237 277 - resets minimum and maximum values;
 #X text 71 88 [range~] analyzes and outputs the signal's range (minimum
 and maximum) values.;
-#X obj 313 215 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 190 215 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 313 215 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 190 215 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 19 0 42 0;
 #X connect 19 1 41 0;
 #X connect 29 0 19 0;

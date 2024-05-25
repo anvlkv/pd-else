@@ -39,8 +39,8 @@
 ;
 #X obj 3 346 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 231 212 else/display;
-#X obj 231 181 else/median;
+#X obj 231 212 display;
+#X obj 231 181 median;
 #X msg 243 158 4 1 3 2;
 #X text 170 324 (none);
 #X text 164 287 float -;

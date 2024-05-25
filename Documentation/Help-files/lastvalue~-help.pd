@@ -151,11 +151,11 @@
 #X text 165 282 signal;
 #X text 211 338 - last input value;
 #X text 211 282 - signal to detect the last value;
-#X obj 217 214 else/lastvalue~ 3;
+#X obj 217 214 lastvalue~ 3;
 #X text 158 373 1) float - initial last value (default 0);
-#X obj 217 242 else/numbox~ 3 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 160 214 else/numbox~ 3 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 217 153 else/rand.i~ 0 100;
+#X obj 217 242 numbox~ 3 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 160 214 numbox~ 3 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 217 153 rand.i~ 0 100;
 #X text 45 215 current value -->;
 #X text 122 244 last value -->;
 #X floatatom 316 186 6 0 0 0 - - - 0;

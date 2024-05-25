@@ -1,7 +1,7 @@
 #N canvas 464 45 541 612 12;
 #X declare -path else;
 #X obj 311 18 declare -path else;
-#X obj 138 209 else/keyboard 17 80 2 4 0 0 empty empty;
+#X obj 138 209 keyboard 17 80 2 4 0 0 empty empty;
 #N canvas 470 55 473 376 random 0;
 #X obj 86 246 pack f f;
 #X obj 86 283 outlet;

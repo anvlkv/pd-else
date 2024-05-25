@@ -40,10 +40,10 @@
 #X text 153 365 width <float>;
 #X text 246 421 - list of coords (x \, y);
 #X text 207 421 list;
-#X text 172 208 [else/pad] =>;
+#X text 172 208 [pad] =>;
 #X msg 282 161 dim 50 75;
 #X msg 261 136 width 200;
-#X obj 261 190 else/pad 50 75 255 255 255;
+#X obj 261 190 pad 50 75 255 255 255;
 #X msg 181 136 height 40;
 #X text 86 465 -dim <f \, f>: set horizontal and vertical dimensions
 (default 127 \, 127), f 72;
@@ -58,14 +58,14 @@
 -1 -1 12700 1;
 #X obj 246 52 loadbang;
 #X msg 246 84 set 255;
-#X obj 171 319 else/pad 127 127 255 255 255;
-#X obj 171 494 else/display;
+#X obj 171 319 pad 127 127 255 255 255;
+#X obj 171 494 display;
 #X obj 171 467 route list click, f 22;
-#X obj 235 494 else/display;
+#X obj 235 494 display;
 #X text 78 182 Example on how to set the color, f 16;
 #X text 254 497 <= click;
 #X text 65 498 coords (x \, y) =>;
-#X obj 171 286 else/pack2 color 255 255 255;
+#X obj 171 286 pack2 color 255 255 255;
 #X connect 0 0 12 3;
 #X connect 1 0 12 2;
 #X connect 2 0 12 1;
@@ -78,9 +78,9 @@
 #X connect 7 1 8 0;
 #X connect 12 0 5 0;
 #X restore 490 307 pd color;
-#X obj 261 305 else/display;
+#X obj 261 305 display;
 #X obj 261 278 route list click, f 22;
-#X obj 325 305 else/display;
+#X obj 325 305 display;
 #X text 344 308 <= click;
 #X text 155 309 coords (x \, y) =>;
 #X text 141 395 color <f \, f \, f>;

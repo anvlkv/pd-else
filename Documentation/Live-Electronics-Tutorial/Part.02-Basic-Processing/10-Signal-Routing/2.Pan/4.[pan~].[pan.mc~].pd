@@ -103,7 +103,7 @@
 #X connect 9 0 0 0;
 #X coords 0 -1 1 1 44 72 2 50 100;
 #X restore 413 344 pd;
-#X obj 246 294 else/meter4~;
+#X obj 246 294 meter4~;
 #X obj 248 254 pan~ 4, f 14;
 #X obj 127 166 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X floatatom 124 192 8 0 0 0 - - - 0;
@@ -125,8 +125,8 @@
 #X obj 411 306 numbox~ 6 12 100 #C0C0C4 #440008 10 0 0 0;
 #X text 27 534 Spread values greater than 1 spreads the signal to more than 2 adjacent channels. A spread value of two will spread the input to the 2 adjacent channels (to the right and to the left) with an amplidute of the square root of 0.5! Values smaller than 1 narrows the crossfading point closer to the selected channel. A value of 0.5 provides no actual crossfading \, meaning that 2 adjacent channels get muted at the mid point. Values smaller than 0.5 are possible and it narrows down even more at the channel center., f 71;
 #X obj 652 393 noise~;
-#X obj 646 483 else/meter8~;
-#X obj 705 226 else/circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0 0 0 1 0 0 0 1 empty empty 1;
+#X obj 646 483 meter8~;
+#X obj 705 226 circle 127 -1 1 -1 1 1 255 255 255 255 255 255 0 0 0 1 0 0 0 1 empty empty 1;
 #X obj 653 441 pan~ -radians 8 1 90, f 23;
 #X obj 705 395 f2s~;
 #X obj 758 394 f2s~;

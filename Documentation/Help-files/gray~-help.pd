@@ -5,7 +5,7 @@
 0;
 #X obj 7 296 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000
 0;
-#X obj 225 198 else/out~;
+#X obj 225 198 out~;
 #X obj 23 40 cnv 4 4 4 empty empty Gray 0 28 2 18 #e0e0e0 #000000 0
 ;
 #X obj 162 40 cnv 4 4 4 empty empty generator 0 28 2 18 #e0e0e0 #000000
@@ -29,7 +29,7 @@
 0;
 #X obj 502 26 cnv 10 10 10 empty empty library 0 6 2 13 #7c7c7c #e0e4dc
 0;
-#X obj 225 167 else/gray~;
+#X obj 225 167 gray~;
 #X obj 70 40 cnv 4 4 4 empty empty code 0 28 2 18 #e0e0e0 #000000 0
 ;
 #X obj 3 3 cnv 15 301 42 empty empty gray~ 20 20 2 37 #e0e0e0 #000000
@@ -45,10 +45,10 @@
 unique internal, f 65;
 #X text 162 308 signal - gray noise;
 #N canvas 475 138 704 321 seed 0;
-#X obj 393 220 else/downsample~ 1;
-#X obj 548 220 else/downsample~ 1;
-#X obj 393 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 548 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 393 220 downsample~ 1;
+#X obj 548 220 downsample~ 1;
+#X obj 393 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 548 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X text 30 19 Pseudo random number generators aren't true random number
 generators. Instead \, an algorithm is used to provide a sequence of
 numbers that seems random. The same sequence can be reproduced if you
@@ -58,18 +58,18 @@ objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [gray~] object twice with the same seed to
 repeat the output., f 52;
 #X text 387 79 Sync [gray~] objects with a seed value;
-#X obj 403 192 else/gray~;
-#X obj 548 192 else/gray~;
-#X obj 57 220 else/downsample~ 1;
-#X obj 57 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 207 220 else/downsample~ 1;
-#X obj 207 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 403 192 gray~;
+#X obj 548 192 gray~;
+#X obj 57 220 downsample~ 1;
+#X obj 57 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 207 220 downsample~ 1;
+#X obj 207 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X text 365 24 You can set a seed with the '-seed' flag. If you don't
 supply it \, each object gets its own seed internal seed. If you send
 a 'seed' message without float \, the object also gets a unique seed
 value., f 52;
-#X obj 57 181 else/gray~ -seed 1039;
-#X obj 207 181 else/gray~ -seed 1039;
+#X obj 57 181 gray~ -seed 1039;
+#X obj 207 181 gray~ -seed 1039;
 #X msg 433 113 seed 507;
 #X msg 393 113 seed;
 #X text 495 114 <-- set seed;

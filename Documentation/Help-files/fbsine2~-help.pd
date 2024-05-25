@@ -59,7 +59,7 @@
 #X obj 210 171 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 137 171 rate in Hz;
-#X obj 210 218 else/out~;
+#X obj 210 218 out~;
 #X obj 99 40 cnv 4 4 4 empty empty sine 0 28 2 18 #e0e0e0 #000000 0
 ;
 #X obj 138 40 cnv 4 4 4 empty empty with 0 28 2 18 #e0e0e0 #000000
@@ -78,7 +78,7 @@ f 55;
 on the difference equations below (for im = 1 \, fb = 0 and a = 1 a
 sinewave results) \; x(n+1) = sin(im * y(n) + fb * x(n)) \; y(n+1)
 = (a * y(n) + c) % 2pi, f 73;
-#X obj 210 194 else/fbsine2~;
+#X obj 210 194 fbsine2~;
 #X text 213 367 - feedback sine chaotic signal;
 #X text 178 322 list;
 #X text 172 338 clear;
@@ -93,7 +93,7 @@ sinewave results) \; x(n+1) = sin(im * y(n) + fb * x(n)) \; y(n+1)
 #X obj 39 142 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X text 69 117 rate in Hz;
-#X obj 82 393 else/out~;
+#X obj 82 393 out~;
 #X floatatom 82 188 5 0 0 0 - - - 0;
 #X floatatom 163 189 5 0 0 0 - - - 0;
 #X text 80 169 x[n-1];
@@ -109,13 +109,13 @@ a list.;
 #X text 27 20 By default \, the initial im \, fb \, a and c values
 are 1 \, 0.1 \, 1.1 and 0.5 respectively \, but can be changed via
 arguments or via the "coeffs" message.;
-#X obj 82 209 else/pack2 f f;
-#X obj 101 293 else/pack2 coeffs 1 0.1 1.1 0.5, f 40;
+#X obj 82 209 pack2 f f;
+#X obj 101 293 pack2 coeffs 1 0.1 1.1 0.5, f 40;
 #X text 166 254 im;
 #X text 224 255 fb;
 #X text 286 255 a;
 #X text 344 253 c;
-#X obj 82 361 else/fbsine2~;
+#X obj 82 361 fbsine2~;
 #X connect 0 0 1 0;
 #X connect 1 0 22 0;
 #X connect 4 0 16 0;

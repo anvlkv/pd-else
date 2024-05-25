@@ -48,10 +48,10 @@
 #X msg 242 178 div \$1;
 #X floatatom 297 156 5 0 0 0 - - - 0;
 #X floatatom 242 156 5 0 0 0 - - - 0;
-#X obj 214 275 else/display;
+#X obj 214 275 display;
 #X obj 214 159 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 214 249 else/count;
+#X obj 214 249 count;
 #X text 61 85 [bangdiv] outputs bangs when receiving bangs \, but doesn't
 discards a number of bangs corresponding to a division value. The first
 bang in the count is output. A starting value lets you start in the
@@ -71,7 +71,7 @@ counts to the first time a bang is output., f 69;
 #X text 185 439 bang;
 #X text 222 439 - when we have a rest;
 #X msg 165 170 reset;
-#X obj 213 219 else/bangdiv 4;
+#X obj 213 219 bangdiv 4;
 #X obj 116 386 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0
 ;
 #X text 179 386 float;

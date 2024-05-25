@@ -152,13 +152,13 @@
 #X coords 0 1 100 -1 302 42 1 0 0;
 #X restore 2 3 graph;
 #X text 218 331 - an impulse resets counter to zero;
-#X obj 171 183 else/impseq~;
-#X obj 78 214 else/pulsecount~;
+#X obj 171 183 impseq~;
+#X obj 78 214 pulsecount~;
 #X obj 429 156 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 429 184 else/impseq~;
-#X obj 324 184 else/imp~ 1;
-#X obj 324 215 else/pulsecount~ 4;
+#X obj 429 184 impseq~;
+#X obj 324 184 imp~ 1;
+#X obj 324 215 pulsecount~ 4;
 #X text 64 86 [pulsecount~] counts pulse triggers. A trigger happens
 at transitions from non positive to positive. A trigger in the right
 inlet resets the counter to zero. The argument sets a maximum count
@@ -170,8 +170,8 @@ value (if greater than 0).;
 #dcdcdc #000000 #000000 0 256;
 #X text 144 306 max <float>;
 #X text 218 306 - sets maximum count value;
-#X obj 78 246 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 324 246 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 78 246 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 324 246 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X connect 17 0 29 0;
 #X connect 18 0 28 0;
 #X connect 28 0 29 1;

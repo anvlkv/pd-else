@@ -22,10 +22,10 @@
 #X obj 139 244 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 181 244 signal;
 #X text 181 283 signal;
-#X obj 217 167 else/nop~;
+#X obj 217 167 nop~;
 #X obj 217 137 sig~ 3;
-#X obj 217 199 else/numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
-#X obj 465 94 else/setdsp~;
+#X obj 217 199 numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
+#X obj 465 94 setdsp~;
 #X text 230 244 - signal input;
 #X text 230 283 - signal output;
 #X text 195 316 (none);

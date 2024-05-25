@@ -36,7 +36,7 @@
 ;
 #X text 72 88 [any2symbol] converts any message to a symbol message.
 ;
-#X obj 219 208 else/any2symbol;
+#X obj 219 208 any2symbol;
 #X text 141 308 anything;
 #X text 154 345 symbol;
 #X text 208 345 - the converted symbol message;
@@ -52,14 +52,14 @@
 #X obj 189 163 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X floatatom 240 169 5 0 0 0 - - - 0;
-#X obj 219 235 else/display;
+#X obj 219 235 display;
 #X msg 210 119 list a b c;
 #X symbolatom 219 269 10 0 0 0 - - - 0;
 #X msg 298 170 hi there;
 #X text 435 218 see also:;
 #X text 221 380 (none);
-#X obj 440 241 else/symbol2any;
-#X obj 470 265 else/unite;
+#X obj 440 241 symbol2any;
+#X obj 470 265 unite;
 #X connect 18 0 29 0;
 #X connect 26 0 18 0;
 #X connect 27 0 18 0;

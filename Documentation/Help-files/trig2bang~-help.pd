@@ -31,7 +31,7 @@
 0;
 #X obj 503 27 cnv 10 10 10 empty empty library 0 6 2 13 #7c7c7c #e0e4dc
 0;
-#X obj 140 166 else/imp~ 1;
+#X obj 140 166 imp~ 1;
 #X obj 140 228 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #N canvas 207 34 366 264 (subpatch) 0;
@@ -141,15 +141,15 @@
 #X text 167 343 (none);
 #X text 179 308 bang;
 #X text 165 273 signal;
-#X obj 140 198 else/trig2bang~;
+#X obj 140 198 trig2bang~;
 #X obj 111 41 cnv 4 4 4 empty empty bang 0 28 2 18 #e0e0e0 #000000
 0;
 #X obj 156 41 cnv 4 4 4 empty empty conversion 0 28 2 18 #e0e0e0 #000000
 0;
 #X obj 292 226 bng 17 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
-#X obj 292 196 else/trig2bang~;
-#X obj 292 164 else/pulse~ 1;
+#X obj 292 196 trig2bang~;
+#X obj 292 164 pulse~ 1;
 #X text 213 308 - when detecting zero to non-zero transitions;
 #X text 69 97 [trig2bang~] detects zero to non-zero transitions. This
 can be used to detect and convert trigger signals (impulses and gate)

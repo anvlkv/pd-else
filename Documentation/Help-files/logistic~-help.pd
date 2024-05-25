@@ -58,8 +58,8 @@ nyquist). The 'p' parameter controls the chaos;
 -228856 -1 -1 0 256;
 #X text 363 199 p;
 #X text 217 361 - logistic chaotic signal;
-#X obj 174 192 else/logistic~ 440;
-#X obj 174 229 else/out~;
+#X obj 174 192 logistic~ 440;
+#X obj 174 229 out~;
 #X text 84 89 [logistic~] is a chaotic generator based on the difference
 equation: y[n] = (3 + p) * y[n-1] * (1- y[n-1]).;
 #X text 143 440 Object inspired on SuperCollider's Logistic UGEN. The

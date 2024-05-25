@@ -53,7 +53,7 @@
 #X coords 0 1 100 -1 302 42 1;
 #X restore 3 4 graph;
 #X text 142 140 resets;
-#X obj 243 175 else/mov.avg 4;
+#X obj 243 175 mov.avg 4;
 #X text 51 91 [mov.avg] gives you a running/moving average over the
 last 'n' values., f 62;
 #X text 141 364 1) float - sets initial 'n' values (default 1);

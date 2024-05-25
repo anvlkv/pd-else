@@ -21,8 +21,8 @@
 #X restore 2 2 graph;
 #X obj 174 157 sig~ 1;
 #X obj 369 157 sig~ 2;
-#X obj 174 229 else/numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
-#X obj 369 229 else/numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
+#X obj 174 229 numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
+#X obj 369 229 numbox~ 6 10 100 #C0C0C4 #440008 10 0 0 0;
 #X obj 111 351 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X obj 111 411 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
 #X text 174 385 signal;
@@ -34,9 +34,9 @@
 #X text 219 267 - the left input to subprocess, f 49;
 #X text 219 352 - the right input to subprocess;
 #X text 156 453 1) symbol - .pd file to load (default none);
-#X obj 489 138 else/setdsp~;
+#X obj 489 138 setdsp~;
 #X text 17 166 see also:;
-#X obj 14 188 else/sendmidi;
+#X obj 14 188 sendmidi;
 #X text 185 283 stop;
 #X text 219 283 - stop the subprocess, f 49;
 #X obj 14 215 pd~, f 5;
@@ -44,7 +44,7 @@
 #X text 219 329 - messages to the subprocess, f 49;
 #N canvas 490 54 448 436 +details 0;
 #X msg 156 137 start abs.pd~-testpatch.pd;
-#X obj 155 361 else/abs.pd~, f 13;
+#X obj 155 361 abs.pd~, f 13;
 #X msg 175 168 stop;
 #X msg 102 157 start;
 #X text 45 25 This object is still experimental and limited to just 2 ins and 2 outs \, but more features are planned. If you give it an argument \, it automatically loads/starts the sub-process. In order for this to happen \, both sub and super processes have their DSP state automatically set to on. If you don't want anything to start at loading the patch \, just don't give it any arguments and then send it a start message.;
@@ -68,7 +68,7 @@
 #X text 219 299 - start a subprocess \, no symbol restarts last one;
 #X text 121 199 click ->;
 #X text 57 88 [abs.pd~] loads a pd file into a subprocess via [pd~] and makes things more convenient like making the subprocess able to receive MIDI data from MIDI devices connected to the parent process (thanks to [sendmidi]). Also \, you can open the subprocess patch by clicking on the object., f 77;
-#X obj 174 198 else/abs.pd~ abs.pd~-testpatch.pd;
+#X obj 174 198 abs.pd~ abs.pd~-testpatch.pd;
 #X msg 291 167 show;
 #X text 185 314 show;
 #X text 219 314 - same as clicking on the object, f 49;

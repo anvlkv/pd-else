@@ -80,13 +80,13 @@
 #X text 243 349 - clears the filter in case of a blow-up;
 #X text 176 517 - sets Q/resonance from 0-1 (default 0.01), f 60;
 #X obj 166 204 + 1;
-#X obj 206 261 else/out~;
-#X obj 206 231 else/xselect~ 4 1000 1;
+#X obj 206 261 out~;
+#X obj 206 231 xselect~ 4 1000 1;
 #X text 51 84 [svfilter~] implements Chamberlin's state-variable filter
 algorithm \, which outputs lowpass \, highpass \, bandpass \, and bandstop
 simultaneously in parallel (in this order from left to right)., f
 70;
-#X obj 206 204 else/svfilter~ 800 0.5;
+#X obj 206 204 svfilter~ 800 0.5;
 #X obj 335 183 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 #dcdcdc #000000 #000000 0 256;
 #X obj 270 163 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10

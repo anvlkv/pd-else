@@ -32,14 +32,14 @@
 #X obj 386 195 osc~;
 #X obj 386 223 out~;
 #X text 17 227 see also:;
-#X obj 16 247 else/autotune;
+#X obj 16 247 autotune;
 #X obj 141 142 hsl 200 18 -2400 2400 0 0 empty empty empty -2 -8 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 138 258 s \$0-cents;
 #X obj 386 147 r \$0-cents;
 #X obj 386 168 expr mtof(($f1/100) + 69);
 #X text 59 90 [autotune2] receives a scale as a list of steps in cents and then retunes incoming cents values to the closest step in the scale., f 67;
 #X text 256 344 - scale in cents;
-#X obj 138 196 else/autotune2 0 110 190 320 410 480 590 610 690 805 895 990 1110 1200, f 36;
+#X obj 138 196 autotune2 0 110 190 320 410 480 590 610 690 805 895 990 1110 1200, f 36;
 #X text 163 319 bypass <float>;
 #X text 256 319 - non zero sets to bypass mode;
 #X msg 60 163 bypass \$1;

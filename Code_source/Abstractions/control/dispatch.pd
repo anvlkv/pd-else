@@ -1,10 +1,10 @@
 #N canvas 288 115 689 402 12;
-#X obj 193 193 else/args;
+#X obj 193 193 args;
 #X obj 193 159 loadbang;
 #X obj 71 63 inlet;
-#X obj 71 163 else/iterate;
+#X obj 71 163 iterate;
 #X obj 71 197 t a b;
-#X obj 173 253 else/list.seq;
+#X obj 173 253 list.seq;
 #X obj 148 290 send;
 #X msg 173 124 goto 0;
 #X obj 71 125 t l b;

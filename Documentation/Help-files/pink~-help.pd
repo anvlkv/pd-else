@@ -25,10 +25,10 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 3 3 graph;
-#X obj 209 194 else/out~;
+#X obj 209 194 out~;
 #X obj 6 419 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020
 0;
-#X obj 209 164 else/pink~;
+#X obj 209 164 pink~;
 #X obj 7 263 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000
 0;
 #X obj 7 310 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000
@@ -43,8 +43,8 @@
 unique internal, f 65;
 #X text 162 322 signal - pink noise;
 #N canvas 722 98 495 359 number 0;
-#X obj 199 279 else/out~;
-#X obj 199 249 else/pink~;
+#X obj 199 279 out~;
+#X obj 199 249 pink~;
 #X obj 199 223 nbx 5 14 0 40 0 0 empty empty empty 0 -8 0 10 #dcdcdc
 #000000 #000000 0 256;
 #X obj 202 170 hsl 128 15 1 40 0 0 empty empty empty -2 -8 0 10 #dcdcdc
@@ -79,18 +79,18 @@ based on a pseudo random number generator algorithm., f 71;
 #X text 145 399 1) float - number of octaves (default depends on sample
 rate), f 62;
 #N canvas 475 138 704 321 seed 0;
-#X obj 393 220 else/downsample~ 1;
-#X obj 548 220 else/downsample~ 1;
-#X obj 393 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 548 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 393 220 downsample~ 1;
+#X obj 548 220 downsample~ 1;
+#X obj 393 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 548 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X text 30 19 Pseudo random number generators aren't true random number
 generators. Instead \, an algorithm is used to provide a sequence of
 numbers that seems random. The same sequence can be reproduced if you
 set a "seed" value \, which can be any integer number., f 52;
-#X obj 57 220 else/downsample~ 1;
-#X obj 57 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
-#X obj 207 220 else/downsample~ 1;
-#X obj 207 260 else/numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 57 220 downsample~ 1;
+#X obj 57 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
+#X obj 207 220 downsample~ 1;
+#X obj 207 260 numbox~ 6 12 100 #c0c0c4 #440008 10 0 0 0;
 #X text 365 24 You can set a seed with the '-seed' flag. If you don't
 supply it \, each object gets its own seed internal seed. If you send
 a 'seed' message without float \, the object also gets a unique seed
@@ -103,10 +103,10 @@ value., f 52;
 objects are seeded the same they will have the same output. Conversely
 \, you can seed the same [pink~] object twice with the same seed to
 repeat the output., f 52;
-#X obj 57 181 else/pink~ -seed 1039;
-#X obj 207 181 else/pink~ -seed 1039;
-#X obj 403 192 else/pink~;
-#X obj 548 192 else/pink~;
+#X obj 57 181 pink~ -seed 1039;
+#X obj 207 181 pink~ -seed 1039;
+#X obj 403 192 pink~;
+#X obj 548 192 pink~;
 #X text 387 79 Sync [pink~] objects with a seed value;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;

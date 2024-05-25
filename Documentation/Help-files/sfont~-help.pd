@@ -122,20 +122,20 @@ name when you load a program or if it fails. Verbosity is also set
 by the "verbose" message. The preset name is also output as a 'preset'
 message in the rightmost "info" outlet when loading a program., f
 65;
-#X obj 232 360 else/sfont~ -v -ch 32 sf/waves.sf2, f 21;
-#X obj 232 239 else/pack2 pgm f 1;
-#X obj 362 236 else/pack2 bank f 1;
-#X obj 636 56 else/openfile -h https://en.wikipedia.org/wiki/SoundFont
+#X obj 232 360 sfont~ -v -ch 32 sf/waves.sf2, f 21;
+#X obj 232 239 pack2 pgm f 1;
+#X obj 362 236 pack2 bank f 1;
+#X obj 636 56 openfile -h https://en.wikipedia.org/wiki/SoundFont
 ;
-#X obj 628 121 else/openfile -h https://github.com/FluidSynth/fluidsynth/wiki/SoundFont
+#X obj 628 121 openfile -h https://github.com/FluidSynth/fluidsynth/wiki/SoundFont
 fluidsynth's github;
-#X obj 636 73 else/openfile -h https://freepats.zenvoid.org/sf2/SF2_Intro.txt
+#X obj 636 73 openfile -h https://freepats.zenvoid.org/sf2/SF2_Intro.txt
 ;
-#X obj 114 16 else/keyboard 17 80 4 3 0 0 empty empty;
-#X obj 222 403 else/out~;
-#X obj 355 466 else/display;
-#X obj 362 261 else/display;
-#X obj 232 269 else/display;
+#X obj 114 16 keyboard 17 80 4 3 0 0 empty empty;
+#X obj 222 403 out~;
+#X obj 355 466 display;
+#X obj 362 261 display;
+#X obj 232 269 display;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 1;
@@ -242,9 +242,9 @@ so this is not needed., f 62;
 #X connect 1 0 4 0;
 #X connect 5 0 4 0;
 #X restore 151 495 pd sysex;
-#X obj 298 283 else/initmess 8192;
-#X obj 381 319 else/mouse;
-#X obj 381 446 else/rint;
+#X obj 298 283 initmess 8192;
+#X obj 381 319 mouse;
+#X obj 381 446 rint;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 1 2;
@@ -348,12 +348,12 @@ where using here., f 72;
 #X msg 537 310 ctl \$1 0;
 #X text 611 284 sets bank number but doesn't load a program (you need
 to use the 'pgm' message next., f 18;
-#X obj 360 451 else/suspedal;
-#X obj 611 12 else/openfile -h https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
+#X obj 360 451 suspedal;
+#X obj 611 12 openfile -h https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
 MIDI Specifications;
-#X obj 545 32 else/openfile -h https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart
+#X obj 545 32 openfile -h https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart
 Fluid Specificaitions;
-#X obj 28 63 else/keyboard 17 80 6 1 0 0 empty empty;
+#X obj 28 63 keyboard 17 80 6 1 0 0 empty empty;
 #X connect 0 0 37 0;
 #X connect 1 0 38 0;
 #X connect 3 0 40 0;
@@ -399,9 +399,9 @@ and these two are MIDI messages. Other MIDI messages are:;
 #X text 92 68 - 'ctl' for 'control change \; - 'bend' for Pitch Bend
 \; - 'touchin' for channel aftertouch \; - 'polytouchin' for key aftertouch
 \; - 'sysex' for Sysex messages;
-#X obj 124 312 else/midi -loop midi-seq.mid;
-#X obj 115 490 else/out~;
-#X obj 124 456 else/sfont~ sf/Theremin;
+#X obj 124 312 midi -loop midi-seq.mid;
+#X obj 115 490 out~;
+#X obj 124 456 sfont~ sf/Theremin;
 #X text 276 448 .sf2 or .sf3 extension also implied, f 12;
 #X connect 0 0 12 0;
 #X connect 1 0 12 0;
@@ -570,9 +570,9 @@ divisions of the octave from 13 to 20 steps. A scale name is also generated.
 Set a different input channel to play each scale on the parent patch.
 , f 47;
 #X text 10 113 or select a program in channel 1, f 11;
-#X obj 87 78 else/loop 8;
-#X obj 87 206 else/eqdiv;
-#X obj 87 236 else/insert scale;
+#X obj 87 78 loop 8;
+#X obj 87 206 eqdiv;
+#X obj 87 236 insert scale;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 1 1 2 0;
@@ -604,11 +604,11 @@ Set a different input channel to play each scale on the parent patch.
 #000000;
 #X text 220 74 The remap message allows you to set MIDI Pitches for
 each key. This patch generates random values for each key., f 31;
-#X obj 75 62 else/loop -b 128;
-#X obj 75 91 else/rand.f 0 127;
-#X obj 75 119 else/group 128;
-#X obj 75 146 else/sort;
-#X obj 75 176 else/insert remap;
+#X obj 75 62 loop -b 128;
+#X obj 75 91 rand.f 0 127;
+#X obj 75 119 group 128;
+#X obj 75 146 sort;
+#X obj 75 176 insert remap;
 #X connect 2 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
@@ -628,8 +628,8 @@ each key. This patch generates random values for each key., f 31;
 #X text 170 573 unselect tuning in channel 1, f 15;
 #X text 168 604 unselect in all channels, f 12;
 #X text 261 198 (decimal values allowed);
-#X obj 67 173 else/eqdiv;
-#X obj 67 201 else/insert scale;
+#X obj 67 173 eqdiv;
+#X obj 67 201 insert scale;
 #X connect 2 0 27 0;
 #X connect 3 0 5 0;
 #X connect 6 0 7 0;
@@ -682,15 +682,15 @@ to the [retune] object. A "remap" message sets 128 MIDI Pitch values
 (from 0 to 127) for each MIDI key \, so you can have a scale that doesn't
 repeat (decimal values are possible \, so 60.5 is a quarter tone above
 middle C)., f 69;
-#X obj 69 460 else/sfont~ sf/waves.sf2;
-#X obj 603 287 else/retune;
-#X obj 54 493 else/out~;
-#X obj 611 12 else/openfile -h https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
+#X obj 69 460 sfont~ sf/waves.sf2;
+#X obj 603 287 retune;
+#X obj 54 493 out~;
+#X obj 611 12 openfile -h https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
 MIDI Specifications;
-#X obj 545 32 else/openfile -h https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart
+#X obj 545 32 openfile -h https://github.com/FluidSynth/fluidsynth/wiki/FluidFeatures#midi-control-change-implementation-chart
 Fluid Specificaitions;
-#X obj 30 65 else/keyboard 17 80 6 3 0 0 empty empty;
-#X obj 210 525 else/display;
+#X obj 30 65 keyboard 17 80 6 3 0 0 empty empty;
+#X obj 210 525 display;
 #X connect 0 0 24 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -731,10 +731,10 @@ and ".sf3" extensions. This is the same for the argument., f 38;
 #X connect 8 0 3 0;
 #X connect 9 0 3 0;
 #X restore 137 130 pd open;
-#X obj 198 175 else/sfont~ sf/Theremin.sf2;
+#X obj 198 175 sfont~ sf/Theremin.sf2;
 #X text 69 130 load ----> soundfonts, f 10;
-#X obj 194 201 else/out~;
-#X obj 198 116 else/keyboard 14 45 2 3 0 0 empty empty;
+#X obj 194 201 out~;
+#X obj 198 116 keyboard 14 45 2 3 0 0 empty empty;
 #X connect 39 0 40 0;
 #X connect 40 0 42 0;
 #X connect 40 1 42 1;

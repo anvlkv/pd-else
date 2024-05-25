@@ -54,9 +54,9 @@ defined as fractions to ratio intervals., f 72;
 #X obj 239 164 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X text 455 165 see also:;
-#X obj 451 188 else/autotune;
-#X obj 451 210 else/retune;
-#X obj 451 230 else/frac2dec;
+#X obj 451 188 autotune;
+#X obj 451 210 retune;
+#X obj 451 230 frac2dec;
 #X obj 75 226 print scale-ratio;
 #X obj 270 236 print scale-cents;
 #X floatatom 75 168 5 0 0 0 - - - 0;
@@ -75,8 +75,8 @@ defined as fractions to ratio intervals., f 72;
 #X text 192 436 2) float - interval ratio (default: 2);
 #X text 192 417 1) float - number of equal divisions (default: 12)
 ;
-#X obj 270 208 else/eqdiv 7 2;
-#X obj 75 198 else/eqdiv -ratio 7 2;
+#X obj 270 208 eqdiv 7 2;
+#X obj 75 198 eqdiv -ratio 7 2;
 #X obj 42 166 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X text 317 156 Bohlen-pierce;

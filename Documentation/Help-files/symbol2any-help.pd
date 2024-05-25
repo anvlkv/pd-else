@@ -36,10 +36,10 @@
 ;
 #X obj 86 39 cnv 4 4 4 empty empty symbol 0 28 2 18 #e0e0e0 #000000
 0;
-#X obj 201 194 else/display;
+#X obj 201 194 display;
 #X text 411 155 see also:;
 #X text 221 317 (none);
-#X obj 201 167 else/symbol2any;
+#X obj 201 167 symbol2any;
 #X symbolatom 201 137 10 0 0 0 - - - 0;
 #X text 74 89 [symbol2any] convert symbols to any messages.;
 #X text 155 245 symbol;
@@ -51,7 +51,7 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X coords 0 1 100 -1 302 42 1;
 #X restore 2 2 graph;
-#X obj 423 202 else/separate;
-#X obj 423 177 else/any2symbol;
+#X obj 423 202 separate;
+#X obj 423 177 any2symbol;
 #X connect 21 0 18 0;
 #X connect 22 0 21 0;
