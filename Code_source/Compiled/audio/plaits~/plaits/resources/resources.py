@@ -64,7 +64,7 @@ namespace = 'plaits'
 target = 'plaits'
 types = ['uint8_t', 'uint16_t']
 includes = """
-#include "stmlib/stmlib.hpp"
+#include "stmlib/stmlib.h"
 """
 
 import fm_patches

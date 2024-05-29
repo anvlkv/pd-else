@@ -5,9 +5,9 @@
 
 #include <stdint.h>
 #include "m_pd.h"
-#include "plaits/dsp/dsp.hpp"
-#include "plaits/dsp/engine/engine.hpp"
-#include "plaits/dsp/voice.hpp"
+#include "plaits/dsp/dsp.h"
+#include "plaits/dsp/engine/engine.h"
+#include "plaits/dsp/voice.h"
 
 static t_class *plaits_class;
 
